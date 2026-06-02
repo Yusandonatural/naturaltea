@@ -203,6 +203,12 @@
   .ctx-challenge .ctx-list li::before{content:"⚠";color:var(--gold);}
   .ctx-hope .ctx-list li::before{content:"✦";color:var(--matcha);}
   @media(max-width:860px){ .context-grid{grid-template-columns:1fr;gap:18px;} }
+  .ctx-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px;margin-top:36px;}
+  .ctx-stat{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:26px 22px;text-align:center;}
+  .ctx-stat .num{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.8vw,40px);color:var(--green-700);line-height:1.1;font-weight:600;}
+  .ctx-stat .desc{font-size:12.5px;color:var(--ink-soft);margin-top:10px;line-height:1.65;}
+  .ctx-sources{margin-top:24px;font-size:11.5px;color:var(--ink-soft);line-height:1.9;}
+  .ctx-sources a{color:var(--green-600);text-decoration:underline;}
 
   /* Instagram */
   .ig-wrap{max-width:520px;margin:0 auto;text-align:center;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:clamp(30px,4vw,48px);}
@@ -380,7 +386,7 @@
         <h3><span class="ja-only">日本のお茶が抱える課題</span><span class="en-only">Challenges facing Japanese tea</span><span class="fr-only">Les défis du thé japonais</span></h3>
         <ul class="ctx-list">
           <li><span class="ja-only">茶の生産者が年々減りつつある</span><span class="en-only">The number of tea producers is declining year by year</span><span class="fr-only">Le nombre de producteurs de thé diminue d’année en année</span></li>
-          <li><span class="ja-only">残留農薬の基準値が諸外国より高い</span><span class="en-only">Permitted pesticide residue levels remain higher than in many other countries</span><span class="fr-only">Les limites autorisées de résidus de pesticides restent plus élevées que dans de nombreux autres pays</span></li>
+          <li><span class="ja-only">残留農薬の基準値が諸外国より高い（緩い）。EUの基準は品目により日本の数倍〜数十倍厳しい</span><span class="en-only">Permitted pesticide residue levels are higher (more lenient) than abroad — EU limits can be several to tens of times stricter than Japan’s</span><span class="fr-only">Les limites de résidus de pesticides sont plus élevées (plus permissives) qu’ailleurs — celles de l’UE sont parfois plusieurs à des dizaines de fois plus strictes qu’au Japon</span></li>
         </ul>
       </div>
       <div class="ctx-panel ctx-hope reveal">
@@ -391,6 +397,26 @@
         </ul>
       </div>
     </div>
+    <div class="ctx-stats">
+      <div class="ctx-stat reveal">
+        <div class="num"><span class="ja-only">約2万戸</span><span class="en-only">≈20,000</span><span class="fr-only">≈20 000</span></div>
+        <div class="desc"><span class="ja-only">茶の販売農家戸数（2015年）。2000年の約5.4万戸から15年で約6割減。</span><span class="en-only">Tea-farming households (2015) — down about 60% from ~54,000 in 2000.</span><span class="fr-only">Exploitations productrices de thé (2015) — en baisse d’environ 60 % depuis ~54 000 en 2000.</span></div>
+      </div>
+      <div class="ctx-stat reveal">
+        <div class="num"><span class="ja-only">約2.5倍</span><span class="en-only">×2.5</span><span class="fr-only">×2,5</span></div>
+        <div class="desc"><span class="ja-only">緑茶の輸出量の伸び（過去約10年）。海外需要が拡大。</span><span class="en-only">Growth in green tea export volume over the past decade.</span><span class="fr-only">Croissance du volume d’exportation du thé vert sur dix ans.</span></div>
+      </div>
+      <div class="ctx-stat reveal">
+        <div class="num"><span class="ja-only">292億円</span><span class="en-only">¥29.2B</span><span class="fr-only">29,2 Md¥</span></div>
+        <div class="desc"><span class="ja-only">緑茶の輸出額（2023年）。4年連続で過去最高、抹茶など粉末茶が牽引。</span><span class="en-only">Green tea export value (2023) — a record high for the 4th year running, led by matcha and powdered teas.</span><span class="fr-only">Valeur d’exportation du thé vert (2023) — record pour la 4e année consécutive, portée par le matcha et les thés en poudre.</span></div>
+      </div>
+    </div>
+    <p class="ctx-sources">
+      <span class="ja-only">出典：</span><span class="en-only">Sources: </span><span class="fr-only">Sources : </span>
+      <a href="https://www.maff.go.jp/j/seisan/tokusan/cha/" target="_blank" rel="noopener"><span class="ja-only">農林水産省「茶をめぐる情勢」</span><span class="en-only">MAFF, “Situation Surrounding Tea”</span><span class="fr-only">MAFF, « Situation du thé »</span></a>　/
+      <a href="https://www.maff.go.jp/j/seisan/tokusan/cha/tea_export.html" target="_blank" rel="noopener"><span class="ja-only">農林水産省・財務省貿易統計（緑茶輸出）</span><span class="en-only">MAFF / Customs trade statistics (green tea exports)</span><span class="fr-only">MAFF / statistiques douanières (exportations de thé vert)</span></a>　/
+      <a href="https://www.maff.go.jp/j/shokusan/export/zannou_kisei.html" target="_blank" rel="noopener"><span class="ja-only">農林水産省「諸外国における残留農薬基準値」</span><span class="en-only">MAFF, pesticide residue limits by country</span><span class="fr-only">MAFF, limites de résidus de pesticides par pays</span></a>
+    </p>
   </div>
 </section>
 
