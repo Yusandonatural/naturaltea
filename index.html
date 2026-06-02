@@ -41,6 +41,11 @@
   .en-only{display:none;}
   body.lang-en .ja-only{display:none;}
   body.lang-en .en-only{display:inline;}
+  /* French: button added; content falls back to English until FR translations are provided */
+  body.lang-fr{font-family:'Cormorant Garamond','Noto Sans JP',serif;}
+  body.lang-fr .ja-only{display:none;}
+  body.lang-fr .en-only{display:inline;}
+  body.lang-fr h1,body.lang-fr h2,body.lang-fr h3,body.lang-fr .serif{font-family:'Cormorant Garamond',serif;font-weight:600;}
 
   h1,h2,h3,.serif{font-family:'Noto Serif JP',serif;font-weight:500;}
   body.lang-en h1,body.lang-en h2,body.lang-en h3,body.lang-en .serif{font-family:'Cormorant Garamond',serif;font-weight:600;}
@@ -299,6 +304,7 @@
     <div class="lang-toggle">
       <button id="btn-ja" class="active" onclick="setLang('ja')">日本語</button>
       <button id="btn-en" onclick="setLang('en')">EN</button>
+      <button id="btn-fr" onclick="setLang('fr')">FR</button>
     </div>
   </nav>
   <button class="menu-btn" id="menuBtn" aria-label="menu">☰</button>
@@ -636,13 +642,14 @@
 
 <script>
   function setLang(l){
-    document.body.classList.remove('lang-ja','lang-en');
+    document.body.classList.remove('lang-ja','lang-en','lang-fr');
     document.body.classList.add('lang-'+l);
     document.documentElement.lang = l;
     document.getElementById('btn-ja').classList.toggle('active', l==='ja');
     document.getElementById('btn-en').classList.toggle('active', l==='en');
+    var bfr=document.getElementById('btn-fr'); if(bfr){ bfr.classList.toggle('active', l==='fr'); }
     document.querySelectorAll('[data-ph-ja]').forEach(function(el){
-      el.setAttribute('placeholder', el.getAttribute('data-ph-'+l) || '');
+      el.setAttribute('placeholder', el.getAttribute('data-ph-'+l) || el.getAttribute('data-ph-en') || '');
     });
     try{localStorage.setItem('jnta_lang', l);}catch(e){}
   }
