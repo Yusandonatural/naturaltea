@@ -420,30 +420,16 @@
         <p><span class="ja-only">自然茶を楽しみ、応援する方々</span><span class="en-only">Those who enjoy and support tea</span></p>
       </div>
     </div>
-    <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <div class="field">
-        <label for="cf-name"><span class="ja-only">お名前</span><span class="en-only">Name</span></label>
-        <input type="text" id="cf-name" name="name" required
-          data-ph-ja="山田 太郎" data-ph-en="Your name" placeholder="山田 太郎">
-      </div>
-      <div class="field">
-        <label for="cf-email"><span class="ja-only">メールアドレス</span><span class="en-only">Email</span></label>
-        <input type="email" id="cf-email" name="email" required
-          data-ph-ja="you@example.com" data-ph-en="you@example.com" placeholder="you@example.com">
-      </div>
-      <div class="field">
-        <label for="cf-message"><span class="ja-only">お問い合わせ内容</span><span class="en-only">Message</span></label>
-        <textarea id="cf-message" name="message" required
-          data-ph-ja="ご質問・ご相談などをご記入ください。" data-ph-en="How can we help you?"
-          placeholder="ご質問・ご相談などをご記入ください。"></textarea>
-      </div>
-      <div class="form-actions">
-        <button type="submit" class="btn btn-primary" id="cf-submit">
-          <span class="ja-only">送信する</span><span class="en-only">Send message</span>
-        </button>
-      </div>
-      <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
-    </form>
+    <div class="contact-form reveal" id="contactFormWrap">
+      <iframe
+        id="JotFormIFrame-261521964938063"
+        title="お問い合わせフォーム 日本自然茶協会"
+        allow="geolocation; microphone; camera; fullscreen; payment"
+        src="https://form.jotform.com/261521964938063"
+        style="width:100%;max-width:680px;height:760px;border:none;background:transparent;"
+        scrolling="no">
+      </iframe>
+    </div>
   </div>
 </section>
 
@@ -529,6 +515,11 @@
   // scroll reveal
   var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); },{threshold:.12});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+<script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+<script>
+  window.jotformEmbedHandler &&
+    window.jotformEmbedHandler("iframe[id='JotFormIFrame-261521964938063']", "https://form.jotform.com");
 </script>
 </body>
 </html>
