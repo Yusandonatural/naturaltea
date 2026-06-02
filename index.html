@@ -158,6 +158,49 @@
   /* Org / officers */
   .org-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:54px;align-items:start;}
   .org-single{max-width:760px;margin:0 auto;}
+
+  /* Producers */
+  .producer-card{
+    background:var(--paper);border:1px solid var(--line);border-radius:8px;
+    padding:clamp(28px,4vw,48px);max-width:880px;margin:0 auto;
+    box-shadow:0 10px 36px rgba(42,74,53,.06);
+  }
+  .producer-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:24px;}
+  .producer-head h3{font-size:clamp(20px,2.6vw,26px);color:var(--green-800);}
+  .producer-head a{font-size:14px;color:var(--green-600);letter-spacing:.04em;border-bottom:1px solid var(--matcha);padding-bottom:2px;transition:color .2s;}
+  .producer-head a:hover{color:var(--green-800);}
+  .producer-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;margin-bottom:28px;}
+  .producer-meta .label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+  .producer-meta .val{font-size:16px;color:var(--ink);}
+  .producer-meta .val .badge{display:inline-block;background:var(--green-700);color:var(--kinari);font-size:12px;padding:3px 12px;border-radius:999px;letter-spacing:.05em;}
+  .tea-label{font-size:13px;letter-spacing:.06em;color:var(--green-700);margin-bottom:12px;font-weight:500;}
+  .tea-tags{display:flex;flex-wrap:wrap;gap:9px;}
+  .tea-tags span{
+    background:var(--kinari-2);color:var(--green-800);border:1px solid var(--line);
+    font-size:13px;padding:6px 14px;border-radius:999px;
+  }
+
+  /* Context: challenges & global attention */
+  .context-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  .ctx-panel{border-radius:8px;padding:clamp(26px,3.4vw,40px);border:1px solid var(--line);}
+  .ctx-challenge{background:var(--paper);}
+  .ctx-hope{background:var(--green-800);border-color:var(--green-800);}
+  .ctx-panel h3{font-size:clamp(17px,2vw,21px);line-height:1.5;margin-bottom:22px;}
+  .ctx-challenge h3{color:var(--green-800);}
+  .ctx-hope h3{color:var(--kinari);}
+  .ctx-list{list-style:none;display:flex;flex-direction:column;gap:16px;}
+  .ctx-list li{position:relative;padding-left:30px;font-size:15px;line-height:1.7;}
+  .ctx-challenge .ctx-list li{color:var(--ink-soft);}
+  .ctx-hope .ctx-list li{color:rgba(244,241,232,.92);}
+  .ctx-list li::before{position:absolute;left:0;top:1px;font-size:16px;}
+  .ctx-challenge .ctx-list li::before{content:"⚠";color:var(--gold);}
+  .ctx-hope .ctx-list li::before{content:"✦";color:var(--matcha);}
+  @media(max-width:860px){ .context-grid{grid-template-columns:1fr;gap:18px;} }
+
+  /* Instagram */
+  .ig-wrap{max-width:520px;margin:0 auto;text-align:center;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:clamp(30px,4vw,48px);}
+  .ig-handle{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,30px);color:var(--green-800);margin-bottom:12px;letter-spacing:.02em;}
+  .ig-text{color:var(--ink-soft);font-size:15px;margin-bottom:26px;}
   .info-table{width:100%;border-collapse:collapse;}
   .info-table th,.info-table td{text-align:left;padding:16px 6px;border-bottom:1px solid var(--line);vertical-align:top;font-size:15px;}
   .info-table th{width:36%;color:var(--green-700);font-weight:500;white-space:nowrap;}
@@ -249,6 +292,8 @@
   <nav class="main" id="nav">
     <a class="navlink" href="#about"><span class="ja-only">協会について</span><span class="en-only">About</span></a>
     <a class="navlink" href="#business"><span class="ja-only">事業内容</span><span class="en-only">Activities</span></a>
+    <a class="navlink" href="#producers"><span class="ja-only">生産者紹介</span><span class="en-only">Producers</span></a>
+    <a class="navlink" href="#visit"><span class="ja-only">楽しめる場所</span><span class="en-only">Visit</span></a>
     <a class="navlink" href="#org"><span class="ja-only">協会概要</span><span class="en-only">Overview</span></a>
     <a class="navlink" href="#join"><span class="ja-only">入会・お問い合わせ</span><span class="en-only">Membership</span></a>
     <div class="lang-toggle">
@@ -311,6 +356,32 @@
   </div>
 </section>
 
+<!-- CONTEXT -->
+<section class="block alt-2" id="context">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker"><span class="ja-only">日本茶の今</span><span class="en-only">Japanese Tea Today</span></p>
+      <h2><span class="ja-only">課題と、世界からの期待</span><span class="en-only">Challenges, and global expectations</span></h2>
+    </div>
+    <div class="context-grid">
+      <div class="ctx-panel ctx-challenge reveal">
+        <h3><span class="ja-only">日本のお茶が抱える課題</span><span class="en-only">Challenges facing Japanese tea</span></h3>
+        <ul class="ctx-list">
+          <li><span class="ja-only">茶の生産者が年々減りつつある</span><span class="en-only">The number of tea producers is declining year by year</span></li>
+          <li><span class="ja-only">残留農薬の基準値が諸外国より高い</span><span class="en-only">Permitted pesticide residue levels remain higher than in many other countries</span></li>
+        </ul>
+      </div>
+      <div class="ctx-panel ctx-hope reveal">
+        <h3><span class="ja-only">世界から注目を浴びる日本茶</span><span class="en-only">Japanese tea in the global spotlight</span></h3>
+        <ul class="ctx-list">
+          <li><span class="ja-only">小規模の生産者が持続可能な農業を営む</span><span class="en-only">Small-scale producers practicing sustainable farming</span></li>
+          <li><span class="ja-only">世界中のお茶好きと生産者をつなぐ</span><span class="en-only">Connecting tea lovers around the world with growers</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- BUSINESS -->
 <section class="block" id="business">
   <div class="wrap">
@@ -352,41 +423,87 @@
   </div>
 </section>
 
-<!-- ORGANIZATION -->
-<section class="block alt-2" id="org">
+<!-- PRODUCERS -->
+<section class="block alt" id="producers">
   <div class="wrap">
     <div class="sec-head reveal">
-      <p class="kicker"><span class="ja-only">協会概要</span><span class="en-only">Overview</span></p>
-      <h2><span class="ja-only">協会概要</span><span class="en-only">Association Overview</span></h2>
+      <p class="kicker"><span class="ja-only">生産者紹介</span><span class="en-only">Producers</span></p>
+      <h2><span class="ja-only">自然茶を育てる生産者</span><span class="en-only">The growers behind our tea</span></h2>
     </div>
-    <div class="org-single">
-      <div class="reveal">
-        <table class="info-table">
-          <tr>
-            <th><span class="ja-only">名称</span><span class="en-only">Name</span></th>
-            <td><span class="ja-only">一般社団法人 日本自然茶協会</span><span class="en-only">Japan Natural Tea Association</span></td>
-          </tr>
-          <tr>
-            <th><span class="ja-only">英文名称</span><span class="en-only">Japanese Name</span></th>
-            <td><span class="ja-only">Japan Natural Tea Association</span><span class="en-only">一般社団法人 日本自然茶協会</span></td>
-          </tr>
-          <tr>
-            <th><span class="ja-only">所在地</span><span class="en-only">Head Office</span></th>
-            <td><span class="ja-only">奈良県奈良市都祁吐山町920</span><span class="en-only">920 Tsuge-Hayama-cho, Nara City, Nara, Japan</span></td>
-          </tr>
-          <tr>
-            <th><span class="ja-only">設立</span><span class="en-only">Established</span></th>
-            <td><span class="ja-only">令和8年(2026年)3月1日</span><span class="en-only">March 1, 2026</span></td>
-          </tr>
-          <tr>
-            <th><span class="ja-only">事業年度</span><span class="en-only">Fiscal Year</span></th>
-            <td><span class="ja-only">4月1日 〜 翌年3月31日</span><span class="en-only">April 1 – March 31</span></td>
-          </tr>
-          <tr>
-            <th><span class="ja-only">事業内容</span><span class="en-only">Activities</span></th>
-            <td><span class="ja-only">自然茶の調査研究・教育・交流促進・文化普及・国際交流</span><span class="en-only">Research, education, exchange, cultural outreach, and international exchange of natural tea</span></td>
-          </tr>
-        </table>
+    <div class="producer-card reveal">
+      <div class="producer-head">
+        <h3><span class="ja-only">株式会社 悠三堂</span><span class="en-only">Yusando Co., Ltd.</span></h3>
+        <a href="https://yusando.com" target="_blank" rel="noopener">yusando.com</a>
+      </div>
+      <div class="producer-meta">
+        <div>
+          <div class="label"><span class="ja-only">所在地</span><span class="en-only">Location</span></div>
+          <div class="val"><span class="ja-only">日本　奈良県奈良市</span><span class="en-only">Nara City, Nara, Japan</span></div>
+        </div>
+        <div>
+          <div class="label"><span class="ja-only">自然栽培開始</span><span class="en-only">Natural cultivation since</span></div>
+          <div class="val"><span class="ja-only">2014年</span><span class="en-only">2014</span></div>
+        </div>
+        <div>
+          <div class="label"><span class="ja-only">見学</span><span class="en-only">Visits</span></div>
+          <div class="val"><span class="badge"><span class="ja-only">見学可能</span><span class="en-only">Open to visitors</span></span></div>
+        </div>
+      </div>
+      <p class="tea-label"><span class="ja-only">取り扱うお茶の種類</span><span class="en-only">Teas produced</span></p>
+      <div class="tea-tags">
+        <span><span class="ja-only">煎茶</span><span class="en-only">Sencha</span></span>
+        <span><span class="ja-only">ほうじ茶</span><span class="en-only">Hojicha</span></span>
+        <span><span class="ja-only">抹茶</span><span class="en-only">Matcha</span></span>
+        <span><span class="ja-only">和紅茶</span><span class="en-only">Japanese Black Tea</span></span>
+        <span><span class="ja-only">烏龍茶</span><span class="en-only">Oolong</span></span>
+        <span><span class="ja-only">釜炒り茶</span><span class="en-only">Kamairicha</span></span>
+        <span><span class="ja-only">番茶</span><span class="en-only">Bancha</span></span>
+        <span><span class="ja-only">白茶</span><span class="en-only">White Tea</span></span>
+        <span><span class="ja-only">玄米茶</span><span class="en-only">Genmaicha</span></span>
+        <span><span class="ja-only">玄米ほうじ茶</span><span class="en-only">Genmai Hojicha</span></span>
+        <span><span class="ja-only">発酵番茶</span><span class="en-only">Fermented Bancha</span></span>
+        <span><span class="ja-only">三年番茶</span><span class="en-only">Three-year Bancha</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="block" id="visit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker"><span class="ja-only">自然茶を楽しめる場所</span><span class="en-only">Where to Enjoy</span></p>
+      <h2><span class="ja-only">カフェ・小売店</span><span class="en-only">Café &amp; Shop</span></h2>
+    </div>
+    <div class="producer-card reveal">
+      <div class="producer-head">
+        <h3>YUSANDO NATURAL TEA</h3>
+        <a href="https://yusando.com" target="_blank" rel="noopener">yusando.com</a>
+      </div>
+      <div class="producer-meta">
+        <div>
+          <div class="label"><span class="ja-only">所在地</span><span class="en-only">Location</span></div>
+          <div class="val"><span class="ja-only">日本　奈良県奈良市都祁吐山町920</span><span class="en-only">920 Tsuge-Hayama-cho, Nara City, Nara, Japan</span></div>
+        </div>
+        <div>
+          <div class="label"><span class="ja-only">ご利用</span><span class="en-only">Reservations</span></div>
+          <div class="val"><span class="badge"><span class="ja-only">予約制</span><span class="en-only">By reservation</span></span></div>
+        </div>
+      </div>
+      <p class="tea-label"><span class="ja-only">楽しめる自然茶の種類</span><span class="en-only">Natural teas you can enjoy</span></p>
+      <div class="tea-tags">
+        <span><span class="ja-only">煎茶</span><span class="en-only">Sencha</span></span>
+        <span><span class="ja-only">ほうじ茶</span><span class="en-only">Hojicha</span></span>
+        <span><span class="ja-only">抹茶</span><span class="en-only">Matcha</span></span>
+        <span><span class="ja-only">和紅茶</span><span class="en-only">Japanese Black Tea</span></span>
+        <span><span class="ja-only">烏龍茶</span><span class="en-only">Oolong</span></span>
+        <span><span class="ja-only">釜炒り茶</span><span class="en-only">Kamairicha</span></span>
+        <span><span class="ja-only">番茶</span><span class="en-only">Bancha</span></span>
+        <span><span class="ja-only">白茶</span><span class="en-only">White Tea</span></span>
+        <span><span class="ja-only">玄米茶</span><span class="en-only">Genmaicha</span></span>
+        <span><span class="ja-only">玄米ほうじ茶</span><span class="en-only">Genmai Hojicha</span></span>
+        <span><span class="ja-only">発酵番茶</span><span class="en-only">Fermented Bancha</span></span>
+        <span><span class="ja-only">三年番茶</span><span class="en-only">Three-year Bancha</span></span>
       </div>
     </div>
   </div>
@@ -433,6 +550,66 @@
   </div>
 </section>
 
+<!-- INSTAGRAM -->
+<section class="block alt" id="instagram">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;">
+      <p class="kicker" style="justify-content:center;"><span class="ja-only">インスタグラム</span><span class="en-only">Instagram</span></p>
+      <h2><span class="ja-only">最新の活動はInstagramで</span><span class="en-only">Follow us on Instagram</span></h2>
+    </div>
+    <div class="ig-wrap reveal">
+      <p class="ig-handle">@japan_natural_tea</p>
+      <p class="ig-text">
+        <span class="ja-only">自然茶づくりの様子やお茶のある暮らしを発信しています。</span>
+        <span class="en-only">Glimpses of natural tea cultivation and life with tea.</span>
+      </p>
+      <a class="btn btn-primary" href="https://www.instagram.com/japan_natural_tea/" target="_blank" rel="noopener">
+        <span class="ja-only">Instagramを見る</span><span class="en-only">View on Instagram</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANIZATION -->
+<section class="block alt-2" id="org">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker"><span class="ja-only">協会概要</span><span class="en-only">Overview</span></p>
+      <h2><span class="ja-only">協会概要</span><span class="en-only">Association Overview</span></h2>
+    </div>
+    <div class="org-single">
+      <div class="reveal">
+        <table class="info-table">
+          <tr>
+            <th><span class="ja-only">名称</span><span class="en-only">Name</span></th>
+            <td><span class="ja-only">一般社団法人 日本自然茶協会</span><span class="en-only">Japan Natural Tea Association</span></td>
+          </tr>
+          <tr>
+            <th><span class="ja-only">英文名称</span><span class="en-only">Japanese Name</span></th>
+            <td><span class="ja-only">Japan Natural Tea Association</span><span class="en-only">一般社団法人 日本自然茶協会</span></td>
+          </tr>
+          <tr>
+            <th><span class="ja-only">所在地</span><span class="en-only">Head Office</span></th>
+            <td><span class="ja-only">日本 奈良県奈良市都祁吐山町920</span><span class="en-only">920 Tsuge-Hayama-cho, Nara City, Nara, Japan</span></td>
+          </tr>
+          <tr>
+            <th><span class="ja-only">設立</span><span class="en-only">Established</span></th>
+            <td><span class="ja-only">令和8年(2026年)3月1日</span><span class="en-only">March 1, 2026</span></td>
+          </tr>
+          <tr>
+            <th><span class="ja-only">事業年度</span><span class="en-only">Fiscal Year</span></th>
+            <td><span class="ja-only">4月1日 〜 翌年3月31日</span><span class="en-only">April 1 – March 31</span></td>
+          </tr>
+          <tr>
+            <th><span class="ja-only">事業内容</span><span class="en-only">Activities</span></th>
+            <td><span class="ja-only">自然茶の調査研究・教育・交流促進・文化普及・国際交流</span><span class="en-only">Research, education, exchange, cultural outreach, and international exchange of natural tea</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="foot-top">
@@ -444,6 +621,8 @@
     <div class="foot-links">
       <a href="#about"><span class="ja-only">協会について</span><span class="en-only">About</span></a>
       <a href="#business"><span class="ja-only">事業内容</span><span class="en-only">Activities</span></a>
+      <a href="#producers"><span class="ja-only">生産者紹介</span><span class="en-only">Producers</span></a>
+      <a href="#visit"><span class="ja-only">楽しめる場所</span><span class="en-only">Visit</span></a>
       <a href="#org"><span class="ja-only">協会概要</span><span class="en-only">Overview</span></a>
       <a href="#join"><span class="ja-only">入会・お問い合わせ</span><span class="en-only">Membership</span></a>
     </div>
