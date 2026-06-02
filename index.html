@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一般社団法人 日本自然茶協会 | Japan Natural Tea Association</title>
+<meta name="description" content="農薬や化学肥料を使用しない自然茶の普及、研究、教育、情報発信および国際交流を通じて、環境保全と人々の健康、地域社会の発展に寄与する一般社団法人 日本自然茶協会の公式サイト。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-900:#1f3326;
+    --green-800:#2a4a35;
+    --green-700:#35603f;
+    --green-600:#4a7a54;
+    --green-500:#6b9a6f;
+    --matcha:#8aab6e;
+    --kinari:#f4f1e8;
+    --kinari-2:#ece7d8;
+    --paper:#faf8f1;
+    --ink:#242a24;
+    --ink-soft:#4c544c;
+    --gold:#a98c4b;
+    --line:#d7d2c2;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Noto Sans JP',sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.9;
+    -webkit-font-smoothing:antialiased;
+    font-weight:300;
+  }
+  body.lang-en{font-family:'Cormorant Garamond','Noto Sans JP',serif;}
+  body.lang-en .heading-jp{display:none;}
+  body.lang-ja .heading-en{display:none;}
+  .ja-only{display:inline;}
+  .en-only{display:none;}
+  body.lang-en .ja-only{display:none;}
+  body.lang-en .en-only{display:inline;}
+
+  h1,h2,h3,.serif{font-family:'Noto Serif JP',serif;font-weight:500;}
+  body.lang-en h1,body.lang-en h2,body.lang-en h3,body.lang-en .serif{font-family:'Cormorant Garamond',serif;font-weight:600;}
+
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed;top:0;left:0;width:100%;z-index:100;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 6vw;
+    background:rgba(250,248,241,.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+    transition:padding .3s;
+  }
+  .brand{display:flex;align-items:center;gap:14px;}
+  .brand .mark{
+    width:42px;height:42px;border-radius:50%;
+    background:var(--green-700);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--kinari);font-family:'Noto Serif JP',serif;font-size:20px;flex-shrink:0;
+  }
+  .brand .name{line-height:1.3;}
+  .brand .name b{font-family:'Noto Serif JP',serif;font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--green-800);display:block;}
+  .brand .name span{font-size:11px;letter-spacing:.18em;color:var(--ink-soft);text-transform:uppercase;}
+  nav.main{display:flex;align-items:center;gap:30px;}
+  nav.main a.navlink{font-size:13px;letter-spacing:.08em;color:var(--ink-soft);transition:color .2s;}
+  nav.main a.navlink:hover{color:var(--green-700);}
+  .lang-toggle{display:flex;border:1px solid var(--green-600);border-radius:999px;overflow:hidden;font-size:12px;letter-spacing:.05em;}
+  .lang-toggle button{
+    background:transparent;border:none;cursor:pointer;
+    padding:6px 14px;color:var(--green-700);font-family:inherit;transition:.2s;
+  }
+  .lang-toggle button.active{background:var(--green-700);color:var(--kinari);}
+  .menu-btn{display:none;background:none;border:none;cursor:pointer;font-size:24px;color:var(--green-800);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;min-height:100vh;
+    display:flex;flex-direction:column;justify-content:center;
+    padding:0 6vw;
+    background:
+      linear-gradient(rgba(31,51,38,.55),rgba(31,51,38,.45)),
+      radial-gradient(circle at 70% 30%, var(--green-600), var(--green-900));
+    color:var(--kinari);
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"茶";
+    position:absolute;right:-2vw;bottom:-6vw;
+    font-family:'Noto Serif JP',serif;font-weight:700;
+    font-size:46vw;line-height:1;color:rgba(255,255,255,.05);
+    pointer-events:none;
+  }
+  .hero-inner{max-width:880px;position:relative;z-index:2;}
+  .hero .eyebrow{
+    font-size:13px;letter-spacing:.35em;text-transform:uppercase;
+    color:var(--matcha);margin-bottom:26px;font-weight:400;
+  }
+  .hero h1{
+    font-size:clamp(34px,6vw,68px);line-height:1.35;font-weight:500;
+    margin-bottom:30px;letter-spacing:.02em;
+  }
+  .hero p{font-size:clamp(15px,1.7vw,19px);max-width:620px;color:rgba(244,241,232,.9);font-weight:300;}
+  .hero .cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;padding:14px 34px;border-radius:999px;
+    font-size:14px;letter-spacing:.08em;transition:.25s;cursor:pointer;border:1px solid transparent;
+  }
+  .btn-primary{background:var(--kinari);color:var(--green-800);}
+  .btn-primary:hover{background:#fff;transform:translateY(-2px);}
+  .btn-ghost{border-color:rgba(244,241,232,.5);color:var(--kinari);}
+  .btn-ghost:hover{background:rgba(244,241,232,.12);}
+
+  /* ---------- Sections ---------- */
+  section.block{padding:clamp(70px,10vw,130px) 6vw;}
+  .wrap{max-width:1080px;margin:0 auto;}
+  .sec-head{margin-bottom:54px;}
+  .sec-head .kicker{
+    font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);
+    display:flex;align-items:center;gap:12px;margin-bottom:18px;
+  }
+  .sec-head .kicker::before{content:"";width:38px;height:1px;background:var(--gold);display:inline-block;}
+  .sec-head h2{font-size:clamp(26px,3.6vw,40px);color:var(--green-800);line-height:1.4;}
+  .lead{font-size:clamp(16px,1.8vw,20px);color:var(--ink-soft);max-width:760px;line-height:2;}
+
+  .alt{background:var(--kinari);}
+  .alt-2{background:linear-gradient(180deg,var(--paper),var(--kinari-2));}
+
+  /* About columns */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:start;}
+  .about-grid h3{font-size:20px;color:var(--green-700);margin-bottom:14px;border-left:3px solid var(--matcha);padding-left:14px;}
+  .about-grid p{color:var(--ink-soft);}
+  .mission-card{
+    grid-column:1/-1;background:var(--green-800);color:var(--kinari);
+    border-radius:6px;padding:48px clamp(28px,5vw,60px);text-align:center;margin-top:10px;
+  }
+  .mission-card .label{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--matcha);margin-bottom:18px;}
+  .mission-card p{font-size:clamp(18px,2.4vw,26px);font-family:'Noto Serif JP',serif;font-weight:400;line-height:1.9;color:#ffffff;}
+  body.lang-en .mission-card p{font-family:'Cormorant Garamond',serif;}
+
+  /* Business cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;}
+  .card{
+    background:var(--paper);border:1px solid var(--line);border-radius:6px;
+    padding:34px 28px;transition:.3s;position:relative;overflow:hidden;
+  }
+  .card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(42,74,53,.12);border-color:var(--matcha);}
+  .card .num{font-family:'Cormorant Garamond',serif;font-size:40px;color:var(--matcha);line-height:1;margin-bottom:16px;font-weight:500;}
+  .card h3{font-size:17px;color:var(--green-800);margin-bottom:12px;line-height:1.5;}
+  .card p{font-size:14px;color:var(--ink-soft);}
+
+  /* Org / officers */
+  .org-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:54px;align-items:start;}
+  .org-single{max-width:760px;margin:0 auto;}
+  .info-table{width:100%;border-collapse:collapse;}
+  .info-table th,.info-table td{text-align:left;padding:16px 6px;border-bottom:1px solid var(--line);vertical-align:top;font-size:15px;}
+  .info-table th{width:36%;color:var(--green-700);font-weight:500;white-space:nowrap;}
+  .info-table td{color:var(--ink-soft);}
+  .officers{display:flex;flex-direction:column;gap:14px;}
+  .officer{
+    background:var(--paper);border:1px solid var(--line);border-radius:6px;
+    padding:20px 24px;display:flex;align-items:center;gap:18px;
+  }
+  .officer .av{
+    width:46px;height:46px;border-radius:50%;background:var(--kinari-2);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Noto Serif JP',serif;color:var(--green-700);font-size:18px;flex-shrink:0;
+  }
+  .officer .role{font-size:12px;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;}
+  .officer .pname{font-family:'Noto Serif JP',serif;font-size:18px;color:var(--green-800);}
+  body.lang-en .officer .pname{font-family:'Cormorant Garamond',serif;}
+
+  /* Join / CTA */
+  .join{background:radial-gradient(circle at 30% 20%,var(--green-700),var(--green-900));color:var(--kinari);text-align:center;}
+  .join .sec-head{margin-bottom:24px;}
+  .join h2{color:var(--kinari);}
+  .join .lead{color:rgba(244,241,232,.85);margin:0 auto 12px;}
+  .join .kicker{color:var(--matcha);justify-content:center;}
+  .join .kicker::before{background:var(--matcha);}
+  .member-types{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;max-width:760px;margin:40px auto 0;}
+  /* contact form */
+  .contact-form{max-width:600px;margin:46px auto 0;text-align:left;}
+  .field{margin-bottom:20px;}
+  .field label{display:block;font-size:13px;letter-spacing:.06em;color:var(--matcha);margin-bottom:8px;}
+  .field input,.field textarea{
+    width:100%;background:rgba(250,248,241,.06);border:1px solid rgba(244,241,232,.28);
+    border-radius:6px;padding:13px 16px;color:var(--kinari);font-family:inherit;font-size:15px;
+    transition:border-color .2s,background .2s;
+  }
+  body.lang-en .field input,body.lang-en .field textarea{font-family:'Noto Sans JP',sans-serif;}
+  .field textarea{min-height:130px;resize:vertical;}
+  .field input::placeholder,.field textarea::placeholder{color:rgba(244,241,232,.4);}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--matcha);background:rgba(250,248,241,.12);}
+  .form-actions{text-align:center;margin-top:8px;}
+  .form-actions .btn{border:none;}
+  .form-status{text-align:center;margin-top:20px;font-size:14px;min-height:22px;}
+  .form-status.ok{color:var(--matcha);}
+  .form-status.err{color:#f2b8a2;}
+  .mtype{border:1px solid rgba(244,241,232,.25);border-radius:6px;padding:24px;}
+  .mtype .ic{font-size:26px;margin-bottom:10px;}
+  .mtype h3{color:var(--kinari);font-size:16px;margin-bottom:6px;}
+  .mtype p{font-size:13px;color:rgba(244,241,232,.75);}
+
+  /* Footer */
+  footer{background:var(--green-900);color:rgba(244,241,232,.75);padding:60px 6vw 34px;}
+  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;max-width:1080px;margin:0 auto 40px;}
+  .foot-brand b{font-family:'Noto Serif JP',serif;color:var(--kinari);font-size:17px;display:block;margin-bottom:6px;}
+  body.lang-en .foot-brand b{font-family:'Cormorant Garamond',serif;}
+  .foot-brand span{font-size:12px;letter-spacing:.15em;}
+  .foot-links{display:flex;gap:28px;flex-wrap:wrap;font-size:13px;}
+  .foot-links a:hover{color:var(--kinari);}
+  .foot-bottom{max-width:1080px;margin:0 auto;border-top:1px solid rgba(244,241,232,.15);padding-top:22px;font-size:12px;letter-spacing:.05em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+
+  /* Scroll reveal */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media(max-width:860px){
+    nav.main{
+      position:fixed;top:0;right:0;height:100vh;width:74%;max-width:320px;
+      flex-direction:column;justify-content:center;gap:26px;
+      background:var(--green-900);transform:translateX(100%);transition:transform .35s;padding:40px;
+    }
+    nav.main.open{transform:none;}
+    nav.main a.navlink{color:var(--kinari);font-size:16px;}
+    .menu-btn{display:block;z-index:120;color:var(--green-800);}
+    nav.main.open + .menu-btn,.menu-btn.open{color:var(--kinari);}
+    .about-grid,.org-grid{grid-template-columns:1fr;gap:36px;}
+  }
+</style>
+</head>
+<body class="lang-ja">
+
+<header>
+  <a href="#top" class="brand">
+    <span class="mark">茶</span>
+    <span class="name">
+      <b><span class="ja-only">日本自然茶協会</span><span class="en-only">Japan Natural Tea</span></b>
+      <span class="ja-only">JAPAN NATURAL TEA ASSOCIATION</span>
+      <span class="en-only">ASSOCIATION · 日本自然茶協会</span>
+    </span>
+  </a>
+  <nav class="main" id="nav">
+    <a class="navlink" href="#about"><span class="ja-only">協会について</span><span class="en-only">About</span></a>
+    <a class="navlink" href="#business"><span class="ja-only">事業内容</span><span class="en-only">Activities</span></a>
+    <a class="navlink" href="#org"><span class="ja-only">協会概要</span><span class="en-only">Overview</span></a>
+    <a class="navlink" href="#join"><span class="ja-only">入会・お問い合わせ</span><span class="en-only">Membership</span></a>
+    <div class="lang-toggle">
+      <button id="btn-ja" class="active" onclick="setLang('ja')">日本語</button>
+      <button id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="menu">☰</button>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <p class="eyebrow"><span class="ja-only">自然と共にある茶のために</span><span class="en-only">For tea that lives with nature</span></p>
+    <h1>
+      <span class="ja-only">農薬と化学肥料に<br>頼らない、<br>自然のままの茶を未来へ。</span>
+      <span class="en-only">Carrying natural tea,<br>grown without agrochemicals,<br>into the future.</span>
+    </h1>
+    <p>
+      <span class="ja-only">一般社団法人 日本自然茶協会は、自然茶の普及・研究・教育・情報発信・国際交流を通じて、環境保全と人々の健康、そして地域社会の発展に寄与します。</span>
+      <span class="en-only">The Japan Natural Tea Association advances the cultivation, study, education, and global exchange of natural tea — contributing to environmental conservation, human health, and the vitality of local communities.</span>
+    </p>
+    <div class="cta">
+      <a href="#about" class="btn btn-primary"><span class="ja-only">私たちについて</span><span class="en-only">Learn more</span></a>
+      <a href="#join" class="btn btn-ghost"><span class="ja-only">入会のご案内</span><span class="en-only">Become a member</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="block alt" id="about">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker"><span class="ja-only">協会について</span><span class="en-only">About Us</span></p>
+      <h2><span class="ja-only">自然茶を、未来へつなぐ。</span><span class="en-only">Connecting natural tea to tomorrow.</span></h2>
+    </div>
+    <div class="about-grid">
+      <div class="reveal">
+        <h3><span class="ja-only">設立の趣旨</span><span class="en-only">Our Purpose</span></h3>
+        <p>
+          <span class="ja-only">本協会は、農薬や化学肥料を使用しない「自然茶」の価値を社会に広く伝えるために設立されました。化学資材に頼らない茶づくりは、土壌や水、生きものといった自然環境を守りながら、安心して楽しめるお茶を育みます。私たちは、その営みを支え、次の世代へと受け継いでいくことを目指します。</span>
+          <span class="en-only">The Association was founded to share, with society at large, the value of "natural tea" — tea cultivated without synthetic pesticides or chemical fertilizers. Growing tea without chemical inputs protects the soil, water, and living things, while producing tea that can be enjoyed with confidence. We exist to support this practice and pass it on to the next generation.</span>
+        </p>
+      </div>
+      <div class="reveal">
+        <h3><span class="ja-only">私たちの想い</span><span class="en-only">What Drives Us</span></h3>
+        <p>
+          <span class="ja-only">茶は、日本の暮らしと風景に深く根ざした文化です。一方で、後継者の減少や環境への負荷といった課題も抱えています。生産者・研究者・消費者が垣根を越えてつながり、学び合うことで、自然茶の輪を国内外へ広げていきたい。その想いから、この協会は生まれました。</span>
+          <span class="en-only">Tea is a culture deeply rooted in Japanese daily life and landscape, yet it faces challenges — fewer successors and growing environmental pressure. By connecting producers, researchers, and consumers across boundaries and learning from one another, we hope to widen the circle of natural tea both in Japan and abroad. That hope is why this association exists.</span>
+        </p>
+      </div>
+      <div class="mission-card reveal">
+        <p class="label"><span class="ja-only">私たちの目的</span><span class="en-only">Our Mission</span></p>
+        <p>
+          <span class="ja-only">農薬や化学肥料を使用しない自然茶の普及、研究、教育、情報発信および国際交流を通じて、環境保全、人々の健康および地域社会の発展に寄与する。</span>
+          <span class="en-only">To contribute to environmental conservation, human health, and the development of local communities through the promotion, research, education, communication, and international exchange of natural tea grown without agrochemicals or chemical fertilizers.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUSINESS -->
+<section class="block" id="business">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker"><span class="ja-only">事業内容</span><span class="en-only">Our Activities</span></p>
+      <h2><span class="ja-only">協会が行う5つの取り組み</span><span class="en-only">Five areas of work</span></h2>
+      <p class="lead" style="margin-top:18px;">
+        <span class="ja-only">定款に定める目的を達成するため、調査研究から教育、交流、文化の普及まで、幅広い活動を行います。</span>
+        <span class="en-only">To fulfill the purpose set out in our articles of incorporation, we pursue a broad range of activities — from research to education, exchange, and cultural outreach.</span>
+      </p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="num">01</div>
+        <h3><span class="ja-only">調査・研究と情報発信</span><span class="en-only">Research &amp; Communication</span></h3>
+        <p><span class="ja-only">自然茶に関する調査・研究を行い、その成果を広く社会に向けて発信します。</span><span class="en-only">We conduct surveys and research on natural tea and share the findings widely with society.</span></p>
+      </div>
+      <div class="card reveal">
+        <div class="num">02</div>
+        <h3><span class="ja-only">教育・研修・体験事業</span><span class="en-only">Education &amp; Experience</span></h3>
+        <p><span class="ja-only">自然茶を深く知るための教育・研修や、産地での体験プログラムを提供します。</span><span class="en-only">We offer education, training, and hands-on programs that deepen understanding of natural tea.</span></p>
+      </div>
+      <div class="card reveal">
+        <div class="num">03</div>
+        <h3><span class="ja-only">生産者・研究者・消費者の交流</span><span class="en-only">Connecting People</span></h3>
+        <p><span class="ja-only">立場を越えてつながり、学び合える場を生み出し、交流を促進します。</span><span class="en-only">We create spaces where producers, researchers, and consumers can connect and learn together.</span></p>
+      </div>
+      <div class="card reveal">
+        <div class="num">04</div>
+        <h3><span class="ja-only">文化的価値の普及</span><span class="en-only">Cultural Value</span></h3>
+        <p><span class="ja-only">自然茶が持つ文化的な価値を、国内外に向けて広く伝えていきます。</span><span class="en-only">We share the cultural value of natural tea with audiences in Japan and around the world.</span></p>
+      </div>
+      <div class="card reveal">
+        <div class="num">05</div>
+        <h3><span class="ja-only">国際交流と連携</span><span class="en-only">International Exchange</span></h3>
+        <p><span class="ja-only">海外の関係者や団体と連携し、自然茶の輪を世界へと広げます。</span><span class="en-only">We collaborate with partners and organizations abroad to widen the circle of natural tea worldwide.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANIZATION -->
+<section class="block alt-2" id="org">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker"><span class="ja-only">協会概要</span><span class="en-only">Overview</span></p>
+      <h2><span class="ja-only">協会概要</span><span class="en-only">Association Overview</span></h2>
+    </div>
+    <div class="org-single">
+      <div class="reveal">
+        <table class="info-table">
+          <tr>
+            <th><span class="ja-only">名称</span><span class="en-only">Name</span></th>
+            <td><span class="ja-only">一般社団法人 日本自然茶協会</span><span class="en-only">Japan Natural Tea Association</span></td>
+          </tr>
+          <tr>
+            <th><span class="ja-only">英文名称</span><span class="en-only">Japanese Name</span></th>
+            <td><span class="ja-only">Japan Natural Tea Association</span><span class="en-only">一般社団法人 日本自然茶協会</span></td>
+          </tr>
+          <tr>
+            <th><span class="ja-only">所在地</span><span class="en-only">Head Office</span></th>
+            <td><span class="ja-only">奈良県奈良市都祁吐山町920</span><span class="en-only">920 Tsuge-Hayama-cho, Nara City, Nara, Japan</span></td>
+          </tr>
+          <tr>
+            <th><span class="ja-only">設立</span><span class="en-only">Established</span></th>
+            <td><span class="ja-only">令和8年(2026年)3月1日</span><span class="en-only">March 1, 2026</span></td>
+          </tr>
+          <tr>
+            <th><span class="ja-only">事業年度</span><span class="en-only">Fiscal Year</span></th>
+            <td><span class="ja-only">4月1日 〜 翌年3月31日</span><span class="en-only">April 1 – March 31</span></td>
+          </tr>
+          <tr>
+            <th><span class="ja-only">事業内容</span><span class="en-only">Activities</span></th>
+            <td><span class="ja-only">自然茶の調査研究・教育・交流促進・文化普及・国際交流</span><span class="en-only">Research, education, exchange, cultural outreach, and international exchange of natural tea</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOIN -->
+<section class="block join" id="join">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker"><span class="ja-only">入会・お問い合わせ</span><span class="en-only">Membership</span></p>
+      <h2><span class="ja-only">自然茶の輪に、加わりませんか。</span><span class="en-only">Join the circle of natural tea.</span></h2>
+    </div>
+    <p class="lead reveal">
+      <span class="ja-only">本協会の社員は、協会の目的に賛同する個人または法人です。生産者・研究者・消費者を問わず、自然茶に関心をお持ちの方のご参加を歓迎します。</span>
+      <span class="en-only">Membership is open to individuals and organizations who share our purpose. Whether you are a producer, researcher, or simply someone who cares about natural tea, we warmly welcome you.</span>
+    </p>
+    <div class="member-types reveal">
+      <div class="mtype">
+        <div class="ic">🌱</div>
+        <h3><span class="ja-only">生産者</span><span class="en-only">Producers</span></h3>
+        <p><span class="ja-only">自然茶を育てる方々</span><span class="en-only">Those who grow natural tea</span></p>
+      </div>
+      <div class="mtype">
+        <div class="ic">📚</div>
+        <h3><span class="ja-only">研究者・教育者</span><span class="en-only">Researchers &amp; Educators</span></h3>
+        <p><span class="ja-only">学びと知見を深める方々</span><span class="en-only">Those who study and teach</span></p>
+      </div>
+      <div class="mtype">
+        <div class="ic">🍵</div>
+        <h3><span class="ja-only">愛好者・法人</span><span class="en-only">Enthusiasts &amp; Companies</span></h3>
+        <p><span class="ja-only">自然茶を楽しみ、応援する方々</span><span class="en-only">Those who enjoy and support tea</span></p>
+      </div>
+    </div>
+    <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="field">
+        <label for="cf-name"><span class="ja-only">お名前</span><span class="en-only">Name</span></label>
+        <input type="text" id="cf-name" name="name" required
+          data-ph-ja="山田 太郎" data-ph-en="Your name" placeholder="山田 太郎">
+      </div>
+      <div class="field">
+        <label for="cf-email"><span class="ja-only">メールアドレス</span><span class="en-only">Email</span></label>
+        <input type="email" id="cf-email" name="email" required
+          data-ph-ja="you@example.com" data-ph-en="you@example.com" placeholder="you@example.com">
+      </div>
+      <div class="field">
+        <label for="cf-message"><span class="ja-only">お問い合わせ内容</span><span class="en-only">Message</span></label>
+        <textarea id="cf-message" name="message" required
+          data-ph-ja="ご質問・ご相談などをご記入ください。" data-ph-en="How can we help you?"
+          placeholder="ご質問・ご相談などをご記入ください。"></textarea>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary" id="cf-submit">
+          <span class="ja-only">送信する</span><span class="en-only">Send message</span>
+        </button>
+      </div>
+      <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <b><span class="ja-only">一般社団法人 日本自然茶協会</span><span class="en-only">Japan Natural Tea Association</span></b>
+      <span class="ja-only">JAPAN NATURAL TEA ASSOCIATION</span>
+      <span class="en-only">一般社団法人 日本自然茶協会</span>
+    </div>
+    <div class="foot-links">
+      <a href="#about"><span class="ja-only">協会について</span><span class="en-only">About</span></a>
+      <a href="#business"><span class="ja-only">事業内容</span><span class="en-only">Activities</span></a>
+      <a href="#org"><span class="ja-only">協会概要</span><span class="en-only">Overview</span></a>
+      <a href="#join"><span class="ja-only">入会・お問い合わせ</span><span class="en-only">Membership</span></a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 <span class="ja-only">一般社団法人 日本自然茶協会</span><span class="en-only">Japan Natural Tea Association</span></span>
+    <span class="ja-only">奈良県奈良市都祁吐山町920</span>
+    <span class="en-only">Nara City, Nara, Japan</span>
+  </div>
+</footer>
+
+<script>
+  function setLang(l){
+    document.body.classList.remove('lang-ja','lang-en');
+    document.body.classList.add('lang-'+l);
+    document.documentElement.lang = l;
+    document.getElementById('btn-ja').classList.toggle('active', l==='ja');
+    document.getElementById('btn-en').classList.toggle('active', l==='en');
+    document.querySelectorAll('[data-ph-ja]').forEach(function(el){
+      el.setAttribute('placeholder', el.getAttribute('data-ph-'+l) || '');
+    });
+    try{localStorage.setItem('jnta_lang', l);}catch(e){}
+  }
+  (function(){
+    var saved=null;
+    try{saved=localStorage.getItem('jnta_lang');}catch(e){}
+    if(!saved){ saved = (navigator.language||'ja').toLowerCase().indexOf('ja')===0 ? 'ja':'en'; }
+    setLang(saved);
+  })();
+
+  // mobile menu
+  var nav=document.getElementById('nav'), mb=document.getElementById('menuBtn');
+  mb.addEventListener('click', function(){ nav.classList.toggle('open'); mb.classList.toggle('open'); mb.textContent = nav.classList.contains('open')?'✕':'☰'; });
+  nav.querySelectorAll('a.navlink').forEach(function(a){ a.addEventListener('click', function(){ nav.classList.remove('open'); mb.classList.remove('open'); mb.textContent='☰'; }); });
+
+  // contact form (Formspree AJAX submit)
+  var cf=document.getElementById('contactForm');
+  if(cf){
+    cf.addEventListener('submit', function(e){
+      e.preventDefault();
+      var status=document.getElementById('cf-status'), btn=document.getElementById('cf-submit');
+      var en=document.body.classList.contains('lang-en');
+      status.className='form-status';
+      if(cf.action.indexOf('YOUR_FORM_ID')!==-1){
+        status.classList.add('err');
+        status.textContent= en
+          ? 'Form is not configured yet. Please set your Formspree endpoint.'
+          : '送信先が未設定です。FormspreeのフォームIDを設定してください。';
+        return;
+      }
+      btn.disabled=true;
+      status.textContent= en ? 'Sending…' : '送信中…';
+      fetch(cf.action,{method:'POST',body:new FormData(cf),headers:{'Accept':'application/json'}})
+        .then(function(r){
+          if(r.ok){
+            cf.reset();
+            status.classList.add('ok');
+            status.textContent= en ? 'Thank you. Your message has been sent.' : 'お問い合わせを送信しました。ありがとうございます。';
+          }else{ throw new Error('bad'); }
+        })
+        .catch(function(){
+          status.classList.add('err');
+          status.textContent= en ? 'Sorry, sending failed. Please try again later.' : '送信に失敗しました。時間をおいて再度お試しください。';
+        })
+        .finally(function(){ btn.disabled=false; });
+    });
+  }
+
+  // scroll reveal
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
