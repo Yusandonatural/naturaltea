@@ -667,7 +667,7 @@
           title="生産者登録フォーム 日本自然茶協会"
           allow="geolocation; microphone; camera; fullscreen; payment"
           src="https://form.jotform.com/263026980551054"
-          style="width:100%;height:1600px;border:none;background:transparent;"
+          style="width:100%;height:4500px;border:none;background:transparent;"
           scrolling="no">
         </iframe>
       </div>
@@ -940,6 +940,15 @@
     window.jotformEmbedHandler("iframe[id='JotFormIFrame-263026980551054']", "https://form.jotform.com");
     window.jotformEmbedHandler("iframe[id='JotFormIFrame-263026716489061']", "https://form.jotform.com");
   }
+  // 埋め込みハンドラが高さを反映しないフォームがあるため、setHeight を直接受けて iframe の高さを合わせる
+  window.addEventListener('message', function(e){
+    if(!/jotform\.com$/.test(String(e.origin).replace(/^https?:\/\//,''))) return;
+    if(typeof e.data !== 'string') return;
+    var m = e.data.match(/^setHeight:(\d+):(\d+)/);
+    if(!m) return;
+    var f = document.getElementById('JotFormIFrame-' + m[2]);
+    if(f) f.style.height = (parseInt(m[1],10) + 20) + 'px';
+  });
 </script>
 </body>
 </html>
