@@ -187,6 +187,48 @@
     font-size:13px;padding:6px 14px;border-radius:999px;
   }
 
+  /* Registration grid (producers & shops) */
+  .reg-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px;align-items:start;}
+  .reg-col{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:clamp(18px,2.4vw,28px);}
+  .reg-title{font-size:clamp(18px,2.2vw,22px);color:var(--green-800);text-align:center;margin-bottom:6px;}
+  .reg-note{font-size:13px;color:var(--ink-soft);text-align:center;margin-bottom:16px;line-height:1.6;}
+  @media(max-width:960px){ .reg-grid{grid-template-columns:1fr;} }
+
+  /* Founder's message */
+  .founder{max-width:820px;margin:0 auto;text-align:center;position:relative;padding:clamp(30px,4vw,48px) clamp(20px,4vw,40px);}
+  .founder::before{content:"“";position:absolute;top:-10px;left:50%;transform:translateX(-50%);font-family:'Cormorant Garamond',serif;font-size:120px;line-height:1;color:var(--matcha);opacity:.55;}
+  .founder p{font-size:clamp(16px,1.9vw,20px);line-height:2.1;color:var(--ink);font-family:'Noto Serif JP',serif;font-weight:400;}
+  body.lang-en .founder p,body.lang-fr .founder p{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2.1vw,23px);}
+  .founder .sig{margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:4px;}
+  .founder .sig .name{font-family:'Cormorant Garamond',serif;font-size:26px;color:var(--green-800);font-weight:600;letter-spacing:.04em;}
+  .founder .sig .name-ja{font-family:'Noto Serif JP',serif;font-size:16px;color:var(--green-800);}
+  .founder .sig .role{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);}
+  .founder .sig .line{width:40px;height:1px;background:var(--matcha);margin:10px 0 6px;}
+
+  /* Natural tea: no fertilizer, no pesticides */
+  .nat-statement{text-align:center;max-width:820px;margin:0 auto 54px;}
+  .nat-statement .big{
+    font-family:'Noto Serif JP',serif;font-weight:600;color:var(--green-800);
+    font-size:clamp(34px,6.5vw,72px);line-height:1.25;letter-spacing:.02em;margin:6px 0 22px;
+  }
+  body.lang-en .nat-statement .big,body.lang-fr .nat-statement .big{font-family:'Cormorant Garamond',serif;}
+  .nat-statement .big em{font-style:normal;color:var(--green-600);border-bottom:4px solid var(--matcha);padding-bottom:2px;}
+  .nat-statement .lead{margin:0 auto;text-align:center;}
+  .nat-compare{width:100%;border-collapse:separate;border-spacing:0;max-width:860px;margin:0 auto 54px;background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  .nat-compare th,.nat-compare td{padding:16px 14px;text-align:center;font-size:14px;border-bottom:1px solid var(--line);}
+  .nat-compare thead th{background:var(--kinari-2);color:var(--green-800);font-weight:600;font-size:14px;}
+  .nat-compare tbody th{text-align:left;color:var(--ink-soft);font-weight:500;background:var(--kinari);}
+  .nat-compare tr:last-child td,.nat-compare tr:last-child th{border-bottom:none;}
+  .nat-compare .hl{background:var(--green-800) !important;color:var(--kinari) !important;}
+  .nat-compare .hl-cell{background:rgba(42,74,53,.08);font-weight:600;color:var(--green-800);}
+  .nat-compare .no{color:var(--green-700);font-weight:700;}
+  .nat-compare .yes{color:#b2543a;}
+  .nat-why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;max-width:980px;margin:0 auto;}
+  .nat-why .item{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:30px 26px;}
+  .nat-why .item .ic{font-size:28px;margin-bottom:12px;}
+  .nat-why .item h3{font-size:18px;color:var(--green-800);margin-bottom:10px;}
+  .nat-why .item p{font-size:14px;color:var(--ink-soft);}
+
   /* Context: challenges & global attention */
   .context-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
   .ctx-panel{border-radius:8px;padding:clamp(26px,3.4vw,40px);border:1px solid var(--line);}
@@ -246,6 +288,10 @@
   .member-types{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;max-width:760px;margin:40px auto 0;}
   /* contact form */
   .contact-form{max-width:600px;margin:46px auto 0;text-align:left;}
+  .apply-head{max-width:640px;margin:48px auto 0;text-align:center;}
+  .apply-head h3{font-size:clamp(20px,2.6vw,26px);color:var(--kinari);margin-bottom:12px;}
+  .apply-head p{font-size:15px;color:rgba(244,241,232,.85);line-height:1.8;}
+  .apply-head .tag{display:inline-block;background:var(--matcha);color:var(--green-900);font-size:12px;letter-spacing:.14em;padding:4px 14px;border-radius:999px;margin-bottom:14px;}
   .field{margin-bottom:20px;}
   .field label{display:block;font-size:13px;letter-spacing:.06em;color:var(--matcha);margin-bottom:8px;}
   .field input,.field textarea{
@@ -295,7 +341,7 @@
   }
 </style>
 </head>
-<body class="lang-ja">
+<body class="lang-en">
 
 <header>
   <a href="#top" class="brand">
@@ -308,6 +354,7 @@
   </a>
   <nav class="main" id="nav">
     <a class="navlink" href="#about"><span class="ja-only">協会について</span><span class="en-only">About</span><span class="fr-only">À propos</span></a>
+    <a class="navlink" href="#natural"><span class="ja-only">自然茶とは</span><span class="en-only">Natural Tea</span><span class="fr-only">Thé naturel</span></a>
     <a class="navlink" href="#business"><span class="ja-only">事業内容</span><span class="en-only">Activities</span><span class="fr-only">Activités</span></a>
     <a class="navlink" href="#producers"><span class="ja-only">生産者紹介</span><span class="en-only">Producers</span><span class="fr-only">Producteurs</span></a>
     <a class="navlink" href="#visit"><span class="ja-only">楽しめる場所</span><span class="en-only">Visit</span><span class="fr-only">Visiter</span></a>
@@ -369,6 +416,96 @@
           <span class="ja-only">農薬や化学肥料を使用しない自然茶の普及、研究、教育、情報発信および国際交流を通じて、環境保全、人々の健康および地域社会の発展に寄与する。</span>
           <span class="en-only">To contribute to environmental conservation, human health, and the development of local communities through the promotion, research, education, communication, and international exchange of natural tea grown without agrochemicals or chemical fertilizers.</span><span class="fr-only">Contribuer à la préservation de l’environnement, à la santé humaine et au développement des communautés locales par la promotion, la recherche, l’éducation, la diffusion d’informations et les échanges internationaux autour du thé naturel cultivé sans produits agrochimiques ni engrais chimiques.</span>
         </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="block alt-2" id="founder">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;margin-bottom:30px;">
+      <p class="kicker" style="justify-content:center;"><span class="ja-only">代表挨拶</span><span class="en-only">Founder’s Message</span><span class="fr-only">Message du fondateur</span></p>
+    </div>
+    <div class="founder reveal">
+      <p>
+        <span class="ja-only">僕は自然栽培のお茶作りを10年以上、奈良で実践してきました。自然を守りながら、自然と触れて、お茶を育てる。その世界観に魅了されてここまできました。日本にとどまるのではなく、世界に広げられるようにこの協会を設立しました。</span>
+        <span class="en-only">I have practiced natural-cultivation tea growing in Nara for more than ten years. Protecting nature, staying close to nature, and growing tea — that way of seeing the world captivated me and has carried me here. I founded this association so that it would not remain only in Japan, but could reach the world.</span>
+        <span class="fr-only">Je pratique la culture naturelle du thé à Nara depuis plus de dix ans. Protéger la nature, rester proche de la nature et faire pousser le thé — cette vision du monde m’a captivé et m’a mené jusqu’ici. J’ai fondé cette association pour qu’elle ne reste pas confinée au Japon, mais puisse s’ouvrir au monde.</span>
+      </p>
+      <div class="sig">
+        <span class="line"></span>
+        <span class="name">Ryotaro Isozaki</span>
+        <span class="name-ja"><span class="ja-only">礒﨑 遼太郎</span><span class="en-only">礒﨑 遼太郎</span><span class="fr-only">礒﨑 遼太郎</span></span>
+        <span class="role"><span class="ja-only">代表理事・創設者</span><span class="en-only">Representative Director &amp; Founder</span><span class="fr-only">Directeur représentant &amp; fondateur</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NATURAL TEA -->
+<section class="block" id="natural">
+  <div class="wrap">
+    <div class="nat-statement reveal">
+      <p class="kicker" style="justify-content:center;"><span class="ja-only">自然茶とは</span><span class="en-only">What is Natural Tea</span><span class="fr-only">Qu’est-ce que le thé naturel</span></p>
+      <p class="big">
+        <span class="ja-only"><em>無肥料</em>・<em>無農薬</em>。</span>
+        <span class="en-only"><em>No fertilizer.</em> <em>No pesticides.</em></span>
+        <span class="fr-only"><em>Sans engrais.</em> <em>Sans pesticides.</em></span>
+      </p>
+      <p class="lead">
+        <span class="ja-only">自然茶は、化学肥料はもちろん有機肥料も含めて、肥料を一切与えません。農薬も使いません。土と茶の木が本来もつ力だけで、時間をかけてゆっくりと育ったお茶です。</span>
+        <span class="en-only">Natural tea is grown with no fertilizer whatsoever — not even organic fertilizer — and no pesticides. Only the soil and the tea plant’s own vitality, given time to grow slowly.</span>
+        <span class="fr-only">Le thé naturel est cultivé sans aucun engrais — pas même organique — et sans pesticides. Seuls le sol et la vitalité propre du théier, qui prend le temps de pousser lentement.</span>
+      </p>
+    </div>
+
+    <table class="nat-compare reveal">
+      <thead>
+        <tr>
+          <th></th>
+          <th><span class="ja-only">慣行栽培</span><span class="en-only">Conventional</span><span class="fr-only">Conventionnel</span></th>
+          <th><span class="ja-only">有機栽培</span><span class="en-only">Organic</span><span class="fr-only">Biologique</span></th>
+          <th class="hl"><span class="ja-only">自然栽培（自然茶）</span><span class="en-only">Natural (Natural Tea)</span><span class="fr-only">Naturel (thé naturel)</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th><span class="ja-only">農薬</span><span class="en-only">Pesticides</span><span class="fr-only">Pesticides</span></th>
+          <td class="yes"><span class="ja-only">使用</span><span class="en-only">Used</span><span class="fr-only">Utilisés</span></td>
+          <td><span class="ja-only">原則不使用<br><small>（一部認可資材あり）</small></span><span class="en-only">Mostly not<br><small>(some approved inputs)</small></span><span class="fr-only">En principe non<br><small>(certains intrants autorisés)</small></span></td>
+          <td class="hl-cell no"><span class="ja-only">不使用</span><span class="en-only">None</span><span class="fr-only">Aucun</span></td>
+        </tr>
+        <tr>
+          <th><span class="ja-only">化学肥料</span><span class="en-only">Chemical fertilizer</span><span class="fr-only">Engrais chimique</span></th>
+          <td class="yes"><span class="ja-only">使用</span><span class="en-only">Used</span><span class="fr-only">Utilisé</span></td>
+          <td class="no"><span class="ja-only">不使用</span><span class="en-only">None</span><span class="fr-only">Aucun</span></td>
+          <td class="hl-cell no"><span class="ja-only">不使用</span><span class="en-only">None</span><span class="fr-only">Aucun</span></td>
+        </tr>
+        <tr>
+          <th><span class="ja-only">有機肥料</span><span class="en-only">Organic fertilizer</span><span class="fr-only">Engrais organique</span></th>
+          <td class="yes"><span class="ja-only">使用</span><span class="en-only">Used</span><span class="fr-only">Utilisé</span></td>
+          <td class="yes"><span class="ja-only">使用</span><span class="en-only">Used</span><span class="fr-only">Utilisé</span></td>
+          <td class="hl-cell no"><span class="ja-only">不使用</span><span class="en-only">None</span><span class="fr-only">Aucun</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="nat-why">
+      <div class="item reveal">
+        <div class="ic">🌱</div>
+        <h3><span class="ja-only">土と水を汚さない</span><span class="en-only">Clean soil, clean water</span><span class="fr-only">Sol et eau préservés</span></h3>
+        <p><span class="ja-only">肥料も農薬も使わないため、土壌や地下水に負荷をかけません。茶畑そのものが、生きものの豊かな環境になります。</span><span class="en-only">With no fertilizer and no pesticides, nothing burdens the soil or groundwater. The tea garden itself becomes a living habitat.</span><span class="fr-only">Sans engrais ni pesticides, rien ne pèse sur le sol ni sur les nappes. Le jardin de thé devient lui-même un habitat vivant.</span></p>
+      </div>
+      <div class="item reveal">
+        <div class="ic">🍃</div>
+        <h3><span class="ja-only">残留農薬ゼロ</span><span class="en-only">Zero pesticide residue</span><span class="fr-only">Zéro résidu de pesticides</span></h3>
+        <p><span class="ja-only">そもそも使っていないので、残留を心配する必要がありません。小さなお子さまから海外のお客さままで、そのまま安心して楽しめます。</span><span class="en-only">Nothing was ever applied, so there is nothing to worry about — tea that children and guests from abroad can enjoy as it is.</span><span class="fr-only">Rien n’a jamais été appliqué, donc rien à craindre — un thé que les enfants comme les visiteurs étrangers peuvent savourer tel quel.</span></p>
+      </div>
+      <div class="item reveal">
+        <div class="ic">🍵</div>
+        <h3><span class="ja-only">茶本来の味わい</span><span class="en-only">The tea’s true character</span><span class="fr-only">Le vrai caractère du thé</span></h3>
+        <p><span class="ja-only">肥料で太らせない茶葉は、雑味がなく、すっきりとした甘みと深い余韻をもちます。土地と季節の個性が、そのまま一杯に表れます。</span><span class="en-only">Leaves not forced with fertilizer are clean and free of harshness, with a gentle sweetness and long finish — the land and season in every cup.</span><span class="fr-only">Des feuilles non forcées par l’engrais, sans âpreté, à la douceur délicate et à la longue finale — le terroir et la saison dans chaque tasse.</span></p>
       </div>
     </div>
   </div>
@@ -470,7 +607,7 @@
     </div>
     <div class="producer-card reveal">
       <div class="producer-head">
-        <h3><span class="ja-only">株式会社 悠三堂</span><span class="en-only">Yusando Co., Ltd.</span><span class="fr-only">Yusando Co., Ltd.</span></h3>
+        <h3><span class="ja-only">株式会社 悠三堂</span><span class="en-only">Yusando Inc.</span><span class="fr-only">Yusando Inc.</span></h3>
         <a href="https://yusando.com" target="_blank" rel="noopener">yusando.com</a>
       </div>
       <div class="producer-meta">
@@ -504,6 +641,47 @@
       </div>
       <div class="map-embed reveal">
         <iframe title="株式会社 悠三堂 所在地 / Yusando location" src="https://maps.google.com/maps?q=%E5%A5%88%E8%89%AF%E7%9C%8C%E5%A5%88%E8%89%AF%E5%B8%82%E4%B8%8A%E6%B7%B1%E5%B7%9D%E7%94%BA227&z=15&hl=ja&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTRATION (producers & shops) -->
+<section class="block alt-2" id="register">
+  <div class="wrap">
+    <div class="sec-head reveal" style="text-align:center;">
+      <p class="kicker" style="justify-content:center;"><span class="ja-only">登録</span><span class="en-only">Registration</span><span class="fr-only">Inscription</span></p>
+      <h2><span class="ja-only">生産者・販売店の皆さまへ</span><span class="en-only">For producers and shops</span><span class="fr-only">Pour les producteurs et les boutiques</span></h2>
+      <p class="lead" style="margin:18px auto 0;">
+        <span class="ja-only">自然茶を育てる生産者の方、日本の自然栽培茶を取り扱う販売店・カフェの方は、以下のフォームからご登録ください。協会サイトでのご紹介にも活用します。</span>
+        <span class="en-only">Tea growers, and shops or cafés that carry Japanese natural tea, can register using the forms below. We also use these to feature you on this website.</span>
+        <span class="fr-only">Producteurs de thé, boutiques et cafés proposant du thé naturel japonais : inscrivez-vous via les formulaires ci-dessous. Nous les utilisons aussi pour vous présenter sur ce site.</span>
+      </p>
+    </div>
+    <div class="reg-grid">
+      <div class="reg-col reveal">
+        <h3 class="reg-title"><span class="ja-only">生産者登録</span><span class="en-only">Producer Registration</span><span class="fr-only">Inscription des producteurs</span></h3>
+        <p class="reg-note"><span class="ja-only">農園名・所在地・お茶の種類・輸出や海外からの受け入れの可否など（日本語）</span><span class="en-only">Farm, location, teas, export readiness, overseas visitors (in Japanese)</span><span class="fr-only">Exploitation, lieu, thés, export, accueil de visiteurs (en japonais)</span></p>
+        <iframe
+          id="JotFormIFrame-263026980551054"
+          title="生産者登録フォーム 日本自然茶協会"
+          allow="geolocation; microphone; camera; fullscreen; payment"
+          src="https://form.jotform.com/263026980551054"
+          style="width:100%;height:1600px;border:none;background:transparent;"
+          scrolling="no">
+        </iframe>
+      </div>
+      <div class="reg-col reveal">
+        <h3 class="reg-title"><span class="ja-only">販売店登録</span><span class="en-only">Shop Registration</span><span class="fr-only">Inscription des boutiques</span></h3>
+        <p class="reg-note"><span class="ja-only">店舗名・業態・所在地・取り扱うお茶・海外発送の可否など（日英）</span><span class="en-only">Shop, type, location, teas carried, international shipping (JP / EN)</span><span class="fr-only">Boutique, type, lieu, thés proposés, expédition internationale (JP / EN)</span></p>
+        <iframe
+          id="JotFormIFrame-263026716489061"
+          title="販売店登録フォーム 日本自然茶協会 / Shop Registration"
+          allow="geolocation; microphone; camera; fullscreen; payment"
+          src="https://form.jotform.com/263026716489061"
+          style="width:100%;height:1600px;border:none;background:transparent;"
+          scrolling="no">
+        </iframe>
       </div>
     </div>
   </div>
@@ -581,15 +759,25 @@
         <p><span class="ja-only">自然茶を楽しみ、応援する方々</span><span class="en-only">Those who enjoy and support tea</span><span class="fr-only">Celles et ceux qui apprécient et soutiennent le thé</span></p>
       </div>
     </div>
-    <div class="contact-form reveal" id="contactFormWrap">
+    <div class="apply-head reveal">
+      <span class="tag"><span class="ja-only">メンバー募集</span><span class="en-only">MEMBERSHIP</span><span class="fr-only">ADHÉSION</span></span>
+      <h3><span class="ja-only">メンバーを募集しています</span><span class="en-only">We’re looking for members</span><span class="fr-only">Nous recherchons des membres</span></h3>
+      <p><span class="ja-only">自然茶を世界に広げる仲間を募集しています。生産者・販売店・事務局・アンバサダーなど、関わり方は自由です。以下のフォームからご応募ください（日本語・英語どちらでも）。</span><span class="en-only">We are looking for members to bring natural tea from Japan to the world — growers, retailers, organizers, ambassadors and more. Apply using the form below (Japanese or English).</span><span class="fr-only">Nous recherchons des membres pour faire connaître le thé naturel du Japon dans le monde — producteurs, détaillants, organisateurs, ambassadeurs. Postulez via le formulaire ci-dessous (japonais ou anglais).</span></p>
+    </div>
+    <div class="contact-form reveal" id="memberFormWrap">
       <iframe
-        id="JotFormIFrame-261521964938063"
-        title="お問い合わせフォーム 日本自然茶協会"
+        id="JotFormIFrame-263016570075049"
+        title="メンバー応募フォーム 日本自然茶協会 / Membership Application"
         allow="geolocation; microphone; camera; fullscreen; payment"
-        src="https://form.jotform.com/261521964938063"
-        style="width:100%;max-width:680px;height:760px;border:none;background:transparent;"
+        src="https://form.jotform.com/263016570075049"
+        style="width:100%;max-width:680px;height:1500px;border:none;background:transparent;"
         scrolling="no">
       </iframe>
+    </div>
+    <div class="apply-head reveal" style="margin-top:56px;">
+      <h3 style="font-size:clamp(18px,2.2vw,22px);"><span class="ja-only">お問い合わせ</span><span class="en-only">Inquiries</span><span class="fr-only">Nous contacter</span></h3>
+      <p><span class="ja-only">ご質問・ご相談は、お問い合わせフォームからお気軽にどうぞ。</span><span class="en-only">For questions or consultations, please use our contact form.</span><span class="fr-only">Pour toute question, utilisez notre formulaire de contact.</span></p>
+      <a class="btn btn-primary" href="https://form.jotform.com/261521964938063" target="_blank" rel="noopener" style="margin-top:14px;"><span class="ja-only">お問い合わせフォームを開く</span><span class="en-only">Open contact form</span><span class="fr-only">Ouvrir le formulaire de contact</span></a>
     </div>
   </div>
 </section>
@@ -670,6 +858,7 @@
       <a href="#about"><span class="ja-only">協会について</span><span class="en-only">About</span><span class="fr-only">À propos</span></a>
       <a href="#business"><span class="ja-only">事業内容</span><span class="en-only">Activities</span><span class="fr-only">Activités</span></a>
       <a href="#producers"><span class="ja-only">生産者紹介</span><span class="en-only">Producers</span><span class="fr-only">Producteurs</span></a>
+      <a href="#register"><span class="ja-only">生産者・販売店登録</span><span class="en-only">Register</span><span class="fr-only">Inscription</span></a>
       <a href="#visit"><span class="ja-only">楽しめる場所</span><span class="en-only">Visit</span><span class="fr-only">Visiter</span></a>
       <a href="#org"><span class="ja-only">協会概要</span><span class="en-only">Overview</span><span class="fr-only">Présentation</span></a>
       <a href="#join"><span class="ja-only">入会・お問い合わせ</span><span class="en-only">Membership</span><span class="fr-only">Adhésion</span></a>
@@ -698,7 +887,7 @@
   (function(){
     var saved=null;
     try{saved=localStorage.getItem('jnta_lang');}catch(e){}
-    if(!saved){ saved = (navigator.language||'ja').toLowerCase().indexOf('ja')===0 ? 'ja':'en'; }
+    if(!saved){ saved = 'en'; }
     setLang(saved);
   })();
 
@@ -746,8 +935,11 @@
 </script>
 <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
 <script>
-  window.jotformEmbedHandler &&
-    window.jotformEmbedHandler("iframe[id='JotFormIFrame-261521964938063']", "https://form.jotform.com");
+  if(window.jotformEmbedHandler){
+    window.jotformEmbedHandler("iframe[id='JotFormIFrame-263016570075049']", "https://form.jotform.com");
+    window.jotformEmbedHandler("iframe[id='JotFormIFrame-263026980551054']", "https://form.jotform.com");
+    window.jotformEmbedHandler("iframe[id='JotFormIFrame-263026716489061']", "https://form.jotform.com");
+  }
 </script>
 </body>
 </html>
