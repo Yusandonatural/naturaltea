@@ -167,6 +167,32 @@
     .card p{grid-column:2;}
   }
 
+  /* Upcoming activities */
+  .upcoming{background:var(--green-900);color:var(--kinari);}
+  .upcoming h2{color:var(--kinari);}
+  .upcoming .kicker{color:var(--matcha);}
+  .upcoming .kicker::before{background:var(--matcha);}
+  .upcoming .lead{color:rgba(244,241,232,.82);}
+  .plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgba(138,171,110,.35);}
+  .plan{padding:34px 30px 38px 0;border-bottom:1px solid rgba(138,171,110,.35);}
+  .plan + .plan{padding-left:30px;border-left:1px solid rgba(138,171,110,.35);}
+  .plan:nth-child(3n+1){padding-left:0;border-left:0;}
+  .plan .tag{font-size:13px;letter-spacing:.12em;color:var(--matcha);margin-bottom:12px;}
+  .plan h3{font-size:20px;line-height:1.55;color:#fff;margin-bottom:12px;}
+  .plan p{font-size:15px;line-height:1.9;color:rgba(244,241,232,.8);font-weight:400;}
+  body.lang-en .plan p,body.lang-fr .plan p{font-size:16px;}
+  .upcoming-cta{margin-top:44px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px;}
+  .upcoming-cta p{color:rgba(244,241,232,.85);flex:1 1 320px;}
+  @media(max-width:960px){
+    .plans{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .plan:nth-child(3n+1){padding-left:30px;border-left:1px solid rgba(138,171,110,.35);}
+    .plan:nth-child(2n+1){padding-left:0;border-left:0;}
+  }
+  @media(max-width:620px){
+    .plans{grid-template-columns:minmax(0,1fr);}
+    .plan,.plan + .plan,.plan:nth-child(3n+1){padding:26px 0 28px;border-left:0;}
+  }
+
   /* Org / officers */
   .org-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:54px;align-items:start;}
   .org-single{max-width:760px;margin:0 auto;}
@@ -615,6 +641,55 @@
   </div>
 </section>
 
+<!-- UPCOMING -->
+<section class="block upcoming" id="upcoming">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="kicker"><span class="ja-only">準備中の活動</span><span class="en-only">In Preparation</span><span class="fr-only">En préparation</span></p>
+      <h2><span class="ja-only">これから始まる、6つの活動</span><span class="en-only">Six projects on the way</span><span class="fr-only">Six projets en préparation</span></h2>
+      <p class="lead" style="margin-top:18px;">
+        <span class="ja-only">自然茶を、もっと身近に、もっと深く。協会では現在、次の活動の準備を進めています。始まる時期が決まりしだい、このサイトと Instagram でお知らせします。</span><span class="en-only">Bringing natural tea closer, and deeper. The association is now preparing the projects below. We’ll announce each one here and on Instagram as soon as its start date is set.</span><span class="fr-only">Rendre le thé naturel plus proche, et plus profond. L’association prépare actuellement les projets ci-dessous. Nous annoncerons chacun ici et sur Instagram dès que sa date de lancement sera fixée.</span>
+      </p>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <p class="tag"><span class="ja-only">日本国内</span><span class="en-only">In Japan</span><span class="fr-only">Au Japon</span></p>
+        <h3><span class="ja-only">生産者をめぐるティーツアー</span><span class="en-only">Tea tours to meet the growers</span><span class="fr-only">Circuits à la rencontre des producteurs</span></h3>
+        <p><span class="ja-only">日本各地の自然茶の産地を訪ね、生産者と一緒に茶畑や製茶の現場を歩きます。</span><span class="en-only">Visit natural tea regions across Japan and walk the fields and tea workshops with the growers themselves.</span><span class="fr-only">Visitez les régions de thé naturel du Japon et parcourez les champs et les ateliers avec les producteurs eux-mêmes.</span></p>
+      </div>
+      <div class="plan reveal">
+        <p class="tag"><span class="ja-only">オンライン</span><span class="en-only">Online</span><span class="fr-only">En ligne</span></p>
+        <h3><span class="ja-only">オンラインコース</span><span class="en-only">Online courses</span><span class="fr-only">Cours en ligne</span></h3>
+        <p><span class="ja-only">自然栽培によるお茶の生産、日本茶の基礎、茶道・煎茶道の3つのテーマで学べます。海外からも受講できます。</span><span class="en-only">Three themes: growing tea naturally, the essentials of Japanese tea, and the tea ceremony (chadō and senchadō). Open to learners worldwide.</span><span class="fr-only">Trois thèmes : cultiver le thé naturellement, les bases du thé japonais, et la cérémonie du thé (chadō et senchadō). Ouverts aux participants du monde entier.</span></p>
+      </div>
+      <div class="plan reveal">
+        <p class="tag"><span class="ja-only">年に一度</span><span class="en-only">Once a year</span><span class="fr-only">Une fois par an</span></p>
+        <h3><span class="ja-only">自然栽培茶カンファレンス</span><span class="en-only">Natural Tea Conference</span><span class="fr-only">Conférence du thé naturel</span></h3>
+        <p><span class="ja-only">生産者・研究者・販売店・お茶を愛する人が集まり、自然栽培の知恵とこれからを語り合います。</span><span class="en-only">Growers, researchers, retailers, and tea lovers gather to share what they know about natural cultivation and where it goes next.</span><span class="fr-only">Producteurs, chercheurs, commerçants et amateurs de thé se réunissent pour partager leurs savoirs sur la culture naturelle et son avenir.</span></p>
+      </div>
+      <div class="plan reveal">
+        <p class="tag">YouTube</p>
+        <h3><span class="ja-only">生産者を紹介する動画</span><span class="en-only">Videos featuring the growers</span><span class="fr-only">Vidéos sur les producteurs</span></h3>
+        <p><span class="ja-only">生産者の畑と暮らし、お茶づくりへの想いを、動画でお届けします。</span><span class="en-only">Films about the growers — their fields, their lives, and what goes into their tea.</span><span class="fr-only">Des films sur les producteurs — leurs champs, leur vie et ce qu’ils mettent dans leur thé.</span></p>
+      </div>
+      <div class="plan reveal">
+        <p class="tag"><span class="ja-only">お届け</span><span class="en-only">By mail</span><span class="fr-only">Par courrier</span></p>
+        <h3><span class="ja-only">自然茶サンプルのアソートパック</span><span class="en-only">Natural tea sampler pack</span><span class="fr-only">Coffret découverte de thés naturels</span></h3>
+        <p><span class="ja-only">いろいろな生産者の自然茶を少しずつ詰め合わせ、飲み比べができるセットです。</span><span class="en-only">Small portions of natural tea from different growers, packed together so you can taste and compare.</span><span class="fr-only">De petites portions de thés naturels de différents producteurs, réunies pour déguster et comparer.</span></p>
+      </div>
+      <div class="plan reveal">
+        <p class="tag"><span class="ja-only">メール</span><span class="en-only">Email</span><span class="fr-only">E-mail</span></p>
+        <h3><span class="ja-only">メールマガジン</span><span class="en-only">Newsletter</span><span class="fr-only">Lettre d’information</span></h3>
+        <p><span class="ja-only">活動のお知らせ、生産者からの便り、ツアーやコースの先行案内をお届けします。</span><span class="en-only">News from the association, letters from the growers, and early notice of tours and courses.</span><span class="fr-only">Les nouvelles de l’association, des lettres des producteurs et l’annonce en avant-première des circuits et des cours.</span></p>
+      </div>
+    </div>
+    <div class="upcoming-cta reveal">
+      <p><span class="ja-only">いち早く案内を受け取りたい方は、メンバー応募フォームからご登録ください。</span><span class="en-only">Want to hear first? Sign up through the membership application form.</span><span class="fr-only">Vous voulez être informé en premier ? Inscrivez-vous via le formulaire d’adhésion.</span></p>
+      <a class="btn btn-primary" href="#join"><span class="ja-only">メンバーに応募する</span><span class="en-only">Apply to become a member</span><span class="fr-only">Devenir membre</span></a>
+    </div>
+  </div>
+</section>
+
 <!-- PRODUCERS -->
 <section class="block alt" id="producers">
   <div class="wrap">
@@ -871,6 +946,7 @@
     <div class="foot-links">
       <a href="#about"><span class="ja-only">協会について</span><span class="en-only">About</span><span class="fr-only">À propos</span></a>
       <a href="#business"><span class="ja-only">事業内容</span><span class="en-only">Activities</span><span class="fr-only">Activités</span></a>
+      <a href="#upcoming"><span class="ja-only">準備中の活動</span><span class="en-only">Coming soon</span><span class="fr-only">À venir</span></a>
       <a href="#producers"><span class="ja-only">生産者紹介</span><span class="en-only">Producers</span><span class="fr-only">Producteurs</span></a>
       <a href="#register"><span class="ja-only">生産者・販売店登録</span><span class="en-only">Register</span><span class="fr-only">Inscription</span></a>
       <a href="#visit"><span class="ja-only">楽しめる場所</span><span class="en-only">Visit</span><span class="fr-only">Visiter</span></a>

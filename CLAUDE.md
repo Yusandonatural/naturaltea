@@ -56,12 +56,13 @@
 4. `#natural` 自然茶とは — **無肥料・無農薬**を大きく掲げ、慣行／有機／自然栽培の比較表
 5. `#context` 日本茶の今（課題と世界からの注目、統計3点＋出典リンク）
 6. `#business` 事業内容（5つの取り組み）
-7. `#producers` 生産者紹介（株式会社 悠三堂 / Yusando Inc.、奈良市上深川町227、Googleマップ埋め込み）
-8. `#register` 登録（生産者登録フォーム＋販売店登録フォーム、横並び）
-9. `#visit` カフェ・小売店（YUSANDO NATURAL TEA、都祁吐山町920、予約制、Googleマップ）
-10. `#join` 入会（メンバー募集＋メンバー応募フォーム、お問い合わせボタン）
-11. `#instagram`（@japan_natural_tea）
-12. `#org` 協会概要（名称・代表理事・所在地・設立日 2026-05-07・事業年度）
+7. `#upcoming` 準備中の活動（深緑背景、6項目: ティーツアー／オンラインコース／年1回のカンファレンス／YouTube生産者紹介／サンプルアソートパック／メールマガジン。開始したら各項目に申込・視聴リンクを足す）
+8. `#producers` 生産者紹介（株式会社 悠三堂 / Yusando Inc.、奈良市上深川町227、Googleマップ埋め込み）
+9. `#register` 登録（生産者登録フォーム＋販売店登録フォーム、横並び）
+10. `#visit` カフェ・小売店（YUSANDO NATURAL TEA、都祁吐山町920、予約制、Googleマップ）
+11. `#join` 入会（メンバー募集＋メンバー応募フォーム、お問い合わせボタン）
+12. `#instagram`（@japan_natural_tea）
+13. `#org` 協会概要（名称・代表理事・所在地・設立日 2026-05-07・事業年度）
 
 ### 埋め込み
 - Jotform は `<iframe id="JotFormIFrame-<formID>" src="https://form.jotform.com/<formID>">` で埋め込み、末尾の `jotformEmbedHandler(...)` に同じ ID を登録すると高さが自動調整される
