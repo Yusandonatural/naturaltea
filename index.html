@@ -681,7 +681,7 @@
       </p>
     </div>
     <div class="reg-grid">
-      <div class="reg-col reveal">
+      <div class="reg-col">
         <h3 class="reg-title"><span class="ja-only">生産者登録</span><span class="en-only">Producer Registration</span><span class="fr-only">Inscription des producteurs</span></h3>
         <p class="reg-note"><span class="ja-only">農園名・所在地・お茶の種類・輸出や海外からの受け入れの可否など（日本語）</span><span class="en-only">Farm, location, teas, export readiness, overseas visitors (in Japanese)</span><span class="fr-only">Exploitation, lieu, thés, export, accueil de visiteurs (en japonais)</span></p>
         <iframe
@@ -693,7 +693,7 @@
           scrolling="no">
         </iframe>
       </div>
-      <div class="reg-col reveal">
+      <div class="reg-col">
         <h3 class="reg-title"><span class="ja-only">販売店登録</span><span class="en-only">Shop Registration</span><span class="fr-only">Inscription des boutiques</span></h3>
         <p class="reg-note"><span class="ja-only">店舗名・業態・所在地・取り扱うお茶・海外発送の可否など（日英）</span><span class="en-only">Shop, type, location, teas carried, international shipping (JP / EN)</span><span class="fr-only">Boutique, type, lieu, thés proposés, expédition internationale (JP / EN)</span></p>
         <iframe
@@ -786,7 +786,7 @@
       <h3><span class="ja-only">メンバーを募集しています</span><span class="en-only">We’re looking for members</span><span class="fr-only">Nous recherchons des membres</span></h3>
       <p><span class="ja-only">自然茶を世界に広げる仲間を募集しています。生産者・販売店・事務局・アンバサダーなど、関わり方は自由です。以下のフォームからご応募ください（日本語・英語どちらでも）。</span><span class="en-only">We are looking for members to bring natural tea from Japan to the world — growers, retailers, organizers, ambassadors and more. Apply using the form below (Japanese or English).</span><span class="fr-only">Nous recherchons des membres pour faire connaître le thé naturel du Japon dans le monde — producteurs, détaillants, organisateurs, ambassadeurs. Postulez via le formulaire ci-dessous (japonais ou anglais).</span></p>
     </div>
-    <div class="contact-form reveal" id="memberFormWrap">
+    <div class="contact-form" id="memberFormWrap">
       <iframe
         id="JotFormIFrame-263016570075049"
         title="メンバー応募フォーム 日本自然茶協会 / Membership Application"
@@ -952,7 +952,7 @@
   }
 
   // scroll reveal
-  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); },{threshold:.12});
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }); },{threshold:0,rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 </script>
 <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
