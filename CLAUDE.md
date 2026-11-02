@@ -49,6 +49,11 @@
   python3 -c "import html.parser;html.parser.HTMLParser().feed(open('index.html',encoding='utf-8').read());print('parse OK')"
   ```
 
+### ページ
+- `index.html` — トップ（1ページ構成、下記セクション）
+- `directory/index.html` — 生産者とショップの紹介ページ（naturaltea.jp/directory/）。CSS はページ内に持つ（トップと同じ変数・ヘッダー・フッター）。ヘッダーナビの「生産者とショップ」と、トップの `#producers`・`#visit` 下の「すべて見る」リンクから来る。言語は `localStorage('jnta_lang')` を共有
+- ページを足したら、ヘッダー／フッターのリンクと3言語 span 件数チェックを両ページで行う
+
 ### セクション構成（上から順）
 1. `#top` ヒーロー
 2. `#about` 協会について（設立趣旨・想い・ミッション）
@@ -95,7 +100,7 @@ Jotform は MCP コネクタ（または https://www.jotform.com/build/<formID>�
 ## 今後の候補
 - 「事業内容」を収益3本に合わせて組み替え、それぞれに「登録する／参加する／お問い合わせ」ボタンを付ける
 - お知らせ・活動報告、イベント／マルシェ情報、海外日本茶コースの案内、登録生産者・販売店の一覧 などのコンテンツ枠
-- 複数ページ化は現時点では不要（1ページのまま）
+- 登録生産者・販売店が増えたら `directory/index.html` に `.entry` カードを足す（掲載は登録フォームで「掲載可」の回答のみ。メール・電話は載せない）。件数は `.jump .count` も更新
 
 ## 関連
 - Instagram: @japan_natural_tea
