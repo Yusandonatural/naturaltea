@@ -1,49 +1,34 @@
 #!/usr/bin/env python3
-"""Instagram 投稿の LP を posts/posts.json から生成する。
+"""Instagram 投稿を tools/instagram_posts.json からサイトに反映する。
 
     python3 tools/build_posts.py
 
-posts/<slug>/index.html（投稿ごとの LP）と posts/index.html（一覧）を書き出す。
+投稿の kind で行き先が変わる:
+  producer → directory/index.html の「生産者」欄にカードを差し込む
+  shop     → directory/index.html の「ショップ・カフェ」欄にカードを差し込む
+  education → learn/<slug>/index.html（独立した LP）を作り、learn/index.html（一覧）に載せる
 生成物はそのまま commit する（GitHub Pages にビルド工程はない）。
 """
 import json
+import re
 from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-POSTS_DIR = ROOT / "posts"
+DATA = ROOT / "tools" / "instagram_posts.json"
+DIRECTORY = ROOT / "directory" / "index.html"
+LEARN_DIR = ROOT / "learn"
 LANGS = ("ja", "en", "fr")
+DIRECTORY_KINDS = ("producer", "shop")
 
 KINDS = {
-    "shop": {
-        "label": {"ja": "ショップ紹介", "en": "Shop feature", "fr": "Boutique à la une"},
-        "cta_title": {"ja": "あなたのお店も紹介します", "en": "We’d love to feature your shop", "fr": "Nous aimerions présenter votre boutique"},
-        "cta_text": {
-            "ja": "自然茶を扱う、または扱いたいショップ・カフェ・オンラインショップは、販売店登録フォームからご登録ください。",
-            "en": "Shops, cafés and online stores that carry natural tea, or would like to, can register through the shop form.",
-            "fr": "Les boutiques, cafés et boutiques en ligne qui proposent du thé naturel, ou souhaitent le faire, peuvent s’inscrire via le formulaire boutiques.",
-        },
-        "cta_button": {"ja": "販売店登録をする", "en": "Register your shop", "fr": "Inscrire votre boutique"},
-        "cta_href": "/#register",
-    },
-    "producer": {
-        "label": {"ja": "生産者紹介", "en": "Producer feature", "fr": "Producteur à la une"},
-        "cta_title": {"ja": "あなたの農園も紹介します", "en": "We’d love to feature your farm", "fr": "Nous aimerions présenter votre exploitation"},
-        "cta_text": {
-            "ja": "無肥料・無農薬でお茶を育てている方は、生産者登録フォームからご登録ください。",
-            "en": "If you grow tea with no fertilizer and no pesticides, register through the producer form.",
-            "fr": "Si vous cultivez du thé sans engrais ni pesticides, inscrivez-vous via le formulaire producteurs.",
-        },
-        "cta_button": {"ja": "生産者登録をする", "en": "Register as a producer", "fr": "S’inscrire comme producteur"},
-        "cta_href": "/#register",
-    },
-    "news": {
-        "label": {"ja": "お知らせ", "en": "News", "fr": "Actualités"},
+    "education": {
+        "label": {"ja": "学び", "en": "Learn", "fr": "Apprendre"},
         "cta_title": {"ja": "自然茶の輪に、加わりませんか", "en": "Join the circle of natural tea", "fr": "Rejoignez le cercle du thé naturel"},
         "cta_text": {
-            "ja": "協会ではメンバーを募集しています。活動の案内もいち早くお届けします。",
-            "en": "The association is looking for members, who also hear about our activities first.",
-            "fr": "L’association recherche des membres, qui sont aussi les premiers informés de nos activités.",
+            "ja": "協会ではメンバーを募集しています。オンラインコースやツアーの案内も、いち早くお届けします。",
+            "en": "The association is looking for members, who also hear first about our online courses and tours.",
+            "fr": "L’association recherche des membres, qui sont aussi les premiers informés de nos cours en ligne et de nos circuits.",
         },
         "cta_button": {"ja": "メンバーに応募する", "en": "Apply to become a member", "fr": "Devenir membre"},
         "cta_href": "/#join",
@@ -51,18 +36,26 @@ KINDS = {
 }
 
 UI = {
-    "posts": {"ja": "投稿", "en": "Posts", "fr": "Publications"},
+    "learn": {"ja": "学び", "en": "Learn", "fr": "Apprendre"},
     "home": {"ja": "トップ", "en": "Home", "fr": "Accueil"},
-    "list_title": {"ja": "Instagram の投稿から", "en": "From our Instagram", "fr": "Depuis notre Instagram"},
+    "list_title": {"ja": "自然茶を学ぶ", "en": "Learn about natural tea", "fr": "Apprendre le thé naturel"},
     "list_lead": {
-        "ja": "協会の Instagram（@japan_natural_tea）で紹介した生産者・お店・活動を、ここにまとめています。",
-        "en": "The growers, shops and activities we’ve featured on our Instagram (@japan_natural_tea), collected in one place.",
-        "fr": "Les producteurs, boutiques et activités présentés sur notre Instagram (@japan_natural_tea), réunis en un seul endroit.",
+        "ja": "協会の Instagram（@japan_natural_tea）で発信した、自然茶や日本茶について学べる投稿を、読みものとしてまとめています。",
+        "en": "Posts from our Instagram (@japan_natural_tea) about natural tea and Japanese tea, collected here as articles.",
+        "fr": "Les publications de notre Instagram (@japan_natural_tea) sur le thé naturel et le thé japonais, réunies ici sous forme d’articles.",
+    },
+    "empty": {
+        "ja": "最初の記事を準備しています。公開までは Instagram でご覧ください。",
+        "en": "Our first article is on its way. Until then, find us on Instagram.",
+        "fr": "Notre premier article est en préparation. En attendant, retrouvez-nous sur Instagram.",
     },
     "read": {"ja": "記事を読む", "en": "Read more", "fr": "Lire la suite"},
     "on_ig": {"ja": "Instagram で見る", "en": "View on Instagram", "fr": "Voir sur Instagram"},
-    "back": {"ja": "投稿一覧へ戻る", "en": "Back to all posts", "fr": "Retour aux publications"},
+    "ig_feature": {"ja": "紹介投稿を見る", "en": "See our Instagram post", "fr": "Voir notre publication"},
+    "back": {"ja": "学びの記事一覧へ", "en": "Back to all articles", "fr": "Retour aux articles"},
     "follow": {"ja": "Instagram をフォロー", "en": "Follow us on Instagram", "fr": "Suivez-nous sur Instagram"},
+    "shop": {"ja": "ショップ", "en": "Shop", "fr": "Boutique"},
+    "producer": {"ja": "生産者", "en": "Producer", "fr": "Producteur"},
 }
 
 NAV = [
@@ -70,7 +63,7 @@ NAV = [
     ("/#natural", {"ja": "自然茶とは", "en": "Natural Tea", "fr": "Thé naturel"}),
     ("/#business", {"ja": "事業内容", "en": "Activities", "fr": "Activités"}),
     ("/directory/", {"ja": "生産者とショップ", "en": "Producers &amp; Shops", "fr": "Producteurs &amp; boutiques"}),
-    ("/posts/", {"ja": "投稿", "en": "Posts", "fr": "Publications"}),
+    ("/learn/", {"ja": "学び", "en": "Learn", "fr": "Apprendre"}),
     ("/#org", {"ja": "協会概要", "en": "Overview", "fr": "Présentation"}),
     ("/#join", {"ja": "入会・お問い合わせ", "en": "Membership", "fr": "Adhésion"}),
 ]
@@ -179,6 +172,7 @@ CSS = """
   .post-card h2{font-size:clamp(19px,2.2vw,22px);color:var(--green-800);line-height:1.5;margin-bottom:12px;}
   .post-card p{font-size:15px;color:var(--ink-soft);margin-bottom:18px;}
   .post-card .more{margin-top:auto;font-size:14px;color:var(--green-600);}
+  .empty{font-size:16px;color:var(--ink-soft);}
   .follow{margin-top:44px;font-size:15px;}
   .follow a{color:var(--green-700);border-bottom:1px solid var(--matcha);}
 
@@ -216,7 +210,7 @@ SCRIPT = """
 def page(title, description, canonical, body, extra_head=""):
     current = ' aria-current="page"'
     nav = "\n".join(
-        f'    <a class="navlink" href="{href}"{current if href == "/posts/" else ""}>{t_raw(label)}</a>'
+        f'    <a class="navlink" href="{href}"{current if href == "/learn/" else ""}>{t_raw(label)}</a>'
         for href, label in NAV
     )
     foot = "\n".join(f'      <a href="{href}">{t_raw(label)}</a>' for href, label in [("/", UI["home"])] + NAV)
@@ -238,7 +232,7 @@ def page(title, description, canonical, body, extra_head=""):
 <style>{CSS}</style>
 {extra_head}</head>
 <body class="lang-en">
-<!-- tools/build_posts.py で生成。直接編集せず posts/posts.json を直して再生成する -->
+<!-- tools/build_posts.py で生成。直接編集せず tools/instagram_posts.json を直して再生成する -->
 
 <header>
   <a href="/" class="brand">
@@ -291,6 +285,13 @@ def ig_permalink(url):
     return url if url.endswith("/") else url + "/"
 
 
+def links_html(p, ig_label):
+    out = "".join(
+        f'\n          <a href="{escape(x["url"])}" target="_blank" rel="noopener">{escape(x["label"])}</a>' for x in p.get("links", [])
+    )
+    return out + f'\n          <a href="{ig_permalink(p["instagram"])}" target="_blank" rel="noopener">{t(ig_label)}</a>'
+
+
 def render_post(p):
     kind = KINDS[p["kind"]]
     date = fmt_date(p["date"])
@@ -300,13 +301,9 @@ def render_post(p):
     if p.get("points"):
         items = "\n".join(f"          <li>{t_at(p['points'], i)}</li>" for i in range(len(p["points"]["ja"])))
         points = f'        <ul class="points">\n{items}\n        </ul>\n'
-    links = "".join(
-        f'\n          <a href="{escape(x["url"])}" target="_blank" rel="noopener">{escape(x["label"])}</a>' for x in p.get("links", [])
-    )
-    links += f'\n          <a href="{ig}" target="_blank" rel="noopener">{t(UI["on_ig"])}</a>'
     body = f"""<div class="page-head">
   <div class="wrap">
-    <p class="crumb"><a href="/">{t(UI["home"])}</a>　/　<a href="/posts/">{t(UI["posts"])}</a></p>
+    <p class="crumb"><a href="/">{t(UI["home"])}</a>　/　<a href="/learn/">{t(UI["learn"])}</a></p>
     <p class="meta">{t(kind["label"])}　{t(date)}</p>
     <h1>{t(p["title"])}</h1>
     <p class="lead">{t(p["lead"])}</p>
@@ -322,36 +319,41 @@ def render_post(p):
     </div>
     <article class="article">
 {paras}
-{points}        <div class="links">{links}
+{points}        <div class="links">{links_html(p, UI["on_ig"])}
         </div>
         <div class="cta">
           <h2>{t(kind["cta_title"])}</h2>
           <p>{t(kind["cta_text"])}</p>
           <a class="btn" href="{kind["cta_href"]}">{t(kind["cta_button"])}</a>
         </div>
-        <p class="back"><a href="/posts/">{t(UI["back"])}</a></p>
+        <p class="back"><a href="/learn/">{t(UI["back"])}</a></p>
     </article>
   </div>
 </section>"""
     title = f'{p["title"]["ja"]} | 日本自然茶協会 Japan Natural Tea Association'
     desc = f'{p["lead"]["ja"]} {p["lead"]["en"]}'
     extra = '<script async src="https://www.instagram.com/embed.js"></script>\n'
-    return page(title, desc, f"https://naturaltea.jp/posts/{p['slug']}/", body, extra)
+    return page(title, desc, f"https://naturaltea.jp/learn/{p['slug']}/", body, extra)
 
 
 def render_list(posts):
     cards = []
     for p in posts:
         kind = KINDS[p["kind"]]
-        cards.append(f"""      <a class="post-card" href="/posts/{p["slug"]}/">
+        cards.append(f"""      <a class="post-card" href="/learn/{p["slug"]}/">
         <p class="meta">{t(kind["label"])}　{t(fmt_date(p["date"]))}</p>
         <h2>{t(p["title"])}</h2>
         <p>{t(p["lead"])}</p>
         <span class="more">{t(UI["read"])}</span>
       </a>""")
+    listing = (
+        f'    <div class="post-list">\n{chr(10).join(cards)}\n    </div>'
+        if cards
+        else f'    <p class="empty">{t(UI["empty"])}</p>'
+    )
     body = f"""<div class="page-head">
   <div class="wrap">
-    <p class="crumb"><a href="/">{t(UI["home"])}</a>　/　{t(UI["posts"])}</p>
+    <p class="crumb"><a href="/">{t(UI["home"])}</a>　/　{t(UI["learn"])}</p>
     <h1>{t(UI["list_title"])}</h1>
     <p class="lead">{t(UI["list_lead"])}</p>
   </div>
@@ -359,39 +361,85 @@ def render_list(posts):
 
 <section class="block">
   <div class="wrap">
-    <div class="post-list">
-{chr(10).join(cards)}
-    </div>
+{listing}
     <p class="follow"><a href="https://www.instagram.com/japan_natural_tea/" target="_blank" rel="noopener">{t(UI["follow"])}（@japan_natural_tea）</a></p>
   </div>
 </section>"""
     return page(
-        "投稿 | 日本自然茶協会 Japan Natural Tea Association",
-        "日本自然茶協会の Instagram で紹介した生産者・お店・活動のまとめ。",
-        "https://naturaltea.jp/posts/",
+        "学び | 日本自然茶協会 Japan Natural Tea Association",
+        "日本自然茶協会の Instagram で発信した、自然茶や日本茶について学べる投稿のまとめ。",
+        "https://naturaltea.jp/learn/",
         body,
     )
 
 
+def render_entry(p):
+    """directory/index.html の .entry カード（生産者・ショップ）。"""
+    paras = "".join(t_at(p["body"], i) + ("<br><br>" if i < len(p["body"]["ja"]) - 1 else "") for i in range(len(p["body"]["ja"])))
+    tags = ""
+    if p.get("points"):
+        tags = "\n        <div class=\"tea-tags\">\n" + "\n".join(
+            f"          <span>{t_at(p['points'], i)}</span>" for i in range(len(p["points"]["ja"]))
+        ) + "\n        </div>"
+    return f"""      <article class="entry" id="{p["slug"]}">
+        <p class="kind">{t({l: UI[p["kind"]][l] + "・" + p["region"][l] if l == "ja" else UI[p["kind"]][l] + " · " + p["region"][l] for l in LANGS})}</p>
+        <h3>{escape(p["name"])}</h3>
+        <p class="place">{t(p["place"])}</p>
+        <p class="about">{paras}</p>{tags}
+        <div class="links">{links_html(p, UI["ig_feature"])}
+        </div>
+      </article>
+"""
+
+
+def update_directory(posts):
+    html = DIRECTORY.read_text(encoding="utf-8")
+    for kind in DIRECTORY_KINDS:
+        entries = "".join(render_entry(p) for p in posts if p["kind"] == kind)
+        pat = re.compile(rf"(<!-- POSTS:{kind} -->\n).*?(\s*<!-- /POSTS:{kind} -->)", re.S)
+        assert pat.search(html), f"directory/index.html に <!-- POSTS:{kind} --> の目印がありません"
+        html = pat.sub(lambda m: m.group(1) + entries + m.group(2).lstrip("\n") if entries else m.group(1) + m.group(2).lstrip("\n"), html)
+    # 上部ボタンの件数を、各欄のカード数に合わせる
+    for sec, kind in (("producers", "producer"), ("shops", "shop")):
+        block = re.search(rf'<section class="block[^"]*" id="{sec}">.*?</section>', html, re.S).group(0)
+        n = block.count('<article class="entry"')
+        html = re.sub(rf'(<span class="count" data-count="{sec}">)\d+(</span>)', rf"\g<1>{n}\g<2>", html)
+    DIRECTORY.write_text(html, encoding="utf-8")
+    print("updated", DIRECTORY.relative_to(ROOT))
+
+
+def check(p):
+    s = p.get("slug", "?")
+    assert p.get("kind") in DIRECTORY_KINDS + tuple(KINDS), f"{s}: kind は producer / shop / education のどれか"
+    need = ("body",) + (("name", "region", "place") if p["kind"] in DIRECTORY_KINDS else ("title", "lead"))
+    for key in need:
+        assert key in p, f"{s}: {key} が必要"
+        if key != "name":
+            assert set(p[key]) >= set(LANGS), f"{s}: {key} に ja/en/fr が必要"
+    for key in ("body", "points"):
+        if p.get(key):
+            assert len({len(p[key][l]) for l in LANGS}) == 1, f"{s}: {key} の数を3言語でそろえる"
+
+
 def main():
-    posts = json.loads((POSTS_DIR / "posts.json").read_text(encoding="utf-8"))
+    posts = json.loads(DATA.read_text(encoding="utf-8"))
     slugs = [p["slug"] for p in posts]
     assert len(slugs) == len(set(slugs)), "slug が重複しています"
     for p in posts:
-        assert p["kind"] in KINDS, f'{p["slug"]}: kind は {list(KINDS)} のどれか'
-        for key in ("title", "lead", "body"):
-            assert set(p[key]) >= set(LANGS), f'{p["slug"]}: {key} に ja/en/fr が必要'
-        assert len({len(p["body"][l]) for l in LANGS}) == 1, f'{p["slug"]}: body の段落数を3言語でそろえる'
-        if p.get("points"):
-            assert len({len(p["points"][l]) for l in LANGS}) == 1, f'{p["slug"]}: points の数を3言語でそろえる'
+        check(p)
     posts.sort(key=lambda p: p["date"], reverse=True)
-    for p in posts:
-        out = POSTS_DIR / p["slug"] / "index.html"
-        out.parent.mkdir(exist_ok=True)
+
+    update_directory(posts)
+
+    learn = [p for p in posts if p["kind"] in KINDS]
+    for p in learn:
+        out = LEARN_DIR / p["slug"] / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(render_post(p), encoding="utf-8")
         print("wrote", out.relative_to(ROOT))
-    (POSTS_DIR / "index.html").write_text(render_list(posts), encoding="utf-8")
-    print("wrote posts/index.html")
+    LEARN_DIR.mkdir(exist_ok=True)
+    (LEARN_DIR / "index.html").write_text(render_list(learn), encoding="utf-8")
+    print("wrote learn/index.html")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,33 @@
+[
+  {
+    "slug": "tencha-london",
+    "kind": "shop",
+    "instagram": "https://www.instagram.com/p/DfQS0p-k-oB/",
+    "date": "2026-11-02",
+    "name": "Tencha",
+    "region": {"ja": "イギリス", "en": "UK", "fr": "Royaume-Uni"},
+    "place": {"ja": "イギリス・ロンドン（オンラインショップ）", "en": "London, UK (online shop)", "fr": "Londres, Royaume-Uni (boutique en ligne)"},
+    "body": {
+      "ja": [
+        "Charlie Avendano さんが営む、日本茶と茶道具の専門店です。抹茶から発酵番茶まで扱い、その中には農薬も肥料も使わずに育てた自然茶もあります。",
+        "お茶をつくる農家が年々減るなかで、日本の茶葉のお茶（リーフティー）を絶やさないことを目指しています。"
+      ],
+      "en": [
+        "Run by Charlie Avendano, Tencha specialises in Japanese teas and tea ware, from matcha to fermented bancha. Among them: natural tea grown without pesticides or fertilizer.",
+        "Their aim is simple: keep loose leaf Japanese tea alive while fewer farms make it each year."
+      ],
+      "fr": [
+        "Tenue par Charlie Avendano, Tencha est spécialisée dans les thés et ustensiles japonais, du matcha au bancha fermenté. Parmi eux : du thé naturel cultivé sans pesticides ni engrais.",
+        "Son objectif est simple : faire vivre le thé japonais en feuilles alors que de moins en moins de fermes en produisent chaque année."
+      ]
+    },
+    "points": {
+      "ja": ["イギリス国内へ発送", "日本の自然茶", "茶道具"],
+      "en": ["Ships across the UK", "Natural tea from Japan", "Tea ware"],
+      "fr": ["Livraison au Royaume-Uni", "Thé naturel du Japon", "Ustensiles à thé"]
+    },
+    "links": [
+      {"label": "tencha.co.uk", "url": "https://tencha.co.uk"}
+    ]
+  }
+]

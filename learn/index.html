@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>投稿 | 日本自然茶協会 Japan Natural Tea Association</title>
-<meta name="description" content="日本自然茶協会の Instagram で紹介した生産者・お店・活動のまとめ。">
-<link rel="canonical" href="https://naturaltea.jp/posts/">
+<title>学び | 日本自然茶協会 Japan Natural Tea Association</title>
+<meta name="description" content="日本自然茶協会の Instagram で発信した、自然茶や日本茶について学べる投稿のまとめ。">
+<link rel="canonical" href="https://naturaltea.jp/learn/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="投稿 | 日本自然茶協会 Japan Natural Tea Association">
-<meta property="og:description" content="日本自然茶協会の Instagram で紹介した生産者・お店・活動のまとめ。">
-<meta property="og:url" content="https://naturaltea.jp/posts/">
+<meta property="og:title" content="学び | 日本自然茶協会 Japan Natural Tea Association">
+<meta property="og:description" content="日本自然茶協会の Instagram で発信した、自然茶や日本茶について学べる投稿のまとめ。">
+<meta property="og:url" content="https://naturaltea.jp/learn/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
@@ -95,6 +95,7 @@
   .post-card h2{font-size:clamp(19px,2.2vw,22px);color:var(--green-800);line-height:1.5;margin-bottom:12px;}
   .post-card p{font-size:15px;color:var(--ink-soft);margin-bottom:18px;}
   .post-card .more{margin-top:auto;font-size:14px;color:var(--green-600);}
+  .empty{font-size:16px;color:var(--ink-soft);}
   .follow{margin-top:44px;font-size:15px;}
   .follow a{color:var(--green-700);border-bottom:1px solid var(--matcha);}
 
@@ -109,7 +110,7 @@
 </style>
 </head>
 <body class="lang-en">
-<!-- tools/build_posts.py で生成。直接編集せず posts/posts.json を直して再生成する -->
+<!-- tools/build_posts.py で生成。直接編集せず tools/instagram_posts.json を直して再生成する -->
 
 <header>
   <a href="/" class="brand">
@@ -125,7 +126,7 @@
     <a class="navlink" href="/#natural"><span class="ja-only">自然茶とは</span><span class="en-only">Natural Tea</span><span class="fr-only">Thé naturel</span></a>
     <a class="navlink" href="/#business"><span class="ja-only">事業内容</span><span class="en-only">Activities</span><span class="fr-only">Activités</span></a>
     <a class="navlink" href="/directory/"><span class="ja-only">生産者とショップ</span><span class="en-only">Producers &amp; Shops</span><span class="fr-only">Producteurs &amp; boutiques</span></a>
-    <a class="navlink" href="/posts/" aria-current="page"><span class="ja-only">投稿</span><span class="en-only">Posts</span><span class="fr-only">Publications</span></a>
+    <a class="navlink" href="/learn/" aria-current="page"><span class="ja-only">学び</span><span class="en-only">Learn</span><span class="fr-only">Apprendre</span></a>
     <a class="navlink" href="/#org"><span class="ja-only">協会概要</span><span class="en-only">Overview</span><span class="fr-only">Présentation</span></a>
     <a class="navlink" href="/#join"><span class="ja-only">入会・お問い合わせ</span><span class="en-only">Membership</span><span class="fr-only">Adhésion</span></a>
     <div class="lang-toggle">
@@ -140,22 +141,15 @@
 <main>
 <div class="page-head">
   <div class="wrap">
-    <p class="crumb"><a href="/"><span class="ja-only">トップ</span><span class="en-only">Home</span><span class="fr-only">Accueil</span></a>　/　<span class="ja-only">投稿</span><span class="en-only">Posts</span><span class="fr-only">Publications</span></p>
-    <h1><span class="ja-only">Instagram の投稿から</span><span class="en-only">From our Instagram</span><span class="fr-only">Depuis notre Instagram</span></h1>
-    <p class="lead"><span class="ja-only">協会の Instagram（@japan_natural_tea）で紹介した生産者・お店・活動を、ここにまとめています。</span><span class="en-only">The growers, shops and activities we’ve featured on our Instagram (@japan_natural_tea), collected in one place.</span><span class="fr-only">Les producteurs, boutiques et activités présentés sur notre Instagram (@japan_natural_tea), réunis en un seul endroit.</span></p>
+    <p class="crumb"><a href="/"><span class="ja-only">トップ</span><span class="en-only">Home</span><span class="fr-only">Accueil</span></a>　/　<span class="ja-only">学び</span><span class="en-only">Learn</span><span class="fr-only">Apprendre</span></p>
+    <h1><span class="ja-only">自然茶を学ぶ</span><span class="en-only">Learn about natural tea</span><span class="fr-only">Apprendre le thé naturel</span></h1>
+    <p class="lead"><span class="ja-only">協会の Instagram（@japan_natural_tea）で発信した、自然茶や日本茶について学べる投稿を、読みものとしてまとめています。</span><span class="en-only">Posts from our Instagram (@japan_natural_tea) about natural tea and Japanese tea, collected here as articles.</span><span class="fr-only">Les publications de notre Instagram (@japan_natural_tea) sur le thé naturel et le thé japonais, réunies ici sous forme d’articles.</span></p>
   </div>
 </div>
 
 <section class="block">
   <div class="wrap">
-    <div class="post-list">
-      <a class="post-card" href="/posts/tencha-london/">
-        <p class="meta"><span class="ja-only">ショップ紹介</span><span class="en-only">Shop feature</span><span class="fr-only">Boutique à la une</span>　<span class="ja-only">2026年11月2日</span><span class="en-only">November 2, 2026</span><span class="fr-only">2 novembre 2026</span></p>
-        <h2><span class="ja-only">ロンドンで自然茶を扱う日本茶専門店「Tencha」</span><span class="en-only">Tencha — a Japanese tea shop in London that carries natural tea</span><span class="fr-only">Tencha — une boutique de thé japonais à Londres qui propose du thé naturel</span></h2>
-        <p><span class="ja-only">世界で自然茶を扱うお店を紹介するシリーズの第1回。ロンドンのオンラインショップ Tencha です。</span><span class="en-only">The first in our series introducing shops around the world that carry natural tea: Tencha, an online shop in London.</span><span class="fr-only">Premier épisode de notre série sur les boutiques du monde qui proposent du thé naturel : Tencha, boutique en ligne à Londres.</span></p>
-        <span class="more"><span class="ja-only">記事を読む</span><span class="en-only">Read more</span><span class="fr-only">Lire la suite</span></span>
-      </a>
-    </div>
+    <p class="empty"><span class="ja-only">最初の記事を準備しています。公開までは Instagram でご覧ください。</span><span class="en-only">Our first article is on its way. Until then, find us on Instagram.</span><span class="fr-only">Notre premier article est en préparation. En attendant, retrouvez-nous sur Instagram.</span></p>
     <p class="follow"><a href="https://www.instagram.com/japan_natural_tea/" target="_blank" rel="noopener"><span class="ja-only">Instagram をフォロー</span><span class="en-only">Follow us on Instagram</span><span class="fr-only">Suivez-nous sur Instagram</span>（@japan_natural_tea）</a></p>
   </div>
 </section>
@@ -174,7 +168,7 @@
       <a href="/#natural"><span class="ja-only">自然茶とは</span><span class="en-only">Natural Tea</span><span class="fr-only">Thé naturel</span></a>
       <a href="/#business"><span class="ja-only">事業内容</span><span class="en-only">Activities</span><span class="fr-only">Activités</span></a>
       <a href="/directory/"><span class="ja-only">生産者とショップ</span><span class="en-only">Producers &amp; Shops</span><span class="fr-only">Producteurs &amp; boutiques</span></a>
-      <a href="/posts/"><span class="ja-only">投稿</span><span class="en-only">Posts</span><span class="fr-only">Publications</span></a>
+      <a href="/learn/"><span class="ja-only">学び</span><span class="en-only">Learn</span><span class="fr-only">Apprendre</span></a>
       <a href="/#org"><span class="ja-only">協会概要</span><span class="en-only">Overview</span><span class="fr-only">Présentation</span></a>
       <a href="/#join"><span class="ja-only">入会・お問い合わせ</span><span class="en-only">Membership</span><span class="fr-only">Adhésion</span></a>
     </div>

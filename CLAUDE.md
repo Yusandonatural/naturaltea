@@ -52,7 +52,7 @@
 ### ページ
 - `index.html` — トップ（1ページ構成、下記セクション）
 - `directory/index.html` — 生産者とショップの紹介ページ（naturaltea.jp/directory/）。CSS はページ内に持つ（トップと同じ変数・ヘッダー・フッター）。ヘッダーナビの「生産者とショップ」と、トップの `#producers`・`#visit` 下の「すべて見る」リンクから来る。言語は `localStorage('jnta_lang')` を共有
-- `posts/` — Instagram 投稿のLP（naturaltea.jp/posts/ が一覧、/posts/<slug>/ が各投稿）。**`posts/posts.json` を編集して `python3 tools/build_posts.py` で生成**する。生成HTMLは手で直さない（デザインを変えるときは tools/build_posts.py の CSS／テンプレートを直して再生成）。手順は `.claude/skills/instagram-lp/SKILL.md`（「このインスタ投稿をLPにして <URL>」で使う）
+- Instagram 投稿の反映: **`tools/instagram_posts.json` を編集して `python3 tools/build_posts.py`** を実行。kind で行き先が決まる — `producer`→ directory の生産者欄、`shop`→ directory のショップ欄（`<!-- POSTS:… -->` の目印の間に生成）、`education`→ `learn/<slug>/` の独立LP（一覧は naturaltea.jp/learn/）。生成部分は手で直さない（デザインは tools/build_posts.py を直して再生成）。手順は `.claude/skills/instagram-lp/SKILL.md`。learn/ は記事0件のあいだはナビに出さずフッターのみ
 - ページを足したら、ヘッダー／フッターのリンクと3言語 span 件数チェックを各ページで行う
 
 ### セクション構成（上から順）
