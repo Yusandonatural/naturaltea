@@ -1,0 +1,262 @@
+[
+  {
+    "slug": "yusando",
+    "kind": "producer",
+    "name_i18n": {
+      "ja": "株式会社 悠三堂",
+      "en": "Yusando Inc.",
+      "fr": "Yusando Inc."
+    },
+    "region": {
+      "ja": "奈良県",
+      "en": "Nara",
+      "fr": "Nara"
+    },
+    "place": {
+      "ja": "奈良県奈良市上深川町227",
+      "en": "227 Kamifukawa-cho, Nara City, Nara",
+      "fr": "227 Kamifukawa-cho, ville de Nara, Nara"
+    },
+    "body": {
+      "ja": [
+        "2014年から奈良で、無肥料・無農薬の自然栽培でお茶を育てています。煎茶から番茶、和紅茶まで、12種類のお茶をつくっています。"
+      ],
+      "en": [
+        "Growing tea with no fertilizer and no pesticides in Nara since 2014, and making twelve kinds of tea, from sencha to bancha and Japanese black tea."
+      ],
+      "fr": [
+        "Cultive le thé sans engrais ni pesticides à Nara depuis 2014, et produit douze sortes de thé, du sencha au bancha en passant par le thé noir japonais."
+      ]
+    },
+    "facts": [
+      {
+        "label": {
+          "ja": "自然栽培開始",
+          "en": "Natural since",
+          "fr": "Naturel depuis"
+        },
+        "value": {
+          "ja": "2014",
+          "en": "2014",
+          "fr": "2014"
+        }
+      },
+      {
+        "label": {
+          "ja": "見学",
+          "en": "Visits",
+          "fr": "Visites"
+        },
+        "value": {
+          "ja": "見学可能",
+          "en": "Open to visitors",
+          "fr": "Ouvert aux visiteurs"
+        },
+        "badge": true
+      }
+    ],
+    "points": {
+      "ja": [
+        "煎茶",
+        "ほうじ茶",
+        "抹茶",
+        "和紅茶",
+        "烏龍茶",
+        "釜炒り茶",
+        "番茶",
+        "白茶",
+        "玄米茶",
+        "玄米ほうじ茶",
+        "発酵番茶",
+        "三年番茶"
+      ],
+      "en": [
+        "Sencha",
+        "Hojicha",
+        "Matcha",
+        "Japanese Black Tea",
+        "Oolong",
+        "Kamairicha",
+        "Bancha",
+        "White Tea",
+        "Genmaicha",
+        "Genmai Hojicha",
+        "Fermented Bancha",
+        "Three-year Bancha"
+      ],
+      "fr": [
+        "Sencha",
+        "Hojicha",
+        "Matcha",
+        "Thé noir japonais",
+        "Oolong",
+        "Kamairicha",
+        "Bancha",
+        "Thé blanc",
+        "Genmaicha",
+        "Genmai hojicha",
+        "Bancha fermenté",
+        "Bancha de trois ans"
+      ]
+    },
+    "links": [
+      {
+        "label": "yusando.com",
+        "url": "https://yusando.com"
+      }
+    ],
+    "map": "奈良県奈良市上深川町227"
+  },
+  {
+    "slug": "yusando-natural-tea",
+    "kind": "shop",
+    "name": "YUSANDO NATURAL TEA",
+    "region": {
+      "ja": "奈良県",
+      "en": "Nara",
+      "fr": "Nara"
+    },
+    "kind_label": {
+      "ja": "カフェ・小売店",
+      "en": "Café & shop",
+      "fr": "Café & boutique"
+    },
+    "place": {
+      "ja": "奈良県奈良市都祁吐山町920",
+      "en": "920 Tsuge-Hayama-cho, Nara City, Nara",
+      "fr": "920 Tsuge-Hayama-cho, ville de Nara, Nara"
+    },
+    "body": {
+      "ja": [
+        "株式会社 悠三堂が営むカフェ・小売店です。自家農園の自然茶12種類を、その場で味わい、買うことができます。"
+      ],
+      "en": [
+        "A café and shop run by Yusando Inc., where you can taste and buy twelve natural teas from its own farm."
+      ],
+      "fr": [
+        "Un café-boutique tenu par Yusando Inc., où déguster et acheter douze thés naturels issus de sa propre exploitation."
+      ]
+    },
+    "facts": [
+      {
+        "label": {
+          "ja": "ご利用",
+          "en": "Visits",
+          "fr": "Visites"
+        },
+        "value": {
+          "ja": "予約制",
+          "en": "By reservation",
+          "fr": "Sur réservation"
+        },
+        "badge": true
+      }
+    ],
+    "points": {
+      "ja": [
+        "煎茶",
+        "ほうじ茶",
+        "抹茶",
+        "和紅茶",
+        "烏龍茶",
+        "釜炒り茶",
+        "番茶",
+        "白茶",
+        "玄米茶",
+        "玄米ほうじ茶",
+        "発酵番茶",
+        "三年番茶"
+      ],
+      "en": [
+        "Sencha",
+        "Hojicha",
+        "Matcha",
+        "Japanese Black Tea",
+        "Oolong",
+        "Kamairicha",
+        "Bancha",
+        "White Tea",
+        "Genmaicha",
+        "Genmai Hojicha",
+        "Fermented Bancha",
+        "Three-year Bancha"
+      ],
+      "fr": [
+        "Sencha",
+        "Hojicha",
+        "Matcha",
+        "Thé noir japonais",
+        "Oolong",
+        "Kamairicha",
+        "Bancha",
+        "Thé blanc",
+        "Genmaicha",
+        "Genmai hojicha",
+        "Bancha fermenté",
+        "Bancha de trois ans"
+      ]
+    },
+    "links": [
+      {
+        "label": "yusando.com",
+        "url": "https://yusando.com"
+      }
+    ],
+    "map": "奈良県奈良市都祁吐山町920"
+  },
+  {
+    "slug": "tencha-london",
+    "kind": "shop",
+    "instagram": "https://www.instagram.com/p/DfQS0p-k-oB/",
+    "date": "2026-11-02",
+    "name": "Tencha",
+    "region": {
+      "ja": "イギリス",
+      "en": "UK",
+      "fr": "Royaume-Uni"
+    },
+    "place": {
+      "ja": "イギリス・ロンドン（オンラインショップ）",
+      "en": "London, UK (online shop)",
+      "fr": "Londres, Royaume-Uni (boutique en ligne)"
+    },
+    "body": {
+      "ja": [
+        "Charlie Avendano さんが営む、日本茶と茶道具の専門店です。抹茶から発酵番茶まで扱い、その中には農薬も肥料も使わずに育てた自然茶もあります。",
+        "お茶をつくる農家が年々減るなかで、日本の茶葉のお茶（リーフティー）を絶やさないことを目指しています。"
+      ],
+      "en": [
+        "Run by Charlie Avendano, Tencha specialises in Japanese teas and tea ware, from matcha to fermented bancha. Among them: natural tea grown without pesticides or fertilizer.",
+        "Their aim is simple: keep loose leaf Japanese tea alive while fewer farms make it each year."
+      ],
+      "fr": [
+        "Tenue par Charlie Avendano, Tencha est spécialisée dans les thés et ustensiles japonais, du matcha au bancha fermenté. Parmi eux : du thé naturel cultivé sans pesticides ni engrais.",
+        "Son objectif est simple : faire vivre le thé japonais en feuilles alors que de moins en moins de fermes en produisent chaque année."
+      ]
+    },
+    "points": {
+      "ja": [
+        "イギリス国内へ発送",
+        "日本の自然茶",
+        "茶道具"
+      ],
+      "en": [
+        "Ships across the UK",
+        "Natural tea from Japan",
+        "Tea ware"
+      ],
+      "fr": [
+        "Livraison au Royaume-Uni",
+        "Thé naturel du Japon",
+        "Ustensiles à thé"
+      ]
+    },
+    "links": [
+      {
+        "label": "tencha.co.uk",
+        "url": "https://tencha.co.uk"
+      }
+    ],
+    "person": "Charlie Avendano"
+  }
+]

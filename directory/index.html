@@ -127,6 +127,12 @@
     padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;
   }
   .alt .entry{background:#fdfcf8;}
+  .entry{overflow:hidden;}
+  .entry-photo{display:block;width:calc(100% + 2*clamp(24px,3vw,36px));max-width:none;margin:calc(-1*clamp(24px,3vw,36px)) calc(-1*clamp(24px,3vw,36px)) 24px;aspect-ratio:16/10;object-fit:cover;background:var(--kinari-2);}
+  .entry-head{display:flex;align-items:center;gap:16px;}
+  .entry-logo{width:64px;height:64px;border-radius:50%;object-fit:cover;flex-shrink:0;background:#fff;border:1px solid var(--line);}
+  .person{display:flex;align-items:center;gap:12px;margin:-4px 0 20px;font-size:14px;color:var(--ink-soft);}
+  .entry-portrait{width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1px solid var(--line);}
   .entry .kind{font-size:13px;letter-spacing:.08em;color:var(--gold);margin-bottom:8px;}
   .entry h3{font-size:clamp(21px,2.4vw,25px);color:var(--green-800);line-height:1.45;}
   .entry .place{font-size:14px;color:var(--ink-soft);margin-top:4px;}
@@ -218,14 +224,19 @@
       <p><span class="ja-only">農薬も肥料も使わずにお茶を育てている生産者です。</span><span class="en-only">Growers who raise their tea without pesticides or fertilizer.</span><span class="fr-only">Des producteurs qui cultivent leur thé sans pesticides ni engrais.</span></p>
     </div>
     <div class="entries">
-      <article class="entry">
-        <p class="kind"><span class="ja-only">生産者・奈良県</span><span class="en-only">Producer · Nara</span><span class="fr-only">Producteur · Nara</span></p>
-        <h3><span class="ja-only">株式会社 悠三堂</span><span class="en-only">Yusando Inc.</span><span class="fr-only">Yusando Inc.</span></h3>
-        <p class="place"><span class="ja-only">奈良県奈良市上深川町227</span><span class="en-only">227 Kamifukawa-cho, Nara City, Nara</span><span class="fr-only">227 Kamifukawa-cho, ville de Nara, Nara</span></p>
+      <!-- POSTS:producer -->
+      <article class="entry" id="yusando">
+        <div class="entry-head">
+          <div>
+            <p class="kind"><span class="ja-only">生産者・奈良県</span><span class="en-only">Producer · Nara</span><span class="fr-only">Producteur · Nara</span></p>
+            <h3><span class="ja-only">株式会社 悠三堂</span><span class="en-only">Yusando Inc.</span><span class="fr-only">Yusando Inc.</span></h3>
+            <p class="place"><span class="ja-only">奈良県奈良市上深川町227</span><span class="en-only">227 Kamifukawa-cho, Nara City, Nara</span><span class="fr-only">227 Kamifukawa-cho, ville de Nara, Nara</span></p>
+          </div>
+        </div>
         <p class="about"><span class="ja-only">2014年から奈良で、無肥料・無農薬の自然栽培でお茶を育てています。煎茶から番茶、和紅茶まで、12種類のお茶をつくっています。</span><span class="en-only">Growing tea with no fertilizer and no pesticides in Nara since 2014, and making twelve kinds of tea, from sencha to bancha and Japanese black tea.</span><span class="fr-only">Cultive le thé sans engrais ni pesticides à Nara depuis 2014, et produit douze sortes de thé, du sencha au bancha en passant par le thé noir japonais.</span></p>
         <dl class="facts">
           <dt><span class="ja-only">自然栽培開始</span><span class="en-only">Natural since</span><span class="fr-only">Naturel depuis</span></dt>
-          <dd>2014</dd>
+          <dd><span class="ja-only">2014</span><span class="en-only">2014</span><span class="fr-only">2014</span></dd>
           <dt><span class="ja-only">見学</span><span class="en-only">Visits</span><span class="fr-only">Visites</span></dt>
           <dd><span class="badge"><span class="ja-only">見学可能</span><span class="en-only">Open to visitors</span><span class="fr-only">Ouvert aux visiteurs</span></span></dd>
         </dl>
@@ -248,7 +259,6 @@
           <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A5%88%E8%89%AF%E7%9C%8C%E5%A5%88%E8%89%AF%E5%B8%82%E4%B8%8A%E6%B7%B1%E5%B7%9D%E7%94%BA227" target="_blank" rel="noopener"><span class="ja-only">地図を開く</span><span class="en-only">Open map</span><span class="fr-only">Ouvrir la carte</span></a>
         </div>
       </article>
-      <!-- POSTS:producer -->
       <!-- /POSTS:producer -->
       <div class="slot">
         <h3><span class="ja-only">あなたの農園も掲載できます</span><span class="en-only">Your farm could be listed here</span><span class="fr-only">Votre exploitation peut figurer ici</span></h3>
@@ -267,10 +277,15 @@
       <p><span class="ja-only">自然茶を味わえる、買えるお店です。</span><span class="en-only">Places where you can taste and buy natural tea.</span><span class="fr-only">Des lieux où déguster et acheter du thé naturel.</span></p>
     </div>
     <div class="entries">
-      <article class="entry">
-        <p class="kind"><span class="ja-only">カフェ・小売店・奈良県</span><span class="en-only">Café &amp; shop · Nara</span><span class="fr-only">Café &amp; boutique · Nara</span></p>
-        <h3>YUSANDO NATURAL TEA</h3>
-        <p class="place"><span class="ja-only">奈良県奈良市都祁吐山町920</span><span class="en-only">920 Tsuge-Hayama-cho, Nara City, Nara</span><span class="fr-only">920 Tsuge-Hayama-cho, ville de Nara, Nara</span></p>
+      <!-- POSTS:shop -->
+      <article class="entry" id="yusando-natural-tea">
+        <div class="entry-head">
+          <div>
+            <p class="kind"><span class="ja-only">カフェ・小売店・奈良県</span><span class="en-only">Café &amp; shop · Nara</span><span class="fr-only">Café &amp; boutique · Nara</span></p>
+            <h3>YUSANDO NATURAL TEA</h3>
+            <p class="place"><span class="ja-only">奈良県奈良市都祁吐山町920</span><span class="en-only">920 Tsuge-Hayama-cho, Nara City, Nara</span><span class="fr-only">920 Tsuge-Hayama-cho, ville de Nara, Nara</span></p>
+          </div>
+        </div>
         <p class="about"><span class="ja-only">株式会社 悠三堂が営むカフェ・小売店です。自家農園の自然茶12種類を、その場で味わい、買うことができます。</span><span class="en-only">A café and shop run by Yusando Inc., where you can taste and buy twelve natural teas from its own farm.</span><span class="fr-only">Un café-boutique tenu par Yusando Inc., où déguster et acheter douze thés naturels issus de sa propre exploitation.</span></p>
         <dl class="facts">
           <dt><span class="ja-only">ご利用</span><span class="en-only">Visits</span><span class="fr-only">Visites</span></dt>
@@ -295,11 +310,14 @@
           <a href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A5%88%E8%89%AF%E7%9C%8C%E5%A5%88%E8%89%AF%E5%B8%82%E9%83%BD%E7%A5%81%E5%90%90%E5%B1%B1%E7%94%BA920" target="_blank" rel="noopener"><span class="ja-only">地図を開く</span><span class="en-only">Open map</span><span class="fr-only">Ouvrir la carte</span></a>
         </div>
       </article>
-      <!-- POSTS:shop -->
       <article class="entry" id="tencha-london">
-        <p class="kind"><span class="ja-only">ショップ・イギリス</span><span class="en-only">Shop · UK</span><span class="fr-only">Boutique · Royaume-Uni</span></p>
-        <h3>Tencha</h3>
-        <p class="place"><span class="ja-only">イギリス・ロンドン（オンラインショップ）</span><span class="en-only">London, UK (online shop)</span><span class="fr-only">Londres, Royaume-Uni (boutique en ligne)</span></p>
+        <div class="entry-head">
+          <div>
+            <p class="kind"><span class="ja-only">ショップ・イギリス</span><span class="en-only">Shop · UK</span><span class="fr-only">Boutique · Royaume-Uni</span></p>
+            <h3>Tencha</h3>
+            <p class="place"><span class="ja-only">イギリス・ロンドン（オンラインショップ）</span><span class="en-only">London, UK (online shop)</span><span class="fr-only">Londres, Royaume-Uni (boutique en ligne)</span></p>
+          </div>
+        </div>
         <p class="about"><span class="ja-only">Charlie Avendano さんが営む、日本茶と茶道具の専門店です。抹茶から発酵番茶まで扱い、その中には農薬も肥料も使わずに育てた自然茶もあります。</span><span class="en-only">Run by Charlie Avendano, Tencha specialises in Japanese teas and tea ware, from matcha to fermented bancha. Among them: natural tea grown without pesticides or fertilizer.</span><span class="fr-only">Tenue par Charlie Avendano, Tencha est spécialisée dans les thés et ustensiles japonais, du matcha au bancha fermenté. Parmi eux : du thé naturel cultivé sans pesticides ni engrais.</span><br><br><span class="ja-only">お茶をつくる農家が年々減るなかで、日本の茶葉のお茶（リーフティー）を絶やさないことを目指しています。</span><span class="en-only">Their aim is simple: keep loose leaf Japanese tea alive while fewer farms make it each year.</span><span class="fr-only">Son objectif est simple : faire vivre le thé japonais en feuilles alors que de moins en moins de fermes en produisent chaque année.</span></p>
         <div class="tea-tags">
           <span><span class="ja-only">イギリス国内へ発送</span><span class="en-only">Ships across the UK</span><span class="fr-only">Livraison au Royaume-Uni</span></span>

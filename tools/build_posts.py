@@ -1,21 +1,25 @@
 #!/usr/bin/env python3
-"""Instagram 投稿を tools/instagram_posts.json からサイトに反映する。
+"""生産者・ショップのカードと Instagram 投稿を tools/entries.json からサイトに反映する。
 
     python3 tools/build_posts.py
 
 投稿の kind で行き先が変わる:
   producer → directory/index.html の「生産者」欄にカードを差し込む
   shop     → directory/index.html の「ショップ・カフェ」欄にカードを差し込む
+             images/directory/<slug>/ に logo / portrait / photo（.jpg .jpeg .png .webp）があればカードに表示する
   education → learn/<slug>/index.html（独立した LP）を作り、learn/index.html（一覧）に載せる
 生成物はそのまま commit する（GitHub Pages にビルド工程はない）。
 """
 import json
 import re
 from html import escape
+from urllib.parse import quote
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA = ROOT / "tools" / "instagram_posts.json"
+DATA = ROOT / "tools" / "entries.json"
+IMAGES = ROOT / "images" / "directory"
+IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".webp")
 DIRECTORY = ROOT / "directory" / "index.html"
 LEARN_DIR = ROOT / "learn"
 LANGS = ("ja", "en", "fr")
@@ -52,6 +56,7 @@ UI = {
     "read": {"ja": "記事を読む", "en": "Read more", "fr": "Lire la suite"},
     "on_ig": {"ja": "Instagram で見る", "en": "View on Instagram", "fr": "Voir sur Instagram"},
     "ig_feature": {"ja": "紹介投稿を見る", "en": "See our Instagram post", "fr": "Voir notre publication"},
+    "map": {"ja": "地図を開く", "en": "Open map", "fr": "Ouvrir la carte"},
     "back": {"ja": "学びの記事一覧へ", "en": "Back to all articles", "fr": "Retour aux articles"},
     "follow": {"ja": "Instagram をフォロー", "en": "Follow us on Instagram", "fr": "Suivez-nous sur Instagram"},
     "shop": {"ja": "ショップ", "en": "Shop", "fr": "Boutique"},
@@ -232,7 +237,7 @@ def page(title, description, canonical, body, extra_head=""):
 <style>{CSS}</style>
 {extra_head}</head>
 <body class="lang-en">
-<!-- tools/build_posts.py で生成。直接編集せず tools/instagram_posts.json を直して再生成する -->
+<!-- tools/build_posts.py で生成。直接編集せず tools/entries.json を直して再生成する -->
 
 <header>
   <a href="/" class="brand">
@@ -285,11 +290,16 @@ def ig_permalink(url):
     return url if url.endswith("/") else url + "/"
 
 
-def links_html(p, ig_label):
+def links_html(p, ig_label=None):
     out = "".join(
         f'\n          <a href="{escape(x["url"])}" target="_blank" rel="noopener">{escape(x["label"])}</a>' for x in p.get("links", [])
     )
-    return out + f'\n          <a href="{ig_permalink(p["instagram"])}" target="_blank" rel="noopener">{t(ig_label)}</a>'
+    if p.get("map"):
+        q = quote(p["map"])
+        out += f'\n          <a href="https://www.google.com/maps/search/?api=1&amp;query={q}" target="_blank" rel="noopener">{t(UI["map"])}</a>'
+    if p.get("instagram") and ig_label:
+        out += f'\n          <a href="{ig_permalink(p["instagram"])}" target="_blank" rel="noopener">{t(ig_label)}</a>'
+    return out
 
 
 def render_post(p):
@@ -373,23 +383,68 @@ def render_list(posts):
     )
 
 
+def find_image(slug, name):
+    """images/directory/<slug>/<name>.<ext> があればサイト内のパスを返す。"""
+    for ext in IMAGE_EXTS:
+        f = IMAGES / slug / (name + ext)
+        if f.exists():
+            return f"/images/directory/{slug}/{name}{ext}"
+    return None
+
+
+def fact_value(f):
+    v = t(f["value"])
+    return f'<span class="badge">{v}</span>' if f.get("badge") else v
+
+
+def entry_name(p):
+    return t(p["name_i18n"]) if "name_i18n" in p else escape(p["name"])
+
+
+def entry_alt(p):
+    return p["name_i18n"]["en"] if "name_i18n" in p else p["name"]
+
+
 def render_entry(p):
     """directory/index.html の .entry カード（生産者・ショップ）。"""
-    paras = "".join(t_at(p["body"], i) + ("<br><br>" if i < len(p["body"]["ja"]) - 1 else "") for i in range(len(p["body"]["ja"])))
-    tags = ""
+    slug, alt = p["slug"], escape(entry_alt(p))
+    photo, logo, portrait = (find_image(slug, n) for n in ("photo", "logo", "portrait"))
+    kind_label = p.get("kind_label", UI[p["kind"]])
+    kind = t({l: kind_label[l] + ("・" if l == "ja" else " · ") + p["region"][l] for l in LANGS})
+    paras = "<br><br>".join(t_at(p["body"], i) for i in range(len(p["body"]["ja"])))
+
+    out = f'      <article class="entry{" has-photo" if photo else ""}" id="{slug}">\n'
+    if photo:
+        out += f'        <img class="entry-photo" src="{photo}" alt="{alt}" loading="lazy">\n'
+    out += '        <div class="entry-head">\n'
+    if logo:
+        out += f'          <img class="entry-logo" src="{logo}" alt="{alt} logo" loading="lazy">\n'
+    out += f"""          <div>
+            <p class="kind">{kind}</p>
+            <h3>{entry_name(p)}</h3>
+            <p class="place">{t(p["place"])}</p>
+          </div>
+        </div>
+        <p class="about">{paras}</p>
+"""
+    if portrait:
+        who = escape(p["person"]) if p.get("person") else ""
+        out += f'        <div class="person"><img class="entry-portrait" src="{portrait}" alt="{who or alt}" loading="lazy">{f"<span>{who}</span>" if who else ""}</div>\n'
+    if p.get("facts"):
+        rows = "".join(
+            f'\n          <dt>{t(f["label"])}</dt>\n          <dd>{fact_value(f)}</dd>'
+            for f in p["facts"]
+        )
+        out += f'        <dl class="facts">{rows}\n        </dl>\n'
     if p.get("points"):
-        tags = "\n        <div class=\"tea-tags\">\n" + "\n".join(
+        out += '        <div class="tea-tags">\n' + "\n".join(
             f"          <span>{t_at(p['points'], i)}</span>" for i in range(len(p["points"]["ja"]))
-        ) + "\n        </div>"
-    return f"""      <article class="entry" id="{p["slug"]}">
-        <p class="kind">{t({l: UI[p["kind"]][l] + "・" + p["region"][l] if l == "ja" else UI[p["kind"]][l] + " · " + p["region"][l] for l in LANGS})}</p>
-        <h3>{escape(p["name"])}</h3>
-        <p class="place">{t(p["place"])}</p>
-        <p class="about">{paras}</p>{tags}
-        <div class="links">{links_html(p, UI["ig_feature"])}
+        ) + "\n        </div>\n"
+    out += f"""        <div class="links">{links_html(p, UI["ig_feature"])}
         </div>
       </article>
 """
+    return out
 
 
 def update_directory(posts):
@@ -411,11 +466,14 @@ def update_directory(posts):
 def check(p):
     s = p.get("slug", "?")
     assert p.get("kind") in DIRECTORY_KINDS + tuple(KINDS), f"{s}: kind は producer / shop / education のどれか"
-    need = ("body",) + (("name", "region", "place") if p["kind"] in DIRECTORY_KINDS else ("title", "lead"))
+    if p["kind"] in DIRECTORY_KINDS:
+        assert "name" in p or "name_i18n" in p, f"{s}: name か name_i18n が必要"
+        need = ("body", "region", "place")
+    else:
+        assert p.get("instagram") and p.get("date"), f"{s}: education には instagram と date が必要"
+        need = ("body", "title", "lead")
     for key in need:
-        assert key in p, f"{s}: {key} が必要"
-        if key != "name":
-            assert set(p[key]) >= set(LANGS), f"{s}: {key} に ja/en/fr が必要"
+        assert key in p and set(p[key]) >= set(LANGS), f"{s}: {key} に ja/en/fr が必要"
     for key in ("body", "points"):
         if p.get(key):
             assert len({len(p[key][l]) for l in LANGS}) == 1, f"{s}: {key} の数を3言語でそろえる"
@@ -427,11 +485,9 @@ def main():
     assert len(slugs) == len(set(slugs)), "slug が重複しています"
     for p in posts:
         check(p)
-    posts.sort(key=lambda p: p["date"], reverse=True)
+    update_directory(posts)  # カードは entries.json の並び順
 
-    update_directory(posts)
-
-    learn = [p for p in posts if p["kind"] in KINDS]
+    learn = sorted((p for p in posts if p["kind"] in KINDS), key=lambda p: p["date"], reverse=True)
     for p in learn:
         out = LEARN_DIR / p["slug"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
