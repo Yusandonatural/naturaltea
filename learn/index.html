@@ -70,6 +70,8 @@
   .post-grid{display:grid;grid-template-columns:minmax(0,540px) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:start;}
   .ig-frame{max-width:540px;width:100%;}
   .ig-frame .instagram-media{margin:0!important;min-width:0!important;width:100%!important;}
+  .slides{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:8px;max-width:540px;}
+  .slides img{flex:0 0 100%;width:100%;aspect-ratio:4/5;object-fit:cover;scroll-snap-align:start;border-radius:8px;}
   .ig-fallback{display:block;border:1px solid var(--line);border-radius:8px;padding:28px;text-align:center;color:var(--green-700);background:#fdfcf8;}
   .article p{font-size:16px;line-height:2;margin-bottom:1.2em;}
   body.lang-en .article p,body.lang-fr .article p{font-size:18px;}
@@ -86,7 +88,7 @@
   .btn:hover{background:var(--green-800);}
   .back{margin-top:44px;font-size:15px;}
   .back a{color:var(--green-700);border-bottom:1px solid var(--matcha);}
-  @media(max-width:900px){.post-grid{grid-template-columns:minmax(0,1fr);}.ig-frame{margin:0 auto;}}
+  @media(max-width:900px){.post-grid{grid-template-columns:minmax(0,1fr);}.ig-frame,.slides{margin:0 auto;}}
 
   .post-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;}
   .post-card{background:#fdfcf8;border:1px solid var(--line);border-radius:8px;padding:clamp(24px,3vw,32px);display:flex;flex-direction:column;transition:border-color .2s;}

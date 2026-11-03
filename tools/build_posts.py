@@ -7,7 +7,9 @@
   producer → directory/index.html の「生産者」欄にカードを差し込む
   shop     → directory/index.html の「ショップ・カフェ」欄にカードを差し込む
              images/directory/<slug>/ に logo / portrait / photo（.jpg .jpeg .png .webp）があればカードに表示する
+             photo がなく投稿画像（instagram/<slug>/01.png）があれば、表紙をカードの写真に使う
   education → learn/<slug>/index.html（独立した LP）を作り、learn/index.html（一覧）に載せる
+             投稿画像（instagram/<slug>/*.png）があればそれを並べ、なければ Instagram の埋め込みを使う
 生成物はそのまま commit する（GitHub Pages にビルド工程はない）。
 """
 import json
@@ -20,6 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "tools" / "entries.json"
 IMAGES = ROOT / "images" / "directory"
 IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".webp")
+SLIDES = ROOT / "instagram"  # tools/render_slides.py が書き出す投稿画像 instagram/<slug>/01.png ...
 DIRECTORY = ROOT / "directory" / "index.html"
 LEARN_DIR = ROOT / "learn"
 LANGS = ("ja", "en", "fr")
@@ -152,6 +155,8 @@ CSS = """
   .post-grid{display:grid;grid-template-columns:minmax(0,540px) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:start;}
   .ig-frame{max-width:540px;width:100%;}
   .ig-frame .instagram-media{margin:0!important;min-width:0!important;width:100%!important;}
+  .slides{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:8px;max-width:540px;}
+  .slides img{flex:0 0 100%;width:100%;aspect-ratio:4/5;object-fit:cover;scroll-snap-align:start;border-radius:8px;}
   .ig-fallback{display:block;border:1px solid var(--line);border-radius:8px;padding:28px;text-align:center;color:var(--green-700);background:#fdfcf8;}
   .article p{font-size:16px;line-height:2;margin-bottom:1.2em;}
   body.lang-en .article p,body.lang-fr .article p{font-size:18px;}
@@ -168,7 +173,7 @@ CSS = """
   .btn:hover{background:var(--green-800);}
   .back{margin-top:44px;font-size:15px;}
   .back a{color:var(--green-700);border-bottom:1px solid var(--matcha);}
-  @media(max-width:900px){.post-grid{grid-template-columns:minmax(0,1fr);}.ig-frame{margin:0 auto;}}
+  @media(max-width:900px){.post-grid{grid-template-columns:minmax(0,1fr);}.ig-frame,.slides{margin:0 auto;}}
 
   .post-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;}
   .post-card{background:#fdfcf8;border:1px solid var(--line);border-radius:8px;padding:clamp(24px,3vw,32px);display:flex;flex-direction:column;transition:border-color .2s;}
@@ -305,7 +310,17 @@ def links_html(p, ig_label=None):
 def render_post(p):
     kind = KINDS[p["kind"]]
     date = fmt_date(p["date"])
-    ig = ig_permalink(p["instagram"])
+    slides = slide_images(p["slug"])
+    if slides:
+        imgs = "".join(f'\n        <img src="{src}" alt="{escape(p["title"]["en"])} {i}/{len(slides)}" loading="lazy">' for i, src in enumerate(slides, 1))
+        media = f'    <div class="slides" tabindex="0">{imgs}\n    </div>'
+    else:
+        ig = ig_permalink(p["instagram"])
+        media = f"""    <div class="ig-frame">
+      <blockquote class="instagram-media" data-instgrm-permalink="{ig}" data-instgrm-version="14">
+        <a class="ig-fallback" href="{ig}" target="_blank" rel="noopener">{t(UI["on_ig"])}</a>
+      </blockquote>
+    </div>"""
     paras = "\n".join(f"        <p>{t_at(p['body'], i)}</p>" for i in range(len(p["body"]["ja"])))
     points = ""
     if p.get("points"):
@@ -322,11 +337,7 @@ def render_post(p):
 
 <section class="block">
   <div class="wrap post-grid">
-    <div class="ig-frame">
-      <blockquote class="instagram-media" data-instgrm-permalink="{ig}" data-instgrm-version="14">
-        <a class="ig-fallback" href="{ig}" target="_blank" rel="noopener">{t(UI["on_ig"])}</a>
-      </blockquote>
-    </div>
+{media}
     <article class="article">
 {paras}
 {points}        <div class="links">{links_html(p, UI["on_ig"])}
@@ -342,7 +353,7 @@ def render_post(p):
 </section>"""
     title = f'{p["title"]["ja"]} | 日本自然茶協会 Japan Natural Tea Association'
     desc = f'{p["lead"]["ja"]} {p["lead"]["en"]}'
-    extra = '<script async src="https://www.instagram.com/embed.js"></script>\n'
+    extra = "" if slides else '<script async src="https://www.instagram.com/embed.js"></script>\n'
     return page(title, desc, f"https://naturaltea.jp/learn/{p['slug']}/", body, extra)
 
 
@@ -383,6 +394,10 @@ def render_list(posts):
     )
 
 
+def slide_images(slug):
+    return [f"/instagram/{slug}/{f.name}" for f in sorted((SLIDES / slug).glob("[0-9][0-9].png"))]
+
+
 def find_image(slug, name):
     """images/directory/<slug>/<name>.<ext> があればサイト内のパスを返す。"""
     for ext in IMAGE_EXTS:
@@ -409,6 +424,8 @@ def render_entry(p):
     """directory/index.html の .entry カード（生産者・ショップ）。"""
     slug, alt = p["slug"], escape(entry_alt(p))
     photo, logo, portrait = (find_image(slug, n) for n in ("photo", "logo", "portrait"))
+    if not photo and slide_images(slug):
+        photo = slide_images(slug)[0]
     kind_label = p.get("kind_label", UI[p["kind"]])
     kind = t({l: kind_label[l] + ("・" if l == "ja" else " · ") + p["region"][l] for l in LANGS})
     paras = "<br><br>".join(t_at(p["body"], i) for i in range(len(p["body"]["ja"])))
@@ -457,7 +474,7 @@ def update_directory(posts):
     # 上部ボタンの件数を、各欄のカード数に合わせる
     for sec, kind in (("producers", "producer"), ("shops", "shop")):
         block = re.search(rf'<section class="block[^"]*" id="{sec}">.*?</section>', html, re.S).group(0)
-        n = block.count('<article class="entry"')
+        n = block.count('<article class="entry')
         html = re.sub(rf'(<span class="count" data-count="{sec}">)\d+(</span>)', rf"\g<1>{n}\g<2>", html)
     DIRECTORY.write_text(html, encoding="utf-8")
     print("updated", DIRECTORY.relative_to(ROOT))
@@ -470,7 +487,8 @@ def check(p):
         assert "name" in p or "name_i18n" in p, f"{s}: name か name_i18n が必要"
         need = ("body", "region", "place")
     else:
-        assert p.get("instagram") and p.get("date"), f"{s}: education には instagram と date が必要"
+        assert p.get("date"), f"{s}: education には date が必要"
+        assert p.get("instagram") or slide_images(s), f"{s}: education には instagram か投稿画像（render_slides.py）が必要"
         need = ("body", "title", "lead")
     for key in need:
         assert key in p and set(p[key]) >= set(LANGS), f"{s}: {key} に ja/en/fr が必要"
