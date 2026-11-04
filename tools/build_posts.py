@@ -289,6 +289,8 @@ def links_html(p, ig_label):
     out = "".join(
         f'\n          <a href="{escape(x["url"])}" target="_blank" rel="noopener">{escape(x["label"])}</a>' for x in p.get("links", [])
     )
+    if not p.get("instagram"):  # 投稿前（スライドだけ先に作った生産者など）はリンクなし
+        return out
     return out + f'\n          <a href="{ig_permalink(p["instagram"])}" target="_blank" rel="noopener">{t(ig_label)}</a>'
 
 
