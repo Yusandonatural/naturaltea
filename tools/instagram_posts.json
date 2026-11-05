@@ -161,5 +161,73 @@
         "Hojicha"
       ]
     }
+  },
+  {
+    "slug": "kamairicha-shibamoto",
+    "kind": "producer",
+    "date": "2026-11-05",
+    "name": "釜炒り茶柴本 / Kamairicha Shibamoto",
+    "region": {
+      "ja": "静岡県",
+      "en": "Shizuoka",
+      "fr": "Shizuoka"
+    },
+    "place": {
+      "ja": "静岡県牧之原市（1ha）",
+      "en": "Makinohara, Shizuoka (1 ha)",
+      "fr": "Makinohara, Shizuoka (1 ha)"
+    },
+    "body": {
+      "ja": [
+        "全国有数の茶産地・静岡県の牧之原台地で、2010年から釜炒り茶の栽培、製茶、販売、見学をしています。海に近い温暖な気候を活かした、自然の摂理をベースにした無肥料・無農薬の栽培と、高度な釜炒り技術によってできる、個性あふれるお茶が特徴です。",
+        "土と微生物。茶樹と大地。地下水脈と太陽光と風。そのすべてに感謝して、自然の力を濁りのない形で一杯に届けます。ヤギとともに16年。山林農法も研究中です。"
+      ],
+      "en": [
+        "On the Makinohara plateau, one of Japan's great tea regions, Kamairicha Shibamoto has grown, pan-fired and sold tea since 2010, and welcomes visitors. The warm climate near the sea, natural farming with no fertilizer and no pesticides, and skilled pan-firing give each tea its own character.",
+        "Soil and microbes. Tea trees and the earth. Groundwater, sunlight and wind. Shibamoto gives thanks to all of them and passes their power on in a clear, undiluted cup. Goats have lived on the farm for 16 years; forest farming is under study."
+      ],
+      "fr": [
+        "Sur le plateau de Makinohara, l'une des grandes régions de thé du Japon, Kamairicha Shibamoto cultive, torréfie au wok et vend son thé depuis 2010, et accueille les visiteurs. Le climat doux proche de la mer, la culture naturelle sans engrais ni pesticides et un savoir-faire de torréfaction donnent à chaque thé son caractère.",
+        "Le sol et les microbes. Les théiers et la terre. L'eau souterraine, le soleil et le vent. Shibamoto les remercie tous et transmet leur force dans une tasse claire, sans rien y ajouter. Des chèvres vivent sur la ferme depuis 16 ans ; l'agroforesterie est à l'étude."
+      ]
+    },
+    "points": {
+      "ja": [
+        "釜炒り茶",
+        "ほうじ茶",
+        "番茶",
+        "紅茶",
+        "烏龍茶",
+        "発酵番茶",
+        "草木茶",
+        "見学可"
+      ],
+      "en": [
+        "Kamairicha",
+        "Hojicha",
+        "Bancha",
+        "Black tea",
+        "Oolong",
+        "Fermented bancha",
+        "Herbal teas",
+        "Open to visitors"
+      ],
+      "fr": [
+        "Kamairicha",
+        "Hojicha",
+        "Bancha",
+        "Thé noir",
+        "Oolong",
+        "Bancha fermenté",
+        "Tisanes",
+        "Ouvert aux visiteurs"
+      ]
+    },
+    "links": [
+      {
+        "label": "Instagram @toshifumishibamoto",
+        "url": "https://www.instagram.com/toshifumishibamoto"
+      }
+    ]
   }
 ]
