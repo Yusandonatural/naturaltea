@@ -108,6 +108,115 @@
     "map": "奈良県奈良市上深川町227"
   },
   {
+    "slug": "kudoan",
+    "kind": "producer",
+    "date": "2026-11-04",
+    "name": "空洞庵 / Kudoan",
+    "region": {
+      "ja": "静岡県",
+      "en": "Shizuoka",
+      "fr": "Shizuoka"
+    },
+    "place": {
+      "ja": "静岡県静岡市・梅ヶ島（20a）",
+      "en": "Umegashima, Shizuoka City (0.2 ha)",
+      "fr": "Umegashima, ville de Shizuoka (0,2 ha)"
+    },
+    "body": {
+      "ja": [
+        "2021年から、静岡市の山あい・梅ヶ島で在来種にこだわったお茶をつくっています。標高が高く、昼夜の寒暖差が大きく、水はけのよい土地で、無肥料・無農薬で育てた葉を手摘みや手鋏で丁寧に収穫しています。",
+        "新茶はすぐに販売せず、秋まで熟成させてからお届けします。土地と茶葉の個性を大切に、正解にとらわれない自由なお茶の楽しみ方を通して、人と人がつながり、心がほどける穏やかな時間を届けています。"
+      ],
+      "en": [
+        "Since 2021, Kudoan has grown native-variety (zairai) tea in Umegashima, in the mountains behind Shizuoka city. High altitude, cold nights after warm days and fast-draining soil: the leaves are grown with no fertilizer and no pesticides, and picked by hand or with hand shears.",
+        "Spring tea is not sold right away; it rests until autumn. Kudoan values the character of the land and the leaf, and a free way of enjoying tea with no single right answer, so that people connect and the mind can rest."
+      ],
+      "fr": [
+        "Depuis 2021, Kudoan cultive du thé de variété indigène (zairai) à Umegashima, dans les montagnes derrière la ville de Shizuoka. Altitude élevée, nuits froides après des journées chaudes et sol bien drainé : les feuilles sont cultivées sans engrais ni pesticides, et cueillies à la main ou aux ciseaux.",
+        "Le thé de printemps n’est pas vendu tout de suite ; il repose jusqu’à l’automne. Kudoan tient au caractère de la terre et de la feuille, et à une façon libre de savourer le thé, sans réponse unique, pour que les gens se rencontrent et que l’esprit se repose."
+      ]
+    },
+    "points": {
+      "ja": [
+        "抹茶・碾茶",
+        "煎茶",
+        "ほうじ茶",
+        "紅茶",
+        "在来種",
+        "手摘み"
+      ],
+      "en": [
+        "Matcha & tencha",
+        "Sencha",
+        "Hojicha",
+        "Black tea",
+        "Zairai (native variety)",
+        "Hand-picked"
+      ],
+      "fr": [
+        "Matcha & tencha",
+        "Sencha",
+        "Hojicha",
+        "Thé noir",
+        "Zairai (variété indigène)",
+        "Cueilli à la main"
+      ]
+    },
+    "links": [
+      {
+        "label": "Instagram @kudoanotea",
+        "url": "https://www.instagram.com/kudoanotea"
+      }
+    ]
+  },
+  {
+    "slug": "kanrakuen",
+    "kind": "producer",
+    "date": "2026-11-01",
+    "name": "感楽園 / Kan Raku En",
+    "region": {
+      "ja": "福岡県",
+      "en": "Fukuoka",
+      "fr": "Fukuoka"
+    },
+    "place": {
+      "ja": "福岡県小郡市干潟（1反）・八女市上陽町（2反）",
+      "en": "Ogori (0.1 ha) and Joyo, Yame (0.2 ha), Fukuoka",
+      "fr": "Ogori (0,1 ha) et Joyo, Yame (0,2 ha), Fukuoka"
+    },
+    "body": {
+      "ja": [
+        "福岡県小郡市と八女市上陽町の二つの畑で、無肥料・無農薬のお茶を育てています。平地の小郡と山あいの八女、ふたつの風土から生まれる葉を、荒茶・緑茶・和紅茶・ほうじ茶に仕上げています。自然栽培5年目。"
+      ],
+      "en": [
+        "Kan Raku En grows tea with no fertilizer and no pesticides in two fields in Fukuoka: one on the plain in Ogori, one in the hills of Joyo, Yame. The leaves become aracha, green tea, Japanese black tea and hojicha. Five years into natural farming."
+      ],
+      "fr": [
+        "Kan Raku En cultive du thé sans engrais ni pesticides dans deux champs de Fukuoka : l’un en plaine à Ogori, l’autre dans les collines de Joyo, à Yame. Les feuilles deviennent aracha, thé vert, thé noir japonais et hojicha. Cinquième année de culture naturelle."
+      ]
+    },
+    "points": {
+      "ja": [
+        "荒茶",
+        "緑茶",
+        "和紅茶",
+        "ほうじ茶"
+      ],
+      "en": [
+        "Aracha",
+        "Green tea",
+        "Japanese black tea",
+        "Hojicha"
+      ],
+      "fr": [
+        "Aracha",
+        "Thé vert",
+        "Thé noir japonais",
+        "Hojicha"
+      ]
+    }
+  },
+  {
     "slug": "yusando-natural-tea",
     "kind": "shop",
     "name": "YUSANDO NATURAL TEA",
