@@ -19,6 +19,8 @@ slides の書き方（1枚ずつ）:
 表紙は images/directory/<slug>/logo.* があればロゴを載せる。
 """
 import json
+import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -29,8 +31,10 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "tools" / "entries.json"
 OUT = ROOT / "instagram"
 LOGOS = ROOT / "images" / "directory"
-CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+MAC_CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+CHROME = MAC_CHROME if Path(MAC_CHROME).exists() else shutil.which("google-chrome") or "chromium"
 W, H = 1080, 1350
+NO_SANDBOX = ["--no-sandbox"] if os.environ.get("CI") else []  # GitHub Actions 上の Chrome 用
 
 CSS = """
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;500&family=Noto+Serif+JP:wght@400;500&display=block');
@@ -127,7 +131,7 @@ def render(entry):
             src.write_text(slide_html(slug, sl, i, len(slides)), encoding="utf-8")
             png = out / f"{i:02d}.png"
             subprocess.run(
-                [CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=1",
+                [CHROME, *NO_SANDBOX, "--headless=new", "--disable-gpu", "--hide-scrollbars", "--force-device-scale-factor=1",
                  f"--window-size={W},{H}", "--virtual-time-budget=8000", f"--screenshot={png}", src.as_uri()],
                 check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
             )

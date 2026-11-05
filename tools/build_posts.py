@@ -436,14 +436,14 @@ def render_entry(p):
     out += '        <div class="entry-head">\n'
     if logo:
         out += f'          <img class="entry-logo" src="{logo}" alt="{alt} logo" loading="lazy">\n'
+    about = f'        <p class="about">{paras}</p>\n' if p["body"]["ja"] else ""  # 名前と場所のみ掲載の人は紹介文なし
     out += f"""          <div>
             <p class="kind">{kind}</p>
             <h3>{entry_name(p)}</h3>
             <p class="place">{t(p["place"])}</p>
           </div>
         </div>
-        <p class="about">{paras}</p>
-"""
+{about}"""
     if portrait:
         who = escape(p["person"]) if p.get("person") else ""
         out += f'        <div class="person"><img class="entry-portrait" src="{portrait}" alt="{who or alt}" loading="lazy">{f"<span>{who}</span>" if who else ""}</div>\n'
