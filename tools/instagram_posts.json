@@ -229,5 +229,52 @@
         "url": "https://www.instagram.com/toshifumishibamoto"
       }
     ]
+  },
+  {
+    "slug": "koushinraku-takema",
+    "kind": "producer",
+    "date": "2026-11-06",
+    "name": "岳間茶好信楽 / Koushinraku",
+    "region": {
+      "ja": "熊本県",
+      "en": "Kumamoto",
+      "fr": "Kumamoto"
+    },
+    "place": {
+      "ja": "熊本県山鹿市鹿北町（岳間）",
+      "en": "Takema, Kahoku, Yamaga, Kumamoto",
+      "fr": "Takema, Kahoku, Yamaga, Kumamoto"
+    },
+    "body": {
+      "ja": [
+        "熊本県北部、山鹿市鹿北町の岳間で釜炒り茶をつくっています。農薬不使用、無施肥でお茶を作っています。"
+      ],
+      "en": [
+        "Koushinraku makes kamairicha, pan-fired green tea, in Takema, in the hills of Kahoku, Yamaga, northern Kumamoto. The tea is grown without pesticides and without fertilizer."
+      ],
+      "fr": [
+        "Koushinraku produit du kamairicha, un thé vert torréfié au wok, à Takema, dans les collines de Kahoku, Yamaga, au nord de Kumamoto. Le thé est cultivé sans pesticides et sans engrais."
+      ]
+    },
+    "points": {
+      "ja": [
+        "釜炒り茶",
+        "無肥料・無農薬"
+      ],
+      "en": [
+        "Kamairicha",
+        "No fertilizer, no pesticides"
+      ],
+      "fr": [
+        "Kamairicha",
+        "Sans engrais ni pesticides"
+      ]
+    },
+    "links": [
+      {
+        "label": "Instagram @koushinraku_takema",
+        "url": "https://www.instagram.com/koushinraku_takema"
+      }
+    ]
   }
 ]
