@@ -21,7 +21,7 @@
 ## 公開の仕組み
 
 - ホスティング: GitHub Pages。リポジトリ `Yusandonatural/naturaltea`（`main` ブランチ `/(root)`）
-- カスタムドメイン: `naturaltea.jp`（リポジトリ直下の `CNAME` ファイルに記載）。DNS はムームードメイン（A レコード4件 → GitHub Pages IP、`www` → `yusandonatural.github.io`）
+- カスタムドメイン: `naturaltea.jp`（リポジトリ直下の `CNAME` ファイルに記載）。DNS は Cloudflare（2026-11 にムームードメインから移行。ネームサーバーは amir / poppy.ns.cloudflare.com。A レコード4件 → GitHub Pages IP、`www` → `yusandonatural.github.io`。プロキシを使うなら SSL/TLS は Full (strict) にする）
 - HTTPS: Enforce HTTPS 有効済み
 - **デプロイ = `index.html` と `CNAME` を `main` に push するだけ。** 1〜2分で反映
 - このフォルダはまだ git 管理ではない。推奨手順:
