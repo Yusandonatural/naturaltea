@@ -114,6 +114,9 @@ CSS = """
   .brand .name{line-height:1.3;}
   .brand .name b{font-family:'Noto Serif JP',serif;font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--green-800);display:block;}
   .brand .name span{font-size:11px;letter-spacing:.18em;color:var(--ink-soft);text-transform:uppercase;}
+  .brand-logo{height:40px;width:auto;display:block;}
+  @media(max-width:620px){.brand-logo{height:32px;}}
+  .foot-brand img{width:150px;height:auto;display:block;}
   nav.main{display:flex;align-items:center;gap:clamp(16px,1.9vw,28px);}
   nav.main a.navlink{white-space:nowrap;font-size:13px;letter-spacing:.06em;color:var(--ink-soft);transition:color .2s;}
   nav.main a.navlink:hover{color:var(--green-700);}
@@ -221,6 +224,11 @@ def page(title, description, canonical, body, extra_head=""):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{escape(title)}</title>
 <meta name="description" content="{escape(description)}">
+<meta property="og:site_name" content="Japan Natural Tea Association 日本自然茶協会">
+<meta property="og:image" content="https://naturaltea.jp/assets/logo/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="{canonical}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{escape(title)}">
@@ -236,12 +244,7 @@ def page(title, description, canonical, body, extra_head=""):
 
 <header>
   <a href="/" class="brand">
-    <span class="mark">茶</span>
-    <span class="name">
-      <b><span class="ja-only">日本自然茶協会</span><span class="en-only">Japan Natural Tea</span><span class="fr-only">Japan Natural Tea</span></b>
-      <span class="ja-only">JAPAN NATURAL TEA ASSOCIATION</span>
-      <span class="en-only">ASSOCIATION · 日本自然茶協会</span><span class="fr-only">ASSOCIATION · 日本自然茶協会</span>
-    </span>
+    <img class="brand-logo" src="/assets/logo/jnta-logo-horizontal.svg" width="806" height="108" alt="Japan Natural Tea Association 日本自然茶協会">
   </a>
   <nav class="main" id="nav">
 {nav}
@@ -260,11 +263,7 @@ def page(title, description, canonical, body, extra_head=""):
 
 <footer>
   <div class="foot-top">
-    <div class="foot-brand">
-      <b><span class="ja-only">一般社団法人 日本自然茶協会</span><span class="en-only">Japan Natural Tea Association</span><span class="fr-only">Japan Natural Tea Association</span></b>
-      <span class="ja-only">JAPAN NATURAL TEA ASSOCIATION</span>
-      <span class="en-only">一般社団法人 日本自然茶協会</span><span class="fr-only">一般社団法人 日本自然茶協会</span>
-    </div>
+    <div class="foot-brand"><img src="/assets/logo/jnta-logo-stacked-light.svg" width="483" height="486" alt="Japan Natural Tea Association 日本自然茶協会" loading="lazy"></div>
     <div class="foot-links">
 {foot}
     </div>
