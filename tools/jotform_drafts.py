@@ -30,7 +30,7 @@ MODEL = "claude-opus-5-5"
 API = "https://api.jotform.com"
 
 # この日時より前の登録は対象外（すでに手で反映したものを作り直さない）。Jotform の時刻（米国東部）で比べる
-SINCE = os.environ.get("JOTFORM_SINCE", "2026-11-05 00:00:00")
+SINCE = os.environ.get("JOTFORM_SINCE", "2026-11-09 00:00:00")
 
 # facts: Claude に渡す項目。メール・電話・担当者名・番地は渡さない
 FORMS = {
@@ -401,13 +401,17 @@ def open_draft_exists():
 
 
 def targets():
-    done = {str(e.get("jotform_id")) for e in json.loads(ENTRIES.read_text(encoding="utf-8"))}
+    entries = json.loads(ENTRIES.read_text(encoding="utf-8"))
+    done = {str(e.get("jotform_id")) for e in entries}
+    names = " ".join(str(e.get("name", "")) + str(e.get("name_i18n", "")) for e in entries).casefold()
     found = []
     for kind, cfg in FORMS.items():
         for sub in fetch_submissions(cfg["form_id"]):
             if not str(sub.get("id", "")).isdigit() or sub.get("status") != "ACTIVE":
                 continue
             if sub["created_at"] < SINCE or sub["id"] in done:
+                continue
+            if text(sub, cfg["name"]).casefold() in names:  # 別の作業で手で載せた登録を作り直さない
                 continue
             if listing_level(text(sub, cfg["listing"])) == "none":
                 continue
