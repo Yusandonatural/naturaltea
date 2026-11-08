@@ -224,6 +224,9 @@ def page(title, description, canonical, body, extra_head=""):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{escape(title)}</title>
 <meta name="description" content="{escape(description)}">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:site_name" content="Japan Natural Tea Association 日本自然茶協会">
 <meta property="og:image" content="https://naturaltea.jp/assets/logo/og-image.png">
 <meta property="og:image:width" content="1200">
