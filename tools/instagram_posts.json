@@ -276,5 +276,64 @@
         "url": "https://www.instagram.com/koushinraku_takema"
       }
     ]
+  },
+  {
+    "slug": "kisshoen",
+    "kind": "producer",
+    "date": "2026-11-08",
+    "name": "吉祥苑 / Kisshoen",
+    "region": {
+      "ja": "京都府",
+      "en": "Kyoto",
+      "fr": "Kyoto"
+    },
+    "place": {
+      "ja": "京都府綴喜郡宇治田原町（0.67ha）",
+      "en": "Ujitawara, Kyoto (0.67 ha)",
+      "fr": "Ujitawara, Kyoto (0,67 ha)"
+    },
+    "body": {
+      "ja": [
+        "緑茶発祥の地・宇治田原町の山間部で、就農8年。寒暖差のある気候と、近くの天ヶ瀬ダムから立つ霧のなかで、無肥料・無農薬でお茶を育てています。収穫する日や刈り方にもこだわり、抹茶・碾茶、煎茶、玉露・かぶせ茶、ほうじ茶、番茶をつくります。",
+        "モットーは「笑う門には福来たる」。茶の木に話しかけ、家族で笑いながら作業しています。無肥料・無農薬のお茶が世界中の人々に届けられますように。"
+      ],
+      "en": [
+        "In the hills of Ujitawara, the birthplace of Japanese green tea, Kisshoen has farmed for eight years. Wide swings in temperature and mist rising from the nearby Amagase Dam surround tea grown with no fertilizer and no pesticides. Picking day and cutting method are chosen with care for matcha and tencha, sencha, gyokuro and kabuse, hojicha and bancha.",
+        "Their motto: laughter brings good fortune. The family talks to the tea bushes and laughs together as they work, hoping their tea reaches people all over the world."
+      ],
+      "fr": [
+        "Dans les collines d'Ujitawara, berceau du thé vert japonais, Kisshoen cultive depuis huit ans. De fortes variations de température et la brume du barrage d'Amagase tout proche entourent un thé cultivé sans engrais ni pesticides. Le jour de cueillette et la méthode de coupe sont choisis avec soin pour le matcha et le tencha, le sencha, le gyokuro et le kabuse, le hojicha et le bancha.",
+        "Leur devise : le rire attire le bonheur. La famille parle aux théiers et rit ensemble en travaillant, en espérant que leur thé atteigne les gens du monde entier."
+      ]
+    },
+    "points": {
+      "ja": [
+        "抹茶・碾茶",
+        "煎茶",
+        "玉露・かぶせ茶",
+        "ほうじ茶",
+        "番茶"
+      ],
+      "en": [
+        "Matcha & tencha",
+        "Sencha",
+        "Gyokuro & kabuse",
+        "Hojicha",
+        "Bancha"
+      ],
+      "fr": [
+        "Matcha & tencha",
+        "Sencha",
+        "Gyokuro & kabuse",
+        "Hojicha",
+        "Bancha"
+      ]
+    },
+    "links": [
+      {
+        "label": "Website akira.her.jp",
+        "url": "https://akira.her.jp/access.html"
+      }
+    ]
   }
 ]
