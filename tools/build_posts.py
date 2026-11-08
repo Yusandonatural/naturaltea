@@ -105,24 +105,30 @@ CSS = """
     --ink:#242a24;--ink-soft:#434b43;--gold:#a98c4b;--line:#d7d2c2;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
-  body{font-family:'Noto Serif JP',serif;color:var(--ink);background:var(--paper);line-height:1.9;-webkit-font-smoothing:antialiased;font-weight:400;}
+  body{font-family:'Sawarabi Mincho',serif;color:var(--ink);background:var(--paper);line-height:1.9;-webkit-font-smoothing:antialiased;font-weight:400;}
   .ja-only{display:inline;}.en-only{display:none;}.fr-only{display:none;}
-  body.lang-en,body.lang-fr{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:17px;font-weight:500;}
+  body.lang-ja{font-synthesis:none;}
+  body.lang-en,body.lang-fr{font-family:'Cormorant Garamond','Sawarabi Mincho',serif;font-size:17px;font-weight:500;}
   body.lang-en .ja-only,body.lang-fr .ja-only{display:none;}
   body.lang-en .en-only{display:inline;}
   body.lang-fr .fr-only{display:inline;}
-  h1,h2,h3{font-family:'Noto Serif JP',serif;font-weight:500;}
+  h1,h2,h3{font-family:'Sawarabi Mincho',serif;font-weight:500;}
   body.lang-en :is(h1,h2,h3),body.lang-fr :is(h1,h2,h3){font-family:'Cormorant Garamond',serif;font-weight:600;}
   a{color:inherit;text-decoration:none;}
   a:focus-visible,button:focus-visible{outline:2px solid var(--matcha);outline-offset:3px;border-radius:4px;}
 
   header{position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 6vw;background:rgba(250,248,241,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
   .brand{display:flex;align-items:center;gap:14px;}
-  .brand .mark{width:42px;height:42px;border-radius:50%;background:var(--green-700);display:flex;align-items:center;justify-content:center;color:var(--kinari);font-family:'Noto Serif JP',serif;font-size:20px;flex-shrink:0;}
+  .brand .mark{width:42px;height:42px;border-radius:50%;background:var(--green-700);display:flex;align-items:center;justify-content:center;color:var(--kinari);font-family:'Sawarabi Mincho',serif;font-size:20px;flex-shrink:0;}
   .brand .name{line-height:1.3;}
-  .brand .name b{font-family:'Noto Serif JP',serif;font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--green-800);display:block;}
+  .brand .name b{font-family:'Sawarabi Mincho',serif;font-weight:600;font-size:15px;letter-spacing:.04em;color:var(--green-800);display:block;}
   .brand .name span{font-size:11px;letter-spacing:.18em;color:var(--ink-soft);text-transform:uppercase;}
+  .brand-logo{height:40px;width:auto;display:block;}
+  header{column-gap:32px;}
+  @media(max-width:620px){.brand-logo{height:32px;}}
+  .foot-brand img{width:150px;height:auto;display:block;}
   nav.main{display:flex;align-items:center;gap:clamp(16px,1.9vw,28px);}
+  @media(max-width:1440px){.brand-logo{height:34px;} nav.main{gap:clamp(14px,1.4vw,28px);}}
   nav.main a.navlink{white-space:nowrap;font-size:13px;letter-spacing:.06em;color:var(--ink-soft);transition:color .2s;}
   nav.main a.navlink:hover{color:var(--green-700);}
   nav.main a.navlink[aria-current="page"]{color:var(--green-800);border-bottom:1px solid var(--matcha);}
@@ -188,7 +194,7 @@ CSS = """
 
   footer{background:var(--green-900);color:rgba(244,241,232,.75);padding:60px 6vw 34px;}
   .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;max-width:1080px;margin:0 auto 40px;}
-  .foot-brand b{font-family:'Noto Serif JP',serif;color:var(--kinari);font-size:17px;display:block;margin-bottom:6px;}
+  .foot-brand b{font-family:'Sawarabi Mincho',serif;color:var(--kinari);font-size:17px;display:block;margin-bottom:6px;}
   body.lang-en .foot-brand b,body.lang-fr .foot-brand b{font-family:'Cormorant Garamond',serif;}
   .foot-brand span{font-size:12px;letter-spacing:.15em;}
   .foot-links{display:flex;gap:28px;flex-wrap:wrap;font-size:13px;}
@@ -231,6 +237,14 @@ def page(title, description, canonical, body, extra_head=""):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{escape(title)}</title>
 <meta name="description" content="{escape(description)}">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:site_name" content="Japan Natural Tea Association 日本自然茶協会">
+<meta property="og:image" content="https://naturaltea.jp/assets/logo/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="{canonical}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{escape(title)}">
@@ -238,7 +252,7 @@ def page(title, description, canonical, body, extra_head=""):
 <meta property="og:url" content="{canonical}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <style>{CSS}</style>
 {extra_head}</head>
 <body class="lang-en">
@@ -246,12 +260,7 @@ def page(title, description, canonical, body, extra_head=""):
 
 <header>
   <a href="/" class="brand">
-    <span class="mark">茶</span>
-    <span class="name">
-      <b><span class="ja-only">日本自然茶協会</span><span class="en-only">Japan Natural Tea</span><span class="fr-only">Japan Natural Tea</span></b>
-      <span class="ja-only">JAPAN NATURAL TEA ASSOCIATION</span>
-      <span class="en-only">ASSOCIATION · 日本自然茶協会</span><span class="fr-only">ASSOCIATION · 日本自然茶協会</span>
-    </span>
+    <img class="brand-logo" src="/assets/logo/jnta-logo-horizontal.svg" width="806" height="108" alt="Japan Natural Tea Association 日本自然茶協会">
   </a>
   <nav class="main" id="nav">
 {nav}
@@ -270,11 +279,7 @@ def page(title, description, canonical, body, extra_head=""):
 
 <footer>
   <div class="foot-top">
-    <div class="foot-brand">
-      <b><span class="ja-only">一般社団法人 日本自然茶協会</span><span class="en-only">Japan Natural Tea Association</span><span class="fr-only">Japan Natural Tea Association</span></b>
-      <span class="ja-only">JAPAN NATURAL TEA ASSOCIATION</span>
-      <span class="en-only">一般社団法人 日本自然茶協会</span><span class="fr-only">一般社団法人 日本自然茶協会</span>
-    </div>
+    <div class="foot-brand"><img src="/assets/logo/jnta-logo-stacked-light.svg" width="483" height="486" alt="Japan Natural Tea Association 日本自然茶協会" loading="lazy"></div>
     <div class="foot-links">
 {foot}
     </div>
