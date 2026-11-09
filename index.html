@@ -307,6 +307,7 @@
   .ig-layout{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:clamp(28px,5vw,64px);}
   .ig-video{flex:0 1 400px;min-width:0;max-width:100%;}
   .ig-video .instagram-media{margin:0!important;min-width:0!important;width:100%!important;}
+  .ig-video iframe{height:calc(min(400px,88vw)*1.25 + 206px)!important;}  /* 埋め込みスクリプトの高さ調整が届かなくても動画が切れないように固定 */
   .ig-fallback{display:block;padding:28px;text-align:center;color:var(--green-700);background:var(--paper);border:1px solid var(--line);border-radius:8px;}
   .ig-wrap{flex:0 1 460px;max-width:520px;margin:0 auto;text-align:center;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:clamp(30px,4vw,48px);}
   .ig-handle{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,30px);color:var(--green-800);margin-bottom:12px;letter-spacing:.02em;}
