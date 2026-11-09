@@ -304,12 +304,7 @@
   .ctx-sources a{color:var(--green-600);text-decoration:underline;}
 
   /* Instagram */
-  .ig-layout{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:clamp(28px,5vw,64px);}
-  .ig-video{flex:0 1 400px;min-width:0;max-width:100%;}
-  .ig-video .instagram-media{margin:0!important;min-width:0!important;width:100%!important;}
-  .ig-video iframe{height:calc(min(400px,88vw)*1.25 + 206px)!important;}  /* 埋め込みスクリプトの高さ調整が届かなくても動画が切れないように固定 */
-  .ig-fallback{display:block;padding:28px;text-align:center;color:var(--green-700);background:var(--paper);border:1px solid var(--line);border-radius:8px;}
-  .ig-wrap{flex:0 1 460px;max-width:520px;margin:0 auto;text-align:center;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:clamp(30px,4vw,48px);}
+  .ig-wrap{max-width:520px;margin:0 auto;text-align:center;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:clamp(30px,4vw,48px);}
   .ig-handle{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,30px);color:var(--green-800);margin-bottom:12px;letter-spacing:.02em;}
   .ig-text{color:var(--ink-soft);font-size:15px;margin-bottom:26px;}
 
@@ -377,6 +372,18 @@
   .foot-links{display:flex;gap:28px;flex-wrap:wrap;font-size:13px;}
   .foot-links a:hover{color:var(--kinari);}
   .foot-bottom{max-width:1080px;margin:0 auto;border-top:1px solid rgba(244,241,232,.15);padding-top:22px;font-size:12px;letter-spacing:.05em;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+
+  /* Latest reels: Instagram の埋め込みを切り抜き、動画の部分だけを見せる。
+     埋め込みの中は、上に見出し54px、その下に幅×1.25の枠があり、9:16の動画が枠の中央に入っている */
+  .reels{background:var(--green-900);padding:clamp(20px,3vw,40px) 6vw;}
+  .reels-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2vw,24px);max-width:1080px;margin:0 auto;}
+  .reel{position:relative;aspect-ratio:9/16;overflow:hidden;border-radius:6px;background:#000;container-type:inline-size;}
+  .reel .instagram-media{position:absolute!important;top:-54px!important;left:-21.112cqw!important;width:142.224cqw!important;min-width:0!important;max-width:none!important;height:calc(177.78cqw + 400px)!important;margin:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;}
+  @media(max-width:760px){
+    .reels{padding-left:0;padding-right:0;}
+    .reels-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 6vw;gap:12px;}
+    .reel{flex:0 0 max(62vw,230px);scroll-snap-align:center;}
+  }
 
   /* Scroll reveal */
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;}
@@ -452,6 +459,15 @@
       <a href="#about" class="btn btn-primary"><span class="ja-only">私たちについて</span><span class="en-only">Learn more</span><span class="fr-only">En savoir plus</span></a>
       <a href="#join" class="btn btn-ghost"><span class="ja-only">入会のご案内</span><span class="en-only">Become a member</span><span class="fr-only">Devenir membre</span></a>
     </div>
+  </div>
+</section>
+
+<!-- LATEST REELS: 最新の動画3本。差し替えは permalink の /reel/<ID>/ を新しいリールの ID にする -->
+<section class="reels" aria-label="Instagram">
+  <div class="reels-row">
+    <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DffzRoJTo6j/" data-instgrm-version="14"></blockquote></div>
+    <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DfdYG-8vQNq/" data-instgrm-version="14"></blockquote></div>
+    <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Dfas139PTYk/" data-instgrm-version="14"></blockquote></div>
   </div>
 </section>
 
@@ -891,13 +907,6 @@
       <p class="kicker" style="justify-content:center;"><span class="ja-only">インスタグラム</span><span class="en-only">Instagram</span><span class="fr-only">Instagram</span></p>
       <h2><span class="ja-only">最新の活動はInstagramで</span><span class="en-only">Follow us on Instagram</span><span class="fr-only">Suivez-nous sur Instagram</span></h2>
     </div>
-    <div class="ig-layout">
-    <div class="ig-video">
-      <!-- 最新の動画。差し替えは下の2か所の URL を新しいリールの URL にするだけ -->
-      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DffzRoJTo6j/" data-instgrm-version="14">
-        <a class="ig-fallback" href="https://www.instagram.com/reel/DffzRoJTo6j/" target="_blank" rel="noopener"><span class="ja-only">最新の動画を見る</span><span class="en-only">Watch our latest video</span><span class="fr-only">Voir notre dernière vidéo</span></a>
-      </blockquote>
-    </div>
     <div class="ig-wrap reveal">
       <p class="ig-handle">@japan_natural_tea</p>
       <p class="ig-text">
@@ -907,7 +916,6 @@
       <a class="btn btn-primary" href="https://www.instagram.com/japan_natural_tea/" target="_blank" rel="noopener">
         <span class="ja-only">Instagramを見る</span><span class="en-only">View on Instagram</span><span class="fr-only">Voir sur Instagram</span>
       </a>
-    </div>
     </div>
   </div>
 </section>
