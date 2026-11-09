@@ -68,7 +68,7 @@
 8. `#producers` 生産者紹介（株式会社 悠三堂 / Yusando Inc.、奈良市上深川町227、Googleマップ埋め込み）
 9. `#visit` カフェ・小売店（YUSANDO NATURAL TEA、都祁吐山町920、予約制、Googleマップ）
 10. `#join` 入会（メンバー募集＋メンバー応募フォーム → 生産者・販売店の登録 `#register`（生産者登録＋販売店登録フォーム、横並び）→ お問い合わせボタン）
-11. `#instagram`（@japan_natural_tea）
+11. `#instagram`（@japan_natural_tea、最新リールを公式埋め込みで表示。差し替えは `.ig-video` 内の URL 2か所）
 12. `#org` 協会概要（名称・代表理事・所在地・設立日 2026-05-07・事業年度）
 
 ### 埋め込み
@@ -90,6 +90,15 @@ Jotform は MCP コネクタ（または https://www.jotform.com/build/<formID>�
 - 色: ページ背景 #F5F0E6、フォーム面と入力欄 #FBFAF6、見出し #243128、本文・ラベル #2F3431、送信ボタン #2F5D4A（文字 #FBFAF6）
 - 書体: "Times New Roman", serif（全要素）。角丸: フォーム 6px、入力欄・ボタン 4px
 - Jotform の「フォーム名」と「ページタイトル（Form Settings）」は別設定。両方そろえること
+
+## AI チーム
+
+協会の運営を手伝う AI チーム。窓口は `/jimukyoku`（事務局長。`.claude/skills/jimukyoku/SKILL.md`）で、担当は `.claude/agents/` にある。
+
+- `jnta-research`（市場・統計・政策の情報収集）、`jnta-agri-research`（農業コンテンツの題材集め）→ `jnta-content`（投稿・ページの制作）→ `jnta-editor`（公開前の校閲）
+- `jnta-community`（フォーム回答の台帳と返信の下書き）、`jnta-advisor`（相談役）
+- 成果物は Google ドライブの協会フォルダ内 `AIチーム/` に保存する。このリポジトリは公開なので、登録者の情報やレポートは入れない。`.claude/` の定義にも個人のメールアドレスや連絡先を書かない
+- Instagram への投稿、メールの送信、commit・push、PR のマージは、代表理事が内容を確認して OK を出してから行う
 
 ## 協会の方針（コンテンツ作成時に守る）
 

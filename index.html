@@ -304,7 +304,11 @@
   .ctx-sources a{color:var(--green-600);text-decoration:underline;}
 
   /* Instagram */
-  .ig-wrap{max-width:520px;margin:0 auto;text-align:center;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:clamp(30px,4vw,48px);}
+  .ig-layout{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:clamp(28px,5vw,64px);}
+  .ig-video{flex:0 1 400px;min-width:0;max-width:100%;}
+  .ig-video .instagram-media{margin:0!important;min-width:0!important;width:100%!important;}
+  .ig-fallback{display:block;padding:28px;text-align:center;color:var(--green-700);background:var(--paper);border:1px solid var(--line);border-radius:8px;}
+  .ig-wrap{flex:0 1 460px;max-width:520px;margin:0 auto;text-align:center;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:clamp(30px,4vw,48px);}
   .ig-handle{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,30px);color:var(--green-800);margin-bottom:12px;letter-spacing:.02em;}
   .ig-text{color:var(--ink-soft);font-size:15px;margin-bottom:26px;}
 
@@ -886,6 +890,13 @@
       <p class="kicker" style="justify-content:center;"><span class="ja-only">インスタグラム</span><span class="en-only">Instagram</span><span class="fr-only">Instagram</span></p>
       <h2><span class="ja-only">最新の活動はInstagramで</span><span class="en-only">Follow us on Instagram</span><span class="fr-only">Suivez-nous sur Instagram</span></h2>
     </div>
+    <div class="ig-layout">
+    <div class="ig-video">
+      <!-- 最新の動画。差し替えは下の2か所の URL を新しいリールの URL にするだけ -->
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DffzRoJTo6j/" data-instgrm-version="14">
+        <a class="ig-fallback" href="https://www.instagram.com/reel/DffzRoJTo6j/" target="_blank" rel="noopener"><span class="ja-only">最新の動画を見る</span><span class="en-only">Watch our latest video</span><span class="fr-only">Voir notre dernière vidéo</span></a>
+      </blockquote>
+    </div>
     <div class="ig-wrap reveal">
       <p class="ig-handle">@japan_natural_tea</p>
       <p class="ig-text">
@@ -895,6 +906,7 @@
       <a class="btn btn-primary" href="https://www.instagram.com/japan_natural_tea/" target="_blank" rel="noopener">
         <span class="ja-only">Instagramを見る</span><span class="en-only">View on Instagram</span><span class="fr-only">Voir sur Instagram</span>
       </a>
+    </div>
     </div>
   </div>
 </section>
@@ -1046,5 +1058,6 @@
     if(f) f.style.height = (parseInt(m[1],10) + 20) + 'px';
   });
 </script>
+<script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
