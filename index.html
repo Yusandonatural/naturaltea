@@ -241,6 +241,11 @@
   .map-areas > span{background:#fdfcf8;border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:13px;color:var(--green-800);}
   .map-areas b{font-weight:500;color:var(--gold);margin-left:8px;}
   @media(max-width:620px){.pin{width:12px;height:12px;margin:-6px 0 0 -6px;border-width:2px;}}
+  .about-teaser .teaser-text{max-width:720px;font-size:clamp(16px,1.8vw,19px);line-height:2;color:var(--ink);margin:-24px 0 34px;}
+  .teaser-links{display:flex;flex-wrap:wrap;align-items:center;gap:12px 24px;font-size:14px;}
+  .teaser-links a{color:var(--green-700);border-bottom:1px solid var(--matcha);padding-bottom:2px;letter-spacing:.04em;}
+  .teaser-links a.teaser-btn{background:var(--green-700);color:var(--kinari);border:none;border-radius:999px;padding:12px 30px;font-size:15px;margin-right:8px;transition:background .2s;}
+  .teaser-links a.teaser-btn:hover{background:var(--green-800);}
   .dir-more{text-align:center;margin-top:30px;font-size:15px;}
   .dir-more a{color:var(--green-700);border-bottom:1px solid var(--matcha);padding-bottom:2px;letter-spacing:.04em;}
   .dir-more a:hover{color:var(--green-900);}
@@ -433,12 +438,10 @@
     <img class="brand-logo" src="/assets/logo/jnta-logo-horizontal.svg" width="806" height="108" alt="Japan Natural Tea Association 日本自然茶協会">
   </a>
   <nav class="main" id="nav">
-    <a class="navlink" href="#about"><span class="ja-only">協会について</span><span class="en-only">About</span><span class="fr-only">À propos</span></a>
+    <a class="navlink" href="/about/"><span class="ja-only">協会について</span><span class="en-only">About</span><span class="fr-only">À propos</span></a>
     <a class="navlink" href="#natural"><span class="ja-only">自然茶とは</span><span class="en-only">Natural Tea</span><span class="fr-only">Thé naturel</span></a>
-    <a class="navlink" href="#business"><span class="ja-only">事業内容</span><span class="en-only">Activities</span><span class="fr-only">Activités</span></a>
     <a class="navlink" href="/producers/"><span class="ja-only">生産者</span><span class="en-only">Producers</span><span class="fr-only">Producteurs</span></a>
     <a class="navlink" href="/shops/"><span class="ja-only">ショップ</span><span class="en-only">Shops</span><span class="fr-only">Boutiques</span></a>
-    <a class="navlink" href="#visit"><span class="ja-only">楽しめる場所</span><span class="en-only">Visit</span><span class="fr-only">Visiter</span></a>
     <a class="navlink" href="#org"><span class="ja-only">協会概要</span><span class="en-only">Overview</span><span class="fr-only">Présentation</span></a>
     <a class="navlink" href="#join"><span class="ja-only">入会・お問い合わせ</span><span class="en-only">Membership</span><span class="fr-only">Adhésion</span></a>
     <div class="lang-toggle">
@@ -477,57 +480,17 @@
   </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ABOUT (詳しくは about/index.html) -->
 <section class="block alt" id="about">
-  <div class="wrap">
+  <div class="wrap about-teaser">
     <div class="sec-head reveal">
-      <p class="kicker"><span class="ja-only">協会について</span><span class="en-only">About Us</span><span class="fr-only">À propos de nous</span></p>
+      <p class="kicker"><span class="ja-only">協会について</span><span class="en-only">About</span><span class="fr-only">À propos</span></p>
       <h2><span class="ja-only">日本の自然茶を、世界に広げる。</span><span class="en-only">Spreading Japan’s natural tea around the world.</span><span class="fr-only">Faire rayonner le thé naturel du Japon dans le monde.</span></h2>
     </div>
-    <div class="about-grid">
-      <div class="reveal">
-        <h3><span class="ja-only">設立の趣旨</span><span class="en-only">Our Purpose</span><span class="fr-only">Notre raison d’être</span></h3>
-        <p>
-          <span class="ja-only">本協会は、農薬や化学肥料を使用しない「自然茶」の価値を社会に広く伝えるために設立されました。化学資材に頼らない茶づくりは、土壌や水、生きものといった自然環境を守りながら、安心して楽しめるお茶を育みます。私たちは、その営みを支え、次の世代へと受け継いでいくことを目指します。</span>
-          <span class="en-only">The Association was founded to share, with society at large, the value of "natural tea" — tea cultivated without synthetic pesticides or chemical fertilizers. Growing tea without chemical inputs protects the soil, water, and living things, while producing tea that can be enjoyed with confidence. We exist to support this practice and pass it on to the next generation.</span><span class="fr-only">L’association a été fondée pour faire connaître au plus grand nombre la valeur du « thé naturel » — un thé cultivé sans pesticides de synthèse ni engrais chimiques. Cultiver le thé sans intrants chimiques protège le sol, l’eau et le vivant, tout en produisant un thé que l’on peut savourer en toute confiance. Nous existons pour soutenir cette pratique et la transmettre à la génération suivante.</span>
-        </p>
-      </div>
-      <div class="reveal">
-        <h3><span class="ja-only">私たちの想い</span><span class="en-only">What Drives Us</span><span class="fr-only">Ce qui nous anime</span></h3>
-        <p>
-          <span class="ja-only">茶は、日本の暮らしと風景に深く根ざした文化です。一方で、後継者の減少や環境への負荷といった課題も抱えています。生産者・研究者・消費者が垣根を越えてつながり、学び合うことで、自然茶の輪を国内外へ広げていきたい。その想いから、この協会は生まれました。</span>
-          <span class="en-only">Tea is a culture deeply rooted in Japanese daily life and landscape, yet it faces challenges — fewer successors and growing environmental pressure. By connecting producers, researchers, and consumers across boundaries and learning from one another, we hope to widen the circle of natural tea both in Japan and abroad. That hope is why this association exists.</span><span class="fr-only">Le thé est une culture profondément enracinée dans la vie quotidienne et les paysages du Japon, mais il fait face à des défis : moins de successeurs et une pression environnementale croissante. En reliant producteurs, chercheurs et consommateurs au-delà des frontières et en apprenant les uns des autres, nous souhaitons élargir le cercle du thé naturel au Japon comme à l’étranger. C’est cet espoir qui a donné naissance à cette association.</span>
-        </p>
-      </div>
-      <div class="mission-card reveal">
-        <p class="label"><span class="ja-only">私たちの目的</span><span class="en-only">Our Mission</span><span class="fr-only">Notre mission</span></p>
-        <p>
-          <span class="ja-only">農薬や化学肥料を使用しない自然茶の普及、研究、教育、情報発信および国際交流を通じて、環境保全、人々の健康および地域社会の発展に寄与する。</span>
-          <span class="en-only">To contribute to environmental conservation, human health, and the development of local communities through the promotion, research, education, communication, and international exchange of natural tea grown without agrochemicals or chemical fertilizers.</span><span class="fr-only">Contribuer à la préservation de l’environnement, à la santé humaine et au développement des communautés locales par la promotion, la recherche, l’éducation, la diffusion d’informations et les échanges internationaux autour du thé naturel cultivé sans produits agrochimiques ni engrais chimiques.</span>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOUNDER -->
-<section class="block alt-2" id="founder">
-  <div class="wrap">
-    <div class="sec-head reveal" style="text-align:center;margin-bottom:30px;">
-      <p class="kicker" style="justify-content:center;"><span class="ja-only">代表挨拶</span><span class="en-only">Founder’s Message</span><span class="fr-only">Message du fondateur</span></p>
-    </div>
-    <div class="founder reveal">
-      <p>
-        <span class="ja-only">僕は自然栽培のお茶作りを10年以上、奈良で実践してきました。自然を守りながら、自然と触れて、お茶を育てる。その世界観に魅了されてここまできました。日本にとどまるのではなく、世界に広げられるようにこの協会を設立しました。</span>
-        <span class="en-only">I have practiced natural-cultivation tea growing in Nara for more than ten years. Protecting nature, staying close to nature, and growing tea — that way of seeing the world captivated me and has carried me here. I founded this association so that it would not remain only in Japan, but could reach the world.</span>
-        <span class="fr-only">Je pratique la culture naturelle du thé à Nara depuis plus de dix ans. Protéger la nature, rester proche de la nature et faire pousser le thé — cette vision du monde m’a captivé et m’a mené jusqu’ici. J’ai fondé cette association pour qu’elle ne reste pas confinée au Japon, mais puisse s’ouvrir au monde.</span>
-      </p>
-      <div class="sig">
-        <span class="line"></span>
-        <span class="name">Ryotaro Isozaki</span>
-        <span class="name-ja"><span class="ja-only">礒﨑 遼太郎</span><span class="en-only">礒﨑 遼太郎</span><span class="fr-only">礒﨑 遼太郎</span></span>
-        <span class="role"><span class="ja-only">代表理事・創設者</span><span class="en-only">Representative Director &amp; Founder</span><span class="fr-only">Directeur représentant &amp; fondateur</span></span>
-      </div>
+    <p class="teaser-text reveal"><span class="ja-only">日本で自然茶を育てる農家のコミュニティと、世界で日本茶を広めるコミュニティ。日本自然茶協会は、この2つを育て、つなぎます。</span><span class="en-only">A community of natural tea farmers in Japan, and a community spreading Japanese tea around the world. The Japan Natural Tea Association grows both, and brings them together.</span><span class="fr-only">Une communauté de producteurs de thé naturel au Japon, et une communauté qui fait connaître le thé japonais dans le monde. La Japan Natural Tea Association fait grandir l’une et l’autre, et les relie.</span></p>
+    <div class="teaser-links reveal">
+      <a class="teaser-btn" href="/about/"><span class="ja-only">協会について詳しく</span><span class="en-only">More about us</span><span class="fr-only">En savoir plus</span></a>
+      <a href="/about/#founder"><span class="ja-only">代表挨拶</span><span class="en-only">A word from our director</span><span class="fr-only">Le mot du directeur</span></a><a href="/about/#context"><span class="ja-only">日本茶のいま</span><span class="en-only">Japanese tea today</span><span class="fr-only">Le thé japonais aujourd’hui</span></a><a href="/about/#business"><span class="ja-only">事業内容</span><span class="en-only">Activities</span><span class="fr-only">Activités</span></a><a href="/about/#upcoming"><span class="ja-only">準備中の活動</span><span class="en-only">Coming soon</span><span class="fr-only">À venir</span></a>
     </div>
   </div>
 </section>
@@ -593,142 +556,6 @@
         <h3><span class="ja-only">茶本来の味わい</span><span class="en-only">The tea’s true character</span><span class="fr-only">Le vrai caractère du thé</span></h3>
         <p><span class="ja-only">肥料で太らせない茶葉は、雑味がなく、すっきりとした甘みと深い余韻をもちます。土地と季節の個性が、そのまま一杯に表れます。</span><span class="en-only">Leaves not forced with fertilizer are clean and free of harshness, with a gentle sweetness and long finish — the land and season in every cup.</span><span class="fr-only">Des feuilles non forcées par l’engrais, sans âpreté, à la douceur délicate et à la longue finale — le terroir et la saison dans chaque tasse.</span></p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTEXT -->
-<section class="block alt-2" id="context">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="kicker"><span class="ja-only">日本茶の今</span><span class="en-only">Japanese Tea Today</span><span class="fr-only">Le thé japonais aujourd’hui</span></p>
-      <h2><span class="ja-only">課題と、世界からの期待</span><span class="en-only">Challenges, and global expectations</span><span class="fr-only">Défis et attentes mondiales</span></h2>
-    </div>
-    <div class="context-grid">
-      <div class="ctx-panel ctx-challenge reveal">
-        <h3><span class="ja-only">日本のお茶が抱える課題</span><span class="en-only">Challenges facing Japanese tea</span><span class="fr-only">Les défis du thé japonais</span></h3>
-        <ul class="ctx-list">
-          <li><span class="ja-only">茶の生産者が年々減りつつある</span><span class="en-only">The number of tea producers is declining year by year</span><span class="fr-only">Le nombre de producteurs de thé diminue d’année en année</span></li>
-          <li><span class="ja-only">残留農薬の基準値が諸外国より高い（緩い）。EUの基準は品目により日本の数倍〜数十倍厳しい</span><span class="en-only">Permitted pesticide residue levels are higher (more lenient) than abroad — EU limits can be several to tens of times stricter than Japan’s</span><span class="fr-only">Les limites de résidus de pesticides sont plus élevées (plus permissives) qu’ailleurs — celles de l’UE sont parfois plusieurs à des dizaines de fois plus strictes qu’au Japon</span></li>
-        </ul>
-      </div>
-      <div class="ctx-panel ctx-hope reveal">
-        <h3><span class="ja-only">世界から注目を浴びる日本茶</span><span class="en-only">Japanese tea in the global spotlight</span><span class="fr-only">Le thé japonais sous les projecteurs du monde</span></h3>
-        <ul class="ctx-list">
-          <li><span class="ja-only">小規模の生産者が持続可能な農業を営む</span><span class="en-only">Small-scale producers practicing sustainable farming</span><span class="fr-only">De petits producteurs pratiquant une agriculture durable</span></li>
-          <li><span class="ja-only">世界中のお茶好きと生産者をつなぐ</span><span class="en-only">Connecting tea lovers around the world with growers</span><span class="fr-only">Relier les amateurs de thé du monde entier aux producteurs</span></li>
-        </ul>
-      </div>
-    </div>
-    <div class="ctx-stats">
-      <div class="ctx-stat reveal">
-        <div class="num"><span class="ja-only">約2万戸</span><span class="en-only">≈20,000</span><span class="fr-only">≈20 000</span></div>
-        <div class="desc"><span class="ja-only">茶の販売農家戸数（2015年）。2000年の約5.4万戸から15年で約6割減。</span><span class="en-only">Tea-farming households (2015) — down about 60% from ~54,000 in 2000.</span><span class="fr-only">Exploitations productrices de thé (2015) — en baisse d’environ 60 % depuis ~54 000 en 2000.</span></div>
-      </div>
-      <div class="ctx-stat reveal">
-        <div class="num"><span class="ja-only">約2.5倍</span><span class="en-only">×2.5</span><span class="fr-only">×2,5</span></div>
-        <div class="desc"><span class="ja-only">緑茶の輸出量の伸び（過去約10年）。海外需要が拡大。</span><span class="en-only">Growth in green tea export volume over the past decade.</span><span class="fr-only">Croissance du volume d’exportation du thé vert sur dix ans.</span></div>
-      </div>
-      <div class="ctx-stat reveal">
-        <div class="num"><span class="ja-only">292億円</span><span class="en-only">¥29.2B</span><span class="fr-only">29,2 Md¥</span></div>
-        <div class="desc"><span class="ja-only">緑茶の輸出額（2023年）。4年連続で過去最高、抹茶など粉末茶が牽引。</span><span class="en-only">Green tea export value (2023) — a record high for the 4th year running, led by matcha and powdered teas.</span><span class="fr-only">Valeur d’exportation du thé vert (2023) — record pour la 4e année consécutive, portée par le matcha et les thés en poudre.</span></div>
-      </div>
-    </div>
-    <p class="ctx-sources">
-      <span class="ja-only">出典：</span><span class="en-only">Sources: </span><span class="fr-only">Sources : </span>
-      <a href="https://www.maff.go.jp/j/seisan/tokusan/cha/" target="_blank" rel="noopener"><span class="ja-only">農林水産省「茶をめぐる情勢」</span><span class="en-only">MAFF, “Situation Surrounding Tea”</span><span class="fr-only">MAFF, « Situation du thé »</span></a>　/
-      <a href="https://www.maff.go.jp/j/seisan/tokusan/cha/tea_export.html" target="_blank" rel="noopener"><span class="ja-only">農林水産省・財務省貿易統計（緑茶輸出）</span><span class="en-only">MAFF / Customs trade statistics (green tea exports)</span><span class="fr-only">MAFF / statistiques douanières (exportations de thé vert)</span></a>　/
-      <a href="https://www.maff.go.jp/j/shokusan/export/zannou_kisei.html" target="_blank" rel="noopener"><span class="ja-only">農林水産省「諸外国における残留農薬基準値」</span><span class="en-only">MAFF, pesticide residue limits by country</span><span class="fr-only">MAFF, limites de résidus de pesticides par pays</span></a>
-    </p>
-  </div>
-</section>
-
-<!-- BUSINESS -->
-<section class="block" id="business">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="kicker"><span class="ja-only">事業内容</span><span class="en-only">Our Activities</span><span class="fr-only">Nos activités</span></p>
-      <h2><span class="ja-only">協会が行う5つの取り組み</span><span class="en-only">Five areas of work</span><span class="fr-only">Cinq domaines d’action</span></h2>
-      <p class="lead" style="margin-top:18px;">
-        <span class="ja-only">定款に定める目的を達成するため、調査研究から教育、交流、文化の普及まで、幅広い活動を行います。</span>
-        <span class="en-only">To fulfill the purpose set out in our articles of incorporation, we pursue a broad range of activities — from research to education, exchange, and cultural outreach.</span><span class="fr-only">Pour réaliser l’objet défini par nos statuts, nous menons un large éventail d’activités — de la recherche à l’éducation, en passant par les échanges et la diffusion culturelle.</span>
-      </p>
-    </div>
-    <div class="cards">
-      <div class="card reveal">
-        <div class="num">01</div>
-        <h3><span class="ja-only">調査・研究と情報発信</span><span class="en-only">Research &amp; Communication</span><span class="fr-only">Recherche &amp; communication</span></h3>
-        <p><span class="ja-only">自然茶に関する調査・研究を行い、その成果を広く社会に向けて発信します。</span><span class="en-only">We conduct surveys and research on natural tea and share the findings widely with society.</span><span class="fr-only">Nous menons des études et des recherches sur le thé naturel et en partageons largement les résultats avec la société.</span></p>
-      </div>
-      <div class="card reveal">
-        <div class="num">02</div>
-        <h3><span class="ja-only">教育・研修・体験事業</span><span class="en-only">Education &amp; Experience</span><span class="fr-only">Éducation &amp; expérience</span></h3>
-        <p><span class="ja-only">自然茶を深く知るための教育・研修や、産地での体験プログラムを提供します。</span><span class="en-only">We offer education, training, and hands-on programs that deepen understanding of natural tea.</span><span class="fr-only">Nous proposons des programmes d’éducation, de formation et de découverte pratique pour approfondir la connaissance du thé naturel.</span></p>
-      </div>
-      <div class="card reveal">
-        <div class="num">03</div>
-        <h3><span class="ja-only">生産者・研究者・消費者の交流</span><span class="en-only">Connecting People</span><span class="fr-only">Mettre en relation</span></h3>
-        <p><span class="ja-only">立場を越えてつながり、学び合える場を生み出し、交流を促進します。</span><span class="en-only">We create spaces where producers, researchers, and consumers can connect and learn together.</span><span class="fr-only">Nous créons des espaces où producteurs, chercheurs et consommateurs peuvent se rencontrer et apprendre ensemble.</span></p>
-      </div>
-      <div class="card reveal">
-        <div class="num">04</div>
-        <h3><span class="ja-only">文化的価値の普及</span><span class="en-only">Cultural Value</span><span class="fr-only">Valeur culturelle</span></h3>
-        <p><span class="ja-only">自然茶が持つ文化的な価値を、国内外に向けて広く伝えていきます。</span><span class="en-only">We share the cultural value of natural tea with audiences in Japan and around the world.</span><span class="fr-only">Nous faisons connaître la valeur culturelle du thé naturel au Japon et dans le monde.</span></p>
-      </div>
-      <div class="card reveal">
-        <div class="num">05</div>
-        <h3><span class="ja-only">国際交流と連携</span><span class="en-only">International Exchange</span><span class="fr-only">Échanges internationaux</span></h3>
-        <p><span class="ja-only">海外の関係者や団体と連携し、自然茶の輪を世界へと広げます。</span><span class="en-only">We collaborate with partners and organizations abroad to widen the circle of natural tea worldwide.</span><span class="fr-only">Nous collaborons avec des partenaires et des organisations à l’étranger pour élargir le cercle du thé naturel dans le monde entier.</span></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- UPCOMING -->
-<section class="block upcoming" id="upcoming">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <p class="kicker"><span class="ja-only">準備中の活動</span><span class="en-only">In Preparation</span><span class="fr-only">En préparation</span></p>
-      <h2><span class="ja-only">これから始まる、6つの活動</span><span class="en-only">Six projects on the way</span><span class="fr-only">Six projets en préparation</span></h2>
-      <p class="lead" style="margin-top:18px;">
-        <span class="ja-only">自然茶を、もっと身近に、もっと深く。協会では現在、次の活動の準備を進めています。始まる時期が決まりしだい、このサイトと Instagram でお知らせします。</span><span class="en-only">Bringing natural tea closer, and deeper. The association is now preparing the projects below. We’ll announce each one here and on Instagram as soon as its start date is set.</span><span class="fr-only">Rendre le thé naturel plus proche, et plus profond. L’association prépare actuellement les projets ci-dessous. Nous annoncerons chacun ici et sur Instagram dès que sa date de lancement sera fixée.</span>
-      </p>
-    </div>
-    <div class="plans">
-      <div class="plan reveal">
-        <p class="tag"><span class="ja-only">日本国内</span><span class="en-only">In Japan</span><span class="fr-only">Au Japon</span></p>
-        <h3><span class="ja-only">生産者をめぐるティーツアー</span><span class="en-only">Tea tours to meet the growers</span><span class="fr-only">Circuits à la rencontre des producteurs</span></h3>
-        <p><span class="ja-only">日本各地の自然茶の産地を訪ね、生産者と一緒に茶畑や製茶の現場を歩きます。</span><span class="en-only">Visit natural tea regions across Japan and walk the fields and tea workshops with the growers themselves.</span><span class="fr-only">Visitez les régions de thé naturel du Japon et parcourez les champs et les ateliers avec les producteurs eux-mêmes.</span></p>
-      </div>
-      <div class="plan reveal">
-        <p class="tag"><span class="ja-only">オンライン</span><span class="en-only">Online</span><span class="fr-only">En ligne</span></p>
-        <h3><span class="ja-only">オンラインコース</span><span class="en-only">Online courses</span><span class="fr-only">Cours en ligne</span></h3>
-        <p><span class="ja-only">自然栽培によるお茶の生産、日本茶の基礎、茶道・煎茶道の3つのテーマで学べます。海外からも受講できます。</span><span class="en-only">Three themes: growing tea naturally, the essentials of Japanese tea, and the tea ceremony (chadō and senchadō). Open to learners worldwide.</span><span class="fr-only">Trois thèmes : cultiver le thé naturellement, les bases du thé japonais, et la cérémonie du thé (chadō et senchadō). Ouverts aux participants du monde entier.</span></p>
-      </div>
-      <div class="plan reveal">
-        <p class="tag"><span class="ja-only">年に一度</span><span class="en-only">Once a year</span><span class="fr-only">Une fois par an</span></p>
-        <h3><span class="ja-only">自然栽培茶カンファレンス</span><span class="en-only">Natural Tea Conference</span><span class="fr-only">Conférence du thé naturel</span></h3>
-        <p><span class="ja-only">生産者・研究者・販売店・お茶を愛する人が集まり、自然栽培の知恵とこれからを語り合います。</span><span class="en-only">Growers, researchers, retailers, and tea lovers gather to share what they know about natural cultivation and where it goes next.</span><span class="fr-only">Producteurs, chercheurs, commerçants et amateurs de thé se réunissent pour partager leurs savoirs sur la culture naturelle et son avenir.</span></p>
-      </div>
-      <div class="plan reveal">
-        <p class="tag">YouTube</p>
-        <h3><span class="ja-only">生産者を紹介する動画</span><span class="en-only">Videos featuring the growers</span><span class="fr-only">Vidéos sur les producteurs</span></h3>
-        <p><span class="ja-only">生産者の畑と暮らし、お茶づくりへの想いを、動画でお届けします。</span><span class="en-only">Films about the growers — their fields, their lives, and what goes into their tea.</span><span class="fr-only">Des films sur les producteurs — leurs champs, leur vie et ce qu’ils mettent dans leur thé.</span></p>
-      </div>
-      <div class="plan reveal">
-        <p class="tag"><span class="ja-only">お届け</span><span class="en-only">By mail</span><span class="fr-only">Par courrier</span></p>
-        <h3><span class="ja-only">自然茶サンプルのアソートパック</span><span class="en-only">Natural tea sampler pack</span><span class="fr-only">Coffret découverte de thés naturels</span></h3>
-        <p><span class="ja-only">いろいろな生産者の自然茶を少しずつ詰め合わせ、飲み比べができるセットです。</span><span class="en-only">Small portions of natural tea from different growers, packed together so you can taste and compare.</span><span class="fr-only">De petites portions de thés naturels de différents producteurs, réunies pour déguster et comparer.</span></p>
-      </div>
-      <div class="plan reveal">
-        <p class="tag"><span class="ja-only">メール</span><span class="en-only">Email</span><span class="fr-only">E-mail</span></p>
-        <h3><span class="ja-only">メールマガジン</span><span class="en-only">Newsletter</span><span class="fr-only">Lettre d’information</span></h3>
-        <p><span class="ja-only">活動のお知らせ、生産者からの便り、ツアーやコースの先行案内をお届けします。</span><span class="en-only">News from the association, letters from the growers, and early notice of tours and courses.</span><span class="fr-only">Les nouvelles de l’association, des lettres des producteurs et l’annonce en avant-première des circuits et des cours.</span></p>
-      </div>
-    </div>
-    <div class="upcoming-cta reveal">
-      <p><span class="ja-only">いち早く案内を受け取りたい方は、メンバー応募フォームからご登録ください。</span><span class="en-only">Want to hear first? Sign up through the membership application form.</span><span class="fr-only">Vous voulez être informé en premier ? Inscrivez-vous via le formulaire d’adhésion.</span></p>
-      <a class="btn btn-primary" href="#join"><span class="ja-only">メンバーに応募する</span><span class="en-only">Apply to become a member</span><span class="fr-only">Devenir membre</span></a>
     </div>
   </div>
 </section>
@@ -934,15 +761,13 @@
   <div class="foot-top">
     <div class="foot-brand"><img src="/assets/logo/jnta-logo-stacked-light.svg" width="483" height="486" alt="Japan Natural Tea Association 日本自然茶協会" loading="lazy"></div>
     <div class="foot-links">
-      <a href="#about"><span class="ja-only">協会について</span><span class="en-only">About</span><span class="fr-only">À propos</span></a>
-      <a href="#business"><span class="ja-only">事業内容</span><span class="en-only">Activities</span><span class="fr-only">Activités</span></a>
-      <a href="#upcoming"><span class="ja-only">準備中の活動</span><span class="en-only">Coming soon</span><span class="fr-only">À venir</span></a>
-      <a href="#producers"><span class="ja-only">生産者紹介</span><span class="en-only">Producers</span><span class="fr-only">Producteurs</span></a>
+      <a href="/about/"><span class="ja-only">協会について</span><span class="en-only">About</span><span class="fr-only">À propos</span></a>
+      <a href="/about/#business"><span class="ja-only">事業内容</span><span class="en-only">Activities</span><span class="fr-only">Activités</span></a>
+      <a href="/about/#upcoming"><span class="ja-only">準備中の活動</span><span class="en-only">Coming soon</span><span class="fr-only">À venir</span></a>
       <a href="/producers/"><span class="ja-only">生産者</span><span class="en-only">Producers</span><span class="fr-only">Producteurs</span></a>
       <a href="/shops/"><span class="ja-only">ショップ</span><span class="en-only">Shops</span><span class="fr-only">Boutiques</span></a>
       <a href="/learn/"><span class="ja-only">学び</span><span class="en-only">Learn</span><span class="fr-only">Apprendre</span></a>
       <a href="#register"><span class="ja-only">生産者・販売店登録</span><span class="en-only">Register</span><span class="fr-only">Inscription</span></a>
-      <a href="#visit"><span class="ja-only">楽しめる場所</span><span class="en-only">Visit</span><span class="fr-only">Visiter</span></a>
       <a href="#org"><span class="ja-only">協会概要</span><span class="en-only">Overview</span><span class="fr-only">Présentation</span></a>
       <a href="#join"><span class="ja-only">入会・お問い合わせ</span><span class="en-only">Membership</span><span class="fr-only">Adhésion</span></a>
     </div>
@@ -973,6 +798,9 @@
     if(!saved){ saved = 'en'; }
     setLang(saved);
   })();
+
+  // 協会ページへ移した欄への古いリンク（/#founder など）は /about/ へ
+  (function(){ var h=location.hash.slice(1); if(['founder','context','business','upcoming'].indexOf(h)>=0){ location.replace('/about/#'+h); } })();
 
   // mobile menu
   var nav=document.getElementById('nav'), mb=document.getElementById('menuBtn');

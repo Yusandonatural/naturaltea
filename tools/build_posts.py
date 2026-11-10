@@ -106,14 +106,17 @@ UI = {
 }
 
 NAV = [
-    ("/#about", {"ja": "協会について", "en": "About", "fr": "À propos"}),
+    ("/about/", {"ja": "協会について", "en": "About", "fr": "À propos"}),
     ("/#natural", {"ja": "自然茶とは", "en": "Natural Tea", "fr": "Thé naturel"}),
-    ("/#business", {"ja": "事業内容", "en": "Activities", "fr": "Activités"}),
     ("/producers/", {"ja": "生産者", "en": "Producers", "fr": "Producteurs"}),
     ("/shops/", {"ja": "ショップ", "en": "Shops", "fr": "Boutiques"}),
     ("/learn/", {"ja": "学び", "en": "Learn", "fr": "Apprendre"}),
     ("/#org", {"ja": "協会概要", "en": "Overview", "fr": "Présentation"}),
     ("/#join", {"ja": "入会・お問い合わせ", "en": "Membership", "fr": "Adhésion"}),
+]
+FOOT_EXTRA = [  # フッターだけに出す、協会ページ内の欄
+    ("/about/#business", {"ja": "事業内容", "en": "Activities", "fr": "Activités"}),
+    ("/about/#upcoming", {"ja": "準備中の活動", "en": "Coming soon", "fr": "À venir"}),
 ]
 
 
@@ -269,7 +272,7 @@ def page(title, description, canonical, body, extra_head=""):
         f'    <a class="navlink" href="{href}"{current if href == "/learn/" else ""}>{t_raw(label)}</a>'
         for href, label in NAV
     )
-    foot = "\n".join(f'      <a href="{href}">{t_raw(label)}</a>' for href, label in [("/", UI["home"])] + NAV)
+    foot = "\n".join(f'      <a href="{href}">{t_raw(label)}</a>' for href, label in [("/", UI["home"])] + NAV[:1] + FOOT_EXTRA + NAV[1:])
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
