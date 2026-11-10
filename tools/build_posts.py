@@ -4,10 +4,14 @@
     python3 tools/build_posts.py
 
 投稿の kind で行き先が変わる:
-  producer → directory/index.html の「生産者」欄にカードを差し込む
-  shop     → directory/index.html の「ショップ・カフェ」欄にカードを差し込む
+  producer → producers/index.html（生産者のページ）にカードと日本地図のピンを差し込む
+  shop     → shops/index.html（ショップのページ）にカードと世界地図のピンを差し込む
              images/directory/<slug>/ に logo / portrait / photo（.jpg .jpeg .png .webp）があればカードに表示する
              photo がなく投稿画像（instagram/<slug>/01.png）があれば、表紙をカードの写真に使う
+             ピンの位置は "geo": [{"q": "静岡県牧之原市", "lat": 34.74, "lng": 138.22}]（市町村の単位まで）。
+             geo がなければ、国内は region（都道府県）の県庁所在地に立てる。海外で geo がないものは地図に出ない
+             生産者の「地図を開く」は geo の市町村で Google マップを開く（番地は出さない）。ショップは "map"（住所）があればそれを使う
+  旧 directory/index.html は、生産者・ショップのページへ移すだけのページとして毎回書き出す
   education → learn/<slug>/index.html（独立した LP）を作り、learn/index.html（一覧）に載せる
              投稿画像（instagram/<slug>/*.png）があればそれを並べ、なければ Instagram の埋め込みを使う
 生成物はそのまま commit する（GitHub Pages にビルド工程はない）。
@@ -23,10 +27,45 @@ DATA = ROOT / "tools" / "entries.json"
 IMAGES = ROOT / "images" / "directory"
 IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".webp")
 SLIDES = ROOT / "instagram"  # tools/render_slides.py が書き出す投稿画像 instagram/<slug>/01.png ...
-DIRECTORY = ROOT / "directory" / "index.html"
+DIRECTORY = ROOT / "directory" / "index.html"  # 旧ページ（移動の案内だけ）
+PAGES = {"producer": ROOT / "producers" / "index.html", "shop": ROOT / "shops" / "index.html"}
 LEARN_DIR = ROOT / "learn"
 LANGS = ("ja", "en", "fr")
 DIRECTORY_KINDS = ("producer", "shop")
+
+# 地図の図法（tools/make_maps.py と共通）。正距円筒図法。日本地図は沖縄・奄美を左上の囲みに入れる
+MAPS = {
+    "japan": {"w": 1000, "h": 1096, "lon0": 128.6, "lat0": 45.6, "k": 70.2, "cos": 0.809,
+              "inset": {"lat_max": 29.5, "lng_max": 131.5, "lon0": 122.8, "lat0": 28.9, "x": 10, "y": 10, "w": 432, "h": 351}},
+    "world": {"w": 1000, "h": 389, "lon0": -180.0, "lat0": 83.0, "k": 1000 / 360, "cos": 1.0},
+}
+MAP_OF = {"producer": "japan", "shop": "world"}
+
+
+def project(m, lat, lng):
+    """緯度経度 → 地図の SVG 座標（px）。"""
+    i = m.get("inset")
+    if i and lat < i["lat_max"] and lng < i["lng_max"]:
+        return i["x"] + (lng - i["lon0"]) * m["k"] * m["cos"], i["y"] + (i["lat0"] - lat) * m["k"]
+    return (lng - m["lon0"]) * m["k"] * m["cos"], (m["lat0"] - lat) * m["k"]
+
+
+# geo がないときのピン（都道府県庁の位置。国土地理院の住所検索で取得）
+PREF = {
+    "北海道": (43.06, 141.35), "青森県": (40.82, 140.74), "岩手県": (39.70, 141.15), "宮城県": (38.27, 140.87),
+    "秋田県": (39.72, 140.10), "山形県": (38.24, 140.36), "福島県": (37.75, 140.47), "茨城県": (36.34, 140.45),
+    "栃木県": (36.57, 139.88), "群馬県": (36.39, 139.06), "埼玉県": (35.86, 139.65), "千葉県": (35.61, 140.12),
+    "東京都": (35.69, 139.69), "神奈川県": (35.45, 139.64), "新潟県": (37.90, 139.02), "富山県": (36.70, 137.21),
+    "石川県": (36.59, 136.63), "福井県": (36.07, 136.22), "山梨県": (35.66, 138.57), "長野県": (36.65, 138.18),
+    "岐阜県": (35.39, 136.72), "静岡県": (34.98, 138.38), "愛知県": (35.18, 136.91), "三重県": (34.73, 136.51),
+    "滋賀県": (35.00, 135.87), "京都府": (35.02, 135.76), "大阪府": (34.69, 135.52), "兵庫県": (34.69, 135.18),
+    "奈良県": (34.69, 135.83), "和歌山県": (34.23, 135.17), "鳥取県": (35.50, 134.24), "島根県": (35.47, 133.05),
+    "岡山県": (34.66, 133.93), "広島県": (34.40, 132.46), "山口県": (34.19, 131.47), "徳島県": (34.07, 134.56),
+    "香川県": (34.34, 134.04), "愛媛県": (33.84, 132.77), "高知県": (33.56, 133.53), "福岡県": (33.61, 130.42),
+    "佐賀県": (33.25, 130.30), "長崎県": (32.74, 129.87), "熊本県": (32.79, 130.74), "大分県": (33.24, 131.61),
+    "宮崎県": (31.91, 131.42), "鹿児島県": (31.56, 130.56), "沖縄県": (26.21, 127.68),
+}
+JAPAN = {"ja": "日本", "en": "Japan", "fr": "Japon"}
 
 KINDS = {
     "education": {
@@ -70,7 +109,8 @@ NAV = [
     ("/#about", {"ja": "協会について", "en": "About", "fr": "À propos"}),
     ("/#natural", {"ja": "自然茶とは", "en": "Natural Tea", "fr": "Thé naturel"}),
     ("/#business", {"ja": "事業内容", "en": "Activities", "fr": "Activités"}),
-    ("/directory/", {"ja": "生産者とショップ", "en": "Producers &amp; Shops", "fr": "Producteurs &amp; boutiques"}),
+    ("/producers/", {"ja": "生産者", "en": "Producers", "fr": "Producteurs"}),
+    ("/shops/", {"ja": "ショップ", "en": "Shops", "fr": "Boutiques"}),
     ("/learn/", {"ja": "学び", "en": "Learn", "fr": "Apprendre"}),
     ("/#org", {"ja": "協会概要", "en": "Overview", "fr": "Présentation"}),
     ("/#join", {"ja": "入会・お問い合わせ", "en": "Membership", "fr": "Adhésion"}),
@@ -304,8 +344,10 @@ def links_html(p, ig_label=None):
     out = "".join(
         f'\n          <a href="{escape(x["url"])}" target="_blank" rel="noopener">{escape(x["label"])}</a>' for x in p.get("links", [])
     )
-    if p.get("map"):
-        q = quote(p["map"])
+    # 生産者は市町村まで（番地は出さない）。ショップは訪ねられるよう住所（map）を優先
+    where = (p["geo"][0]["q"] if p.get("geo") else p.get("map")) if p.get("kind") == "producer" else p.get("map")
+    if where:
+        q = quote(where)
         out += f'\n          <a href="https://www.google.com/maps/search/?api=1&amp;query={q}" target="_blank" rel="noopener">{t(UI["map"])}</a>'
     if p.get("instagram") and ig_label:
         out += f'\n          <a href="{ig_permalink(p["instagram"])}" target="_blank" rel="noopener">{t(ig_label)}</a>'
@@ -469,20 +511,99 @@ def render_entry(p):
     return out
 
 
-def update_directory(posts):
-    html = DIRECTORY.read_text(encoding="utf-8")
-    for kind in DIRECTORY_KINDS:
-        entries = "".join(render_entry(p) for p in posts if p["kind"] == kind)
-        pat = re.compile(rf"(<!-- POSTS:{kind} -->\n).*?(\s*<!-- /POSTS:{kind} -->)", re.S)
-        assert pat.search(html), f"directory/index.html に <!-- POSTS:{kind} --> の目印がありません"
-        html = pat.sub(lambda m: m.group(1) + entries + m.group(2).lstrip("\n") if entries else m.group(1) + m.group(2).lstrip("\n"), html)
-    # 上部ボタンの件数を、各欄のカード数に合わせる
-    for sec, kind in (("producers", "producer"), ("shops", "shop")):
-        block = re.search(rf'<section class="block[^"]*" id="{sec}">.*?</section>', html, re.S).group(0)
-        n = block.count('<article class="entry')
-        html = re.sub(rf'(<span class="count" data-count="{sec}">)\d+(</span>)', rf"\g<1>{n}\g<2>", html)
-    DIRECTORY.write_text(html, encoding="utf-8")
-    print("updated", DIRECTORY.relative_to(ROOT))
+def geo_points(p):
+    """ピンを立てる場所。geo（市町村）→ 国内なら都道府県庁 → なし。"""
+    if p.get("geo"):
+        return [(g["lat"], g["lng"]) for g in p["geo"]]
+    if p["region"]["ja"] in PREF:
+        return [PREF[p["region"]["ja"]]]
+    print(f"  ! {p['slug']}: geo がないので地図に出ません（海外は geo を書く）")
+    return []
+
+
+def area_of(p):
+    """地図の下の集計に使う単位。生産者は都道府県、ショップは国。"""
+    if p["kind"] == "producer":
+        return p["region"]
+    return JAPAN if p["region"]["ja"] in PREF else p["region"]
+
+
+def plural(n, one, many):
+    return f"{n} {one if n == 1 else many}"
+
+
+def render_map(kind, items):
+    m = MAPS[MAP_OF[kind]]
+    pins = []
+    for p in items:
+        for lat, lng in geo_points(p):
+            x, y = project(m, lat, lng)
+            pins.append(
+                f'        <a class="pin" href="#{p["slug"]}" style="left:{x / m["w"] * 100:.2f}%;top:{y / m["h"] * 100:.2f}%">'
+                f'<span class="tip">{entry_name(p)}<small>{t(p["region"])}</small></span></a>')
+    areas = {}
+    for p in items:
+        a = area_of(p)
+        areas.setdefault(a["ja"], [a, 0])[1] += 1
+    n, r = len(items), len(areas)
+    if kind == "producer":
+        summary = {"ja": f"{n}軒の生産者　{r}都道府県", "en": f"{plural(n, 'producer', 'producers')} in {plural(r, 'prefecture', 'prefectures')}",
+                   "fr": f"{plural(n, 'producteur', 'producteurs')} dans {plural(r, 'préfecture', 'préfectures')}"}
+    else:
+        summary = {"ja": f"{n}軒のショップ　{r}か国・地域", "en": f"{plural(n, 'shop', 'shops')} in {plural(r, 'country', 'countries')}",
+                   "fr": f"{plural(n, 'boutique', 'boutiques')} dans {r} pays"}
+    chips = "".join(f'<span>{t(a)}<b>{c}</b></span>' for a, c in sorted(areas.values(), key=lambda v: -v[1]))
+    return (f'      <p class="map-sum">{t(summary)}</p>\n'
+            f'      <div class="map map-{MAP_OF[kind]}" style="aspect-ratio:{m["w"]}/{m["h"]}">\n'
+            f'        <img src="/assets/maps/{MAP_OF[kind]}.svg" alt="" width="{m["w"]}" height="{m["h"]}">\n'
+            + "\n".join(pins) + "\n      </div>\n"
+            f'      <div class="map-areas">{chips}</div>\n')
+
+
+def replace_block(html, name, content, where):
+    pat = re.compile(rf"(<!-- {name} -->\n).*?(\s*<!-- /{name} -->)", re.S)
+    assert pat.search(html), f"{where} に <!-- {name} --> の目印がありません"
+    return pat.sub(lambda mm: mm.group(1) + content + mm.group(2).lstrip("\n"), html)
+
+
+def update_pages(posts):
+    for kind, page_file in PAGES.items():
+        where = page_file.relative_to(ROOT)
+        items = [p for p in posts if p["kind"] == kind]
+        html = page_file.read_text(encoding="utf-8")
+        html = replace_block(html, f"POSTS:{kind}", "".join(render_entry(p) for p in items), where)
+        html = replace_block(html, "MAP", render_map(kind, items), where)
+        page_file.write_text(html, encoding="utf-8")
+        print("updated", where)
+
+
+def write_redirect(posts):
+    """旧 /directory/ は、#slug を見て生産者かショップのページへ送る。"""
+    shops = json.dumps([p["slug"] for p in posts if p["kind"] == "shop"])
+    DIRECTORY.parent.mkdir(exist_ok=True)
+    DIRECTORY.write_text(f"""<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>生産者・ショップ | 日本自然茶協会 Japan Natural Tea Association</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://naturaltea.jp/producers/">
+<meta http-equiv="refresh" content="0; url=/producers/">
+<!-- tools/build_posts.py で生成。旧ページのリンクを生産者・ショップのページへ送る -->
+<script>
+  (function(){{
+    var shops={shops}, h=location.hash.slice(1);
+    location.replace((h==='shops'||shops.indexOf(h)>=0 ? '/shops/' : '/producers/') + (h && h!=='shops' && h!=='producers' ? '#'+h : ''));
+  }})();
+</script>
+</head>
+<body style="font-family:serif;padding:40px">
+<p><a href="/producers/">生産者 Producers</a> ・ <a href="/shops/">ショップ Shops</a></p>
+</body>
+</html>
+""", encoding="utf-8")
+    print("wrote", DIRECTORY.relative_to(ROOT))
 
 
 def check(p):
@@ -491,6 +612,8 @@ def check(p):
     if p["kind"] in DIRECTORY_KINDS:
         assert "name" in p or "name_i18n" in p, f"{s}: name か name_i18n が必要"
         need = ("body", "region", "place")
+        for g in p.get("geo", []):
+            assert {"q", "lat", "lng"} <= set(g), f"{s}: geo は q / lat / lng をそろえる"
     else:
         assert p.get("date"), f"{s}: education には date が必要"
         assert p.get("instagram") or slide_images(s), f"{s}: education には instagram か投稿画像（render_slides.py）が必要"
@@ -508,7 +631,8 @@ def main():
     assert len(slugs) == len(set(slugs)), "slug が重複しています"
     for p in posts:
         check(p)
-    update_directory(posts)  # カードは entries.json の並び順
+    update_pages(posts)  # カードは entries.json の並び順
+    write_redirect(posts)
 
     learn = sorted((p for p in posts if p["kind"] in KINDS), key=lambda p: p["date"], reverse=True)
     for p in learn:

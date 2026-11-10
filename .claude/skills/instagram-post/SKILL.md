@@ -29,7 +29,7 @@ python3 tools/render_slides.py <slug>   # instagram/<slug>/01.png… と caption
 python3 tools/build_posts.py            # サイトのページを更新
 ```
 - 画像を `sips -Z 540` で縮めて Read で全部見る。はみ出し・詰め込みがあれば文を短くして作り直す
-- サイトは `python3 -m http.server 8765` で確認（producer/shop → /directory/ のカード。写真がなければ表紙スライドがカードの写真になる。education → /learn/<slug>/ にスライドが並ぶ）。終わったらサーバーを止める
+- サイトは `python3 -m http.server 8765` で確認（producer → /producers/、shop → /shops/ のカードと地図のピン。写真がなければ表紙スライドがカードの写真になる。education → /learn/<slug>/ にスライドが並ぶ）。終わったらサーバーを止める
 
 ## 4. 渡す
 - スライド画像（instagram/<slug>/*.png）を SendUserFile でユーザーに送り、caption.txt の中身も見せる。Instagram への投稿はユーザーがする

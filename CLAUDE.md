@@ -51,8 +51,12 @@
 
 ### ページ
 - `index.html` — トップ（1ページ構成、下記セクション）
-- `directory/index.html` — 生産者とショップの紹介ページ（naturaltea.jp/directory/）。CSS はページ内に持つ（トップと同じ変数・ヘッダー・フッター）。ヘッダーナビの「生産者とショップ」と、トップの `#producers`・`#visit` 下の「すべて見る」リンクから来る。言語は `localStorage('jnta_lang')` を共有
-- 生産者・ショップのカードと Instagram 投稿の反映: **`tools/entries.json` を編集して `python3 tools/build_posts.py`** を実行（directory のカードはすべてここから生成。画像は `images/directory/<slug>/logo|portrait|photo.<jpg/png/webp>` を置くと自動表示）。kind で行き先が決まる — `producer`→ directory の生産者欄、`shop`→ directory のショップ欄（`<!-- POSTS:… -->` の目印の間に生成）、`education`→ `learn/<slug>/` の独立LP（一覧は naturaltea.jp/learn/）。生成部分は手で直さない（デザインは tools/build_posts.py を直して再生成）。手順は `.claude/skills/instagram-lp/SKILL.md`（投稿済みのポストを載せる）。
+- `producers/index.html` — 生産者のページ（naturaltea.jp/producers/）。先頭に日本地図（ピンは市町村の位置）、その下に生産者のカード
+- `shops/index.html` — ショップ・カフェのページ（naturaltea.jp/shops/）。先頭に世界地図、その下にショップのカード
+  - どちらも CSS はページ内に持つ（トップと同じ変数・ヘッダー・フッター）。ヘッダーナビの「生産者」「ショップ」と、トップの `#producers`・`#visit` 下の「すべて地図で見る」から来る。言語は `localStorage('jnta_lang')` を共有
+  - 地図の下地は `assets/maps/japan.svg`・`world.svg`（Natural Earth、`tools/make_maps.py` で作成。作り直すことはほぼない）。ピンは build_posts.py が差し込む（`<!-- MAP -->` の目印の間）
+  - 旧 `directory/index.html` は、古いリンクを生産者・ショップのページへ送るだけのページ（build_posts.py が毎回書き出す）
+- 生産者・ショップのカードと Instagram 投稿の反映: **`tools/entries.json` を編集して `python3 tools/build_posts.py`** を実行（生産者・ショップのカードと地図のピンはすべてここから生成。画像は `images/directory/<slug>/logo|portrait|photo.<jpg/png/webp>` を置くと自動表示）。kind で行き先が決まる — `producer`→ producers/ のカードと日本地図のピン、`shop`→ shops/ のカードと世界地図のピン（`<!-- POSTS:… -->`・`<!-- MAP -->` の目印の間に生成）。ピンの位置は各項目の `geo`（市町村まで。番地は書かない）、なければ国内は都道府県庁の位置、`education`→ `learn/<slug>/` の独立LP（一覧は naturaltea.jp/learn/）。生成部分は手で直さない（デザインは tools/build_posts.py を直して再生成）。手順は `.claude/skills/instagram-lp/SKILL.md`（投稿済みのポストを載せる）。
 - **Instagram 投稿を Claude で作るときは、サイトのページも同時に作る**（`.claude/skills/instagram-post/SKILL.md`）。`tools/entries.json` の項目に `slides`（スライドの中身）と `caption` を書き、`python3 tools/render_slides.py <slug>` で `instagram/<slug>/01.png…`（1080×1350、Tencha 投稿と同じデザイン。Chrome のヘッドレスで撮る）と caption.txt を作り、`python3 tools/build_posts.py` でサイトを更新。education の LP は投稿画像があればそれを並べ、directory のカードは photo がなければ表紙スライドを写真に使う。learn/ は記事0件のあいだはナビに出さずフッターのみ
 - **Jotform の新規登録 → 下書き PR（自動）**: `.github/workflows/jotform-drafts.yml` が1時間ごとに `tools/jotform_drafts.py` を実行。生産者・販売店フォームの新しい登録（`SINCE` 以降）から、Claude API で文面を作り、カード・投稿画像・キャプションを含む Pull Request を作る。**公開は PR をマージしたときだけ**。掲載不可は作らない、「名前のみ」は名前と場所だけ。メール・電話・担当者名は Claude に渡さない。下書きは1件ずつ（開いている PR が片付くと次を作る）。PR を閉じると同じ登録は作り直さない。Secrets: `JOTFORM_API_KEY`, `ANTHROPIC_API_KEY`。リポジトリの Settings → Actions で「Allow GitHub Actions to create and approve pull requests」を有効にすること。リポジトリは公開なので PR の中身も公開で見える
 - ページを足したら、ヘッダー／フッターのリンクと3言語 span 件数チェックを各ページで行う
@@ -113,7 +117,7 @@ Jotform は MCP コネクタ（または https://www.jotform.com/build/<formID>�
 ## 今後の候補
 - 「事業内容」を収益3本に合わせて組み替え、それぞれに「登録する／参加する／お問い合わせ」ボタンを付ける
 - お知らせ・活動報告、イベント／マルシェ情報、海外日本茶コースの案内、登録生産者・販売店の一覧 などのコンテンツ枠
-- 登録生産者・販売店が増えたら `directory/index.html` に `.entry` カードを足す（掲載は登録フォームで「掲載可」の回答のみ。メール・電話は載せない）。件数は `.jump .count` も更新
+- 登録生産者・販売店が増えたら `tools/entries.json` に足して `python3 tools/build_posts.py`（掲載は登録フォームで「掲載可」の回答のみ。メール・電話は載せない）。地図のピンと件数も自動で増える
 
 ## 関連
 - Instagram: @japan_natural_tea
