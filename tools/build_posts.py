@@ -532,14 +532,15 @@ def plural(n, one, many):
     return f"{n} {one if n == 1 else many}"
 
 
-def render_map(kind, items):
+def render_map(kind, items, base=""):
+    """base: ピンのリンク先のページ（トップでは "/producers/" など、各ページでは同じページ内なので空）。"""
     m = MAPS[MAP_OF[kind]]
     pins = []
     for p in items:
         for lat, lng in geo_points(p):
             x, y = project(m, lat, lng)
             pins.append(
-                f'        <a class="pin" href="#{p["slug"]}" style="left:{x / m["w"] * 100:.2f}%;top:{y / m["h"] * 100:.2f}%">'
+                f'        <a class="pin" href="{base}#{p["slug"]}" style="left:{x / m["w"] * 100:.2f}%;top:{y / m["h"] * 100:.2f}%">'
                 f'<span class="tip">{entry_name(p)}<small>{t(p["region"])}</small></span></a>')
     areas = {}
     for p in items:
@@ -566,15 +567,28 @@ def replace_block(html, name, content, where):
     return pat.sub(lambda mm: mm.group(1) + content + mm.group(2).lstrip("\n"), html)
 
 
+def listed(posts, kind):
+    """kind の項目を entries.json の並び順で。主催者（"organizer": true、悠三堂）はいつも一番下。"""
+    return sorted((p for p in posts if p["kind"] == kind), key=lambda p: bool(p.get("organizer")))
+
+
 def update_pages(posts):
     for kind, page_file in PAGES.items():
         where = page_file.relative_to(ROOT)
-        items = [p for p in posts if p["kind"] == kind]
+        items = listed(posts, kind)
         html = page_file.read_text(encoding="utf-8")
         html = replace_block(html, f"POSTS:{kind}", "".join(render_entry(p) for p in items), where)
         html = replace_block(html, "MAP", render_map(kind, items), where)
         page_file.write_text(html, encoding="utf-8")
         print("updated", where)
+    # トップページの生産者・ショップ欄も同じ地図（ピンは各ページのカードへ）
+    top = ROOT / "index.html"
+    html = top.read_text(encoding="utf-8")
+    for kind, page_file in PAGES.items():
+        items = listed(posts, kind)
+        html = replace_block(html, f"MAP:{kind}", render_map(kind, items, base=f"/{page_file.parent.name}/"), "index.html")
+    top.write_text(html, encoding="utf-8")
+    print("updated index.html (maps)")
 
 
 def write_redirect(posts):

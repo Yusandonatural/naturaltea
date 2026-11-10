@@ -277,6 +277,47 @@ def collect_images(cfg, sub, slug):
     return notes
 
 
+GSI = "https://msearch.gsi.go.jp/address-search/AddressSearch"
+NOMINATIM = "https://nominatim.openstreetmap.org/search"
+MUNI = re.compile(r"(北海道|東京都|大阪府|京都府|[^\s\d０-９、,・]{2,3}県)?\s*((?:[^\s\d０-９、,・]{1,6}郡)?[^\s\d０-９、,・]{1,6}?[市区町村])")
+
+
+def _get_json(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "naturaltea.jp site builder"})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        return json.load(r)
+
+
+def geocode(kind, sub):
+    """地図のピンの位置（市町村まで）。戻り値は (geo のリスト, PR に書く確認事項)。
+    国内は国土地理院の住所検索、海外は OpenStreetMap（Nominatim）。番地は使わない。"""
+    if kind == "producer":
+        country, place = "日本", text(sub, "11")
+    else:
+        country, place = text(sub, "8"), text(sub, "9")
+    try:
+        if not country or re.search(r"日本|japan|japon", country, re.I):
+            m = MUNI.search(place or "")
+            if m:
+                q = (m.group(1) or "") + m.group(2)
+                hits = _get_json(f"{GSI}?{urlencode({'q': q})}")
+                best = [h for h in hits if h["properties"]["title"].startswith(q)] or hits
+                if best:
+                    lng, lat = best[0]["geometry"]["coordinates"]
+                    return [{"q": q, "lat": round(lat, 2), "lng": round(lng, 2)}], f"地図のピンは「{q}」に立てました（自動で取得）。位置が違えば tools/entries.json の geo を直してください。"
+        else:
+            params = {"format": "json", "limit": 1, "country": country}
+            if place:
+                params["city"] = place
+            hits = _get_json(f"{NOMINATIM}?{urlencode(params)}")
+            if hits:
+                q = ", ".join(x for x in (place, country) if x)
+                return [{"q": q, "lat": round(float(hits[0]["lat"]), 2), "lng": round(float(hits[0]["lon"]), 2)}], f"地図のピンは「{q}」に立てました（自動で取得）。位置が違えば tools/entries.json の geo を直してください。"
+    except Exception as e:  # 位置が取れなくても下書きは作る
+        print("geocode failed:", e)
+    return [], "地図のピンの位置を自動で取れませんでした。国内なら都道府県庁の位置に立ちます。海外は tools/entries.json に geo を足すまで地図に出ません。"
+
+
 def make_entry(kind, sub, ai, level, with_slides, entries):
     cfg = FORMS[kind]
     slug = ai["slug"] if re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", ai["slug"]) and 2 <= len(ai["slug"]) <= 40 else f"jotform-{sub['id']}"
@@ -378,6 +419,12 @@ def draft(kind, sub):
     try:
         entries = json.loads(ENTRIES.read_text(encoding="utf-8"))
         entry = make_entry(kind, sub, ai, level, with_slides, entries)
+        geo, geo_note = geocode(kind, sub)  # 地図のピン（新しい登録が入るたびに日本地図・世界地図が増える）
+        if geo:  # place の直後に入れる（手で書いた項目と同じ並び）
+            items = list(entry.items())
+            i = [k for k, _ in items].index("place") + 1
+            entry = dict(items[:i] + [("geo", geo)] + items[i:])
+        notes.append(geo_note)
         if level == "full":
             notes += collect_images(cfg, sub, entry["slug"])  # ロゴは表紙にも載るので、スライドより先に取り込む
         apply_entry(entries, entry)

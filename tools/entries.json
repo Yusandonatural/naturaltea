@@ -2,6 +2,7 @@
   {
     "slug": "yusando",
     "kind": "producer",
+    "organizer": true,
     "name_i18n": {
       "ja": "株式会社 悠三堂",
       "en": "Yusando Inc.",
@@ -440,6 +441,7 @@
   {
     "slug": "yusando-natural-tea",
     "kind": "shop",
+    "organizer": true,
     "name": "YUSANDO NATURAL TEA",
     "region": {
       "ja": "奈良県",
