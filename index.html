@@ -105,33 +105,21 @@
 
   /* ---------- Hero ---------- */
   .hero{
-    position:relative;min-height:100vh;
-    display:flex;flex-direction:column;justify-content:center;
-    padding:0 6vw;
-    background:
-      linear-gradient(rgba(31,51,38,.55),rgba(31,51,38,.45)),
-      radial-gradient(circle at 70% 30%, var(--green-600), var(--green-900));
+    position:relative;min-height:92vh;
+    display:flex;flex-direction:column;justify-content:flex-start;
+    padding:clamp(112px,15vh,150px) 6vw clamp(150px,24vh,240px);
+    background:linear-gradient(180deg,#16251b 0%,#1c2e22 100%);
     color:var(--kinari);
     overflow:hidden;
   }
-  .hero::after{
-    content:"茶";
-    position:absolute;right:-2vw;bottom:-6vw;
-    font-family:'Sawarabi Mincho',serif;font-weight:700;
-    font-size:46vw;line-height:1;color:rgba(255,255,255,.05);
-    pointer-events:none;
-  }
-  .hero-inner{max-width:880px;position:relative;z-index:2;}
-  .hero .eyebrow{
-    font-size:13px;letter-spacing:.35em;text-transform:uppercase;
-    color:var(--matcha);margin-bottom:26px;font-weight:400;
-  }
-  .hero h1{
-    font-size:clamp(34px,6vw,68px);line-height:1.35;font-weight:500;
-    margin-bottom:30px;letter-spacing:.02em;
-  }
-  .hero p{font-size:clamp(15px,1.7vw,19px);max-width:620px;color:rgba(244,241,232,.9);font-weight:300;}
-  .hero .cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+  .hero-field{position:absolute;left:0;right:0;bottom:0;width:100%;height:clamp(190px,36vh,380px);display:block;}
+  .hero-inner{max-width:1080px;width:100%;margin:0 auto;position:relative;z-index:2;}
+  .hero h1{font-size:clamp(44px,7.4vw,104px);line-height:1.16;font-weight:400;letter-spacing:.01em;}
+  body.lang-en .hero h1,body.lang-fr .hero h1{font-size:clamp(50px,8.4vw,118px);line-height:1.02;font-weight:500;letter-spacing:-.005em;}
+  .hero .hero-sub{margin-top:clamp(20px,3vw,34px);font-family:'Sawarabi Mincho',serif;font-size:clamp(20px,2.5vw,32px);line-height:1.5;color:var(--kinari);max-width:none;font-weight:400;}
+  body.lang-en .hero .hero-sub,body.lang-fr .hero .hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(23px,2.9vw,38px);}
+  .hero .hero-lead{margin-top:18px;font-size:clamp(15px,1.4vw,17.5px);line-height:1.9;max-width:560px;color:rgba(244,241,232,.82);font-weight:400;}
+  .hero .cta{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;}
   .btn{
     display:inline-block;padding:14px 34px;border-radius:999px;
     font-size:14px;letter-spacing:.08em;transition:.25s;cursor:pointer;border:1px solid transparent;
@@ -445,18 +433,17 @@
 
 <!-- HERO -->
 <section class="hero" id="top">
+  <svg class="hero-field" viewBox="0 0 1440 560" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="#24392b" d="M-40 146C260 12 620 59 900 112S1300 136 1480 56V600H-40Z"/><path fill="#2a4532" d="M-40 164C260 39 620 83 900 132S1300 155 1480 80V600H-40Z"/><path fill="#243c2c" d="M-40 197C260 82 620 122 900 168S1300 189 1480 120V600H-40Z"/><path fill="#2f4f39" d="M-40 240C260 135 620 172 900 213S1300 233 1480 169V600H-40Z"/><path fill="#273f2f" d="M-40 292C260 195 620 229 900 267S1300 285 1480 226V600H-40Z"/><path fill="#34593f" d="M-40 349C260 262 620 292 900 327S1300 343 1480 290V600H-40Z"/><path fill="#284332" d="M-40 413C260 334 620 362 900 393S1300 407 1480 360V600H-40Z"/><path fill="#2e4d38" d="M-40 481C260 412 620 436 900 464S1300 477 1480 435V600H-40Z"/><path fill="#1f3326" d="M-40 555C260 495 620 516 900 540S1300 551 1480 515V600H-40Z"/></svg>
   <div class="hero-inner">
-    <p class="eyebrow"><span class="ja-only">自然と共にある茶のために</span><span class="en-only">For tea that lives with nature</span><span class="fr-only">Pour un thé qui vit avec la nature</span></p>
     <h1>
-      <span class="ja-only">農薬と化学肥料に<br>頼らない、<br>自然のままの茶を未来へ。</span>
-      <span class="en-only">Carrying natural tea,<br>grown without agrochemicals,<br>into the future.</span><span class="fr-only">Porter le thé naturel,<br>cultivé sans produits agrochimiques,<br>vers l’avenir.</span>
+      <span class="ja-only">肥料も、農薬も、<br>与えない。</span><span class="en-only">No fertilizer.<br>No pesticides.</span><span class="fr-only">Sans engrais.<br>Sans pesticides.</span>
     </h1>
-    <p>
-      <span class="ja-only">一般社団法人 日本自然茶協会は、自然茶の普及・研究・教育・情報発信・国際交流を通じて、環境保全と人々の健康、そして地域社会の発展に寄与します。</span>
-      <span class="en-only">The Japan Natural Tea Association advances the cultivation, study, education, and global exchange of natural tea — contributing to environmental conservation, human health, and the vitality of local communities.</span><span class="fr-only">L’association Japan Natural Tea promeut la culture, l’étude, l’éducation et les échanges internationaux autour du thé naturel — contribuant à la préservation de l’environnement, à la santé humaine et à la vitalité des communautés locales.</span>
+    <p class="hero-sub"><span class="ja-only">土と茶の木の力だけで、時間をかけて育つお茶。</span><span class="en-only">Just soil, the tea plant, and time.</span><span class="fr-only">La terre, le théier, et le temps.</span></p>
+    <p class="hero-lead">
+      <span class="ja-only">日本自然茶協会は、この自然茶をつくる人と飲む人を、日本と世界でつないでいます。</span><span class="en-only">The Japan Natural Tea Association connects the people who grow this tea with the people who drink it, in Japan and around the world.</span><span class="fr-only">La Japan Natural Tea Association relie celles et ceux qui cultivent ce thé à celles et ceux qui le boivent, au Japon et dans le monde.</span>
     </p>
     <div class="cta">
-      <a href="#about" class="btn btn-primary"><span class="ja-only">私たちについて</span><span class="en-only">Learn more</span><span class="fr-only">En savoir plus</span></a>
+      <a href="#natural" class="btn btn-primary"><span class="ja-only">自然茶とは</span><span class="en-only">What is natural tea</span><span class="fr-only">Qu’est-ce que le thé naturel</span></a>
       <a href="#join" class="btn btn-ghost"><span class="ja-only">入会のご案内</span><span class="en-only">Become a member</span><span class="fr-only">Devenir membre</span></a>
     </div>
   </div>
