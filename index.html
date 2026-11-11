@@ -21,10 +21,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --green-900:#1f3326;
-    --green-800:#2a4a35;
-    --green-700:#35603f;
-    --green-600:#4a7a54;
+    --green-900:#2e3b33;
+    --green-800:#3b4a40;
+    --green-700:#4a5a4f;
+    --green-600:#5d6e62;
     --green-500:#6b9a6f;
     --matcha:#8aab6e;
     --kinari:#f4f1e8;
@@ -105,17 +105,17 @@
 
   /* ---------- Hero ---------- */
   .hero{
-    position:relative;min-height:92vh;
+    position:relative;min-height:82vh;
     display:flex;flex-direction:column;justify-content:flex-start;
-    padding:clamp(112px,15vh,150px) 6vw clamp(150px,24vh,240px);
-    background:linear-gradient(180deg,#16251b 0%,#1c2e22 100%);
+    padding:clamp(112px,15vh,150px) 6vw clamp(72px,11vh,120px);
+    background:var(--green-900);
     color:var(--kinari);
     overflow:hidden;
   }
   .hero-field{position:absolute;left:0;right:0;bottom:0;width:100%;height:clamp(190px,36vh,380px);display:block;}
   .hero-inner{max-width:1080px;width:100%;margin:0 auto;position:relative;z-index:2;}
   .hero h1{font-size:clamp(44px,7.4vw,104px);line-height:1.16;font-weight:400;letter-spacing:.01em;}
-  body.lang-en .hero h1,body.lang-fr .hero h1{font-size:clamp(50px,8.4vw,118px);line-height:1.02;font-weight:500;letter-spacing:-.005em;}
+  body.lang-en .hero h1,body.lang-fr .hero h1{font-size:clamp(42px,6.6vw,92px);line-height:1.04;font-weight:500;letter-spacing:-.005em;}
   .hero .hero-sub{margin-top:clamp(20px,3vw,34px);font-family:'Sawarabi Mincho',serif;font-size:clamp(20px,2.5vw,32px);line-height:1.5;color:var(--kinari);max-width:none;font-weight:400;}
   body.lang-en .hero .hero-sub,body.lang-fr .hero .hero-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(23px,2.9vw,38px);}
   .hero .hero-lead{margin-top:18px;font-size:clamp(15px,1.4vw,17.5px);line-height:1.9;max-width:560px;color:rgba(244,241,232,.82);font-weight:400;}
@@ -341,7 +341,7 @@
   body.lang-en .officer .pname{font-family:'Cormorant Garamond',serif;}
 
   /* Join / CTA */
-  .join{background:radial-gradient(circle at 30% 20%,var(--green-700),var(--green-900));color:var(--kinari);text-align:center;}
+  .join{background:var(--green-900);color:var(--kinari);text-align:center;}
   .join .sec-head{margin-bottom:24px;}
   .join h2{color:var(--kinari);}
   .join .lead{color:rgba(244,241,232,.85);margin:0 auto 12px;}
@@ -387,13 +387,28 @@
   /* Latest reels: Instagram の埋め込みを切り抜き、動画の部分だけを見せる。
      埋め込みの中は、上に見出し54px、その下に幅×1.25の枠があり、9:16の動画が枠の中央に入っている */
   .reels{background:var(--green-900);padding:clamp(20px,3vw,40px) 6vw;}
-  .reels-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2vw,24px);max-width:1080px;margin:0 auto;}
+  .reels-head{max-width:1080px;margin:0 auto clamp(16px,2.4vw,26px);color:var(--kinari);}
+  .reels-kicker{font-size:12px;letter-spacing:.28em;color:var(--matcha);display:flex;align-items:center;gap:12px;margin-bottom:8px;}
+  .reels-kicker::before{content:"";width:38px;height:1px;background:var(--matcha);display:inline-block;}
+  .reels-head h2{font-size:clamp(22px,2.8vw,32px);font-weight:400;line-height:1.4;letter-spacing:.03em;}
+  body.lang-en .reels-head h2,body.lang-fr .reels-head h2{font-weight:500;}
+  .reels-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;}
+  .reels-head > div:first-child{flex:1 1 auto;}
+  .reels-nav{display:flex;gap:10px;}
+  .reels-nav[hidden]{display:none;}
+  .reels-btn{width:42px;height:42px;border-radius:50%;border:1px solid rgba(244,241,232,.45);background:transparent;color:var(--kinari);font-size:18px;cursor:pointer;transition:background .2s;}
+  .reels-btn:hover{background:rgba(244,241,232,.12);}
+  .reels-row{--gap:clamp(12px,2vw,24px);display:flex;gap:var(--gap);max-width:1080px;margin:0 auto;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;}
+  .reels-row::-webkit-scrollbar{display:none;}
+  .reels-row .reel{flex:0 0 calc((100% - 2 * var(--gap)) / 3);scroll-snap-align:start;}
   .reel{position:relative;aspect-ratio:9/16;overflow:hidden;border-radius:6px;background:#000;container-type:inline-size;}
   .reel .instagram-media{position:absolute!important;top:-54px!important;left:-21.112cqw!important;width:142.224cqw!important;min-width:0!important;max-width:none!important;height:calc(177.78cqw + 400px)!important;margin:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;}
   @media(max-width:760px){
     .reels{padding-left:0;padding-right:0;}
+    .reels-head{padding:0 6vw;}
     .reels-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 6vw;gap:12px;}
-    .reel{flex:0 0 max(62vw,230px);scroll-snap-align:center;}
+    .reels-row .reel{flex:0 0 max(62vw,230px);scroll-snap-align:center;}
+    .reels-nav{display:none;}
   }
 
   /* Scroll reveal */
@@ -455,12 +470,11 @@
 
 <!-- HERO -->
 <section class="hero" id="top">
-  <svg class="hero-field" viewBox="0 0 1440 560" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path fill="#24392b" d="M-40 146C260 12 620 59 900 112S1300 136 1480 56V600H-40Z"/><path fill="#2a4532" d="M-40 164C260 39 620 83 900 132S1300 155 1480 80V600H-40Z"/><path fill="#243c2c" d="M-40 197C260 82 620 122 900 168S1300 189 1480 120V600H-40Z"/><path fill="#2f4f39" d="M-40 240C260 135 620 172 900 213S1300 233 1480 169V600H-40Z"/><path fill="#273f2f" d="M-40 292C260 195 620 229 900 267S1300 285 1480 226V600H-40Z"/><path fill="#34593f" d="M-40 349C260 262 620 292 900 327S1300 343 1480 290V600H-40Z"/><path fill="#284332" d="M-40 413C260 334 620 362 900 393S1300 407 1480 360V600H-40Z"/><path fill="#2e4d38" d="M-40 481C260 412 620 436 900 464S1300 477 1480 435V600H-40Z"/><path fill="#1f3326" d="M-40 555C260 495 620 516 900 540S1300 551 1480 515V600H-40Z"/></svg>
   <div class="hero-inner">
     <h1>
-      <span class="ja-only">肥料も、農薬も、<br>与えない。</span><span class="en-only">No fertilizer.<br>No pesticides.</span><span class="fr-only">Sans engrais.<br>Sans pesticides.</span>
+      <span class="ja-only">自然のままに育つ、<br>日本のお茶。</span><span class="en-only">Japanese tea,<br>grown as nature intended.</span><span class="fr-only">Un thé japonais,<br>cultivé comme la nature l’entend.</span>
     </h1>
-    <p class="hero-sub"><span class="ja-only">土と茶の木の力だけで、時間をかけて育つお茶。</span><span class="en-only">Just soil, the tea plant, and time.</span><span class="fr-only">La terre, le théier, et le temps.</span></p>
+    <p class="hero-sub"><span class="ja-only">肥料も農薬も使わずに育てた、日本の自然茶。</span><span class="en-only">Natural tea from Japan, grown without fertilizer or pesticides.</span><span class="fr-only">Un thé naturel du Japon, cultivé sans engrais ni pesticides.</span></p>
     <p class="hero-lead">
       <span class="ja-only">日本で育てる人と、世界で広める人。そのあいだをつなぐのが、日本自然茶協会です。</span><span class="en-only">Growers in Japan, ambassadors around the world — the Japan Natural Tea Association connects them.</span><span class="fr-only">Des producteurs au Japon, des ambassadeurs dans le monde — la Japan Natural Tea Association les relie.</span>
     </p>
@@ -471,12 +485,21 @@
   </div>
 </section>
 
-<!-- LATEST REELS: 最新の動画3本。差し替えは permalink の /reel/<ID>/ を新しいリールの ID にする -->
+<!-- LATEST REELS: 図解動画のカルーセル。tools/reels.json の先頭に ID を足して python3 tools/build_posts.py（新しい順、最大12本） -->
 <section class="reels" aria-label="Instagram">
-  <div class="reels-row">
+  <div class="reels-head">
+    <div>
+    <p class="reels-kicker"><span class="ja-only">WATCH ・ 動画</span><span class="en-only">WATCH</span><span class="fr-only">EN VIDÉO</span></p>
+    <h2><span class="ja-only">動画で知る、自然茶と協会</span><span class="en-only">Natural tea and our association, on video</span><span class="fr-only">Le thé naturel et l’association, en vidéo</span></h2>
+    </div>
+    <div class="reels-nav" id="reelsNav" hidden><button type="button" class="reels-btn" data-dir="-1" aria-label="Previous">&#8592;</button><button type="button" class="reels-btn" data-dir="1" aria-label="Next">&#8594;</button></div>
+  </div>
+  <div class="reels-row" id="reelsRow">
+    <!-- REELS -->
     <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DffzRoJTo6j/" data-instgrm-version="14"></blockquote></div>
     <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DfdYG-8vQNq/" data-instgrm-version="14"></blockquote></div>
     <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Dfas139PTYk/" data-instgrm-version="14"></blockquote></div>
+    <!-- /REELS -->
   </div>
 </section>
 
@@ -801,6 +824,19 @@
 
   // 協会ページへ移した欄への古いリンク（/#founder など）は /about/ へ
   (function(){ var h=location.hash.slice(1); if(['founder','context','business','upcoming'].indexOf(h)>=0){ location.replace('/about/#'+h); } })();
+
+  // reels carousel arrows (shown when there are more than 3)
+  (function(){
+    var row=document.getElementById('reelsRow'), nav=document.getElementById('reelsNav');
+    if(!row||!nav) return;
+    if(row.querySelectorAll('.reel').length>3){ nav.hidden=false; }
+    nav.querySelectorAll('.reels-btn').forEach(function(b){
+      b.addEventListener('click', function(){
+        var c=row.querySelector('.reel'); if(!c) return;
+        row.scrollBy({left:(c.getBoundingClientRect().width+parseFloat(getComputedStyle(row).columnGap||0))*Number(b.dataset.dir), behavior:'smooth'});
+      });
+    });
+  })();
 
   // mobile menu
   var nav=document.getElementById('nav'), mb=document.getElementById('menuBtn');

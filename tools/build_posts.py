@@ -143,7 +143,7 @@ def fmt_date(iso):
 
 CSS = """
   :root{
-    --green-900:#1f3326;--green-800:#2a4a35;--green-700:#35603f;--green-600:#4a7a54;
+    --green-900:#2e3b33;--green-800:#3b4a40;--green-700:#4a5a4f;--green-600:#5d6e62;
     --matcha:#8aab6e;--kinari:#f4f1e8;--kinari-2:#ece7d8;--paper:#faf8f1;
     --ink:#242a24;--ink-soft:#434b43;--gold:#a98c4b;--line:#d7d2c2;
   }
@@ -191,7 +191,7 @@ CSS = """
     nav.main .lang-toggle button.active{background:var(--matcha);color:var(--green-900);}
   }
 
-  .page-head{background:radial-gradient(circle at 75% 20%,var(--green-700),var(--green-900));color:var(--kinari);padding:clamp(130px,16vw,180px) 6vw clamp(56px,7vw,84px);}
+  .page-head{background:var(--green-900);color:var(--kinari);padding:clamp(130px,16vw,180px) 6vw clamp(56px,7vw,84px);}
   .wrap{max-width:1080px;margin:0 auto;}
   .crumb{font-size:13px;letter-spacing:.08em;color:var(--matcha);margin-bottom:20px;}
   .crumb a{border-bottom:1px solid rgba(138,171,110,.5);}
@@ -594,6 +594,28 @@ def update_pages(posts):
     print("updated index.html (maps)")
 
 
+REELS = ROOT / "tools" / "reels.json"  # トップの図解動画カルーセル。新しい順（先頭が最新）
+MAX_REELS = 12
+
+
+def update_reels():
+    """tools/reels.json の動画を、トップの <!-- REELS --> の間に並べる。"""
+    reels = json.loads(REELS.read_text(encoding="utf-8"))
+    ids = []
+    for r in reels:
+        rid = r["id"].strip().strip("/").split("/")[-1]  # URL を貼っても ID だけ取り出す
+        assert re.fullmatch(r"[A-Za-z0-9_-]{5,20}", rid), f"reels.json: ID が正しくありません: {r['id']}"
+        if rid not in ids:
+            ids.append(rid)
+    items = "".join(
+        f'    <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/{rid}/" data-instgrm-version="14"></blockquote></div>\n'
+        for rid in ids[:MAX_REELS])
+    top = ROOT / "index.html"
+    html = replace_block(top.read_text(encoding="utf-8"), "REELS", items, "index.html")
+    top.write_text(html, encoding="utf-8")
+    print(f"updated index.html (reels: {min(len(ids), MAX_REELS)})")
+
+
 def write_redirect(posts):
     """旧 /directory/ は、#slug を見て生産者かショップのページへ送る。"""
     shops = json.dumps([p["slug"] for p in posts if p["kind"] == "shop"])
@@ -649,6 +671,7 @@ def main():
     for p in posts:
         check(p)
     update_pages(posts)  # カードは entries.json の並び順
+    update_reels()
     write_redirect(posts)
 
     learn = sorted((p for p in posts if p["kind"] in KINDS), key=lambda p: p["date"], reverse=True)
