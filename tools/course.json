@@ -1,0 +1,211 @@
+{
+  "slug": "basics",
+  "title": {"ja": "自然茶基礎コース", "en": "Natural Tea Basics", "fr": "Les bases du thé naturel"},
+  "lead": {
+    "ja": "自然茶（肥料も農薬も使わないお茶）の基本を、短い動画と読みもので学ぶ全7回の無料オンラインコースです。登録はいりません。",
+    "en": "A free online course in seven short lessons, each with a video and a short read, on the basics of natural tea: tea grown with no fertilizer and no pesticides. No sign-up needed.",
+    "fr": "Un cours en ligne gratuit en sept courtes leçons, chacune avec une vidéo et un texte court, sur les bases du thé naturel : un thé cultivé sans engrais ni pesticides. Sans inscription."
+  },
+  "lessons": [
+    {
+      "slug": "why",
+      "reel": "DfofqZLPr0b",
+      "title": {"ja": "なぜ、日本自然茶協会は生まれたのか", "en": "Why the association was founded", "fr": "Pourquoi l’association est née"},
+      "lead": {
+        "ja": "肥料も農薬も使わずにお茶を育てる農家が向き合う現実と、協会が生まれた理由。",
+        "en": "The reality facing farmers who grow tea with no fertilizer and no pesticides, and why the association began.",
+        "fr": "La réalité des producteurs qui cultivent le thé sans engrais ni pesticides, et la raison d’être de l’association."
+      },
+      "body": {
+        "ja": [
+          "肥料も農薬も使わない自然栽培は、収量が少なく、手間もかかります。それなのに、自然栽培のお茶を扱う市場はまだ小さいままです。",
+          "周りは慣行栽培の畑ばかりで、疑いの目を向けられることもあり、農家はひとりで続けていることが少なくありません。代表理事の礒﨑 遼太郎も、ゼロから茶づくりを始めて同じ思いをしてきました。けれども世界には、こうしたお茶を求める人が確かにいます。",
+          "だからこの協会は、農家が、農家のためにつくりました。自然栽培の農家がひとりで抱え込まず、お茶を求める人とつながれるように。"
+        ],
+        "en": [
+          "Natural farming, with no fertilizer and no pesticides, means lower yields and more work. And the market for natural tea is still small.",
+          "Surrounded by conventional farms and sometimes met with doubt, these farmers often carry on alone. Our representative director, Ryotaro Isozaki, started growing tea from zero and felt the same. Yet around the world, there are people looking for exactly this tea.",
+          "So the association was founded by a farmer, for farmers: so that natural tea farmers don’t have to do it alone, and can reach the people who want their tea."
+        ],
+        "fr": [
+          "La culture naturelle, sans engrais ni pesticides, donne de plus faibles rendements et demande plus de travail. Et le marché du thé naturel reste encore restreint.",
+          "Entourés de cultures conventionnelles et parfois regardés avec méfiance, ces producteurs avancent souvent seuls. Notre directeur représentant, Ryotaro Isozaki, a commencé à cultiver le thé à partir de rien et a connu la même chose. Pourtant, partout dans le monde, des gens recherchent précisément ce thé.",
+          "C’est pourquoi l’association a été fondée par un producteur, pour les producteurs : pour qu’aucun d’eux ne porte seul ce travail, et qu’ils puissent rejoindre ceux qui veulent leur thé."
+        ]
+      },
+      "takeaway": {"ja": "自然栽培の農家を、ひとりにしない。", "en": "No natural tea farmer should have to go it alone.", "fr": "Aucun producteur de thé naturel ne devrait rester seul."}
+    },
+    {
+      "slug": "natural-agriculture",
+      "reel": "Dfas139PTYk",
+      "title": {"ja": "自然栽培とは", "en": "What is natural agriculture?", "fr": "Qu’est-ce que la culture naturelle ?"},
+      "lead": {
+        "ja": "何も足さずに、茶の木が自分の力で育つ。自然栽培の考え方を知る回です。",
+        "en": "Nothing is added, and the tea plant grows by its own strength. The idea behind natural agriculture.",
+        "fr": "Rien n’est ajouté : le théier pousse par sa propre force. L’idée de la culture naturelle."
+      },
+      "body": {
+        "ja": [
+          "慣行栽培は、外から養分を与える農業です。肥料で栄養を補い、農薬で病気や虫を防ぎます。",
+          "自然栽培（Shizen Saibai）では、何も足しません。化学肥料だけでなく、有機肥料も使いません。茶の木は深く根を張り、日の光や雨、生きた土から、自分で養分を得ます。",
+          "農薬のかわりに、畑の生きものの力を借ります。テントウムシやクモ、チョウがいる畑では、食べる・食べられるのつり合いが保たれ、茶の木そのものも強くなっていきます。"
+        ],
+        "en": [
+          "Conventional farming feeds the plant from the outside: fertilizer for nutrients, chemicals against pests and disease.",
+          "In natural agriculture (Shizen Saibai), nothing is added. Not chemical fertilizer, and not organic fertilizer either. The tea plant sends its roots deep and draws its nourishment from sunlight, rain and living soil.",
+          "Instead of pesticides, it relies on the life in the field. Where ladybugs, spiders and butterflies live, the food chain stays in balance, and the tea plant itself grows stronger."
+        ],
+        "fr": [
+          "L’agriculture conventionnelle nourrit la plante de l’extérieur : des engrais pour les nutriments, des produits chimiques contre les ravageurs et les maladies.",
+          "En culture naturelle (Shizen Saibai), rien n’est ajouté : ni engrais chimique, ni engrais organique. Le théier enfonce ses racines profondément et puise sa nourriture dans le soleil, la pluie et un sol vivant.",
+          "À la place des pesticides, il s’appuie sur la vie du champ. Là où vivent coccinelles, araignées et papillons, la chaîne alimentaire reste en équilibre, et le théier lui-même devient plus robuste."
+        ]
+      },
+      "takeaway": {"ja": "足さない。茶の木が自分の力で育つ。", "en": "Add nothing. Let the tea plant grow by its own strength.", "fr": "Ne rien ajouter. Laisser le théier pousser par sa propre force."}
+    },
+    {
+      "slug": "field",
+      "reel": "DfdYG-8vQNq",
+      "title": {"ja": "畑は、どう変わる？", "en": "How does the field change?", "fr": "Comment le champ se transforme-t-il ?"},
+      "lead": {
+        "ja": "肥料と農薬をやめた茶畑で起きること。奈良・大和高原の畑から。",
+        "en": "What happens when a tea field stops receiving fertilizer and pesticides, seen from fields on the Yamato Plateau in Nara.",
+        "fr": "Ce qui se passe quand un champ de thé ne reçoit plus ni engrais ni pesticides, vu depuis les champs du plateau de Yamato, à Nara."
+      },
+      "body": {
+        "ja": [
+          "肥料に頼る慣行栽培の畑では、茶の木の根は浅いままです。",
+          "肥料をやめると、移行の期間に土の中の肥料が少しずつ抜け、茶の木は肥料も農薬もない畑に慣れていきます。やがて根は深く伸び、土が生き返ります。",
+          "悠三堂は2015年に奈良・大和高原でゼロから茶づくりを始め、慣行栽培をやめる近所の畑を引き継いでは、一枚ずつ自然栽培に切り替えてきました。11年あまりで、その広さは3.5ヘクタールになりました。"
+        ],
+        "en": [
+          "In a conventional field that leans on fertilizer, the tea plant’s roots stay shallow.",
+          "Once fertilizer stops, it fades from the soil over a transition period, and the plants grow used to a field with neither fertilizer nor pesticides. Then the roots run deep, and the soil comes alive.",
+          "Yusando started growing tea from zero in 2015 on the Yamato Plateau in Nara. Whenever neighbors gave up conventional farming, it took over their fields and converted them one by one. In just over 11 years, that has come to 3.5 hectares."
+        ],
+        "fr": [
+          "Dans un champ conventionnel qui dépend des engrais, les racines du théier restent en surface.",
+          "Quand on arrête les engrais, ils disparaissent peu à peu du sol pendant une période de transition, et les théiers s’habituent à un champ sans engrais ni pesticides. Puis les racines plongent en profondeur, et le sol reprend vie.",
+          "Yusando a commencé à cultiver le thé à partir de rien en 2015, sur le plateau de Yamato, à Nara. Chaque fois que des voisins abandonnaient la culture conventionnelle, il a repris leurs champs pour les convertir un à un. En un peu plus de 11 ans, cela représente 3,5 hectares."
+        ]
+      },
+      "takeaway": {"ja": "肥料をやめると、根が深くなり、土が生きる。", "en": "Stop the fertilizer, and the roots go deep and the soil comes alive.", "fr": "Sans engrais, les racines s’enfoncent et le sol reprend vie."}
+    },
+    {
+      "slug": "good-tea",
+      "reel": "DfiWZEiPBTS",
+      "title": {"ja": "良いお茶を、定義しなおす", "en": "Redefining good tea", "fr": "Redéfinir un bon thé"},
+      "lead": {
+        "ja": "見た目や香り、色、味だけでなく。体に、地球に、つくる人によいお茶とは。",
+        "en": "Beyond looks, aroma, color and taste: tea that is good for the body, the earth and the farmers.",
+        "fr": "Au-delà de l’aspect, de l’arôme, de la couleur et du goût : un thé bon pour le corps, la terre et les producteurs."
+      },
+      "body": {
+        "ja": [
+          "お茶はこれまで、茶葉の見た目、香り、水色、味で評価されてきました。協会は、良いお茶をもう少し広く考えています。",
+          "体によいこと。肥料も農薬も使わずに育ち、毎日安心して飲めること。地球によいこと。川や土に害のあるものを流さず、茶畑がたくさんの生きものの住みかになること。つくる人によいこと。安全に働け、薬剤にお金をかけず、丁寧な仕事に見合った値段がつくこと。",
+          "この3つがそろったとき、そのお茶が育った土地の味が感じられます。"
+        ],
+        "en": [
+          "Tea has long been judged by how the leaves look, by its aroma, its color and its taste. The association thinks of good tea a little more broadly.",
+          "Good for the body: grown with no fertilizer and no pesticides, a cup you can drink every day without worry. Good for the earth: nothing harmful runs into rivers or soil, and the tea field becomes home to countless living things. Good for the farmers: a safer place to work, no money spent on chemicals, and careful work that earns a fair price.",
+          "When all three come together, you can taste the place the tea comes from."
+        ],
+        "fr": [
+          "Le thé a longtemps été jugé sur l’aspect des feuilles, son arôme, sa couleur et son goût. L’association conçoit un bon thé de façon un peu plus large.",
+          "Bon pour le corps : cultivé sans engrais ni pesticides, une tasse que l’on peut boire chaque jour en toute confiance. Bon pour la terre : rien de nocif ne rejoint les rivières ni le sol, et le champ de thé abrite d’innombrables êtres vivants. Bon pour les producteurs : un travail plus sûr, pas d’argent dépensé en produits chimiques, et un travail soigné payé à son juste prix.",
+          "Quand ces trois conditions sont réunies, on goûte vraiment le lieu d’où vient le thé."
+        ]
+      },
+      "takeaway": {"ja": "体に、地球に、つくる人によいお茶。", "en": "Good for the body, the earth and the people who grow it.", "fr": "Bon pour le corps, pour la terre et pour ceux qui le cultivent."}
+    },
+    {
+      "slug": "today",
+      "reel": "DffzRoJTo6j",
+      "title": {"ja": "抹茶ブームの裏側", "en": "Behind the matcha boom", "fr": "L’envers du boom du matcha"},
+      "lead": {
+        "ja": "世界で日本茶が求められる一方で、つくる人は減っている。日本茶のいまを数字で見ます。",
+        "en": "The world wants Japanese tea, yet fewer people grow it. Japanese tea today, in numbers.",
+        "fr": "Le monde réclame du thé japonais, mais ceux qui le cultivent sont de moins en moins nombreux. Le thé japonais aujourd’hui, en chiffres."
+      },
+      "body": {
+        "ja": [
+          "世界中で抹茶が人気です。日本の緑茶の輸出額は2025年に721億円と過去最高になり、10年前のおよそ7倍になりました。",
+          "一方で、お茶をつくる人は減っています。茶の農家の数は2005年の37,617から2020年には12,325と、およそ3分の1になりました。農家の61%は65歳以上で、この10年で慣行栽培の茶畑を手放した農家も少なくありません。",
+          "その畑を引き継ぎ、肥料も農薬も使わない自然栽培に切り替える新しい世代の農家が、少しずつ増えています。"
+        ],
+        "en": [
+          "Matcha is loved around the world. Japan’s green tea exports reached a record ¥72.1 billion in 2025, about seven times the level of a decade earlier.",
+          "Yet fewer people are growing it. The number of tea farmers fell from 37,617 in 2005 to 12,325 in 2020, about a third. 61% of tea farmers are over 65, and many conventional farmers have left their tea fields in the past ten years.",
+          "A new generation of farmers is taking over some of those fields and converting them to natural agriculture, with no fertilizer and no pesticides."
+        ],
+        "fr": [
+          "Le matcha est apprécié dans le monde entier. En 2025, les exportations japonaises de thé vert ont atteint le record de 72,1 milliards de yens, environ sept fois plus qu’il y a dix ans.",
+          "Pourtant, ceux qui le cultivent sont de moins en moins nombreux. Le nombre de producteurs de thé est passé de 37 617 en 2005 à 12 325 en 2020, soit environ un tiers. 61 % d’entre eux ont plus de 65 ans, et beaucoup de producteurs conventionnels ont quitté leurs champs ces dix dernières années.",
+          "Une nouvelle génération de producteurs reprend une partie de ces champs pour les convertir à la culture naturelle, sans engrais ni pesticides."
+        ]
+      },
+      "takeaway": {"ja": "求める人は増え、つくる人は減っている。", "en": "Demand is rising while the number of growers falls.", "fr": "La demande augmente, le nombre de producteurs diminue."},
+      "sources": [
+        {"url": "https://www.maff.go.jp/j/seisan/tokusan/cha/", "label": {"ja": "農林水産省「茶をめぐる情勢」", "en": "MAFF, “Situation Surrounding Tea”", "fr": "MAFF, « Situation du thé »"}},
+        {"url": "https://www.maff.go.jp/j/seisan/tokusan/cha/tea_export.html", "label": {"ja": "農林水産省・財務省貿易統計（緑茶輸出）", "en": "MAFF / Customs trade statistics (green tea exports)", "fr": "MAFF / statistiques douanières (exportations de thé vert)"}}
+      ]
+    },
+    {
+      "slug": "spread",
+      "reel": "Dfk2Nq6TOYi",
+      "title": {"ja": "広がる、日本の自然茶", "en": "Japanese natural tea today", "fr": "Le thé naturel japonais aujourd’hui"},
+      "lead": {
+        "ja": "定番のお茶から、新しいお茶、地域の発酵茶まで。各地で広がる自然茶の姿。",
+        "en": "From the classics to new kinds of tea and local fermented teas: how natural tea is spreading across Japan.",
+        "fr": "Des grands classiques aux nouveaux thés et aux thés fermentés régionaux : comment le thé naturel se répand au Japon."
+      },
+      "body": {
+        "ja": [
+          "煎茶、抹茶、ほうじ茶といった定番のお茶が、自然栽培でつくられるようになっています。うま味だけでなく、やさしい甘みやすっきりした後味が好まれはじめています。",
+          "和紅茶や白茶、釜炒り茶など、新しい種類のお茶も次々に生まれています。自然栽培のほうがおいしいという声もあります。",
+          "阿波晩茶をはじめ、地域に伝わる発酵した晩茶も知られるようになってきました。"
+        ],
+        "en": [
+          "Classic teas such as sencha, matcha and hojicha are now being grown through natural agriculture. Beyond umami, people are starting to value a gentle sweetness and a clean aftertaste.",
+          "New kinds of tea keep appearing too: Japanese black tea, white tea and pan-fired kamairicha. Some say they taste even better when grown naturally.",
+          "Regional fermented teas, such as Awa bancha, are also starting to gain recognition."
+        ],
+        "fr": [
+          "Les thés classiques comme le sencha, le matcha et le hojicha sont désormais cultivés en culture naturelle. Au-delà de l’umami, on commence à apprécier une douceur délicate et une finale nette.",
+          "De nouveaux thés apparaissent aussi : thé noir japonais, thé blanc, kamairicha torréfié à la poêle. Certains disent qu’ils sont encore meilleurs cultivés naturellement.",
+          "Les thés fermentés régionaux, comme l’Awa bancha, commencent eux aussi à être reconnus."
+        ]
+      },
+      "takeaway": {"ja": "定番も、新しいお茶も、地域の発酵茶も。", "en": "The classics, new teas, and local fermented teas.", "fr": "Les classiques, les nouveaux thés et les thés fermentés régionaux."}
+    },
+    {
+      "slug": "harvest",
+      "reel": "DZOBxahTvxR",
+      "title": {"ja": "自然抹茶の収穫", "en": "Harvesting natural matcha", "fr": "La récolte du matcha naturel"},
+      "lead": {
+        "ja": "肥料も農薬も使わずに、抹茶の茶葉を育てて摘む。手間と時間のかかるお茶です。",
+        "en": "Growing and picking matcha leaves with no fertilizer and no pesticides: a tea that takes time and care.",
+        "fr": "Cultiver et cueillir les feuilles de matcha sans engrais ni pesticides : un thé qui demande du temps et du soin."
+      },
+      "body": {
+        "ja": [
+          "抹茶の原料になる茶葉を、肥料も農薬も使わずに育てるのは、勇気のいる挑戦です。悠三堂は10年以上、この自然抹茶に取り組んできました。",
+          "2026年の収穫には、世界中から集まった仲間たちも加わり、一緒に茶葉を摘みました。",
+          "自然茶は、手間と時間をかけて、ようやく一杯になります。このコースで見てきた畑や農家の姿を思い浮かべながら、味わってみてください。"
+        ],
+        "en": [
+          "Growing the leaves for matcha with no fertilizer and no pesticides takes real courage. Yusando has been working on this natural matcha for more than ten years.",
+          "For the 2026 harvest, friends who had gathered from around the world joined in to pick the leaves together.",
+          "Natural tea becomes a cup only after much time and care. Next time you drink it, think of the fields and farmers you have met in this course."
+        ],
+        "fr": [
+          "Cultiver les feuilles destinées au matcha sans engrais ni pesticides demande un vrai courage. Yusando se consacre à ce matcha naturel depuis plus de dix ans.",
+          "Pour la récolte 2026, des amis venus du monde entier se sont joints à la cueillette.",
+          "Le thé naturel ne devient une tasse qu’au prix de beaucoup de temps et de soin. La prochaine fois que vous en boirez, pensez aux champs et aux producteurs rencontrés dans ce cours."
+        ]
+      },
+      "takeaway": {"ja": "手間と時間をかけて、ようやく一杯になる。", "en": "Time and care go into every cup.", "fr": "Du temps et du soin dans chaque tasse."}
+    }
+  ]
+}

@@ -115,6 +115,43 @@
   .follow{margin-top:44px;font-size:15px;}
   .follow a{color:var(--green-700);border-bottom:1px solid var(--matcha);}
 
+  .course-card{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:18px 32px;background:var(--green-900);color:var(--kinari);border-radius:8px;padding:clamp(26px,3.4vw,40px);margin-bottom:36px;}
+  .course-card .meta{color:var(--matcha);margin-bottom:8px;}
+  .course-card h2{font-size:clamp(22px,2.8vw,30px);line-height:1.4;margin-bottom:10px;}
+  .course-card p{font-size:15px;color:rgba(244,241,232,.85);max-width:640px;}
+  .course-card .btn{background:var(--matcha);color:var(--green-900);white-space:nowrap;}
+  .course-card .btn:hover{background:var(--kinari);}
+  @media(max-width:700px){.course-card{grid-template-columns:minmax(0,1fr);}.course-card .btn{justify-self:start;}}
+  .page-head .btn{margin-top:30px;background:var(--matcha);color:var(--green-900);}
+  .page-head .btn:hover{background:var(--kinari);}
+
+  .lessons{list-style:none;counter-reset:lesson;max-width:820px;border-top:1px solid var(--line);}
+  .lessons li a{display:grid;grid-template-columns:3.2em minmax(0,1fr);gap:0 18px;padding:24px 4px;border-bottom:1px solid var(--line);transition:background .2s;}
+  .lessons li a:hover{background:#fdfcf8;}
+  .lessons .num{font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.1;color:var(--gold);}
+  .lessons h2{font-size:clamp(18px,2vw,21px);color:var(--green-800);line-height:1.5;margin-bottom:4px;}
+  .lessons p{font-size:15px;color:var(--ink-soft);}
+  .course-note{max-width:820px;margin-top:36px;font-size:15px;color:var(--ink-soft);}
+
+  .lesson-grid{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:start;}
+  .lesson-media{position:sticky;top:110px;}
+  .reel{position:relative;aspect-ratio:9/16;overflow:hidden;border-radius:8px;background:#000;container-type:inline-size;}
+  .reel .instagram-media{position:absolute!important;top:-54px!important;left:-21.112cqw!important;width:142.224cqw!important;min-width:0!important;max-width:none!important;height:calc(177.78cqw + 400px)!important;margin:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;}
+  .lesson-media .on-ig{display:inline-block;margin-top:12px;font-size:14px;color:var(--green-600);border-bottom:1px solid var(--matcha);}
+  .takeaway{margin:8px 0 34px;padding:22px 0 22px 26px;border-left:2px solid var(--matcha);}
+  .takeaway small{display:block;font-size:13px;letter-spacing:.08em;color:var(--gold);margin-bottom:6px;}
+  .takeaway p{font-size:clamp(20px,2.4vw,26px)!important;line-height:1.6!important;color:var(--green-800);margin:0!important;}
+  .sources{font-size:13px;color:var(--ink-soft);margin:-8px 0 34px;}
+  .sources a{color:var(--green-600);border-bottom:1px solid var(--matcha);}
+  .pager{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px;margin-top:8px;}
+  .pager a{display:block;max-width:48%;font-size:14px;color:var(--ink-soft);}
+  .pager a b{display:block;font-weight:500;font-size:16px;color:var(--green-800);}
+  .pager a.next{text-align:right;margin-left:auto;}
+  .pager a:hover b{color:var(--green-600);}
+  .toc{margin-top:30px;font-size:15px;}
+  .toc a{color:var(--green-700);border-bottom:1px solid var(--matcha);}
+  @media(max-width:900px){.lesson-grid{grid-template-columns:minmax(0,1fr);}.lesson-media{position:static;max-width:340px;width:100%;margin:0 auto;}.pager a{max-width:100%;}}
+
   footer{background:var(--green-900);color:rgba(244,241,232,.75);padding:60px 6vw 34px;}
   .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;max-width:1080px;margin:0 auto 40px;}
   .foot-brand b{font-family:'Sawarabi Mincho',serif;color:var(--kinari);font-size:17px;display:block;margin-bottom:6px;}
@@ -160,7 +197,15 @@
 
 <section class="block">
   <div class="wrap">
-    <p class="empty"><span class="ja-only">最初の記事を準備しています。公開までは Instagram でご覧ください。</span><span class="en-only">Our first article is on its way. Until then, find us on Instagram.</span><span class="fr-only">Notre premier article est en préparation. En attendant, retrouvez-nous sur Instagram.</span></p>
+    <a class="course-card" href="/learn/basics/">
+      <div>
+        <p class="meta"><span class="ja-only">無料オンラインコース</span><span class="en-only">Free online course</span><span class="fr-only">Cours en ligne gratuit</span>　<span class="ja-only">全7回</span><span class="en-only">7 lessons</span><span class="fr-only">7 leçons</span></p>
+        <h2><span class="ja-only">自然茶基礎コース</span><span class="en-only">Natural Tea Basics</span><span class="fr-only">Les bases du thé naturel</span></h2>
+        <p><span class="ja-only">自然茶（肥料も農薬も使わないお茶）の基本を、短い動画と読みもので学ぶ全7回の無料オンラインコースです。登録はいりません。</span><span class="en-only">A free online course in seven short lessons, each with a video and a short read, on the basics of natural tea: tea grown with no fertilizer and no pesticides. No sign-up needed.</span><span class="fr-only">Un cours en ligne gratuit en sept courtes leçons, chacune avec une vidéo et un texte court, sur les bases du thé naturel : un thé cultivé sans engrais ni pesticides. Sans inscription.</span></p>
+      </div>
+      <span class="btn"><span class="ja-only">コースを見る</span><span class="en-only">View the course</span><span class="fr-only">Voir le cours</span></span>
+    </a>
+
     <p class="follow"><a href="https://www.instagram.com/japan_natural_tea/" target="_blank" rel="noopener"><span class="ja-only">Instagram をフォロー</span><span class="en-only">Follow us on Instagram</span><span class="fr-only">Suivez-nous sur Instagram</span>（@japan_natural_tea）</a></p>
   </div>
 </section>

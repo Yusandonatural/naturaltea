@@ -14,6 +14,7 @@
   旧 directory/index.html は、生産者・ショップのページへ移すだけのページとして毎回書き出す
   education → learn/<slug>/index.html（独立した LP）を作り、learn/index.html（一覧）に載せる
              投稿画像（instagram/<slug>/*.png）があればそれを並べ、なければ Instagram の埋め込みを使う
+  tools/course.json → learn/basics/（自然茶基礎コース。目次と各回のページ。各回は Instagram の動画1本＋読みもの）
 生成物はそのまま commit する（GitHub Pages にビルド工程はない）。
 """
 import json
@@ -103,6 +104,22 @@ UI = {
     "follow": {"ja": "Instagram をフォロー", "en": "Follow us on Instagram", "fr": "Suivez-nous sur Instagram"},
     "shop": {"ja": "ショップ", "en": "Shop", "fr": "Boutique"},
     "producer": {"ja": "生産者", "en": "Producer", "fr": "Producteur"},
+    "course": {"ja": "無料オンラインコース", "en": "Free online course", "fr": "Cours en ligne gratuit"},
+    "lessons_n": {"ja": "全{n}回", "en": "{n} lessons", "fr": "{n} leçons"},
+    "lesson_n": {"ja": "第{n}回", "en": "Lesson {n}", "fr": "Leçon {n}"},
+    "start": {"ja": "第1回からはじめる", "en": "Start with lesson 1", "fr": "Commencer par la leçon 1"},
+    "open_course": {"ja": "コースを見る", "en": "View the course", "fr": "Voir le cours"},
+    "takeaway": {"ja": "この回のひとこと", "en": "Key takeaway", "fr": "À retenir"},
+    "sources": {"ja": "出典", "en": "Sources", "fr": "Sources"},
+    "prev": {"ja": "前の回", "en": "Previous", "fr": "Précédente"},
+    "next": {"ja": "次の回", "en": "Next", "fr": "Suivante"},
+    "toc": {"ja": "コースの目次へ", "en": "All lessons", "fr": "Toutes les leçons"},
+    "watch_ig": {"ja": "Instagram で動画を見る", "en": "Watch on Instagram", "fr": "Voir la vidéo sur Instagram"},
+    "course_note": {
+        "ja": "各回は1〜2分の動画と、数分で読める文章です。どの回からでも見られますが、順番に見ると、自然茶の考え方から日本茶のいままでがつながります。",
+        "en": "Each lesson is a one- or two-minute video and a few minutes of reading. You can start anywhere, but taken in order they lead from the idea of natural tea to where Japanese tea stands today.",
+        "fr": "Chaque leçon associe une vidéo d’une ou deux minutes et quelques minutes de lecture. Vous pouvez commencer où vous voulez, mais dans l’ordre, elles mènent de l’idée du thé naturel à la situation actuelle du thé japonais.",
+    },
 }
 
 NAV = [
@@ -234,6 +251,43 @@ CSS = """
   .empty{font-size:16px;color:var(--ink-soft);}
   .follow{margin-top:44px;font-size:15px;}
   .follow a{color:var(--green-700);border-bottom:1px solid var(--matcha);}
+
+  .course-card{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:18px 32px;background:var(--green-900);color:var(--kinari);border-radius:8px;padding:clamp(26px,3.4vw,40px);margin-bottom:36px;}
+  .course-card .meta{color:var(--matcha);margin-bottom:8px;}
+  .course-card h2{font-size:clamp(22px,2.8vw,30px);line-height:1.4;margin-bottom:10px;}
+  .course-card p{font-size:15px;color:rgba(244,241,232,.85);max-width:640px;}
+  .course-card .btn{background:var(--matcha);color:var(--green-900);white-space:nowrap;}
+  .course-card .btn:hover{background:var(--kinari);}
+  @media(max-width:700px){.course-card{grid-template-columns:minmax(0,1fr);}.course-card .btn{justify-self:start;}}
+  .page-head .btn{margin-top:30px;background:var(--matcha);color:var(--green-900);}
+  .page-head .btn:hover{background:var(--kinari);}
+
+  .lessons{list-style:none;counter-reset:lesson;max-width:820px;border-top:1px solid var(--line);}
+  .lessons li a{display:grid;grid-template-columns:3.2em minmax(0,1fr);gap:0 18px;padding:24px 4px;border-bottom:1px solid var(--line);transition:background .2s;}
+  .lessons li a:hover{background:#fdfcf8;}
+  .lessons .num{font-family:'Cormorant Garamond',serif;font-size:34px;line-height:1.1;color:var(--gold);}
+  .lessons h2{font-size:clamp(18px,2vw,21px);color:var(--green-800);line-height:1.5;margin-bottom:4px;}
+  .lessons p{font-size:15px;color:var(--ink-soft);}
+  .course-note{max-width:820px;margin-top:36px;font-size:15px;color:var(--ink-soft);}
+
+  .lesson-grid{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(32px,5vw,64px);align-items:start;}
+  .lesson-media{position:sticky;top:110px;}
+  .reel{position:relative;aspect-ratio:9/16;overflow:hidden;border-radius:8px;background:#000;container-type:inline-size;}
+  .reel .instagram-media{position:absolute!important;top:-54px!important;left:-21.112cqw!important;width:142.224cqw!important;min-width:0!important;max-width:none!important;height:calc(177.78cqw + 400px)!important;margin:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;}
+  .lesson-media .on-ig{display:inline-block;margin-top:12px;font-size:14px;color:var(--green-600);border-bottom:1px solid var(--matcha);}
+  .takeaway{margin:8px 0 34px;padding:22px 0 22px 26px;border-left:2px solid var(--matcha);}
+  .takeaway small{display:block;font-size:13px;letter-spacing:.08em;color:var(--gold);margin-bottom:6px;}
+  .takeaway p{font-size:clamp(20px,2.4vw,26px)!important;line-height:1.6!important;color:var(--green-800);margin:0!important;}
+  .sources{font-size:13px;color:var(--ink-soft);margin:-8px 0 34px;}
+  .sources a{color:var(--green-600);border-bottom:1px solid var(--matcha);}
+  .pager{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px;margin-top:8px;}
+  .pager a{display:block;max-width:48%;font-size:14px;color:var(--ink-soft);}
+  .pager a b{display:block;font-weight:500;font-size:16px;color:var(--green-800);}
+  .pager a.next{text-align:right;margin-left:auto;}
+  .pager a:hover b{color:var(--green-600);}
+  .toc{margin-top:30px;font-size:15px;}
+  .toc a{color:var(--green-700);border-bottom:1px solid var(--matcha);}
+  @media(max-width:900px){.lesson-grid{grid-template-columns:minmax(0,1fr);}.lesson-media{position:static;max-width:340px;width:100%;margin:0 auto;}.pager a{max-width:100%;}}
 
   footer{background:var(--green-900);color:rgba(244,241,232,.75);padding:60px 6vw 34px;}
   .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;max-width:1080px;margin:0 auto 40px;}
@@ -407,7 +461,7 @@ def render_post(p):
     return page(title, desc, f"https://naturaltea.jp/learn/{p['slug']}/", body, extra)
 
 
-def render_list(posts):
+def render_list(posts, course=None):
     cards = []
     for p in posts:
         kind = KINDS[p["kind"]]
@@ -420,8 +474,10 @@ def render_list(posts):
     listing = (
         f'    <div class="post-list">\n{chr(10).join(cards)}\n    </div>'
         if cards
-        else f'    <p class="empty">{t(UI["empty"])}</p>'
+        else ("" if course else f'    <p class="empty">{t(UI["empty"])}</p>')
     )
+    if course:
+        listing = course_card(course) + listing
     body = f"""<div class="page-head">
   <div class="wrap">
     <p class="crumb"><a href="/">{t(UI["home"])}</a>　/　{t(UI["learn"])}</p>
@@ -645,6 +701,144 @@ def write_redirect(posts):
     print("wrote", DIRECTORY.relative_to(ROOT))
 
 
+COURSE = ROOT / "tools" / "course.json"  # 自然茶基礎コース → learn/<slug>/
+
+
+def fill(d, **kw):
+    return {l: d[l].format(**kw) for l in LANGS}
+
+
+def course_card(c):
+    n = len(c["lessons"])
+    return f"""    <a class="course-card" href="/learn/{c["slug"]}/">
+      <div>
+        <p class="meta">{t(UI["course"])}　{t(fill(UI["lessons_n"], n=n))}</p>
+        <h2>{t(c["title"])}</h2>
+        <p>{t(c["lead"])}</p>
+      </div>
+      <span class="btn">{t(UI["open_course"])}</span>
+    </a>
+"""
+
+
+def reel_html(rid):
+    url = f"https://www.instagram.com/reel/{rid}/"
+    return (f'      <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="{url}" data-instgrm-version="14"></blockquote></div>\n'
+            f'      <a class="on-ig" href="{url}" target="_blank" rel="noopener">{t(UI["watch_ig"])}</a>')
+
+
+def render_course(c):
+    base = f"/learn/{c['slug']}/"
+    items = "\n".join(f"""      <li><a href="{base}{l["slug"]}/">
+        <span class="num">{i:02d}</span>
+        <span><h2>{t(l["title"])}</h2><p>{t(l["lead"])}</p></span>
+      </a></li>""" for i, l in enumerate(c["lessons"], 1))
+    body = f"""<div class="page-head">
+  <div class="wrap">
+    <p class="crumb"><a href="/">{t(UI["home"])}</a>　/　<a href="/learn/">{t(UI["learn"])}</a></p>
+    <p class="meta">{t(UI["course"])}　{t(fill(UI["lessons_n"], n=len(c["lessons"])))}</p>
+    <h1>{t(c["title"])}</h1>
+    <p class="lead">{t(c["lead"])}</p>
+    <a class="btn" href="{base}{c["lessons"][0]["slug"]}/">{t(UI["start"])}</a>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <ol class="lessons">
+{items}
+    </ol>
+    <p class="course-note">{t(UI["course_note"])}</p>
+  </div>
+</section>"""
+    return page(f'{c["title"]["ja"]} {c["title"]["en"]} | 日本自然茶協会 Japan Natural Tea Association',
+                f'{c["lead"]["ja"]} {c["lead"]["en"]}', f"https://naturaltea.jp{base}", body)
+
+
+def render_lesson(c, i):
+    lessons, base = c["lessons"], f"/learn/{c['slug']}/"
+    l, n = lessons[i], i + 1
+    paras = "\n".join(f"        <p>{t_at(l['body'], k)}</p>" for k in range(len(l["body"]["ja"])))
+    sources = ""
+    if l.get("sources"):
+        links = "　/　".join(f'<a href="{escape(s["url"])}" target="_blank" rel="noopener">{t(s["label"])}</a>' for s in l["sources"])
+        sources = f'        <p class="sources">{t(UI["sources"])}：{links}</p>\n'
+    pager = ""
+    if i > 0:
+        p = lessons[i - 1]
+        pager += f'<a class="prev" href="{base}{p["slug"]}/">← {t(UI["prev"])}<b>{t(p["title"])}</b></a>'
+    if i + 1 < len(lessons):
+        x = lessons[i + 1]
+        pager += f'<a class="next" href="{base}{x["slug"]}/">{t(UI["next"])} →<b>{t(x["title"])}</b></a>'
+    cta = ""
+    if i + 1 == len(lessons):
+        k = KINDS["education"]
+        cta = f"""        <div class="cta">
+          <h2>{t(k["cta_title"])}</h2>
+          <p>{t(k["cta_text"])}</p>
+          <a class="btn" href="{k["cta_href"]}">{t(k["cta_button"])}</a>
+        </div>
+"""
+    body = f"""<div class="page-head">
+  <div class="wrap">
+    <p class="crumb"><a href="/">{t(UI["home"])}</a>　/　<a href="/learn/">{t(UI["learn"])}</a>　/　<a href="{base}">{t(c["title"])}</a></p>
+    <p class="meta">{t(fill(UI["lesson_n"], n=n))} / {len(lessons)}</p>
+    <h1>{t(l["title"])}</h1>
+    <p class="lead">{t(l["lead"])}</p>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap lesson-grid">
+    <div class="lesson-media">
+{reel_html(l["reel"])}
+    </div>
+    <article class="article">
+{paras}
+        <div class="takeaway"><small>{t(UI["takeaway"])}</small><p>{t(l["takeaway"])}</p></div>
+{sources}{cta}        <nav class="pager">{pager}</nav>
+        <p class="toc"><a href="{base}">{t(UI["toc"])}</a></p>
+    </article>
+  </div>
+</section>"""
+    return page(f'{l["title"]["ja"]}（{c["title"]["ja"]} 第{n}回） | 日本自然茶協会 Japan Natural Tea Association',
+                f'{l["lead"]["ja"]} {l["lead"]["en"]}', f"https://naturaltea.jp{base}{l['slug']}/", body,
+                '<script async src="https://www.instagram.com/embed.js"></script>\n')
+
+
+def check_course(c):
+    assert c["slug"] and re.fullmatch(r"[a-z0-9-]+", c["slug"]), "course.json: slug は英小文字・数字・-"
+    for key in ("title", "lead"):
+        assert set(c[key]) >= set(LANGS), f"course.json: {key} に ja/en/fr が必要"
+    slugs = [l["slug"] for l in c["lessons"]]
+    assert len(slugs) == len(set(slugs)), "course.json: 回の slug が重複しています"
+    for l in c["lessons"]:
+        s = l["slug"]
+        assert re.fullmatch(r"[A-Za-z0-9_-]{5,20}", l["reel"]), f"course.json {s}: reel は Instagram の動画 ID"
+        for key in ("title", "lead", "body", "takeaway"):
+            assert set(l[key]) >= set(LANGS), f"course.json {s}: {key} に ja/en/fr が必要"
+        assert len({len(l["body"][x]) for x in LANGS}) == 1, f"course.json {s}: body の数を3言語でそろえる"
+        for src in l.get("sources", []):
+            assert src["url"].startswith("http") and set(src["label"]) >= set(LANGS), f"course.json {s}: sources は url と3言語の label"
+
+
+def write_course():
+    if not COURSE.exists():
+        return None
+    c = json.loads(COURSE.read_text(encoding="utf-8"))
+    check_course(c)
+    out = LEARN_DIR / c["slug"]
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "index.html").write_text(render_course(c), encoding="utf-8")
+    print("wrote", (out / "index.html").relative_to(ROOT))
+    for i, l in enumerate(c["lessons"]):
+        f = out / l["slug"] / "index.html"
+        f.parent.mkdir(exist_ok=True)
+        f.write_text(render_lesson(c, i), encoding="utf-8")
+        print("wrote", f.relative_to(ROOT))
+    return c
+
+
 def check(p):
     s = p.get("slug", "?")
     assert p.get("kind") in DIRECTORY_KINDS + tuple(KINDS), f"{s}: kind は producer / shop / education のどれか"
@@ -681,7 +875,9 @@ def main():
         out.write_text(render_post(p), encoding="utf-8")
         print("wrote", out.relative_to(ROOT))
     LEARN_DIR.mkdir(exist_ok=True)
-    (LEARN_DIR / "index.html").write_text(render_list(learn), encoding="utf-8")
+    course = write_course()
+    assert not course or course["slug"] not in {p["slug"] for p in learn}, "course.json の slug が entries.json の学びの記事と重なっています"
+    (LEARN_DIR / "index.html").write_text(render_list(learn, course), encoding="utf-8")
     print("wrote learn/index.html")
 
 
