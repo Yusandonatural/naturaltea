@@ -1,16 +1,24 @@
 {
   "slug": "basics",
-  "title": {"ja": "自然茶基礎コース", "en": "Natural Tea Basics", "fr": "Les bases du thé naturel"},
+  "title": {
+    "ja": "自然茶基礎コース",
+    "en": "Natural Tea Basics",
+    "fr": "Les bases du thé naturel"
+  },
   "lead": {
-    "ja": "自然茶（肥料も農薬も使わないお茶）の基本を、短い動画と読みもので学ぶ全7回の無料オンラインコースです。登録はいりません。",
-    "en": "A free online course in seven short lessons, each with a video and a short read, on the basics of natural tea: tea grown with no fertilizer and no pesticides. No sign-up needed.",
-    "fr": "Un cours en ligne gratuit en sept courtes leçons, chacune avec une vidéo et un texte court, sur les bases du thé naturel : un thé cultivé sans engrais ni pesticides. Sans inscription."
+    "ja": "自然茶（肥料も農薬も使わないお茶）の基本を、短い動画と読みもので学ぶ全8回の無料オンラインコースです。登録はいりません。",
+    "en": "A free online course in eight short lessons, each with a video and a short read, on the basics of natural tea: tea grown with no fertilizer and no pesticides. No sign-up needed.",
+    "fr": "Un cours en ligne gratuit en huit courtes leçons, chacune avec une vidéo et un texte court, sur les bases du thé naturel : un thé cultivé sans engrais ni pesticides. Sans inscription."
   },
   "lessons": [
     {
       "slug": "why",
       "reel": "DfofqZLPr0b",
-      "title": {"ja": "なぜ、日本自然茶協会は生まれたのか", "en": "Why the association was founded", "fr": "Pourquoi l’association est née"},
+      "title": {
+        "ja": "なぜ、日本自然茶協会は生まれたのか",
+        "en": "Why the association was founded",
+        "fr": "Pourquoi l’association est née"
+      },
       "lead": {
         "ja": "肥料も農薬も使わずにお茶を育てる農家が向き合う現実と、協会が生まれた理由。",
         "en": "The reality facing farmers who grow tea with no fertilizer and no pesticides, and why the association began.",
@@ -33,12 +41,20 @@
           "C’est pourquoi l’association a été fondée par un producteur, pour les producteurs : pour qu’aucun d’eux ne porte seul ce travail, et qu’ils puissent rejoindre ceux qui veulent leur thé."
         ]
       },
-      "takeaway": {"ja": "自然栽培の農家を、ひとりにしない。", "en": "No natural tea farmer should have to go it alone.", "fr": "Aucun producteur de thé naturel ne devrait rester seul."}
+      "takeaway": {
+        "ja": "自然栽培の農家を、ひとりにしない。",
+        "en": "No natural tea farmer should have to go it alone.",
+        "fr": "Aucun producteur de thé naturel ne devrait rester seul."
+      }
     },
     {
       "slug": "natural-agriculture",
       "reel": "Dfas139PTYk",
-      "title": {"ja": "自然栽培とは", "en": "What is natural agriculture?", "fr": "Qu’est-ce que la culture naturelle ?"},
+      "title": {
+        "ja": "自然栽培とは",
+        "en": "What is natural agriculture?",
+        "fr": "Qu’est-ce que la culture naturelle ?"
+      },
       "lead": {
         "ja": "何も足さずに、茶の木が自分の力で育つ。自然栽培の考え方を知る回です。",
         "en": "Nothing is added, and the tea plant grows by its own strength. The idea behind natural agriculture.",
@@ -61,12 +77,20 @@
           "À la place des pesticides, il s’appuie sur la vie du champ. Là où vivent coccinelles, araignées et papillons, la chaîne alimentaire reste en équilibre, et le théier lui-même devient plus robuste."
         ]
       },
-      "takeaway": {"ja": "足さない。茶の木が自分の力で育つ。", "en": "Add nothing. Let the tea plant grow by its own strength.", "fr": "Ne rien ajouter. Laisser le théier pousser par sa propre force."}
+      "takeaway": {
+        "ja": "足さない。茶の木が自分の力で育つ。",
+        "en": "Add nothing. Let the tea plant grow by its own strength.",
+        "fr": "Ne rien ajouter. Laisser le théier pousser par sa propre force."
+      }
     },
     {
       "slug": "field",
       "reel": "DfdYG-8vQNq",
-      "title": {"ja": "畑は、どう変わる？", "en": "How does the field change?", "fr": "Comment le champ se transforme-t-il ?"},
+      "title": {
+        "ja": "畑は、どう変わる？",
+        "en": "How does the field change?",
+        "fr": "Comment le champ se transforme-t-il ?"
+      },
       "lead": {
         "ja": "肥料と農薬をやめた茶畑で起きること。奈良・大和高原の畑から。",
         "en": "What happens when a tea field stops receiving fertilizer and pesticides, seen from fields on the Yamato Plateau in Nara.",
@@ -89,12 +113,20 @@
           "Yusando a commencé à cultiver le thé à partir de rien en 2015, sur le plateau de Yamato, à Nara. Chaque fois que des voisins abandonnaient la culture conventionnelle, il a repris leurs champs pour les convertir un à un. En un peu plus de 11 ans, cela représente 3,5 hectares."
         ]
       },
-      "takeaway": {"ja": "肥料をやめると、根が深くなり、土が生きる。", "en": "Stop the fertilizer, and the roots go deep and the soil comes alive.", "fr": "Sans engrais, les racines s’enfoncent et le sol reprend vie."}
+      "takeaway": {
+        "ja": "肥料をやめると、根が深くなり、土が生きる。",
+        "en": "Stop the fertilizer, and the roots go deep and the soil comes alive.",
+        "fr": "Sans engrais, les racines s’enfoncent et le sol reprend vie."
+      }
     },
     {
       "slug": "good-tea",
       "reel": "DfiWZEiPBTS",
-      "title": {"ja": "良いお茶を、定義しなおす", "en": "Redefining good tea", "fr": "Redéfinir un bon thé"},
+      "title": {
+        "ja": "良いお茶を、定義しなおす",
+        "en": "Redefining good tea",
+        "fr": "Redéfinir un bon thé"
+      },
       "lead": {
         "ja": "見た目や香り、色、味だけでなく。体に、地球に、つくる人によいお茶とは。",
         "en": "Beyond looks, aroma, color and taste: tea that is good for the body, the earth and the farmers.",
@@ -117,12 +149,187 @@
           "Quand ces trois conditions sont réunies, on goûte vraiment le lieu d’où vient le thé."
         ]
       },
-      "takeaway": {"ja": "体に、地球に、つくる人によいお茶。", "en": "Good for the body, the earth and the people who grow it.", "fr": "Bon pour le corps, pour la terre et pour ceux qui le cultivent."}
+      "takeaway": {
+        "ja": "体に、地球に、つくる人によいお茶。",
+        "en": "Good for the body, the earth and the people who grow it.",
+        "fr": "Bon pour le corps, pour la terre et pour ceux qui le cultivent."
+      }
+    },
+    {
+      "slug": "history",
+      "title": {
+        "ja": "日本の自然茶の歴史",
+        "en": "A history of natural tea in Japan",
+        "fr": "Une histoire du thé naturel au Japon"
+      },
+      "lead": {
+        "ja": "薬として中国から伝わったお茶は、やがて番茶や煎茶として人々の毎日を支えるようになりました。戦後の化学肥料と農薬の時代まで、日本のお茶の歩みを暮らしの側からたどります。",
+        "en": "Tea came to Japan from China as a medicine, and in time, as bancha and sencha, became part of everyday life. We trace the story of Japanese tea from the side of daily life, up to the postwar era of chemical fertilizer and pesticides.",
+        "fr": "Le thé est arrivé de Chine au Japon comme un remède, puis, sous forme de bancha et de sencha, il est entré dans la vie de tous les jours. Nous retraçons l’histoire du thé japonais du côté du quotidien, jusqu’à l’ère d’après-guerre des engrais chimiques et des pesticides."
+      },
+      "body": {
+        "ja": [
+          "お茶は、平安時代に中国から日本に伝わりました。9世紀には永忠・最澄・空海といった僧がお茶を持ち帰り、815年には永忠が嵯峨天皇にお茶を煎じて献じたと伝えられています。これが、日本でお茶を飲む文化の始まりとされています。",
+          "お茶は古くから、薬として扱われてきました。鎌倉時代のはじめ、二度にわたって宋に渡った僧・栄西は、茶の実を持ち帰って植え、日本で最初の茶の本『喫茶養生記』を著しました。その中には「茶は養生の仙薬なり。延齢の妙術なり」とあります。お茶は、体をいたわり、日々を健やかに過ごすためのものとして迎えられたのです。",
+          "栄西が勧めたのは、いまの抹茶のもとになる、粉にしたお茶でした。『喫茶養生記』で栄西は、心臓は五臓の王で苦い味を好み、茶は苦い味の筆頭なので、茶を飲めば心臓が強くなって病がなくなる、と説いています。さらに中国の古い書物を引いて、茶には酒の酔いをさます、眠気を少なくする、小便の通じをよくする、のどの渇きをいやす、食べたものの消化を助ける、体を軽くする、といったはたらきがあると書いています。これらは当時の医学の考え方にもとづいて信じられてきたことで、いまの科学で確かめられた効き目とは別のものです。",
+          "はじめは寺や上流の人々のものだったお茶は、やがて庶民へと広がっていきました。そのとき人々の暮らしを支えたのが「番茶」です。番茶は、自分の家で飲むために、あるいは狭い地域の中だけで出回るようにつくられた、毎日のお茶でした。煎茶が広まる前から、番茶は庶民の生活と深く結びつき、飲むだけでなく、食事として「食べる」お茶でもありました。",
+          "江戸時代には、煎茶も人々の毎日のお茶になりました。貝原益軒は『養生訓』（1713年）で、茶は「性冷にして気を下し、眠をさます」と書き、抹茶は強く、煎茶はやわらかいので、ふだんは煎茶を飲むのがよいと勧めています。食後に熱い茶を少し飲めば食べたものがこなれ、のどの渇きがやむとする一方で、空腹のときに飲むことや、濃い茶を多く飲むことは戒めています。人見必大の『本朝食鑑』（1697年）は、江戸では朝ごはんの前に煎茶を何杯も飲む「朝茶」の習わしがあることを伝え、酒のあとに茶を飲むと酔いがすっと醒めるとも書いています。これらも当時の本草学の考え方で、いまの科学で確かめられた効き目ではありません。",
+          "番茶のつくり方は、土地ごとにさまざまです。四国の山あいでは、夏に摘んだ葉を煮たり蒸したりしてから桶に漬けて発酵させる、阿波晩茶や石鎚黒茶、碁石茶がいまもつくられています。その製造技術は、国の重要無形民俗文化財に指定されています。",
+          "戦後、日本の茶づくりは大きく変わりました。海外で開発された化学合成の農薬が次々と導入され、茶畑でも殺虫剤の散布が害虫対策の中心になりました。肥料も増えました。お茶のうま味のもとになるアミノ酸（テアニンなど）は窒素からつくられ、アミノ酸の多いお茶ほど審査の点数や取引価格が高い傾向があります。そのため、窒素を多く入れるほど良いお茶になると考えられ、静岡県の茶畑の窒素の量は、1960年代の10aあたり50kg台から、1990年代後半には120kgを超えるまでに増えました。",
+          "けれども、多く入れた窒素の半分ほどは茶の木に吸われず、地下水や川に流れ出していました。国や県は1990年代の終わりから肥料を減らす取り組みを進め、静岡県は2010年から基準を10aあたり40kgにしています。県の研究では、ふつうの量を超えて肥料を増やしても、収量も品質もそれ以上はほとんど上がらないことが示されています。農薬も、減らした防除の体系でさえ年に13回の散布が行われている例があります（静岡県）。",
+          "暮らしの中で、身近な茶の木から摘み、手をかけてつくり、毎日飲む。協会は、こうした日本のお茶のあり方を、自然茶の原点だと考えています。化学肥料と農薬を多く使って、うま味と量を求めるようになったのは、千年をこえるお茶の歴史の中では、戦後のことです。肥料も農薬も使わない自然茶は、新しい流行ではなく、日本の人々の毎日を支えてきたお茶の続きにあります。"
+        ],
+        "en": [
+          "Tea came to Japan from China in the Heian period. In the 9th century, monks such as Eichu, Saicho and Kukai brought tea back with them, and in 815 Eichu is said to have prepared tea for Emperor Saga. This is considered the beginning of tea drinking in Japan.",
+          "From early on, tea was treated as a medicine. At the start of the Kamakura period, the monk Eisai, who travelled twice to Song China, brought back tea seeds, planted them, and wrote Japan’s first book on tea, the Kissa Yojoki. In it he writes: “Tea is the elixir of good health, the wondrous art of long life.” Tea was welcomed as something to care for the body and to live each day in good health.",
+          "What Eisai recommended was powdered tea, the forerunner of today’s matcha. In the Kissa Yojoki he explains that the heart is the king of the five organs and favours the bitter taste; since tea is the foremost of bitter things, drinking tea strengthens the heart and keeps illness away. Quoting older Chinese books, he also writes that tea sobers you up after drinking, reduces drowsiness, helps urination, quenches thirst, aids the digestion of food and makes the body feel light. These were beliefs based on the medicine of the time, not effects confirmed by modern science.",
+          "At first, tea belonged to temples and the upper classes, but over time it spread to ordinary people. What sustained their daily life was bancha: everyday tea, made for the household or sold only within a small area. Long before sencha became common, bancha was closely tied to the lives of ordinary people, and it was not only drunk but also “eaten” as part of meals.",
+          "In the Edo period, sencha also became an everyday tea. In his Yojokun (1713), Kaibara Ekiken wrote that tea is “cooling by nature, settles the qi and dispels sleep,” and that because matcha is strong and sencha is gentle, sencha is the one to drink every day. A little hot tea after a meal, he said, helps the food settle and quenches thirst, while he warned against drinking tea on an empty stomach or drinking a lot of strong tea. Hitomi Hitsudai’s Honcho Shokkan (1697) records the Edo custom of asacha, several cups of sencha before breakfast, and says that tea after drinking alcohol clears the head at once. These, too, were ideas of the herbal medicine of the time, not effects confirmed by modern science.",
+          "Bancha was made in many different ways from place to place. In the mountains of Shikoku, leaves picked in summer are still boiled or steamed and then fermented in wooden tubs to make Awa bancha, Ishizuchi kurocha and goishicha. These techniques are designated by the Japanese government as Important Intangible Folk Cultural Properties.",
+          "After the Second World War, tea growing in Japan changed greatly. Synthetic pesticides developed abroad were introduced one after another, and in tea fields too, spraying insecticides became the main way of dealing with pests. Fertilizer use grew as well. The amino acids behind tea’s umami, such as theanine, are made from nitrogen, and teas richer in amino acids tend to score higher in judging and fetch higher prices. So it came to be believed that the more nitrogen, the better the tea: in Shizuoka Prefecture, nitrogen applied to tea fields rose from the 50 kg range per 10 ares in the 1960s to over 120 kg in the late 1990s.",
+          "Yet about half of the heavy nitrogen applied was not taken up by the tea plants and flowed out into groundwater and rivers. From the late 1990s the national and prefectural governments worked to reduce fertilizer, and since 2010 Shizuoka’s standard has been 40 kg per 10 ares. Prefectural research shows that adding more than the usual amount barely improves either yield or quality. As for pesticides, even a reduced spraying programme can still mean 13 sprays a year (an example from Shizuoka).",
+          "Picking from the tea plants close at hand, making the tea with care, and drinking it every day as part of life: the association sees this way of tea as the origin of natural tea. In more than a thousand years of tea in Japan, relying on chemical fertilizer and pesticides to chase umami and yield is a postwar development. Natural tea, grown with no fertilizer and no pesticides, is not a new trend. It carries on the tea that has supported the daily lives of people in Japan."
+        ],
+        "fr": [
+          "Le thé est arrivé de Chine au Japon à l’époque de Heian. Au IXe siècle, des moines comme Eichū, Saichō et Kūkai en ont rapporté, et en 815 Eichū aurait préparé du thé pour l’empereur Saga. On considère que c’est le début de la consommation de thé au Japon.",
+          "Dès l’origine, le thé a été considéré comme un remède. Au début de l’époque de Kamakura, le moine Eisai, parti deux fois en Chine des Song, en a rapporté des graines, les a plantées et a écrit le premier livre japonais sur le thé, le Kissa Yōjōki. On y lit : « Le thé est l’élixir de la santé, l’art merveilleux de la longévité. » Le thé a été accueilli comme un moyen de prendre soin du corps et de vivre chaque jour en bonne santé.",
+          "Ce qu’Eisai recommandait, c’était un thé en poudre, l’ancêtre du matcha actuel. Dans le Kissa Yōjōki, il explique que le cœur est le roi des cinq organes et qu’il aime l’amertume ; le thé étant la première des choses amères, en boire fortifie le cœur et éloigne la maladie. Citant d’anciens livres chinois, il écrit aussi que le thé dissipe l’ivresse, réduit la somnolence, facilite la miction, apaise la soif, aide à digérer et rend le corps léger. Ce sont des croyances fondées sur la médecine de l’époque, et non des effets confirmés par la science moderne.",
+          "D’abord réservé aux temples et aux classes supérieures, le thé s’est peu à peu répandu parmi les gens ordinaires. Ce qui a soutenu leur quotidien, c’est le bancha : un thé de tous les jours, fait pour la maison ou vendu seulement dans une petite région. Bien avant la diffusion du sencha, le bancha était étroitement lié à la vie des gens ordinaires, et on ne se contentait pas de le boire : on le « mangeait » aussi pendant les repas.",
+          "À l’époque d’Edo, le sencha est lui aussi devenu un thé de tous les jours. Dans son Yōjōkun (1713), Kaibara Ekiken écrit que le thé « est de nature fraîche, fait descendre le qi et chasse le sommeil », et que le matcha étant fort et le sencha doux, c’est le sencha qu’il faut boire au quotidien. Un peu de thé chaud après le repas aide, selon lui, à digérer et apaise la soif, mais il met en garde contre le thé bu à jeun ou en grande quantité quand il est fort. Le Honchō Shokkan de Hitomi Hitsudai (1697) rapporte la coutume d’Edo de l’asacha, plusieurs tasses de sencha avant le petit-déjeuner, et affirme qu’un thé après l’alcool dissipe aussitôt l’ivresse. Ce sont là aussi des idées de la pharmacopée de l’époque, et non des effets confirmés par la science moderne.",
+          "Le bancha se fabriquait de mille façons selon les régions. Dans les montagnes de Shikoku, on fait encore bouillir ou cuire à la vapeur des feuilles cueillies en été, puis on les fait fermenter dans des cuves en bois pour obtenir l’Awa bancha, l’Ishizuchi kurocha et le goishicha. Ces techniques sont classées par l’État japonais comme biens culturels folkloriques immatériels importants.",
+          "Après la Seconde Guerre mondiale, la culture du thé au Japon a profondément changé. Les pesticides de synthèse mis au point à l’étranger ont été introduits les uns après les autres, et dans les champs de thé aussi, la pulvérisation d’insecticides est devenue le principal moyen de lutter contre les ravageurs. Les engrais ont augmenté eux aussi. Les acides aminés à l’origine de l’umami du thé, comme la théanine, sont fabriqués à partir de l’azote, et les thés riches en acides aminés obtiennent en général de meilleures notes et de meilleurs prix. On en est donc venu à penser que plus il y a d’azote, meilleur est le thé : dans la préfecture de Shizuoka, l’azote apporté aux champs de thé est passé d’une cinquantaine de kilos pour 10 ares dans les années 1960 à plus de 120 kg à la fin des années 1990.",
+          "Pourtant, environ la moitié de l’azote apporté en excès n’était pas absorbée par les théiers et s’écoulait dans les nappes et les rivières. À partir de la fin des années 1990, l’État et les préfectures ont cherché à réduire les engrais, et depuis 2010 la norme de Shizuoka est de 40 kg pour 10 ares. Les recherches préfectorales montrent qu’au-delà de la dose habituelle, ajouter de l’engrais n’améliore presque plus ni le rendement ni la qualité. Quant aux pesticides, même un programme de traitement allégé peut compter 13 pulvérisations par an (exemple de Shizuoka).",
+          "Cueillir les théiers tout proches, préparer le thé avec soin et le boire chaque jour : l’association voit dans cette manière de vivre le thé l’origine du thé naturel. Sur plus de mille ans d’histoire du thé au Japon, le recours massif aux engrais chimiques et aux pesticides pour rechercher l’umami et le rendement date de l’après-guerre. Le thé naturel, cultivé sans engrais ni pesticides, n’est pas une mode nouvelle. Il prolonge le thé qui a soutenu le quotidien des Japonais."
+        ]
+      },
+      "takeaway": {
+        "ja": "薬として伝わり、番茶や煎茶として毎日を支えてきた。",
+        "en": "It arrived as a medicine and, as bancha and sencha, sustained everyday life.",
+        "fr": "Arrivé comme remède, il a soutenu le quotidien sous forme de bancha et de sencha."
+      },
+      "sources": [
+        {
+          "url": "https://www.mlit.go.jp/tagengo-db/common/001558082.pdf",
+          "label": {
+            "ja": "観光庁 多言語解説文「日本茶：歴史的概要」",
+            "en": "Japan Tourism Agency, “Japanese Tea: A Historical Overview”",
+            "fr": "Agence japonaise du tourisme, « Japanese Tea: A Historical Overview »"
+          }
+        },
+        {
+          "url": "https://www.kodansha.co.jp/book/products/0000151045",
+          "label": {
+            "ja": "古田紹欽『栄西 喫茶養生記』（講談社学術文庫）",
+            "en": "Furuta Shōkin, Eisai: Kissa Yōjōki (Kodansha, in Japanese)",
+            "fr": "Furuta Shōkin, Eisai : Kissa Yōjōki (Kodansha, en japonais)"
+          }
+        },
+        {
+          "url": "https://doi.org/10.24729/00004286",
+          "label": {
+            "ja": "水野杏紀・平木康平「栄西『喫茶養生記』全訳注」（大阪府立大学 人文学論集、2018年）",
+            "en": "Mizuno & Hiraki, annotated translation of Eisai’s Kissa Yōjōki (Osaka Prefecture University, 2018, Japanese)",
+            "fr": "Mizuno et Hiraki, traduction annotée du Kissa Yōjōki d’Eisai (Université préfectorale d’Osaka, 2018, en japonais)"
+          }
+        },
+        {
+          "url": "https://www.ndl.go.jp/file/event/exhibitions/kansai_202108/kansai_list_28.pdf",
+          "label": {
+            "ja": "国立国会図書館 関西館 展示資料リスト（お茶の歴史・番茶）",
+            "en": "National Diet Library, exhibition list on Japanese tea (history, bancha; Japanese)",
+            "fr": "Bibliothèque nationale de la Diète, liste d’exposition sur le thé japonais (en japonais)"
+          }
+        },
+        {
+          "url": "https://online.bunka.go.jp/heritages/detail/392215",
+          "label": {
+            "ja": "文化庁 文化遺産オンライン「四国山地の発酵茶の製造技術」",
+            "en": "Agency for Cultural Affairs, “Fermented tea techniques of the Shikoku mountains” (Japanese)",
+            "fr": "Agence pour les affaires culturelles, techniques du thé fermenté des montagnes de Shikoku (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.nakamura-u.ac.jp/institute/media/library/kaibara/text03.html",
+          "label": {
+            "ja": "貝原益軒『養生訓』巻第四（中村学園大学 校訂テキスト）",
+            "en": "Kaibara Ekiken, Yōjōkun, book 4 (Nakamura Gakuen University edition, Japanese)",
+            "fr": "Kaibara Ekiken, Yōjōkun, livre 4 (édition de l’université Nakamura Gakuen, en japonais)"
+          }
+        },
+        {
+          "url": "https://dl.ndl.go.jp/info:ndljp/pid/2569416",
+          "label": {
+            "ja": "人見必大『本朝食鑑』巻之四「茶」（国立国会図書館デジタルコレクション）",
+            "en": "Hitomi Hitsudai, Honchō Shokkan, vol. 4, “Tea” (National Diet Library Digital Collections)",
+            "fr": "Hitomi Hitsudai, Honchō Shokkan, vol. 4, « Thé » (collections numériques de la Bibliothèque nationale de la Diète)"
+          }
+        },
+        {
+          "url": "https://www.jppa.or.jp/archive/pdf/68_08_60.pdf",
+          "label": {
+            "ja": "大田博樹「日本の農薬産業技術史（3）」植物防疫 68巻8号（2014年）",
+            "en": "Ota Hiroki, “History of Japan’s pesticide industry (3)”, Plant Protection 68(8), 2014 (Japanese)",
+            "fr": "Ota Hiroki, « Histoire de l’industrie des pesticides au Japon (3) », Plant Protection 68(8), 2014 (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.jircas.go.jp/sites/default/files/publication/jarq/31-3-213-217_0.pdf",
+          "label": {
+            "ja": "Kawai「Prospect for Integrated Pest Management in Tea Cultivation in Japan」JARQ 31(3)（1997年）",
+            "en": "Kawai, “Prospect for Integrated Pest Management in Tea Cultivation in Japan”, JARQ 31(3), 1997",
+            "fr": "Kawai, « Prospect for Integrated Pest Management in Tea Cultivation in Japan », JARQ 31(3), 1997"
+          }
+        },
+        {
+          "url": "https://www.pref.kyoto.jp/chaken/documents/1325640649427.pdf",
+          "label": {
+            "ja": "京都府茶業研究所「京都府産荒茶における遊離アミノ酸含有率と窒素施用量・製茶品質との関係」",
+            "en": "Kyoto Prefectural Tea Research Institute: amino acids, nitrogen application and tea quality (Japanese)",
+            "fr": "Institut de recherche sur le thé de Kyoto : acides aminés, azote et qualité du thé (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.pref.shizuoka.jp/_res/projects/default_project/_page_/001/060/463/6-chasaibai.pdf",
+          "label": {
+            "ja": "松浦英之ほか「佐鳴湖流域における茶栽培の面積及び施肥量の実態と地下水系への窒素負荷量の推定」静岡県農林技術研究所研究報告 第2号（2009年）",
+            "en": "Matsuura et al., tea fertilization and nitrogen load to groundwater, Shizuoka Research Institute of Agriculture and Forestry, Bulletin 2 (2009, Japanese)",
+            "fr": "Matsuura et al., fertilisation du thé et charge azotée des nappes, Institut de Shizuoka, bulletin n° 2 (2009, en japonais)"
+          }
+        },
+        {
+          "url": "https://www.pref.shizuoka.jp/_res/projects/default_project/_page_/001/044/307/r1-g.pdf",
+          "label": {
+            "ja": "静岡県茶業研究センター「20年間の窒素40kg施肥が収量品質に及ぼす影響」（2019年）",
+            "en": "Shizuoka Tea Research Center: 20 years of 40 kg nitrogen fertilization, yield and quality (2019, Japanese)",
+            "fr": "Centre de recherche sur le thé de Shizuoka : 20 ans de fertilisation à 40 kg d’azote (2019, en japonais)"
+          }
+        },
+        {
+          "url": "https://www.pref.nara.lg.jp/documents/7643/2_7-9seienkannri-tekisai.pdf",
+          "label": {
+            "ja": "奈良県「茶栽培指針」成園の管理",
+            "en": "Nara Prefecture tea cultivation guidelines: managing mature fields (Japanese)",
+            "fr": "Préfecture de Nara, guide de culture du thé : entretien des champs (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.pref.shizuoka.jp/_res/projects/default_project/_page_/001/044/307/h30-d.pdf.pdf",
+          "label": {
+            "ja": "静岡県茶業研究センター「一番茶の米国輸出を可能とするＩＰＭ体系」（平成30年度）",
+            "en": "Shizuoka Tea Research Center: IPM system for exporting first-flush tea to the US (FY2018, Japanese)",
+            "fr": "Centre de recherche sur le thé de Shizuoka : système de lutte intégrée pour l’export vers les États-Unis (2018, en japonais)"
+          }
+        }
+      ]
     },
     {
       "slug": "today",
       "reel": "DffzRoJTo6j",
-      "title": {"ja": "抹茶ブームの裏側", "en": "Behind the matcha boom", "fr": "L’envers du boom du matcha"},
+      "title": {
+        "ja": "抹茶ブームの裏側",
+        "en": "Behind the matcha boom",
+        "fr": "L’envers du boom du matcha"
+      },
       "lead": {
         "ja": "世界で日本茶が求められる一方で、つくる人は減っている。日本茶のいまを数字で見ます。",
         "en": "The world wants Japanese tea, yet fewer people grow it. Japanese tea today, in numbers.",
@@ -145,16 +352,38 @@
           "Une nouvelle génération de producteurs reprend une partie de ces champs pour les convertir à la culture naturelle, sans engrais ni pesticides."
         ]
       },
-      "takeaway": {"ja": "求める人は増え、つくる人は減っている。", "en": "Demand is rising while the number of growers falls.", "fr": "La demande augmente, le nombre de producteurs diminue."},
+      "takeaway": {
+        "ja": "求める人は増え、つくる人は減っている。",
+        "en": "Demand is rising while the number of growers falls.",
+        "fr": "La demande augmente, le nombre de producteurs diminue."
+      },
       "sources": [
-        {"url": "https://www.maff.go.jp/j/seisan/tokusan/cha/", "label": {"ja": "農林水産省「茶をめぐる情勢」", "en": "MAFF, “Situation Surrounding Tea”", "fr": "MAFF, « Situation du thé »"}},
-        {"url": "https://www.maff.go.jp/j/seisan/tokusan/cha/tea_export.html", "label": {"ja": "農林水産省・財務省貿易統計（緑茶輸出）", "en": "MAFF / Customs trade statistics (green tea exports)", "fr": "MAFF / statistiques douanières (exportations de thé vert)"}}
+        {
+          "url": "https://www.maff.go.jp/j/seisan/tokusan/cha/",
+          "label": {
+            "ja": "農林水産省「茶をめぐる情勢」",
+            "en": "MAFF, “Situation Surrounding Tea”",
+            "fr": "MAFF, « Situation du thé »"
+          }
+        },
+        {
+          "url": "https://www.maff.go.jp/j/seisan/tokusan/cha/tea_export.html",
+          "label": {
+            "ja": "農林水産省・財務省貿易統計（緑茶輸出）",
+            "en": "MAFF / Customs trade statistics (green tea exports)",
+            "fr": "MAFF / statistiques douanières (exportations de thé vert)"
+          }
+        }
       ]
     },
     {
       "slug": "spread",
       "reel": "Dfk2Nq6TOYi",
-      "title": {"ja": "広がる、日本の自然茶", "en": "Japanese natural tea today", "fr": "Le thé naturel japonais aujourd’hui"},
+      "title": {
+        "ja": "広がる、日本の自然茶",
+        "en": "Japanese natural tea today",
+        "fr": "Le thé naturel japonais aujourd’hui"
+      },
       "lead": {
         "ja": "定番のお茶から、新しいお茶、地域の発酵茶まで。各地で広がる自然茶の姿。",
         "en": "From the classics to new kinds of tea and local fermented teas: how natural tea is spreading across Japan.",
@@ -177,12 +406,20 @@
           "Les thés fermentés régionaux, comme l’Awa bancha, commencent eux aussi à être reconnus."
         ]
       },
-      "takeaway": {"ja": "定番も、新しいお茶も、地域の発酵茶も。", "en": "The classics, new teas, and local fermented teas.", "fr": "Les classiques, les nouveaux thés et les thés fermentés régionaux."}
+      "takeaway": {
+        "ja": "定番も、新しいお茶も、地域の発酵茶も。",
+        "en": "The classics, new teas, and local fermented teas.",
+        "fr": "Les classiques, les nouveaux thés et les thés fermentés régionaux."
+      }
     },
     {
       "slug": "harvest",
       "reel": "DZOBxahTvxR",
-      "title": {"ja": "自然抹茶の収穫", "en": "Harvesting natural matcha", "fr": "La récolte du matcha naturel"},
+      "title": {
+        "ja": "自然抹茶の収穫",
+        "en": "Harvesting natural matcha",
+        "fr": "La récolte du matcha naturel"
+      },
       "lead": {
         "ja": "肥料も農薬も使わずに、抹茶の茶葉を育てて摘む。手間と時間のかかるお茶です。",
         "en": "Growing and picking matcha leaves with no fertilizer and no pesticides: a tea that takes time and care.",
@@ -205,7 +442,11 @@
           "Le thé naturel ne devient une tasse qu’au prix de beaucoup de temps et de soin. La prochaine fois que vous en boirez, pensez aux champs et aux producteurs rencontrés dans ce cours."
         ]
       },
-      "takeaway": {"ja": "手間と時間をかけて、ようやく一杯になる。", "en": "Time and care go into every cup.", "fr": "Du temps et du soin dans chaque tasse."}
+      "takeaway": {
+        "ja": "手間と時間をかけて、ようやく一杯になる。",
+        "en": "Time and care go into every cup.",
+        "fr": "Du temps et du soin dans chaque tasse."
+      }
     }
   ]
 }

@@ -114,6 +114,7 @@ UI = {
     "prev": {"ja": "前の回", "en": "Previous", "fr": "Précédente"},
     "next": {"ja": "次の回", "en": "Next", "fr": "Suivante"},
     "toc": {"ja": "コースの目次へ", "en": "All lessons", "fr": "Toutes les leçons"},
+    "video_soon": {"ja": "この回の動画は準備中です。先に読みものをどうぞ。", "en": "The video for this lesson is coming soon. The reading is ready now.", "fr": "La vidéo de cette leçon arrive bientôt. Le texte est déjà disponible."},
     "watch_ig": {"ja": "Instagram で動画を見る", "en": "Watch on Instagram", "fr": "Voir la vidéo sur Instagram"},
     "course_note": {
         "ja": "各回は1〜2分の動画と、数分で読める文章です。どの回からでも見られますが、順番に見ると、自然茶の考え方から日本茶のいままでがつながります。",
@@ -283,6 +284,8 @@ CSS = """
   .lesson-media{position:sticky;top:110px;}
   .reel{position:relative;aspect-ratio:9/16;overflow:hidden;border-radius:8px;background:#000;container-type:inline-size;}
   .reel .instagram-media{position:absolute!important;top:-54px!important;left:-21.112cqw!important;width:142.224cqw!important;min-width:0!important;max-width:none!important;height:calc(177.78cqw + 400px)!important;margin:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;}
+  .reel-soon{min-height:180px;border-radius:8px;background:var(--green-900);display:flex;align-items:center;justify-content:center;padding:32px;text-align:center;}
+  .reel-soon p{color:rgba(244,241,232,.85);font-size:15px;line-height:1.9;margin:0;}
   .lesson-media .on-ig{display:inline-block;margin-top:12px;font-size:14px;color:var(--green-600);border-bottom:1px solid var(--matcha);}
   .takeaway{margin:8px 0 34px;padding:22px 0 22px 26px;border-left:2px solid var(--matcha);}
   .takeaway small{display:block;font-size:13px;letter-spacing:.08em;color:var(--gold);margin-bottom:6px;}
@@ -816,7 +819,7 @@ def render_lesson(c, i):
 <section class="block">
   <div class="wrap lesson-grid">
     <div class="lesson-media">
-{reel_html(l["reel"])}
+{reel_html(l["reel"]) if l.get("reel") else f'      <div class="reel-soon"><p>{t(UI["video_soon"])}</p></div>'}
     </div>
     <article class="article">
 {paras}
@@ -839,7 +842,7 @@ def check_course(c):
     assert len(slugs) == len(set(slugs)), "course.json: 回の slug が重複しています"
     for l in c["lessons"]:
         s = l["slug"]
-        assert re.fullmatch(r"[A-Za-z0-9_-]{5,20}", l["reel"]), f"course.json {s}: reel は Instagram の動画 ID"
+        assert not l.get("reel") or re.fullmatch(r"[A-Za-z0-9_-]{5,20}", l["reel"]), f"course.json {s}: reel は Instagram の動画 ID（未投稿なら書かない）"
         for key in ("title", "lead", "body", "takeaway"):
             assert set(l[key]) >= set(LANGS), f"course.json {s}: {key} に ja/en/fr が必要"
         assert len({len(l["body"][x]) for x in LANGS}) == 1, f"course.json {s}: body の数を3言語でそろえる"
