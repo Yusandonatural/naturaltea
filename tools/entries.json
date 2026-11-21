@@ -604,5 +604,132 @@
       }
     ],
     "person": "Charlie Avendano"
+  },
+  {
+    "slug": "pesticides-in-tea-fields",
+    "kind": "education",
+    "date": "2026-11-21",
+    "video": "/learn/pesticides-in-tea-fields/video.mp4",
+    "poster": "/learn/pesticides-in-tea-fields/poster.jpg",
+    "title": {
+      "ja": "茶畑の農薬、いちばん浴びるのは誰？ ― 女性農家と散布作業",
+      "en": "Who is most exposed to pesticides in a tea field? Women farmers and spraying",
+      "fr": "Qui est le plus exposé aux pesticides dans un champ de thé ? Les agricultrices et la pulvérisation"
+    },
+    "lead": {
+      "ja": "農薬の話は「飲む人」の目線で語られがちです。けれど、いちばん農薬に近いのは畑で散布する人です。公的な資料をもとに、作り手、とくに女性農家の立場から整理しました。",
+      "en": "Pesticides are usually discussed from the point of view of the people who drink the tea. But the people closest to pesticides are those who spray them in the field. Drawing on official sources, we look at it from the growers' side, and especially from the side of women farmers.",
+      "fr": "On parle surtout des pesticides du point de vue de ceux qui boivent le thé. Pourtant, les personnes les plus proches des pesticides sont celles qui les pulvérisent au champ. À partir de sources officielles, nous regardons la question du côté des producteurs, et en particulier des agricultrices."
+    },
+    "body": {
+      "ja": [
+        "## 飲む人には「一生毎日とっても安全」な基準がある",
+        "日本では、食品に残ってよい農薬の量（残留基準）を厚生労働省が決めています。基準は、食品安全委員会が定める「一日摂取許容量（ADI）」、つまり人が一生毎日とり続けても健康への悪影響がないとされる量を超えないように設定されています。お茶を飲む人を守るしくみは、制度として整っています。",
+        "## いちばん浴びるのは、散布する人",
+        "世界保健機関（WHO）は、農薬の影響をもっとも受けやすいのは、農薬を直接浴びる人、つまり散布する農業者と、散布中や散布直後にその場にいる人だとしています。農薬の安全を考えるとき、畑で働く人の視点は欠かせません。",
+        "農林水産省によると、令和6年度に日本で起きた農薬による人の事故は17件（18人）でした。そのうち3件は、マスクやメガネ（ゴーグル）、服装などの防護装備が十分でなかったことが原因とされています。",
+        "## 女性農家の場合",
+        "2025年農林業センサスでは、日本の基幹的農業従事者103.6万人のうち、女性は37.7万人で、約36％にあたります（割合は協会で計算）。農薬の散布や、散布後の畑での作業に関わる女性は少なくありません。",
+        "静岡県の「農薬安全使用指針」（令和8年度）は、散布作業に従事しない人として妊婦を挙げています。国際労働機関（ILO）の「農業における安全及び健康に関する条約」（第184号、2001年）も第18条で、妊娠・授乳・生殖に関する健康について、女性の農業労働者の特別な必要に配慮するよう求めています。なお、日本はこの条約を批准していません。",
+        "## 世界では、予防の観点から見直しも",
+        "2024年、欧州食品安全機関（EFSA）は、茶にも使われる殺虫剤アセタミプリドについて、一日摂取許容量を体重1kgあたり0.025mgから0.005mgに引き下げるよう提案しました。データに不確かさがあることを理由にした予防的な提案で、健康被害が確認されたという意味ではありません。それでも、評価は新しい知見に応じて見直されていくものだ、ということを示しています。",
+        "## 自然茶という選択",
+        "自然茶は、無肥料・無農薬で育てるお茶です。散布するものがなければ、吸い込むものもありません。飲む人だけでなく、畑で働くすべての人にとって、より安全な働き方の一つです。協会は、こうした茶づくりを続ける生産者と、そのお茶を届けたい人をつなぐ活動をしています。"
+      ],
+      "en": [
+        "## For tea drinkers, limits set at a lifetime-safe level",
+        "In Japan, the Ministry of Health, Labour and Welfare sets how much pesticide residue may remain in food (maximum residue limits). The limits are set so that intake stays within the acceptable daily intake (ADI) set by the Food Safety Commission of Japan: the amount a person could take every day for a lifetime without harm to health. For people who drink tea, the system is in place.",
+        "## Those most exposed are the people who spray",
+        "The World Health Organization (WHO) says that the people most at risk are those directly exposed: farmers who apply pesticides, and others who are in the area during and just after spraying. Any discussion of pesticide safety needs to include the people who work in the field.",
+        "According to Japan's Ministry of Agriculture, Forestry and Fisheries (MAFF), there were 17 pesticide accidents involving people in Japan in fiscal 2024 (18 people). Three of them were attributed to insufficient protective gear such as masks, goggles and clothing.",
+        "## For women farmers",
+        "In the 2025 Census of Agriculture and Forestry, 377,000 of Japan's 1,036,000 core farmers were women, about 36% (our calculation). Many women take part in spraying, or work in the fields after spraying.",
+        "Shizuoka Prefecture's pesticide safety guide (fiscal 2026) lists pregnant women among the people who should not do spraying work. The International Labour Organization's Safety and Health in Agriculture Convention (No. 184, 2001) also calls, in Article 18, for the special needs of women agricultural workers to be taken into account with regard to pregnancy, breastfeeding and reproductive health. Japan has not ratified this convention.",
+        "## A precautionary review in Europe",
+        "In 2024, the European Food Safety Authority (EFSA) proposed lowering the acceptable daily intake of acetamiprid, an insecticide also used on tea, from 0.025 to 0.005 mg per kg of body weight. It was a precautionary proposal, made because of uncertainties in the data; it does not mean that harm to health was found. It does show that these assessments are revised as new evidence comes in.",
+        "## Natural tea as a choice",
+        "Natural tea is grown with no fertilizer and no pesticides. With nothing to spray, there is nothing to breathe in. It is one way of farming that is safer not only for the people who drink the tea, but for everyone who works in the field. The association connects the growers who farm this way with the people who want to share their tea."
+      ],
+      "fr": [
+        "## Pour les buveurs de thé, des limites sûres pour toute une vie",
+        "Au Japon, le ministère de la Santé, du Travail et des Affaires sociales fixe la quantité de résidus de pesticides autorisée dans les aliments (limites maximales de résidus). Ces limites sont fixées pour que l’apport reste en dessous de la dose journalière admissible (DJA) établie par la Commission de sécurité alimentaire du Japon, c’est-à-dire la quantité qu’une personne pourrait consommer chaque jour, toute sa vie, sans effet néfaste sur la santé. Pour ceux qui boivent le thé, le dispositif existe.",
+        "## Les plus exposés sont ceux qui pulvérisent",
+        "Selon l’Organisation mondiale de la santé (OMS), les personnes les plus à risque sont celles qui sont directement exposées : les agriculteurs qui appliquent les pesticides et les personnes présentes pendant et juste après la pulvérisation. Parler de la sécurité des pesticides, c’est aussi parler de ceux qui travaillent au champ.",
+        "Selon le ministère japonais de l’Agriculture (MAFF), 17 accidents liés aux pesticides ont touché des personnes au Japon pendant l’exercice 2024 (18 personnes). Trois d’entre eux ont été attribués à un équipement de protection insuffisant : masque, lunettes, vêtements.",
+        "## Le cas des agricultrices",
+        "Selon le recensement agricole et forestier de 2025, 377 000 des 1 036 000 agriculteurs principaux du Japon sont des femmes, soit environ 36 % (notre calcul). Beaucoup de femmes participent à la pulvérisation ou travaillent au champ juste après.",
+        "Le guide de sécurité des pesticides de la préfecture de Shizuoka (exercice 2026) cite les femmes enceintes parmi les personnes qui ne doivent pas effectuer de pulvérisation. La convention de l’Organisation internationale du travail sur la sécurité et la santé dans l’agriculture (n° 184, 2001) demande aussi, à son article 18, de tenir compte des besoins particuliers des travailleuses agricoles en matière de grossesse, d’allaitement et de santé reproductive. Le Japon n’a pas ratifié cette convention.",
+        "## Une révision par précaution en Europe",
+        "En 2024, l’Autorité européenne de sécurité des aliments (EFSA) a proposé d’abaisser la dose journalière admissible de l’acétamipride, un insecticide également utilisé sur le thé, de 0,025 à 0,005 mg par kg de poids corporel. C’est une proposition de précaution, liée à des incertitudes dans les données ; elle ne signifie pas qu’un effet néfaste sur la santé a été constaté. Elle montre toutefois que ces évaluations sont revues à mesure que les connaissances progressent.",
+        "## Le thé naturel, un choix",
+        "Le thé naturel est cultivé sans engrais et sans pesticides. Rien à pulvériser, donc rien à respirer. C’est une façon de cultiver plus sûre non seulement pour ceux qui boivent le thé, mais pour tous ceux qui travaillent au champ. L’association relie les producteurs qui cultivent ainsi et les personnes qui souhaitent faire connaître leur thé."
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/shokuhin/zanryu/index.html",
+        "label": {
+          "ja": "厚生労働省「食品中の残留農薬等」",
+          "en": "Ministry of Health, Labour and Welfare: Pesticide residues in food (Japanese)",
+          "fr": "Ministère de la Santé (Japon) : résidus de pesticides dans les aliments (en japonais)"
+        }
+      },
+      {
+        "url": "https://www.fsc.go.jp/yougoshu.data/yougoshu_fsc_5_201504.pdf",
+        "label": {
+          "ja": "食品安全委員会「食品の安全性に関する用語集」（一日摂取許容量）",
+          "en": "Food Safety Commission of Japan: Glossary, acceptable daily intake (Japanese)",
+          "fr": "Commission de sécurité alimentaire du Japon : glossaire, DJA (en japonais)"
+        }
+      },
+      {
+        "url": "https://www.who.int/news-room/fact-sheets/detail/pesticide-residues-in-food",
+        "label": {
+          "ja": "WHO ファクトシート「Pesticide residues in food」（2022年）",
+          "en": "WHO fact sheet: Pesticide residues in food (2022)",
+          "fr": "Fiche d’information de l’OMS : Pesticide residues in food (2022)"
+        }
+      },
+      {
+        "url": "https://www.maff.go.jp/j/press/syouan/nouyaku/260130.html",
+        "label": {
+          "ja": "農林水産省「令和6年度 農薬の使用に伴う事故及び被害の発生状況」（2026年1月公表）",
+          "en": "MAFF: Pesticide accidents and damage in fiscal 2024 (published January 2026, Japanese)",
+          "fr": "MAFF : accidents liés aux pesticides, exercice 2024 (publié en janvier 2026, en japonais)"
+        }
+      },
+      {
+        "url": "https://www.maff.go.jp/j/tokei/sihyo/data/08.html",
+        "label": {
+          "ja": "農林水産省「農業労働力に関する統計」（2025年農林業センサス）",
+          "en": "MAFF: Agricultural labour statistics (2025 Census of Agriculture and Forestry, Japanese)",
+          "fr": "MAFF : statistiques de la main-d’œuvre agricole (recensement 2025, en japonais)"
+        }
+      },
+      {
+        "url": "https://www.pref.shizuoka.jp/_res/projects/default_project/_page_/001/080/504/01kihon_010504_r8.pdf",
+        "label": {
+          "ja": "静岡県「農薬安全使用指針」（令和8年度）",
+          "en": "Shizuoka Prefecture: Pesticide safety guide (fiscal 2026, Japanese)",
+          "fr": "Préfecture de Shizuoka : guide de sécurité des pesticides (exercice 2026, en japonais)"
+        }
+      },
+      {
+        "url": "https://webapps.ilo.org/public/english/standards/relm/ilc/ilc89/pdf/c184.pdf",
+        "label": {
+          "ja": "ILO「農業における安全及び健康に関する条約」（第184号、2001年）",
+          "en": "ILO Safety and Health in Agriculture Convention, 2001 (No. 184)",
+          "fr": "OIT : Convention sur la sécurité et la santé dans l’agriculture, 2001 (n° 184)"
+        }
+      },
+      {
+        "url": "https://doi.org/10.2903/j.efsa.2024.8759",
+        "label": {
+          "ja": "EFSA Journal 2024;22:e8759（アセタミプリドの評価）",
+          "en": "EFSA Journal 2024;22:e8759 (acetamiprid assessment)",
+          "fr": "EFSA Journal 2024;22:e8759 (évaluation de l’acétamipride)"
+        }
+      }
+    ]
   }
 ]

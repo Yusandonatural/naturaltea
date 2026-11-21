@@ -89,6 +89,15 @@
   .ig-fallback{display:block;border:1px solid var(--line);border-radius:8px;padding:28px;text-align:center;color:var(--green-700);background:#fdfcf8;}
   .article p{font-size:16px;line-height:2;margin-bottom:1.2em;}
   body.lang-en .article p,body.lang-fr .article p{font-size:18px;}
+  .video-frame{max-width:420px;width:100%;}
+  .video-frame video{display:block;width:100%;aspect-ratio:9/16;background:var(--green-900);border-radius:8px;}
+  .article > h2{font-family:'Sawarabi Mincho',serif;font-size:clamp(20px,2.2vw,24px);line-height:1.6;margin:40px 0 14px;color:var(--green-800);}
+  .article > h2:first-child{margin-top:0;}
+  .source-list{border-top:1px solid var(--line);margin:36px 0 28px;padding-top:8px;}
+  .source-list h2{font-size:18px;margin:16px 0 10px;}
+  .source-list ol{padding-left:1.4em;font-size:14px;line-height:1.8;}
+  .source-list li{margin-bottom:6px;}
+  .source-list a{color:var(--green-600);border-bottom:1px solid var(--matcha);word-break:break-word;}
   .points{list-style:none;border-top:1px solid var(--line);margin:28px 0;}
   .points li{padding:12px 0 12px 28px;border-bottom:1px solid var(--line);position:relative;font-size:15px;}
   .points li::before{content:"";position:absolute;left:0;top:1.45em;width:14px;height:1px;background:var(--matcha);}
@@ -102,7 +111,7 @@
   .btn:hover{background:var(--green-800);}
   .back{margin-top:44px;font-size:15px;}
   .back a{color:var(--green-700);border-bottom:1px solid var(--matcha);}
-  @media(max-width:900px){.post-grid{grid-template-columns:minmax(0,1fr);}.ig-frame,.slides{margin:0 auto;}}
+  @media(max-width:900px){.post-grid{grid-template-columns:minmax(0,1fr);}.ig-frame,.slides,.video-frame{margin:0 auto;}}
 
   .post-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;}
   .post-card{background:#fdfcf8;border:1px solid var(--line);border-radius:8px;padding:clamp(24px,3vw,32px);display:flex;flex-direction:column;transition:border-color .2s;}
@@ -205,7 +214,14 @@
       </div>
       <span class="btn"><span class="ja-only">コースを見る</span><span class="en-only">View the course</span><span class="fr-only">Voir le cours</span></span>
     </a>
-
+    <div class="post-list">
+      <a class="post-card" href="/learn/pesticides-in-tea-fields/">
+        <p class="meta"><span class="ja-only">学び</span><span class="en-only">Learn</span><span class="fr-only">Apprendre</span>　<span class="ja-only">2026年11月21日</span><span class="en-only">November 21, 2026</span><span class="fr-only">21 novembre 2026</span></p>
+        <h2><span class="ja-only">茶畑の農薬、いちばん浴びるのは誰？ ― 女性農家と散布作業</span><span class="en-only">Who is most exposed to pesticides in a tea field? Women farmers and spraying</span><span class="fr-only">Qui est le plus exposé aux pesticides dans un champ de thé ? Les agricultrices et la pulvérisation</span></h2>
+        <p><span class="ja-only">農薬の話は「飲む人」の目線で語られがちです。けれど、いちばん農薬に近いのは畑で散布する人です。公的な資料をもとに、作り手、とくに女性農家の立場から整理しました。</span><span class="en-only">Pesticides are usually discussed from the point of view of the people who drink the tea. But the people closest to pesticides are those who spray them in the field. Drawing on official sources, we look at it from the growers' side, and especially from the side of women farmers.</span><span class="fr-only">On parle surtout des pesticides du point de vue de ceux qui boivent le thé. Pourtant, les personnes les plus proches des pesticides sont celles qui les pulvérisent au champ. À partir de sources officielles, nous regardons la question du côté des producteurs, et en particulier des agricultrices.</span></p>
+        <span class="more"><span class="ja-only">記事を読む</span><span class="en-only">Read more</span><span class="fr-only">Lire la suite</span></span>
+      </a>
+    </div>
     <p class="follow"><a href="https://www.instagram.com/japan_natural_tea/" target="_blank" rel="noopener"><span class="ja-only">Instagram をフォロー</span><span class="en-only">Follow us on Instagram</span><span class="fr-only">Suivez-nous sur Instagram</span>（@japan_natural_tea）</a></p>
   </div>
 </section>

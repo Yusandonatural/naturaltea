@@ -226,6 +226,15 @@ CSS = """
   .ig-fallback{display:block;border:1px solid var(--line);border-radius:8px;padding:28px;text-align:center;color:var(--green-700);background:#fdfcf8;}
   .article p{font-size:16px;line-height:2;margin-bottom:1.2em;}
   body.lang-en .article p,body.lang-fr .article p{font-size:18px;}
+  .video-frame{max-width:420px;width:100%;}
+  .video-frame video{display:block;width:100%;aspect-ratio:9/16;background:var(--green-900);border-radius:8px;}
+  .article > h2{font-family:'Sawarabi Mincho',serif;font-size:clamp(20px,2.2vw,24px);line-height:1.6;margin:40px 0 14px;color:var(--green-800);}
+  .article > h2:first-child{margin-top:0;}
+  .source-list{border-top:1px solid var(--line);margin:36px 0 28px;padding-top:8px;}
+  .source-list h2{font-size:18px;margin:16px 0 10px;}
+  .source-list ol{padding-left:1.4em;font-size:14px;line-height:1.8;}
+  .source-list li{margin-bottom:6px;}
+  .source-list a{color:var(--green-600);border-bottom:1px solid var(--matcha);word-break:break-word;}
   .points{list-style:none;border-top:1px solid var(--line);margin:28px 0;}
   .points li{padding:12px 0 12px 28px;border-bottom:1px solid var(--line);position:relative;font-size:15px;}
   .points li::before{content:"";position:absolute;left:0;top:1.45em;width:14px;height:1px;background:var(--matcha);}
@@ -239,7 +248,7 @@ CSS = """
   .btn:hover{background:var(--green-800);}
   .back{margin-top:44px;font-size:15px;}
   .back a{color:var(--green-700);border-bottom:1px solid var(--matcha);}
-  @media(max-width:900px){.post-grid{grid-template-columns:minmax(0,1fr);}.ig-frame,.slides{margin:0 auto;}}
+  @media(max-width:900px){.post-grid{grid-template-columns:minmax(0,1fr);}.ig-frame,.slides,.video-frame{margin:0 auto;}}
 
   .post-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;}
   .post-card{background:#fdfcf8;border:1px solid var(--line);border-radius:8px;padding:clamp(24px,3vw,32px);display:flex;flex-direction:column;transition:border-color .2s;}
@@ -415,7 +424,12 @@ def render_post(p):
     kind = KINDS[p["kind"]]
     date = fmt_date(p["date"])
     slides = slide_images(p["slug"])
-    if slides:
+    if p.get("video"):  # サイトに置いた動画（learn/<slug>/video.mp4 など）。投稿前の図解動画もこれで載せられる
+        poster = f' poster="{escape(p["poster"])}"' if p.get("poster") else ""
+        media = f'''    <div class="video-frame">
+      <video src="{escape(p["video"])}"{poster} controls playsinline preload="metadata"></video>
+    </div>'''
+    elif slides:
         imgs = "".join(f'\n        <img src="{src}" alt="{escape(p["title"]["en"])} {i}/{len(slides)}" loading="lazy">' for i, src in enumerate(slides, 1))
         media = f'    <div class="slides" tabindex="0">{imgs}\n    </div>'
     else:
@@ -425,7 +439,11 @@ def render_post(p):
         <a class="ig-fallback" href="{ig}" target="_blank" rel="noopener">{t(UI["on_ig"])}</a>
       </blockquote>
     </div>"""
-    paras = "\n".join(f"        <p>{t_at(p['body'], i)}</p>" for i in range(len(p["body"]["ja"])))
+    paras = "\n".join(body_line(p["body"], i) for i in range(len(p["body"]["ja"])))
+    sources = ""
+    if p.get("sources"):  # 記事の出典。番号つきの一覧で記事の最後に出す
+        items = "\n".join(f'          <li><a href="{escape(x["url"])}" target="_blank" rel="noopener">{t(x["label"])}</a></li>' for x in p["sources"])
+        sources = f'        <div class="source-list"><h2>{t(UI["sources"])}</h2>\n        <ol>\n{items}\n        </ol></div>\n'
     points = ""
     if p.get("points"):
         items = "\n".join(f"          <li>{t_at(p['points'], i)}</li>" for i in range(len(p["points"]["ja"])))
@@ -444,7 +462,7 @@ def render_post(p):
 {media}
     <article class="article">
 {paras}
-{points}        <div class="links">{links_html(p, UI["on_ig"])}
+{points}{sources}        <div class="links">{links_html(p, UI["on_ig"])}
         </div>
         <div class="cta">
           <h2>{t(kind["cta_title"])}</h2>
@@ -457,8 +475,15 @@ def render_post(p):
 </section>"""
     title = f'{p["title"]["ja"]} | 日本自然茶協会 Japan Natural Tea Association'
     desc = f'{p["lead"]["ja"]} {p["lead"]["en"]}'
-    extra = "" if slides else '<script async src="https://www.instagram.com/embed.js"></script>\n'
+    extra = "" if slides or p.get("video") else '<script async src="https://www.instagram.com/embed.js"></script>\n'
     return page(title, desc, f"https://naturaltea.jp/learn/{p['slug']}/", body, extra)
+
+
+def body_line(body, i):
+    """本文の1段落。3言語とも "## " で始まる段落は小見出しにする。"""
+    if all(body[l][i].startswith("## ") for l in LANGS):
+        return "        <h2>" + t({l: body[l][i][3:] for l in LANGS}) + "</h2>"
+    return f"        <p>{t_at(body, i)}</p>"
 
 
 def render_list(posts, course=None):
@@ -849,7 +874,11 @@ def check(p):
             assert {"q", "lat", "lng"} <= set(g), f"{s}: geo は q / lat / lng をそろえる"
     else:
         assert p.get("date"), f"{s}: education には date が必要"
-        assert p.get("instagram") or slide_images(s), f"{s}: education には instagram か投稿画像（render_slides.py）が必要"
+        assert p.get("instagram") or p.get("video") or slide_images(s), f"{s}: education には instagram・video・投稿画像（render_slides.py）のどれかが必要"
+        if p.get("video"):
+            assert (ROOT / p["video"].lstrip("/")).exists(), f"{s}: video のファイルがありません"
+        for x in p.get("sources", []):
+            assert x["url"].startswith("http") and set(x["label"]) >= set(LANGS), f"{s}: sources は url と3言語の label"
         need = ("body", "title", "lead")
     for key in need:
         assert key in p and set(p[key]) >= set(LANGS), f"{s}: {key} に ja/en/fr が必要"
