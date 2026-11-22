@@ -786,7 +786,7 @@ def render_course(c):
 def render_lesson(c, i):
     lessons, base = c["lessons"], f"/learn/{c['slug']}/"
     l, n = lessons[i], i + 1
-    paras = "\n".join(f"        <p>{t_at(l['body'], k)}</p>" for k in range(len(l["body"]["ja"])))
+    paras = "\n".join(body_line(l["body"], k) for k in range(len(l["body"]["ja"])))
     sources = ""
     if l.get("sources"):
         links = "　/　".join(f'<a href="{escape(s["url"])}" target="_blank" rel="noopener">{t(s["label"])}</a>' for s in l["sources"])

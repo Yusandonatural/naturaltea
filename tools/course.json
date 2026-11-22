@@ -20,32 +20,92 @@
         "fr": "Pourquoi l’association est née"
       },
       "lead": {
-        "ja": "肥料も農薬も使わずにお茶を育てる農家が向き合う現実と、協会が生まれた理由。",
-        "en": "The reality facing farmers who grow tea with no fertilizer and no pesticides, and why the association began.",
-        "fr": "La réalité des producteurs qui cultivent le thé sans engrais ni pesticides, et la raison d’être de l’association."
+        "ja": "肥料も農薬も使わずにお茶を育てる農家が向き合う現実と、世界でこうしたお茶を求める人たち。そのあいだをつなぐために、協会は生まれました。",
+        "en": "The reality facing farmers who grow tea with no fertilizer and no pesticides, and the people around the world looking for this tea. The association was born to connect the two.",
+        "fr": "La réalité des producteurs qui cultivent le thé sans engrais ni pesticides, et celles et ceux qui, dans le monde, recherchent ce thé. L’association est née pour relier les deux."
       },
       "body": {
         "ja": [
-          "肥料も農薬も使わない自然栽培は、収量が少なく、手間もかかります。それなのに、自然栽培のお茶を扱う市場はまだ小さいままです。",
-          "周りは慣行栽培の畑ばかりで、疑いの目を向けられることもあり、農家はひとりで続けていることが少なくありません。代表理事の礒﨑 遼太郎も、ゼロから茶づくりを始めて同じ思いをしてきました。けれども世界には、こうしたお茶を求める人が確かにいます。",
-          "だからこの協会は、農家が、農家のためにつくりました。自然栽培の農家がひとりで抱え込まず、お茶を求める人とつながれるように。"
+          "## 自然栽培の茶農家が向き合う現実",
+          "肥料も農薬も使わない自然栽培は、茶の木と土の力だけでお茶を育てる方法です。そのぶん、新芽の伸びはゆっくりで、とれる量は多くありません。草を刈る、畑を見回る、虫の様子を確かめる。薬や肥料に頼らないぶん、人の手と時間がかかります。",
+          "それなのに、その手間は値段に表れにくいのが現実です。お茶の取引では、うま味のもとになるアミノ酸が多いお茶ほど、審査の点数や取引の値段が高くなる傾向があります（京都府茶業研究所の調査）。肥料や農薬を使わずに育てたかどうかは、こうした物差しにはほとんど入りません。自然栽培のお茶を、育て方まで説明して届ける場も、まだ多くはありません。",
+          "## ひとりで続ける難しさ",
+          "自然栽培の茶畑は、まだ少数です。周りはほとんどが慣行栽培の畑で、草や虫を残す畑は、心配や疑いの目で見られることもあります。慣行栽培の農家にも、それぞれの事情と工夫があります。そのなかで、自然栽培の農家は近くに相談できる相手がいないまま、ひとりで続けていることが少なくありません。",
+          "お茶をつくる人そのものも減っています。お茶を育てて売る農家の数は、2005年の37,617から、2025年には7,726になりました（農林業センサス）。続ける人が少なくなるほど、ひとりで抱えるものは重くなっていきます。",
+          "## 世界では、こうしたお茶が求められている",
+          "一方で、海外では日本茶への関心が高まっています。2025年の緑茶の輸出額は721億円で、過去最高になりました。抹茶を含む粉末のお茶の需要が伸びたためです（農林水産省）。",
+          "農林水産省は、有機栽培のお茶は海外でのニーズが高いとしています。2025年には、アメリカ向けとEU・英国向けの緑茶の輸出量のうち、6割ほどが有機栽培のお茶として輸出されました。どこで、どう育てられたお茶なのかを大切にする人が、世界には確かにいます。肥料も農薬も使わない自然茶は、そうした人たちにこそ届けたいお茶です。",
+          "## 協会の3つの役割",
+          "けれども、畑と世界のあいだには、言葉や距離の壁があります。そこで協会は、3つのことに取り組みます。",
+          "ひとつめは、日本の自然茶の農家を紹介することです。どこで、どんな人が、どう育てているのかを、日本語・英語・フランス語で伝えます。",
+          "ふたつめは、海外の自然茶のコミュニティを育てることです。日本茶の講座などを通して、自然茶を知り、楽しみ、広めてくれる人の輪を世界に広げます。",
+          "みっつめは、農家と世界のお茶好きをつなぐことです。お茶を求める人が、育てた人のもとにたどりつけるようにします。そのために協会は、生産者やお店の紹介を進めながら、生産者のためのイベントやマルシェ、海外での日本茶の講座も準備しています。",
+          "## 仲間を募集しています",
+          "この協会は、自然栽培でお茶を育てる農家が、農家のためにつくりました。代表理事も、自然栽培の茶畑に立つ農家のひとりです。自然栽培の農家をひとりにしないこと。そして、そのお茶を求める人と出会えるようにすること。それが、協会が生まれた理由です。",
+          "自然茶を育てる人、扱うお店、飲んで広めたい人。関わり方は自由です。いっしょに自然茶を世界へ届ける仲間（メンバー）を募集しています。"
         ],
         "en": [
-          "Natural farming, with no fertilizer and no pesticides, means lower yields and more work. And the market for natural tea is still small.",
-          "Surrounded by conventional farms and sometimes met with doubt, these farmers often carry on alone. Our representative director, Ryotaro Isozaki, started growing tea from zero and felt the same. Yet around the world, there are people looking for exactly this tea.",
-          "So the association was founded by a farmer, for farmers: so that natural tea farmers don’t have to do it alone, and can reach the people who want their tea."
+          "## The reality natural tea farmers face",
+          "Natural farming, with no fertilizer and no pesticides, grows tea by the strength of the plant and the soil alone. As a result, new shoots grow slowly and the harvest is small. Cutting weeds, walking the rows, checking on the insects: without chemicals or fertilizer to lean on, it takes more hands and more time.",
+          "Yet that extra work rarely shows up in the price. In the tea trade, teas richer in amino acids, the source of umami, tend to score higher at evaluations and sell for more (a study by the Kyoto Prefectural Tea Research Institute). Whether a tea was grown without fertilizer or pesticides hardly figures in that yardstick. And there are still few places where natural tea is sold with the story of how it was grown.",
+          "## The difficulty of going it alone",
+          "Natural tea fields are still rare. Most of the neighboring fields are conventional, and a field that leaves its weeds and insects can be met with worry or doubt. Conventional farmers have their own circumstances and their own care for the land. Even so, natural farmers often carry on alone, with no one nearby to talk things over with.",
+          "The number of people making tea is also shrinking. Farms growing tea for sale fell from 37,617 in 2005 to 7,726 in 2025 (Census of Agriculture and Forestry). The fewer people who keep going, the heavier the load each one carries.",
+          "## The world is looking for this tea",
+          "Meanwhile, interest in Japanese tea is growing abroad. In 2025, Japan’s green tea exports reached a record 72.1 billion yen, driven by demand for powdered tea, including matcha (Ministry of Agriculture, Forestry and Fisheries).",
+          "The Ministry notes that organically grown tea is in high demand overseas. In 2025, about 60 percent of the green tea exported to the United States and to the EU and UK was shipped as organic. Around the world, there are people who care where and how their tea was grown. Natural tea, grown with no fertilizer and no pesticides, is a tea we want to bring to exactly those people.",
+          "## The association’s three roles",
+          "But between the field and the world stand the barriers of language and distance. So the association works on three things.",
+          "First, introducing Japan’s natural tea farmers: telling, in Japanese, English and French, where they are, who they are, and how they grow their tea.",
+          "Second, growing natural tea communities abroad: through Japanese tea courses and more, widening the circle of people around the world who learn about, enjoy and share natural tea.",
+          "Third, connecting farmers with tea lovers around the world, so that people looking for this tea can find the people who grew it. To do this, the association is introducing producers and shops, and preparing events and markets for producers and Japanese tea courses abroad.",
+          "## Join us",
+          "This association was founded by a natural tea farmer, for farmers. Our representative director is himself one of the farmers working a natural tea field. To make sure no natural tea farmer has to go it alone, and to help their tea meet the people who want it: that is why the association was born.",
+          "People who grow natural tea, shops that carry it, people who love to drink it and share it: you can take part in whatever way suits you. We are looking for members to join us in bringing natural tea to the world."
         ],
         "fr": [
-          "La culture naturelle, sans engrais ni pesticides, donne de plus faibles rendements et demande plus de travail. Et le marché du thé naturel reste encore restreint.",
-          "Entourés de cultures conventionnelles et parfois regardés avec méfiance, ces producteurs avancent souvent seuls. Notre directeur représentant, Ryotaro Isozaki, a commencé à cultiver le thé à partir de rien et a connu la même chose. Pourtant, partout dans le monde, des gens recherchent précisément ce thé.",
-          "C’est pourquoi l’association a été fondée par un producteur, pour les producteurs : pour qu’aucun d’eux ne porte seul ce travail, et qu’ils puissent rejoindre ceux qui veulent leur thé."
+          "## La réalité des producteurs de thé naturel",
+          "La culture naturelle, sans engrais ni pesticides, fait pousser le thé par la seule force de la plante et du sol. Les jeunes pousses croissent donc lentement et la récolte est faible. Couper les herbes, parcourir les rangs, observer les insectes : sans produits ni engrais sur lesquels s’appuyer, il faut plus de bras et plus de temps.",
+          "Pourtant, ce travail se voit rarement dans le prix. Dans le commerce du thé, les thés plus riches en acides aminés, source de l’umami, obtiennent en général de meilleures notes aux évaluations et se vendent plus cher (étude de l’institut de recherche sur le thé de la préfecture de Kyoto). Qu’un thé ait été cultivé sans engrais ni pesticides n’entre presque pas dans cette mesure. Et les lieux où le thé naturel est vendu en expliquant la façon dont il a été cultivé restent encore rares.",
+          "## La difficulté d’avancer seul",
+          "Les champs de thé naturel sont encore rares. Les champs voisins sont pour la plupart conventionnels, et un champ qui laisse vivre herbes et insectes peut susciter l’inquiétude ou la méfiance. Les producteurs conventionnels ont, eux aussi, leurs contraintes et leur savoir-faire. Mais dans ce contexte, les producteurs en culture naturelle avancent souvent seuls, sans personne à proximité avec qui échanger.",
+          "Le nombre de personnes qui produisent du thé diminue lui aussi. Les exploitations cultivant du thé pour la vente sont passées de 37 617 en 2005 à 7 726 en 2025 (recensement de l’agriculture et de la forêt). Moins il y a de gens pour continuer, plus la charge de chacun s’alourdit.",
+          "## Le monde recherche ce thé",
+          "Dans le même temps, l’intérêt pour le thé japonais grandit à l’étranger. En 2025, les exportations japonaises de thé vert ont atteint le record de 72,1 milliards de yens, portées par la demande de thé en poudre, dont le matcha (ministère de l’Agriculture, des Forêts et de la Pêche).",
+          "Le ministère souligne que le thé cultivé en bio est très demandé à l’étranger. En 2025, environ 60 % du thé vert exporté vers les États-Unis et vers l’UE et le Royaume-Uni l’a été en tant que thé bio. Partout dans le monde, des gens tiennent à savoir où et comment leur thé a été cultivé. Le thé naturel, cultivé sans engrais ni pesticides, est justement celui que nous voulons leur faire découvrir.",
+          "## Les trois rôles de l’association",
+          "Mais entre le champ et le monde se dressent la langue et la distance. L’association s’engage donc sur trois points.",
+          "Premièrement, présenter les producteurs de thé naturel du Japon : dire, en japonais, en anglais et en français, où ils se trouvent, qui ils sont et comment ils cultivent leur thé.",
+          "Deuxièmement, faire grandir des communautés du thé naturel à l’étranger : grâce notamment à des cours sur le thé japonais, élargir dans le monde le cercle de celles et ceux qui découvrent, apprécient et font connaître le thé naturel.",
+          "Troisièmement, relier les producteurs aux amateurs de thé du monde entier, pour que ceux qui cherchent ce thé puissent trouver ceux qui l’ont cultivé. Pour cela, l’association présente des producteurs et des boutiques, et prépare des événements et des marchés pour les producteurs ainsi que des cours sur le thé japonais à l’étranger.",
+          "## Rejoignez-nous",
+          "Cette association a été fondée par un producteur de thé naturel, pour les producteurs. Notre directeur représentant est lui-même l’un des producteurs qui travaillent un champ de thé naturel. Faire en sorte qu’aucun producteur de thé naturel ne reste seul, et aider leur thé à rencontrer ceux qui le recherchent : c’est pour cela que l’association est née.",
+          "Vous cultivez du thé naturel, vous en vendez dans votre boutique, vous aimez le boire et le faire connaître : chacun peut participer à sa façon. Nous recherchons des membres pour faire découvrir avec nous le thé naturel au monde entier."
         ]
       },
       "takeaway": {
         "ja": "自然栽培の農家を、ひとりにしない。",
         "en": "No natural tea farmer should have to go it alone.",
         "fr": "Aucun producteur de thé naturel ne devrait rester seul."
-      }
+      },
+      "sources": [
+        {
+          "url": "https://www.maff.go.jp/j/seisan/tokusan/cha/attach/pdf/ocha-201.pdf",
+          "label": {
+            "ja": "農林水産省「茶をめぐる情勢」（令和8年10月時点）",
+            "en": "MAFF, “Situation Surrounding Tea” (as of October 2026, Japanese)",
+            "fr": "MAFF, « Situation du thé » (octobre 2026, en japonais)"
+          }
+        },
+        {
+          "url": "https://www.pref.kyoto.jp/chaken/documents/1325640649427.pdf",
+          "label": {
+            "ja": "京都府茶業研究所「京都府産荒茶における遊離アミノ酸含有率と窒素施用量・製茶品質との関係」",
+            "en": "Kyoto Prefectural Tea Research Institute: amino acids, nitrogen application and tea quality (Japanese)",
+            "fr": "Institut de recherche sur le thé de Kyoto : acides aminés, azote et qualité du thé (en japonais)"
+          }
+        }
+      ]
     },
     {
       "slug": "natural-agriculture",
@@ -56,32 +116,125 @@
         "fr": "Qu’est-ce que la culture naturelle ?"
       },
       "lead": {
-        "ja": "何も足さずに、茶の木が自分の力で育つ。自然栽培の考え方を知る回です。",
-        "en": "Nothing is added, and the tea plant grows by its own strength. The idea behind natural agriculture.",
-        "fr": "Rien n’est ajouté : le théier pousse par sa propre force. L’idée de la culture naturelle."
+        "ja": "何も足さずに、茶の木が自分の力で育つ。慣行・有機との違い、虫や草とのつき合い方、袋の表示の見方まで、自然栽培の考え方を知る回です。",
+        "en": "Nothing is added, and the tea plant grows by its own strength. How natural agriculture differs from conventional and organic, how it lives with insects and weeds, and how to read the label.",
+        "fr": "Rien n’est ajouté : le théier pousse par sa propre force. Ce qui distingue la culture naturelle du conventionnel et du bio, sa façon de vivre avec insectes et herbes, et comment lire l’étiquette."
       },
       "body": {
         "ja": [
-          "慣行栽培は、外から養分を与える農業です。肥料で栄養を補い、農薬で病気や虫を防ぎます。",
-          "自然栽培（Shizen Saibai）では、何も足しません。化学肥料だけでなく、有機肥料も使いません。茶の木は深く根を張り、日の光や雨、生きた土から、自分で養分を得ます。",
-          "農薬のかわりに、畑の生きものの力を借ります。テントウムシやクモ、チョウがいる畑では、食べる・食べられるのつり合いが保たれ、茶の木そのものも強くなっていきます。"
+          "## 3つの育て方",
+          "お茶の育て方は、大きく3つに分けられます。慣行栽培、有機栽培、そして自然栽培です。違いは、畑に何を入れるかにあります。",
+          "慣行栽培は、外から養分を与える農業です。化学肥料や有機肥料で栄養を補い、農薬で病気や虫を防ぎます。",
+          "有機栽培は、化学的に合成された肥料と農薬を使わないことを基本にした育て方です。2006年にできた「有機農業の推進に関する法律」でも、そう定められています。ただし、堆肥や油かすなどの有機肥料は使いますし、国の有機JASの基準で認められた一部の資材も使えます。「有機」と表示するには、原則として収穫の前3年以上、化学的に合成された肥料や農薬を使わずに育て、第三者の認証を受ける必要があります。",
+          "自然栽培（Shizen Saibai）では、何も足しません。化学肥料だけでなく、有機肥料も使いません。農薬も使いません。外から養分を持ち込まず、茶の木と土が本来もつ力で育てます。",
+          "## 何も足さずに、なぜ育つのか",
+          "茶の木は常緑の木で、一度植えると何十年も同じ場所で育ちます。深く根を張り、日の光と雨、そして生きた土から養分を得ます。",
+          "畑で育ったものは、畑に還ります。落ち葉や刈った草、刈りそろえた枝葉は、土の上で虫や微生物のすみかになりながら分解され、ゆっくりと土に戻っていきます。肥料で一度に養分を与えるのではなく、畑の中でめぐる養分で、時間をかけて育つのが自然栽培です。",
+          "そのぶん、新芽の伸びはゆっくりで、とれる量も多くはありません。肥料を使う畑と同じ量はとれないことを受け入れたうえで、その土地の力だけで育ったお茶をつくります。",
+          "## 虫や草とのつき合い方",
+          "茶の木には、100種類をこえる害虫がつくといわれます。一方で、茶畑には、それを食べる天敵もたくさんすんでいます。国の茶業の研究所の研究者は、茶畑の生態系は日本の農地のなかでもっとも複雑で安定していると書き、カンザワハダニを食べるカブリダニのように、天敵が害虫の数を抑えている例を示しています。",
+          "自然栽培の畑では、テントウムシやクモ、カブリダニといった生きものの力を借ります。虫に食われる葉はあっても、食べる・食べられるのつり合いが保たれることで、畑全体が少しずつ落ち着いていきます。",
+          "草も、敵ではありません。すべてを抜き取らずに刈って畝の間に敷けば、土の乾きをやわらげ、やがて土に還ります。",
+          "## 袋に「無農薬」と書かれていない理由",
+          "お茶の袋に「無農薬」と書かれているのを、まず見かけることはありません。農林水産省の「特別栽培農産物に係る表示ガイドライン」で、「無農薬」「無化学肥料」という表示は使わないことになっているからです。お茶もこのガイドラインの対象です。",
+          "理由は、消費者が「無農薬」を、まわりの畑から飛んできたものや土に残ったものも含めて「農薬がまったく残っていない」という意味に受け取りやすく、誤解を招くためです。農薬を使わずに育てた場合は「農薬：栽培期間中不使用」と表示します。",
+          "協会が「無肥料・無農薬」と書くのは、商品の表示ではなく、育て方を説明する言葉としてです。お茶を買うときは、「栽培期間中不使用」の表示がひとつの目印になります。",
+          "## 日本の自然農法の歩み",
+          "肥料や農薬に頼らない農業は、新しい考え方ではありません。日本では1940年ごろから、岡田茂吉が農薬や化学肥料を使わない農業を説き、福岡正信は「自然農法」を実践して『わら一本の革命』（1975年）を著しました。1971年に日本有機農業研究会がつくられたとき、すでにあった「自然農法」と混同されないように、「有機農業」という言葉が選ばれたともいわれています。",
+          "自然栽培には、有機JASのような国の基準はありません。だからこそ協会は、自然茶を「化学肥料も有機肥料も、農薬も、一切使わないお茶」とはっきり定めています。"
         ],
         "en": [
-          "Conventional farming feeds the plant from the outside: fertilizer for nutrients, chemicals against pests and disease.",
-          "In natural agriculture (Shizen Saibai), nothing is added. Not chemical fertilizer, and not organic fertilizer either. The tea plant sends its roots deep and draws its nourishment from sunlight, rain and living soil.",
-          "Instead of pesticides, it relies on the life in the field. Where ladybugs, spiders and butterflies live, the food chain stays in balance, and the tea plant itself grows stronger."
+          "## Three ways to grow tea",
+          "Tea can be grown in three broad ways: conventional, organic and natural. The difference lies in what goes into the field.",
+          "Conventional farming feeds the plant from the outside. Chemical or organic fertilizer supplies nutrients, and pesticides protect against disease and insects.",
+          "Organic farming is based on not using chemically synthesized fertilizers or pesticides. Japan’s Act on the Promotion of Organic Agriculture (2006) defines it that way. Organic farmers do use organic fertilizers such as compost and oil cake, and some materials approved under the national Organic JAS standard are allowed. To be labeled “organic,” a crop must in principle be grown without chemically synthesized fertilizers or pesticides for at least three years before harvest, and be certified by a third party.",
+          "In natural agriculture (Shizen Saibai), nothing is added. Not chemical fertilizer, and not organic fertilizer either. No pesticides. Nothing is brought in from outside: the tea grows by the strength of the plant and the soil alone.",
+          "## How can it grow with nothing added?",
+          "The tea plant is an evergreen. Once planted, it grows in the same place for decades. It sends its roots deep and draws its nourishment from sunlight, rain and living soil.",
+          "What grows in the field returns to the field. Fallen leaves, cut grass and trimmed branches break down on the ground, sheltering insects and microbes as they slowly return to the soil. Instead of a dose of fertilizer, the plant grows over time on the nutrients that cycle within the field.",
+          "As a result, new shoots grow slowly and the harvest is smaller. Natural farmers accept that they will not harvest as much as fertilized fields, and make tea grown only by the strength of their land.",
+          "## Living with insects and weeds",
+          "More than 100 species of insect pests are said to attack the tea plant. Yet tea fields are also home to many natural enemies that eat them. A researcher at Japan’s national tea research institute wrote that the tea field ecosystem is the most complex and stable of all Japanese farmland, and showed how natural enemies, such as predatory mites that feed on the Kanzawa spider mite, keep pest numbers down.",
+          "Natural tea fields rely on creatures like ladybugs, spiders and predatory mites. Some leaves get eaten, but as the balance of eating and being eaten holds, the whole field gradually settles.",
+          "Weeds are not the enemy either. Rather than pulling them all out, farmers cut them and lay them between the rows, where they keep the soil from drying out and eventually return to it.",
+          "## Why you won’t see “pesticide-free” on the bag",
+          "In Japan you will rarely see “pesticide-free” (mu-nōyaku) printed on a bag of tea. The Ministry of Agriculture’s labeling guideline for specially cultivated produce says the terms “pesticide-free” and “chemical-fertilizer-free” should not be used, and tea is covered by the guideline.",
+          "The reason is that shoppers tend to read “pesticide-free” as “no pesticide residue at all,” including drift from neighboring fields or residues left in the soil, which is misleading. Produce grown without pesticides is labeled instead as “Pesticides: not used during the growing period.”",
+          "When the association writes “no fertilizer, no pesticides,” it is describing a way of growing, not labeling a product. When you buy tea in Japan, “not used during the growing period” (saibai kikanchū fushiyō) is a useful sign to look for.",
+          "## Natural farming in Japan",
+          "Farming without fertilizer or pesticides is not a new idea. In Japan, from around 1940, Mokichi Okada advocated farming without pesticides or chemical fertilizers, and Masanobu Fukuoka practiced “natural farming” and wrote The One-Straw Revolution (1975). When the Japan Organic Agriculture Association was founded in 1971, the word “organic” was reportedly chosen so as not to be confused with the existing term “natural farming.”",
+          "Natural agriculture has no national standard like Organic JAS. That is exactly why the association defines natural tea clearly: tea grown with no chemical fertilizer, no organic fertilizer and no pesticides at all."
         ],
         "fr": [
-          "L’agriculture conventionnelle nourrit la plante de l’extérieur : des engrais pour les nutriments, des produits chimiques contre les ravageurs et les maladies.",
-          "En culture naturelle (Shizen Saibai), rien n’est ajouté : ni engrais chimique, ni engrais organique. Le théier enfonce ses racines profondément et puise sa nourriture dans le soleil, la pluie et un sol vivant.",
-          "À la place des pesticides, il s’appuie sur la vie du champ. Là où vivent coccinelles, araignées et papillons, la chaîne alimentaire reste en équilibre, et le théier lui-même devient plus robuste."
+          "## Trois façons de cultiver le thé",
+          "On peut cultiver le thé de trois grandes façons : en conventionnel, en bio et en culture naturelle. La différence tient à ce que l’on apporte au champ.",
+          "L’agriculture conventionnelle nourrit la plante de l’extérieur : des engrais chimiques ou organiques apportent les nutriments, et des pesticides protègent des maladies et des insectes.",
+          "L’agriculture biologique repose sur le principe de ne pas utiliser d’engrais ni de pesticides de synthèse chimique. C’est ainsi que la définit la loi japonaise sur la promotion de l’agriculture biologique (2006). Les agriculteurs bio utilisent toutefois des engrais organiques comme le compost ou les tourteaux, et certains intrants autorisés par la norme nationale Organic JAS sont permis. Pour porter la mention « bio », une culture doit en principe avoir été conduite sans engrais ni pesticides de synthèse pendant au moins trois ans avant la récolte, et être certifiée par un organisme tiers.",
+          "En culture naturelle (Shizen Saibai), on n’ajoute rien. Ni engrais chimique, ni engrais organique. Aucun pesticide. Rien n’est apporté de l’extérieur : le thé pousse par la seule force de la plante et du sol.",
+          "## Comment pousse-t-il sans rien ajouter ?",
+          "Le théier est un arbuste à feuillage persistant. Une fois planté, il pousse au même endroit pendant des décennies. Il enfonce profondément ses racines et puise sa nourriture dans le soleil, la pluie et un sol vivant.",
+          "Ce qui pousse dans le champ retourne au champ. Feuilles tombées, herbes coupées et branches taillées se décomposent sur le sol, abritant insectes et micro-organismes, avant de retourner lentement à la terre. Plutôt qu’une dose d’engrais, la plante grandit avec le temps grâce aux nutriments qui circulent dans le champ.",
+          "Les jeunes pousses croissent donc lentement et la récolte est plus faible. Les cultivateurs naturels acceptent de récolter moins que dans un champ fertilisé, pour faire un thé nourri par la seule force de leur terre.",
+          "## Vivre avec les insectes et les herbes",
+          "On dit que plus de 100 espèces d’insectes ravageurs s’attaquent au théier. Mais les champs de thé abritent aussi de nombreux ennemis naturels qui s’en nourrissent. Un chercheur de l’institut national japonais du thé a écrit que l’écosystème du champ de thé est le plus complexe et le plus stable de toutes les terres agricoles du Japon, et a montré comment des ennemis naturels, comme les acariens prédateurs qui mangent le tétranyque de Kanzawa, limitent le nombre de ravageurs.",
+          "Les champs de thé naturel comptent sur des êtres vivants comme les coccinelles, les araignées et les acariens prédateurs. Certaines feuilles sont mangées, mais à mesure que l’équilibre entre mangeurs et mangés se maintient, le champ tout entier se stabilise peu à peu.",
+          "Les herbes ne sont pas des ennemies non plus. Plutôt que de tout arracher, on les coupe et on les étale entre les rangs : elles protègent le sol du dessèchement et finissent par y retourner.",
+          "## Pourquoi « sans pesticides » ne figure pas sur le sachet",
+          "Au Japon, on ne voit presque jamais « sans pesticides » (mu-nōyaku) sur un sachet de thé. Les lignes directrices du ministère de l’Agriculture sur l’étiquetage des produits de culture spéciale demandent de ne pas employer les termes « sans pesticides » et « sans engrais chimiques », et le thé est concerné.",
+          "La raison : les consommateurs comprennent volontiers « sans pesticides » comme « aucun résidu de pesticide », y compris ceux venus des champs voisins ou restés dans le sol, ce qui est trompeur. Un produit cultivé sans pesticides porte donc la mention « Pesticides : non utilisés pendant la période de culture ».",
+          "Quand l’association écrit « sans engrais ni pesticides », elle décrit une façon de cultiver, et non l’étiquette d’un produit. Si vous achetez du thé au Japon, la mention « non utilisés pendant la période de culture » (saibai kikanchū fushiyō) est un bon repère.",
+          "## L’agriculture naturelle au Japon",
+          "Cultiver sans engrais ni pesticides n’est pas une idée nouvelle. Au Japon, dès les années 1940 environ, Mokichi Okada a prôné une agriculture sans pesticides ni engrais chimiques, et Masanobu Fukuoka a pratiqué l’« agriculture naturelle » et écrit La Révolution d’un seul brin de paille (1975). Lors de la fondation de l’Association japonaise d’agriculture biologique en 1971, le mot « biologique » aurait été choisi pour ne pas être confondu avec le terme déjà existant d’« agriculture naturelle ».",
+          "La culture naturelle n’a pas de norme nationale comme Organic JAS. C’est justement pourquoi l’association définit clairement le thé naturel : un thé cultivé sans engrais chimique, sans engrais organique et sans aucun pesticide."
         ]
       },
       "takeaway": {
         "ja": "足さない。茶の木が自分の力で育つ。",
         "en": "Add nothing. Let the tea plant grow by its own strength.",
         "fr": "Ne rien ajouter. Laisser le théier pousser par sa propre force."
-      }
+      },
+      "sources": [
+        {
+          "url": "https://www.maff.go.jp/j/seisan/kankyo/yuuki/law.html",
+          "label": {
+            "ja": "農林水産省「有機農業の推進に関する法律」（2006年）",
+            "en": "MAFF, Act on the Promotion of Organic Agriculture (2006, Japanese)",
+            "fr": "MAFF, loi sur la promotion de l’agriculture biologique (2006, en japonais)"
+          }
+        },
+        {
+          "url": "https://www.maff.go.jp/j/jas/jas_kikaku/yuuki.html",
+          "label": {
+            "ja": "農林水産省「有機食品の検査認証制度（有機JAS）」",
+            "en": "MAFF, Organic JAS certification system (Japanese)",
+            "fr": "MAFF, système de certification Organic JAS (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.maff.go.jp/j/jas/jas_kikaku/pdf/tokusai_qa.pdf",
+          "label": {
+            "ja": "農林水産省「特別栽培農産物に係る表示ガイドライン Q&A」",
+            "en": "MAFF, Q&A on the labeling guideline for specially cultivated produce (Japanese)",
+            "fr": "MAFF, questions-réponses sur l’étiquetage des produits de culture spéciale (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.jircas.go.jp/sites/default/files/publication/jarq/31-3-213-217_0.pdf",
+          "label": {
+            "ja": "Kawai「Prospect for Integrated Pest Management in Tea Cultivation in Japan」JARQ 31(3)（1997年）",
+            "en": "Kawai, “Prospect for Integrated Pest Management in Tea Cultivation in Japan”, JARQ 31(3), 1997",
+            "fr": "Kawai, « Prospect for Integrated Pest Management in Tea Cultivation in Japan », JARQ 31(3), 1997"
+          }
+        },
+        {
+          "url": "https://nagano.repo.nii.ac.jp/records/1177",
+          "label": {
+            "ja": "古田睦美・下里俊行「日本近代農業史における民間農法・有機農業の位置づけをめぐる諸問題（1）」長野大学紀要 38巻（2016年）",
+            "en": "Furuta & Shimozato, on indigenous farming methods and organic agriculture in modern Japan (Bulletin of Nagano University 38, 2016, Japanese)",
+            "fr": "Furuta et Shimozato, sur les méthodes agricoles populaires et l’agriculture biologique au Japon moderne (Bulletin de l’université de Nagano 38, 2016, en japonais)"
+          }
+        }
+      ]
     },
     {
       "slug": "field",
@@ -92,32 +245,124 @@
         "fr": "Comment le champ se transforme-t-il ?"
       },
       "lead": {
-        "ja": "肥料と農薬をやめた茶畑で起きること。奈良・大和高原の畑から。",
-        "en": "What happens when a tea field stops receiving fertilizer and pesticides, seen from fields on the Yamato Plateau in Nara.",
-        "fr": "Ce qui se passe quand un champ de thé ne reçoit plus ni engrais ni pesticides, vu depuis les champs du plateau de Yamato, à Nara."
+        "ja": "肥料と農薬をやめた茶畑では、何がどう変わるのか。県の試験場の研究と、奈良・大和高原の畑から見ていきます。",
+        "en": "What really changes when a tea field stops receiving fertilizer and pesticides? We look at prefectural research trials, and at fields on the Yamato Plateau in Nara.",
+        "fr": "Que se passe-t-il vraiment quand un champ de thé ne reçoit plus ni engrais ni pesticides ? Regard sur les essais des stations de recherche préfectorales et sur les champs du plateau de Yamato, à Nara."
       },
       "body": {
         "ja": [
-          "肥料に頼る慣行栽培の畑では、茶の木の根は浅いままです。",
-          "肥料をやめると、移行の期間に土の中の肥料が少しずつ抜け、茶の木は肥料も農薬もない畑に慣れていきます。やがて根は深く伸び、土が生き返ります。",
-          "悠三堂は2015年に奈良・大和高原でゼロから茶づくりを始め、慣行栽培をやめる近所の畑を引き継いでは、一枚ずつ自然栽培に切り替えてきました。11年あまりで、その広さは3.5ヘクタールになりました。"
+          "## 茶は、肥料をたくさん使ってきた作物",
+          "茶は、ほかの永年作物にくらべて、肥料を多く使ってきた作物です。新芽のうま味のもとになるアミノ酸は窒素からつくられます。そのため、品質を上げようと、窒素肥料を多く与えるのが一般的でした。",
+          "静岡県の調査では、県内の茶園で1年に与える窒素の量は、10アールあたり1993年に105kg、2002年には60kgでした。熊本県の試験では60kgを標準とし、地元の多肥の畑はその1.5倍の90kgほどとしています。",
+          "一方で、肥料の与えすぎは土を酸性にし、根や土の微生物の働きを弱めるおそれがあると指摘されています。地下水に流れ出る硝酸性窒素も問題になり、産地では肥料を減らす取り組みが進んできました。静岡県の牧之原台地では、施肥を減らしたあと、川や湧き水の硝酸性窒素が下がる傾向が確かめられています。",
+          "## 根は、肥料のある場所に集まる",
+          "茶畑では、肥料は畝と畝の間にまくのがふつうです。徳島県の試験場が土を掘って調べると、細い根は株元の真下には少なく、畝の間や、雨が葉の先から落ちるあたりに多く見られました。窒素を倍に増やすと、根の広がり方そのものが変わりました。根は、養分と水のある場所へ伸びていくのです。",
+          "## 肥料をやめると、まず収量が減る",
+          "肥料をやめると、新芽の伸びが落ち、とれる量が減ります。これは公的な試験でもはっきり確かめられています。",
+          "徳島県の試験では、窒素を与えない区画で収量がおよそ半分になりました。大きく下がったのは、試験を始めて3年目からでした。土に残っていた養分で、しばらくは育つということです。",
+          "静岡県の茶業研究センターでは、窒素を与えない区画を10年以上続けました。2007年の一番茶は、年に54kgを与えた区画の752kg（10アールあたり）に対し、与えない区画は290kgでした。並べた写真でも、木の育ち方にはっきり差があります。一番茶の荒茶の評価も、劣る年が多くありました。",
+          "これらは肥料の量だけを比べた試験で、自然栽培の畑そのものを調べたものではありません。それでも、肥料をやめれば収量は減る、ということははっきりしています。自然栽培に切り替えるとは、この時期を引き受けることです。",
+          "## 数年かけて、生きものの顔ぶれが変わる",
+          "農薬をやめると、畑にすむ生きものも変わっていきます。静岡県の調査では、茶園から56種以上のクモと、19科の寄生蜂が見つかりました。農薬を使わない区画や減らした区画では、ハエトリグモやカニグモの仲間、害虫に寄生する小さな蜂などが、ふつうに防除する区画より多く見られました。",
+          "害虫を食べる生きものが増えれば、食べる・食べられるのつり合いが少しずつ戻ってきます。ただ、その変化には時間がかかり、畑ごとに違います。「根が深くなった」「土がやわらかくなった」という声は自然栽培の農家からよく聞きますが、研究で十分に確かめられているわけではありません。協会は、そうした畑の観察を、ていねいに集めていきたいと考えています。",
+          "## 大和高原の畑から",
+          "奈良県の大和高原は、標高200〜500mの高原に茶畑が広がる、大和茶の中心の産地です。茶づくりは806年に始まったと伝わります。朝晩の寒暖差が大きく、一番茶の育ちはほかの産地より1か月ほど遅れます。",
+          "奈良の茶農家、悠三堂は2015年にこの大和高原でゼロから茶づくりを始め、慣行栽培をやめる近所の畑を引き継いでは、一枚ずつ自然栽培に切り替えてきました。11年あまりで、その広さは3.5ヘクタールになりました。畑が変わっていくには年月がかかります。一枚ずつ、その時間を待つことが、自然栽培の茶づくりです。"
         ],
         "en": [
-          "In a conventional field that leans on fertilizer, the tea plant’s roots stay shallow.",
-          "Once fertilizer stops, it fades from the soil over a transition period, and the plants grow used to a field with neither fertilizer nor pesticides. Then the roots run deep, and the soil comes alive.",
-          "Yusando started growing tea from zero in 2015 on the Yamato Plateau in Nara. Whenever neighbors gave up conventional farming, it took over their fields and converted them one by one. In just over 11 years, that has come to 3.5 hectares."
+          "## Tea has long been a heavily fertilized crop",
+          "Tea has used more fertilizer than other perennial crops. The amino acids behind the savory taste of new shoots are built from nitrogen, so farmers commonly applied a lot of nitrogen fertilizer to raise quality.",
+          "A Shizuoka Prefecture survey found that tea fields in the prefecture received 105 kg of nitrogen per 10 ares a year in 1993, and 60 kg in 2002. A Kumamoto Prefecture trial used 60 kg as its standard, and put heavily fertilized local fields at about 90 kg, one and a half times as much.",
+          "At the same time, researchers point out that too much fertilizer can acidify the soil and may weaken the activity of roots and soil microbes. Nitrate leaching into groundwater has also become an issue, and tea regions have been working to cut back. On the Makinohara Plateau in Shizuoka, nitrate levels in streams and springs were found to be trending down after fertilizer use was reduced.",
+          "## Roots gather where the fertilizer is",
+          "In tea fields, fertilizer is usually spread between the rows. When Tokushima Prefecture’s agricultural station dug into the soil, it found few fine roots directly under the plants, and many between the rows and where rain drips off the edge of the leaves. Doubling the nitrogen changed how the roots spread. Roots grow toward where nutrients and water are.",
+          "## Stop the fertilizer, and the harvest drops first",
+          "When fertilizer stops, new shoots grow less and the harvest shrinks. Public trials have shown this clearly.",
+          "In a Tokushima trial, plots given no nitrogen yielded about half as much. The big drop came from the third year of the trial: for a while, the plants keep growing on nutrients left in the soil.",
+          "Shizuoka’s Tea Research Center kept a no-nitrogen plot going for more than ten years. In 2007, the first flush yielded 290 kg per 10 ares, against 752 kg in the plot given 54 kg of nitrogen a year. Photos of the plots side by side show a clear difference in growth, and the first-flush tea scored lower in many years.",
+          "These trials compared only the amount of fertilizer; they did not study natural farming fields as such. Still, it is clear that stopping fertilizer means a smaller harvest. Switching to natural farming means accepting this period.",
+          "## Over the years, the field’s living community changes",
+          "When pesticides stop, the creatures living in the field change too. A Shizuoka survey found more than 56 species of spiders and 19 families of parasitic wasps in tea fields. Plots with no or reduced pesticides had more jumping spiders, crab spiders and tiny wasps that parasitize pests than plots under standard spraying.",
+          "As the creatures that eat pests increase, the balance of eating and being eaten slowly returns. But this takes time, and every field is different. Natural farmers often say the roots have gone deeper or the soil has become softer, but research has not yet fully confirmed this. The association hopes to gather such observations from the fields with care.",
+          "## From the fields of the Yamato Plateau",
+          "The Yamato Plateau in Nara Prefecture, where tea fields spread across highlands 200 to 500 meters above sea level, is the heart of Yamato tea. Tea growing here is said to have begun in 806. The days and nights differ sharply in temperature, and the first flush grows about a month later than in other regions.",
+          "Yusando, a tea farm in Nara, started growing tea from zero on the Yamato Plateau in 2015. Whenever neighbors gave up conventional farming, it took over their fields and converted them one by one. In just over 11 years, that has come to 3.5 hectares. A field takes years to change. Waiting out that time, one field after another, is what growing natural tea means."
         ],
         "fr": [
-          "Dans un champ conventionnel qui dépend des engrais, les racines du théier restent en surface.",
-          "Quand on arrête les engrais, ils disparaissent peu à peu du sol pendant une période de transition, et les théiers s’habituent à un champ sans engrais ni pesticides. Puis les racines plongent en profondeur, et le sol reprend vie.",
-          "Yusando a commencé à cultiver le thé à partir de rien en 2015, sur le plateau de Yamato, à Nara. Chaque fois que des voisins abandonnaient la culture conventionnelle, il a repris leurs champs pour les convertir un à un. En un peu plus de 11 ans, cela représente 3,5 hectares."
+          "## Le thé, une culture longtemps très fertilisée",
+          "Le thé a reçu plus d’engrais que les autres cultures pérennes. Les acides aminés qui donnent leur saveur umami aux jeunes pousses sont fabriqués à partir de l’azote : pour améliorer la qualité, on apportait donc couramment beaucoup d’engrais azoté.",
+          "Selon une enquête de la préfecture de Shizuoka, les champs de thé de la préfecture recevaient 105 kg d’azote par 10 ares et par an en 1993, et 60 kg en 2002. Un essai de la préfecture de Kumamoto prenait 60 kg comme référence et estimait les champs locaux très fertilisés à environ 90 kg, soit une fois et demie plus.",
+          "Les chercheurs soulignent aussi qu’un excès d’engrais peut acidifier le sol et risque d’affaiblir l’activité des racines et des micro-organismes. Le lessivage des nitrates vers les nappes est devenu un problème, et les régions productrices ont entrepris de réduire les apports. Sur le plateau de Makinohara, à Shizuoka, on a constaté une baisse des nitrates dans les rivières et les sources après la réduction des engrais.",
+          "## Les racines se rassemblent là où se trouve l’engrais",
+          "Dans les champs de thé, l’engrais est généralement épandu entre les rangs. En creusant le sol, la station agricole de la préfecture de Tokushima a trouvé peu de radicelles juste sous les plants, et beaucoup entre les rangs et là où la pluie s’égoutte du bord du feuillage. En doublant l’azote, la répartition même des racines changeait. Les racines vont là où se trouvent les nutriments et l’eau.",
+          "## Sans engrais, la récolte baisse d’abord",
+          "Quand on arrête l’engrais, les jeunes pousses croissent moins et la récolte diminue. Des essais publics l’ont clairement montré.",
+          "Dans un essai à Tokushima, les parcelles sans azote ont produit environ moitié moins. La forte baisse est apparue à partir de la troisième année : pendant un temps, les plants poussent encore sur les nutriments restés dans le sol.",
+          "Le centre de recherche sur le thé de Shizuoka a maintenu une parcelle sans azote pendant plus de dix ans. En 2007, la première récolte y a donné 290 kg par 10 ares, contre 752 kg dans la parcelle recevant 54 kg d’azote par an. Sur les photos des parcelles côte à côte, la différence de croissance est nette, et le thé de première récolte était moins bien noté bien des années.",
+          "Ces essais ne comparaient que la quantité d’engrais ; ils n’étudiaient pas des champs en culture naturelle à proprement parler. Il reste clair qu’arrêter l’engrais réduit la récolte. Passer à la culture naturelle, c’est accepter cette période.",
+          "## Au fil des années, les êtres vivants du champ changent",
+          "Quand on arrête les pesticides, les êtres vivants du champ changent eux aussi. Une étude de Shizuoka a recensé dans les champs de thé plus de 56 espèces d’araignées et 19 familles de guêpes parasitoïdes. Les parcelles sans pesticides ou avec moins de pesticides abritaient davantage d’araignées sauteuses, d’araignées-crabes et de minuscules guêpes parasites des ravageurs que les parcelles traitées normalement.",
+          "À mesure que les prédateurs des ravageurs se multiplient, l’équilibre entre mangeurs et mangés revient peu à peu. Mais cela prend du temps, et chaque champ est différent. Les cultivateurs naturels disent souvent que les racines sont descendues plus profond ou que le sol est devenu plus meuble, mais la recherche ne l’a pas encore pleinement confirmé. L’association souhaite recueillir avec soin ces observations venues des champs.",
+          "## Depuis les champs du plateau de Yamato",
+          "Le plateau de Yamato, dans la préfecture de Nara, où les champs de thé s’étendent entre 200 et 500 mètres d’altitude, est le cœur de la production du thé de Yamato. On dit que la culture du thé y a commencé en 806. L’écart de température entre le jour et la nuit est grand, et la première récolte pousse environ un mois plus tard qu’ailleurs.",
+          "Yusando, une ferme de thé de Nara, a commencé à cultiver le thé à partir de rien sur le plateau de Yamato en 2015. Chaque fois que des voisins abandonnaient la culture conventionnelle, elle a repris leurs champs pour les convertir un à un. En un peu plus de 11 ans, cela représente 3,5 hectares. Un champ met des années à changer. Attendre ce temps, champ après champ, c’est cela, cultiver un thé naturel."
         ]
       },
       "takeaway": {
-        "ja": "肥料をやめると、根が深くなり、土が生きる。",
-        "en": "Stop the fertilizer, and the roots go deep and the soil comes alive.",
-        "fr": "Sans engrais, les racines s’enfoncent et le sol reprend vie."
-      }
+        "ja": "肥料をやめると、まず収量が減る。畑は、年月をかけて変わっていく。",
+        "en": "Stop the fertilizer, and the harvest drops first. The field changes over the years.",
+        "fr": "Sans engrais, la récolte baisse d’abord. Le champ se transforme au fil des années."
+      },
+      "sources": [
+        {
+          "url": "https://www.pref.shizuoka.jp/_res/projects/default_project/_page_/001/058/835/07-syousannseitisso.pdf",
+          "label": {
+            "ja": "静岡県農林技術研究所「施肥量削減の取組が進行する牧之原台地における水系の硝酸性窒素濃度の低減」",
+            "en": "Shizuoka Prefectural Research Institute of Agriculture and Forestry, nitrate reduction in streams on the Makinohara Plateau after fertilizer cuts (Japanese)",
+            "fr": "Institut de recherche agricole et forestière de Shizuoka, baisse des nitrates dans les cours d’eau du plateau de Makinohara après la réduction des engrais (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.pref.kumamoto.jp/uploaded/attachment/6469.pdf",
+          "label": {
+            "ja": "甲木哲哉・城秀信「茶園における減肥による窒素負荷低減効果」熊本県農業研究センター研究報告 第12号（2003年）",
+            "en": "Katsuki & Joh, reducing nitrogen load by cutting fertilizer in tea fields, Kumamoto Prefectural Agricultural Research Center Bulletin 12, 2003 (Japanese)",
+            "fr": "Katsuki et Joh, réduction de la charge azotée par la baisse des engrais dans les champs de thé, Bulletin du centre de recherche agricole de Kumamoto n° 12, 2003 (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.pref.tokushima.lg.jp/file/attachment/432385.pdf",
+          "label": {
+            "ja": "岡田俊美ほか「窒素施用量の違いが茶樹の生育と土壌化学性に及ぼす影響」徳島農試研報 27号（1990年）",
+            "en": "Okada et al., effects of nitrogen fertilizer rates on tea plants and soil chemistry, Bulletin of the Tokushima Agricultural Experiment Station 27, 1990 (Japanese)",
+            "fr": "Okada et al., effets des doses d’azote sur les théiers et la chimie du sol, Bulletin de la station agricole de Tokushima n° 27, 1990 (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.pref.shizuoka.jp/_res/projects/default_project/_page_/001/044/307/020.pdf",
+          "label": {
+            "ja": "静岡県農林技術研究所 茶業研究センター「窒素40kg施肥の10年間継続が茶樹へ及ぼす影響」",
+            "en": "Shizuoka Tea Research Center, effects of ten years of 40 kg nitrogen fertilization on tea plants (Japanese)",
+            "fr": "Centre de recherche sur le thé de Shizuoka, effets de dix ans de fertilisation à 40 kg d’azote sur les théiers (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.pref.shizuoka.jp/_res/projects/default_project/_page_/001/025/687/572tenteki.pdf",
+          "label": {
+            "ja": "静岡県「あたらしい農業技術 No.572 茶園における土着天敵類の生物多様性と農薬の影響」（2012年度）",
+            "en": "Shizuoka Prefecture, New Agricultural Technology No. 572: biodiversity of native natural enemies in tea fields and the effects of pesticides, FY2012 (Japanese)",
+            "fr": "Préfecture de Shizuoka, Nouvelles techniques agricoles n° 572 : biodiversité des ennemis naturels indigènes dans les champs de thé et effets des pesticides, 2012 (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.maff.go.jp/j/keikaku/syokubunka/traditional-foods/menu/yamatocha.html",
+          "label": {
+            "ja": "農林水産省「にっぽん伝統食図鑑 大和茶」",
+            "en": "MAFF, Japanese Traditional Foods: Yamato tea (Japanese)",
+            "fr": "MAFF, aliments traditionnels du Japon : thé de Yamato (en japonais)"
+          }
+        }
+      ]
     },
     {
       "slug": "good-tea",
@@ -128,35 +373,145 @@
         "fr": "Redéfinir un bon thé"
       },
       "lead": {
-        "ja": "見た目や香り、色、味だけでなく。体に、地球に、つくる人によいお茶とは。",
-        "en": "Beyond looks, aroma, color and taste: tea that is good for the body, the earth and the farmers.",
-        "fr": "Au-delà de l’aspect, de l’arôme, de la couleur et du goût : un thé bon pour le corps, la terre et les producteurs."
+        "ja": "お茶はこれまで、見た目、香り、色、味で評価されてきました。その物差しを知ったうえで、体に、地球に、つくる人によいお茶とは何かを考える回です。",
+        "en": "Tea has long been judged by its looks, aroma, color and taste. Knowing that yardstick, this lesson asks what makes tea good for the body, the earth and the people who grow it.",
+        "fr": "Le thé a longtemps été jugé sur son aspect, son arôme, sa couleur et son goût. En partant de cet étalon, cette leçon se demande ce qu’est un thé bon pour le corps, pour la terre et pour ceux qui le cultivent."
       },
       "body": {
         "ja": [
-          "お茶はこれまで、茶葉の見た目、香り、水色、味で評価されてきました。協会は、良いお茶をもう少し広く考えています。",
-          "体によいこと。肥料も農薬も使わずに育ち、毎日安心して飲めること。地球によいこと。川や土に害のあるものを流さず、茶畑がたくさんの生きものの住みかになること。つくる人によいこと。安全に働け、薬剤にお金をかけず、丁寧な仕事に見合った値段がつくこと。",
-          "この3つがそろったとき、そのお茶が育った土地の味が感じられます。"
+          "## これまでの物差し",
+          "お茶の良し悪しは、長いあいだ、決まった物差しで測られてきました。茶葉の見た目（外観）、香り（香気）、お湯を注いだときの色（水色）、そして味（滋味）の4つです。",
+          "全国茶品評会でも、この4つの項目で審査が行われます。たとえば普通煎茶は、外観20点、香気75点、水色30点、滋味75点の、合わせて200点満点です。外観は黒い審査盆にのせて形と色を見ます。香りと色と味は、審査茶碗に茶葉3gを入れ、熱湯を注いでから確かめます。",
+          "味の審査では、甘み、渋み、苦み、うま味がほどよい濃さで調和していること、舌にまろやかで、のど越しがよいことが求められます。点数は、理想のお茶を満点とし、欠点が見つかれば下げていく「減点法」でつけられます。",
+          "この物差しは、つくり手の腕をみがき、日本のお茶の品質を高めてきました。協会も、その積み重ねを大切に思っています。",
+          "## うま味と肥料",
+          "審査で高く評価されるお茶には、ひとつの傾向があります。京都府の茶業研究所が府内の荒茶を調べたところ、うま味のもとになるアミノ酸が多いお茶ほど、審査の点数が高い傾向がありました。多くの茶種で、取引価格とも関係がみられました。",
+          "アミノ酸は、茶の木が土から吸った窒素をもとにつくられます。そのため、窒素の肥料を多く入れるほどうま味が増え、良いお茶になると考えられてきました。同じ資料も、この考えが茶畑に肥料を多く入れる傾向につながっている、と書いています。",
+          "ただ、この調査では、お茶のアミノ酸の量と、畑に入れた窒素の量との間に、関連はみられませんでした。研究所は、品質を上げるには肥料の量だけでなく、入れる時期や方法、ほかの手入れを工夫する必要がある、とまとめています。",
+          "審査の物差しは、一杯のお茶の中身を測ります。けれども、そのお茶がどんな畑で、どんなふうに育ったかまでは測りません。協会は、良いお茶をもう少し広く考えています。物差しは3つです。体によいこと、地球によいこと、そしてつくる人によいことです。",
+          "## 体に、地球に",
+          "体によいこと。肥料も農薬も使わずに育ち、何が使われたかを気にせず、毎日安心して飲めることです。お茶が体にどんなはたらきをするかを、協会は言い切りません。ただ、育て方がはっきりしたお茶を、毎日の一杯として選べることを大切にしています。",
+          "地球によいこと。畑に入れた窒素は、すべてが茶の木に吸われるわけではありません。地下水や川へ流れ出す話は、第5回でくわしく見ます。空気への影響もあります。滋賀県の研究では、刈り落とした枝葉がうねの間にたまった茶畑から、温室効果ガスの一酸化二窒素が多く出ていて、肥料の窒素が多い畑ほどその傾向がはっきりしていました。同じ研究では、肥料の使い方を工夫して窒素を4割ほど減らしても、収量や荒茶の品質は変わりませんでした。",
+          "茶畑は、たくさんの生きもののすみかにもなります。国の茶業の研究者は、茶畑の生態系は日本の農地のなかでもっとも複雑で安定していると書いています。そして、殺虫剤を使いすぎると害虫を食べる天敵のはたらきが弱まり、かえって害虫がふえてしまう、とも指摘しています。",
+          "## つくる人に",
+          "つくる人によいこと。農薬を散布するときは、マスクや防除衣、保護メガネ、手袋を身につけることが求められています。国の調査では、こうした装備が十分でなかったために起きた事故が、ここ5年、毎年報告されています。多くの農家は気をつけて作業していますが、薬を扱う仕事の負担は小さくありません。",
+          "肥料も農薬も使わなければ、その費用はかかりません。その一方で、とれる量は少なく、草刈りなどの手間はふえます。だからこそ、丁寧な仕事に見合った値段がつき、つくる人が続けていけることも、良いお茶の条件だと協会は考えています。",
+          "## その土地の味",
+          "肥料で養分をそろえないお茶は、土や水、日当たり、畑の高さ、その年の天気によって、味が少しずつ変わります。ワインでいう「テロワール」に近い考え方です。",
+          "協会は、体に、地球に、つくる人によい、この3つがそろったとき、そのお茶が育った土地の味が感じられると考えています。うま味の強さだけでなく、その畑にしかない味わいを楽しむこと。それも、良いお茶のひとつの形です。"
         ],
         "en": [
-          "Tea has long been judged by how the leaves look, by its aroma, its color and its taste. The association thinks of good tea a little more broadly.",
-          "Good for the body: grown with no fertilizer and no pesticides, a cup you can drink every day without worry. Good for the earth: nothing harmful runs into rivers or soil, and the tea field becomes home to countless living things. Good for the farmers: a safer place to work, no money spent on chemicals, and careful work that earns a fair price.",
-          "When all three come together, you can taste the place the tea comes from."
+          "## The yardstick so far",
+          "For a long time, tea has been judged by a fixed yardstick: how the leaves look (appearance), how they smell (aroma), the color of the brewed tea (liquor color), and how it tastes (flavor).",
+          "Japan’s National Tea Competition judges tea on these same four points. For regular sencha, appearance is worth 20 points, aroma 75, liquor color 30 and flavor 75, for a total of 200. Appearance is judged by placing the leaves on a black tray and looking at their shape and color. Aroma, color and taste are checked after putting 3 g of leaves in a judging bowl and pouring in boiling water.",
+          "For taste, judges look for sweetness, astringency, bitterness and umami in balance at the right strength, with a smooth feel on the tongue and a clean finish. Scores are given by deduction: the ideal tea gets full marks, and points are taken off for each flaw found.",
+          "This yardstick has sharpened farmers’ skills and raised the quality of Japanese tea. The association values all that it has built.",
+          "## Umami and fertilizer",
+          "Teas that score well share a tendency. When Kyoto Prefecture’s tea research institute studied crude teas from the prefecture, it found that the more amino acids a tea contained (the source of umami), the higher its competition score tended to be. For most types of tea, amino acids were also linked to the trading price.",
+          "The tea plant makes amino acids from the nitrogen it draws from the soil. So it came to be believed that the more nitrogen fertilizer you add, the more umami you get, and the better the tea. The same report notes that this belief has led to heavy fertilizer use in tea fields.",
+          "Yet in this study, no link was found between a tea’s amino acid content and the amount of nitrogen applied to the field. The institute concluded that improving quality takes more than the amount of fertilizer: timing, method and other field care matter too.",
+          "The competition yardstick measures what is in the cup. It does not measure what kind of field the tea came from, or how it was grown. The association thinks of good tea a little more broadly, with three yardsticks: good for the body, good for the earth, and good for the people who grow it.",
+          "## For the body and the earth",
+          "Good for the body: tea grown with no fertilizer and no pesticides, a cup you can drink every day without wondering what was used on it. The association does not make claims about what tea does for the body. What it values is being able to choose, as your daily cup, a tea whose way of growing is clear.",
+          "Good for the earth: not all the nitrogen put into a field is taken up by the tea plants. How it runs off into groundwater and rivers is covered in Lesson 5. The air is affected too. A study in Shiga Prefecture found that tea fields where pruned leaves and branches had piled up between the rows released large amounts of nitrous oxide, a greenhouse gas, and that this was more pronounced the more nitrogen fertilizer was used. In the same study, cutting nitrogen by about 40% through better fertilizing methods did not change yields or the quality of the crude tea.",
+          "A tea field is also home to many living things. A researcher at the national tea research institute wrote that the tea field ecosystem is the most complex and most stable among Japan’s farmland. He also pointed out that using too much insecticide weakens the natural enemies that eat pests, and can end up making the pests come back stronger.",
+          "## For the people who grow it",
+          "Good for the people who grow it: when spraying pesticides, farmers are asked to wear a mask, protective clothing, goggles and gloves. Government surveys have recorded accidents caused by inadequate protective gear every year for the past five years. Most farmers work with great care, but handling chemicals is no small burden.",
+          "Without fertilizer or pesticides, there is no cost for them. On the other hand, the harvest is smaller, and there is more work such as cutting weeds. That is why the association believes a good tea is also one whose careful work earns a fair price, so that the people who grow it can keep going.",
+          "## The taste of a place",
+          "Tea whose nutrients are not evened out with fertilizer changes in taste with its soil and water, its sunlight, the altitude of the field and the weather of the year. It is close to what wine calls “terroir.”",
+          "The association believes that when all three come together, good for the body, the earth and the people who grow it, you can taste the place the tea comes from. Enjoying not only strong umami but a flavor found only in that field is also one form of good tea."
         ],
         "fr": [
-          "Le thé a longtemps été jugé sur l’aspect des feuilles, son arôme, sa couleur et son goût. L’association conçoit un bon thé de façon un peu plus large.",
-          "Bon pour le corps : cultivé sans engrais ni pesticides, une tasse que l’on peut boire chaque jour en toute confiance. Bon pour la terre : rien de nocif ne rejoint les rivières ni le sol, et le champ de thé abrite d’innombrables êtres vivants. Bon pour les producteurs : un travail plus sûr, pas d’argent dépensé en produits chimiques, et un travail soigné payé à son juste prix.",
-          "Quand ces trois conditions sont réunies, on goûte vraiment le lieu d’où vient le thé."
+          "## L’étalon d’hier",
+          "Pendant longtemps, le thé a été jugé selon un étalon bien établi : l’aspect des feuilles, leur arôme, la couleur de l’infusion et son goût.",
+          "Le Concours national du thé au Japon juge le thé sur ces quatre mêmes critères. Pour le sencha ordinaire, l’aspect compte pour 20 points, l’arôme 75, la couleur 30 et le goût 75, soit 200 au total. L’aspect se juge en posant les feuilles sur un plateau noir pour en observer la forme et la couleur. L’arôme, la couleur et le goût s’évaluent après avoir mis 3 g de feuilles dans un bol de dégustation et versé de l’eau bouillante.",
+          "Pour le goût, les juges recherchent une douceur, une astringence, une amertume et un umami en équilibre, à la bonne intensité, avec une sensation ronde en bouche et une finale nette. La note se donne par déduction : le thé idéal obtient la note maximale, et des points sont retirés pour chaque défaut relevé.",
+          "Cet étalon a affiné le savoir-faire des producteurs et élevé la qualité du thé japonais. L’association tient à tout ce qu’il a permis de construire.",
+          "## L’umami et l’engrais",
+          "Les thés bien notés ont un point commun. En étudiant des thés bruts de la préfecture, l’institut de recherche sur le thé de Kyoto a constaté que plus un thé contenait d’acides aminés (à l’origine de l’umami), plus sa note au concours avait tendance à être élevée. Pour la plupart des types de thé, les acides aminés étaient aussi liés au prix de vente.",
+          "Le théier fabrique ses acides aminés à partir de l’azote qu’il puise dans le sol. On en est donc venu à croire que plus on apporte d’engrais azoté, plus le thé a d’umami et meilleur il est. Le même rapport indique que cette idée a conduit à fertiliser abondamment les champs de thé.",
+          "Pourtant, cette étude n’a trouvé aucun lien entre la teneur en acides aminés du thé et la quantité d’azote apportée au champ. L’institut conclut que, pour améliorer la qualité, la quantité d’engrais ne suffit pas : le moment, la méthode et les autres soins comptent aussi.",
+          "L’étalon du concours mesure ce qu’il y a dans la tasse. Il ne mesure pas dans quel champ le thé a poussé, ni de quelle façon. L’association conçoit un bon thé de façon un peu plus large, avec trois étalons : bon pour le corps, bon pour la terre et bon pour ceux qui le cultivent.",
+          "## Pour le corps et pour la terre",
+          "Bon pour le corps : un thé cultivé sans engrais ni pesticides, une tasse que l’on peut boire chaque jour sans se demander ce qui a été utilisé. L’association ne prétend pas dire ce que le thé fait au corps. Ce qui compte pour elle, c’est de pouvoir choisir, pour sa tasse quotidienne, un thé dont la façon de pousser est claire.",
+          "Bon pour la terre : tout l’azote apporté au champ n’est pas absorbé par les théiers. Son ruissellement vers les nappes et les rivières sera abordé dans la leçon 5. L’air est touché aussi. Une étude de la préfecture de Shiga a montré que les champs de thé où les feuilles et branches taillées s’accumulaient entre les rangs dégageaient beaucoup de protoxyde d’azote, un gaz à effet de serre, et cela d’autant plus que l’engrais azoté était abondant. Dans la même étude, réduire l’azote d’environ 40 % en améliorant la façon de fertiliser n’a changé ni le rendement ni la qualité du thé brut.",
+          "Le champ de thé abrite aussi de nombreux êtres vivants. Un chercheur de l’institut national de recherche sur le thé a écrit que l’écosystème du champ de thé est le plus complexe et le plus stable des terres agricoles japonaises. Il souligne aussi qu’un excès d’insecticides affaiblit les ennemis naturels qui mangent les ravageurs, et peut finir par faire revenir ces derniers en plus grand nombre.",
+          "## Pour ceux qui le cultivent",
+          "Bon pour ceux qui le cultivent : lors de l’épandage de pesticides, les agriculteurs doivent porter masque, vêtements de protection, lunettes et gants. Les enquêtes de l’État ont relevé, chaque année depuis cinq ans, des accidents dus à un équipement de protection insuffisant. La plupart des agriculteurs travaillent avec beaucoup de soin, mais manipuler des produits chimiques n’est pas une charge légère.",
+          "Sans engrais ni pesticides, on n’a pas à les payer. En revanche, la récolte est plus petite et le travail, comme le désherbage, augmente. C’est pourquoi l’association considère qu’un bon thé est aussi un thé dont le travail soigné est payé à son juste prix, pour que ceux qui le cultivent puissent continuer.",
+          "## Le goût d’un lieu",
+          "Un thé dont les nutriments ne sont pas uniformisés par l’engrais change de goût selon son sol et son eau, son ensoleillement, l’altitude du champ et le temps de l’année. C’est proche de ce que le vin appelle le « terroir ».",
+          "L’association pense que lorsque ces trois conditions sont réunies, bon pour le corps, pour la terre et pour ceux qui le cultivent, on goûte le lieu d’où vient le thé. Apprécier non seulement un umami intense, mais aussi une saveur que l’on ne trouve que dans ce champ, c’est aussi une forme de bon thé."
         ]
       },
       "takeaway": {
         "ja": "体に、地球に、つくる人によいお茶。",
         "en": "Good for the body, the earth and the people who grow it.",
         "fr": "Bon pour le corps, pour la terre et pour ceux qui le cultivent."
-      }
+      },
+      "sources": [
+        {
+          "url": "https://www.naro.go.jp/PUBLICITY_REPORT/publication/archive/files/vt_s_3_5-2.pdf",
+          "label": {
+            "ja": "山口優一「日本茶の品質評価の現状と展望」（農研機構 野菜茶業研究所）",
+            "en": "Yamaguchi, “Quality Evaluation of Japanese Green Tea” (NARO Institute of Vegetable and Tea Science, Japanese)",
+            "fr": "Yamaguchi, « Quality Evaluation of Japanese Green Tea » (NARO, Institut des légumes et du thé, en japonais)"
+          }
+        },
+        {
+          "url": "https://www.pref.saitama.lg.jp/documents/208233/syuseisentya4kg.pdf",
+          "label": {
+            "ja": "埼玉県「第75回全国茶品評会 審査会結果（普通煎茶4kg）」",
+            "en": "Saitama Prefecture, results of the 75th National Tea Competition (regular sencha, Japanese)",
+            "fr": "Préfecture de Saitama, résultats du 75e Concours national du thé (sencha ordinaire, en japonais)"
+          }
+        },
+        {
+          "url": "https://www.pref.kyoto.jp/chaken/documents/1325640649427.pdf",
+          "label": {
+            "ja": "京都府茶業研究所「京都府産荒茶における遊離アミノ酸含有率と窒素施用量・製茶品質との関係」",
+            "en": "Kyoto Prefectural Tea Research Institute, amino acids in Kyoto crude tea, nitrogen use and tea quality (Japanese)",
+            "fr": "Institut de recherche sur le thé de Kyoto, acides aminés du thé brut, apport d’azote et qualité (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.naro.go.jp/org/warc/research_results/h26/pdf/11_chagyo/71-1102.pdf",
+          "label": {
+            "ja": "滋賀県農業技術振興センター「一酸化二窒素の発生を抑制する茶園の土壌管理技術」（農研機構 成果情報、2014年度）",
+            "en": "Shiga Prefecture Agricultural Technology Promotion Center, soil management to reduce nitrous oxide from tea fields (NARO research results, FY2014, Japanese)",
+            "fr": "Centre de promotion des techniques agricoles de Shiga, gestion du sol pour réduire le protoxyde d’azote des champs de thé (résultats NARO, 2014, en japonais)"
+          }
+        },
+        {
+          "url": "https://www.jircas.go.jp/sites/default/files/publication/jarq/31-3-213-217_0.pdf",
+          "label": {
+            "ja": "Kawai「Prospect for Integrated Pest Management in Tea Cultivation in Japan」JARQ 31(3)（1997年）",
+            "en": "Kawai, “Prospect for Integrated Pest Management in Tea Cultivation in Japan”, JARQ 31(3), 1997",
+            "fr": "Kawai, « Prospect for Integrated Pest Management in Tea Cultivation in Japan », JARQ 31(3), 1997"
+          }
+        },
+        {
+          "url": "https://www.maff.go.jp/j/nouyaku/n_tekisei/accident.html",
+          "label": {
+            "ja": "農林水産省「農薬の使用に伴う事故及び被害の発生状況について」",
+            "en": "MAFF, accidents and damage from pesticide use (Japanese)",
+            "fr": "MAFF, accidents et dommages liés à l’usage des pesticides (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.maff.go.jp/kinki/syouhi/mn/noutiku/attach/pdf/noyaku-4.pdf",
+          "label": {
+            "ja": "農林水産省 近畿農政局「農薬の適正使用についてのお願い」",
+            "en": "MAFF Kinki Regional Agricultural Administration Office, leaflet on proper pesticide use (Japanese)",
+            "fr": "MAFF, bureau régional du Kinki, dépliant sur le bon usage des pesticides (en japonais)"
+          }
+        }
+      ]
     },
     {
       "slug": "history",
+      "reel": "DgD97YHPNqX",
       "title": {
         "ja": "日本の自然茶の歴史",
         "en": "A history of natural tea in Japan",
@@ -339,25 +694,73 @@
         "fr": "L’envers du boom du matcha"
       },
       "lead": {
-        "ja": "世界で日本茶が求められる一方で、つくる人は減っている。日本茶のいまを数字で見ます。",
-        "en": "The world wants Japanese tea, yet fewer people grow it. Japanese tea today, in numbers.",
-        "fr": "Le monde réclame du thé japonais, mais ceux qui le cultivent sont de moins en moins nombreux. Le thé japonais aujourd’hui, en chiffres."
+        "ja": "世界で抹茶が求められる一方で、お茶をつくる人と畑は減っています。輸出、農家の数、畑の広さ、値段の動きから、日本茶のいまを最新の数字で見る回です。",
+        "en": "The world wants matcha, yet the people and fields that grow tea in Japan are shrinking. Japanese tea today, seen through the latest figures on exports, farmers, fields and prices.",
+        "fr": "Le monde réclame du matcha, mais les producteurs et les champs de thé du Japon diminuent. Le thé japonais aujourd’hui, à travers les derniers chiffres sur les exportations, les producteurs, les champs et les prix."
       },
       "body": {
         "ja": [
-          "世界中で抹茶が人気です。日本の緑茶の輸出額は2025年に721億円と過去最高になり、10年前のおよそ7倍になりました。",
-          "一方で、お茶をつくる人は減っています。茶の農家の数は2005年の37,617から2020年には12,325と、およそ3分の1になりました。農家の61%は65歳以上で、この10年で慣行栽培の茶畑を手放した農家も少なくありません。",
-          "その畑を引き継ぎ、肥料も農薬も使わない自然栽培に切り替える新しい世代の農家が、少しずつ増えています。"
+          "## 世界で広がる日本の緑茶",
+          "いま、世界中で抹茶が人気です。日本の緑茶の輸出額は、2025年に721億円となり、過去最高になりました。10年前の2015年は101億円でしたから、およそ7倍です。",
+          "量で見ても、輸出は2015年の約4,100トンから、2025年には約1万2,600トンに増えました。10年でおよそ3倍です。2026年も、1〜8月だけで674億円と、前の年を上回るペースで続いています。",
+          "主な行き先は、量で見るとアメリカが約35%、EUとイギリスが約19%、台湾が約13%です。",
+          "## 主役は抹茶",
+          "輸出をおし上げているのは、抹茶を含む粉末状の緑茶です。2025年の輸出のうち、粉末状のものが量で約7割、金額で約8割をしめました。1kgあたりの輸出の値段も、粉末状のものは、ほかの緑茶のおよそ2.3倍です。",
+          "抹茶の原料になるのは「てん茶」です。摘む前の2〜3週間ほど畑を覆い、蒸した葉を揉まずに乾かしてつくります。国の資料によると、てん茶の生産は2014年から2025年にかけて、およそ3.2倍に増えました。",
+          "## つくる人と畑が減っている",
+          "一方で、お茶をつくる人は減っています。農林業センサスによると、茶を販売目的で育てる農家の数は、2005年の37,617から、2020年には12,325、2025年には7,726になりました（2015年までは販売農家、2020年からは個人経営体の数）。20年でおよそ5分の1です。この5年だけでも、4割近く減りました。",
+          "茶を中心に営む農家で、おもに農業をしている人のうち、65歳以上の割合は、2010年の55%から2025年には63%に上がりました。",
+          "畑も減っています。茶の栽培面積は、2008年の約4万8,000haから、2025年には3万3,400haになりました。全国の茶畑のおよそ4割は、植えてから30年をこえた古い茶園です。残った農家が畑を引き受けて、1戸あたりの面積は広がっていますが、すべての畑を引き継げるわけではありません。",
+          "## ブームの中で起きていること",
+          "抹茶の人気は、畑の中身も変えています。2025年の荒茶の値段は、てん茶が1kgあたり8,562円、煎茶が1,746円と、およそ4.9倍の差がありました。2026年の一番茶は、前の年とくらべて、鹿児島県で約2倍、静岡県で約7割高い値段で取引されました。",
+          "その一方で、急須でいれる煎茶などのリーフ茶は、家庭で飲まれる量が減っています。おもにリーフ茶になる一番茶の生産量は、2008年の約4万700トンから2025年には約2万5,200トンに減りました。ペットボトルなどの飲料向けの安いお茶は、増える傾向にあります。",
+          "世界で求められるお茶と、国内で飲まれるお茶。その両方の変化の中で、多くの茶農家が育てる茶の種類や売り先を考え直しています。",
+          "## 手放された畑を受け継ぐ",
+          "海外では、農薬を使わないお茶を求める声も強まっています。国の資料では、2025年にアメリカ向け、EU・イギリス向けに輸出された緑茶の量のうち、それぞれ6割ほどが、有機認証のしくみを使って輸出された有機栽培茶でした。",
+          "協会のまわりでは、高齢などで手放された茶畑を引き継ぎ、肥料も農薬も使わない自然栽培で育て直す新しい世代の農家にも出会います。何十年も生きてきた茶の木は、手をかければ、もう一度芽を出します。",
+          "ブームは、いつか落ち着くかもしれません。それでも、畑とつくる人が残っていれば、お茶はこれからも続いていきます。協会は、そうした農家とお茶を飲む人をつなぐことで、日本の茶畑を次の世代へ手わたしたいと考えています。"
         ],
         "en": [
-          "Matcha is loved around the world. Japan’s green tea exports reached a record ¥72.1 billion in 2025, about seven times the level of a decade earlier.",
-          "Yet fewer people are growing it. The number of tea farmers fell from 37,617 in 2005 to 12,325 in 2020, about a third. 61% of tea farmers are over 65, and many conventional farmers have left their tea fields in the past ten years.",
-          "A new generation of farmers is taking over some of those fields and converting them to natural agriculture, with no fertilizer and no pesticides."
+          "## Japanese green tea goes global",
+          "Matcha is popular all over the world. Japan’s green tea exports reached ¥72.1 billion in 2025, a record high. In 2015 they were ¥10.1 billion, so that is about seven times more.",
+          "By volume, exports grew from about 4,100 tonnes in 2015 to about 12,600 tonnes in 2025, roughly three times in ten years. The rise continues in 2026: January to August alone brought in ¥67.4 billion, ahead of the year before.",
+          "By volume, the main destinations are the United States (about 35%), the EU and the UK (about 19%) and Taiwan (about 13%).",
+          "## Matcha leads the way",
+          "What drives exports is powdered green tea, including matcha. In 2025, powdered tea made up about 70% of green tea exports by volume and about 80% by value. Per kilogram, it sells for about 2.3 times the price of other green tea.",
+          "Matcha is made from tencha. The fields are shaded for two to three weeks before picking, and the steamed leaves are dried without rolling. According to the ministry, tencha production grew about 3.2 times between 2014 and 2025.",
+          "## Fewer growers, fewer fields",
+          "Yet fewer people are growing tea. According to the Census of Agriculture and Forestry, the number of farms growing tea for sale fell from 37,617 in 2005 to 12,325 in 2020 and 7,726 in 2025 (commercial farm households up to 2015, individual farm management entities from 2020). That is about one fifth in twenty years, and a drop of nearly 40% in the last five years alone.",
+          "On farms that mainly grow tea, the share of core farm workers aged 65 or over rose from 55% in 2010 to 63% in 2025.",
+          "Fields are shrinking too. Japan’s tea-growing area fell from about 48,000 hectares in 2008 to 33,400 hectares in 2025. About 40% of the country’s tea fields are more than 30 years old. The remaining farmers are taking on more land, so the average area per farm is growing, but not every field finds someone to take it over.",
+          "## What the boom is changing",
+          "The matcha boom is also changing what fields produce. In 2025, unrefined tencha sold for ¥8,562 per kilogram, against ¥1,746 for sencha, a gap of about 4.9 times. In 2026, first-flush tea traded at about twice the previous year’s price in Kagoshima and about 70% higher in Shizuoka.",
+          "Meanwhile, households in Japan are drinking less leaf tea, such as sencha brewed in a teapot. Production of first-flush tea, which mostly becomes leaf tea, fell from about 40,700 tonnes in 2008 to about 25,200 tonnes in 2025. Cheaper tea for bottled drinks, on the other hand, is tending to rise.",
+          "Between the tea the world wants and the tea people drink at home, many tea farmers are rethinking what they grow and where they sell it.",
+          "## Taking over abandoned fields",
+          "Abroad, demand for tea grown without pesticides is also growing. According to the ministry, about 60% of the green tea exported in 2025 to the United States, and about 60% of that sent to the EU and the UK, by volume, was organic tea exported under organic certification arrangements.",
+          "Around the association, we also meet a new generation of farmers who take over tea fields left behind, often because their owners grew too old, and bring them back with natural agriculture, using no fertilizer and no pesticides. Tea plants that have lived for decades will sprout again when someone cares for them.",
+          "The boom may settle down one day. But as long as the fields and the people who tend them remain, tea will go on. By connecting these farmers with the people who drink their tea, the association hopes to hand Japan’s tea fields on to the next generation."
         ],
         "fr": [
-          "Le matcha est apprécié dans le monde entier. En 2025, les exportations japonaises de thé vert ont atteint le record de 72,1 milliards de yens, environ sept fois plus qu’il y a dix ans.",
-          "Pourtant, ceux qui le cultivent sont de moins en moins nombreux. Le nombre de producteurs de thé est passé de 37 617 en 2005 à 12 325 en 2020, soit environ un tiers. 61 % d’entre eux ont plus de 65 ans, et beaucoup de producteurs conventionnels ont quitté leurs champs ces dix dernières années.",
-          "Une nouvelle génération de producteurs reprend une partie de ces champs pour les convertir à la culture naturelle, sans engrais ni pesticides."
+          "## Le thé vert japonais conquiert le monde",
+          "Le matcha est apprécié dans le monde entier. En 2025, les exportations japonaises de thé vert ont atteint 72,1 milliards de yens, un record. En 2015, elles étaient de 10,1 milliards de yens : c’est environ sept fois plus.",
+          "En volume, les exportations sont passées d’environ 4 100 tonnes en 2015 à environ 12 600 tonnes en 2025, soit à peu près trois fois plus en dix ans. La hausse se poursuit en 2026 : de janvier à août, elles ont déjà atteint 67,4 milliards de yens, devant l’année précédente.",
+          "En volume, les principales destinations sont les États-Unis (environ 35 %), l’Union européenne et le Royaume-Uni (environ 19 %) et Taïwan (environ 13 %).",
+          "## Le matcha en tête",
+          "Ce qui tire les exportations, c’est le thé vert en poudre, matcha compris. En 2025, il représentait environ 70 % des exportations de thé vert en volume et environ 80 % en valeur. Au kilo, il se vend environ 2,3 fois plus cher que les autres thés verts.",
+          "Le matcha est fait à partir de tencha. Les champs sont ombragés deux à trois semaines avant la cueillette, et les feuilles étuvées sont séchées sans être roulées. Selon le ministère, la production de tencha a été multipliée par environ 3,2 entre 2014 et 2025.",
+          "## Moins de producteurs, moins de champs",
+          "Pourtant, ceux qui cultivent le thé sont de moins en moins nombreux. Selon le recensement de l’agriculture et de la forêt, le nombre d’exploitations cultivant du thé pour la vente est passé de 37 617 en 2005 à 12 325 en 2020, puis à 7 726 en 2025 (ménages agricoles commerciaux jusqu’en 2015, exploitations individuelles à partir de 2020). C’est environ un cinquième en vingt ans, et une baisse de près de 40 % rien que sur les cinq dernières années.",
+          "Dans les exploitations centrées sur le thé, la part des principaux travailleurs agricoles âgés de 65 ans ou plus est passée de 55 % en 2010 à 63 % en 2025.",
+          "Les champs aussi se réduisent. La surface cultivée en thé au Japon est passée d’environ 48 000 hectares en 2008 à 33 400 hectares en 2025. Environ 40 % des champs de thé du pays ont plus de 30 ans. Les producteurs restants reprennent des terres et la surface moyenne par exploitation augmente, mais tous les champs ne trouvent pas de repreneur.",
+          "## Ce que le boom transforme",
+          "Le boom du matcha change aussi ce que produisent les champs. En 2025, le tencha brut se vendait 8 562 yens le kilo, contre 1 746 yens pour le sencha, soit un écart d’environ 4,9 fois. En 2026, le thé de première récolte s’est échangé à environ deux fois le prix de l’année précédente à Kagoshima, et environ 70 % plus cher à Shizuoka.",
+          "Pendant ce temps, les foyers japonais boivent moins de thé en feuilles, comme le sencha infusé dans une théière. La production de thé de première récolte, qui devient surtout du thé en feuilles, est passée d’environ 40 700 tonnes en 2008 à environ 25 200 tonnes en 2025. Le thé bon marché destiné aux boissons en bouteille, lui, tend à augmenter.",
+          "Entre le thé que le monde réclame et celui que l’on boit chez soi, beaucoup de producteurs repensent ce qu’ils cultivent et à qui ils le vendent.",
+          "## Reprendre les champs délaissés",
+          "À l’étranger, la demande de thé cultivé sans pesticides grandit elle aussi. Selon le ministère, environ 60 % du thé vert exporté en 2025 vers les États-Unis, et environ 60 % de celui envoyé vers l’Union européenne et le Royaume-Uni, en volume, était du thé bio exporté dans le cadre des accords de certification biologique.",
+          "Autour de l’association, nous rencontrons aussi une nouvelle génération de producteurs qui reprennent des champs de thé délaissés, souvent parce que leurs propriétaires ont pris de l’âge, et les font revivre en culture naturelle, sans engrais ni pesticides. Des théiers qui vivent depuis des décennies repoussent quand quelqu’un en prend soin.",
+          "Le boom finira peut-être par se calmer. Mais tant qu’il restera des champs et des gens pour les cultiver, le thé continuera. En reliant ces producteurs à ceux qui boivent leur thé, l’association souhaite transmettre les champs de thé du Japon à la génération suivante."
         ]
       },
       "takeaway": {
@@ -367,19 +770,19 @@
       },
       "sources": [
         {
-          "url": "https://www.maff.go.jp/j/seisan/tokusan/cha/",
+          "url": "https://www.maff.go.jp/j/seisan/tokusan/cha/attach/pdf/ocha-201.pdf",
           "label": {
-            "ja": "農林水産省「茶をめぐる情勢」",
-            "en": "MAFF, “Situation Surrounding Tea”",
-            "fr": "MAFF, « Situation du thé »"
+            "ja": "農林水産省「茶をめぐる情勢」（令和8年10月）",
+            "en": "MAFF, “Situation Surrounding Tea” (October 2026, Japanese)",
+            "fr": "MAFF, « Situation du thé » (octobre 2026, en japonais)"
           }
         },
         {
-          "url": "https://www.maff.go.jp/j/seisan/tokusan/cha/tea_export.html",
+          "url": "https://www.maff.go.jp/j/seisan/tokusan/cha/ocha.html",
           "label": {
-            "ja": "農林水産省・財務省貿易統計（緑茶輸出）",
-            "en": "MAFF / Customs trade statistics (green tea exports)",
-            "fr": "MAFF / statistiques douanières (exportations de thé vert)"
+            "ja": "農林水産省「お茶のページ」",
+            "en": "MAFF, tea page (Japanese)",
+            "fr": "MAFF, page sur le thé (en japonais)"
           }
         }
       ]
@@ -393,32 +796,144 @@
         "fr": "Le thé naturel japonais aujourd’hui"
       },
       "lead": {
-        "ja": "定番のお茶から、新しいお茶、地域の発酵茶まで。各地で広がる自然茶の姿。",
-        "en": "From the classics to new kinds of tea and local fermented teas: how natural tea is spreading across Japan.",
-        "fr": "Des grands classiques aux nouveaux thés et aux thés fermentés régionaux : comment le thé naturel se répand au Japon."
+        "ja": "煎茶・抹茶・ほうじ茶の定番から、和紅茶や釜炒り茶、四国の山あいに伝わる発酵茶まで。つくり方の違いと、各地で自然茶をつくる農家を知る回です。",
+        "en": "From classic sencha, matcha and hojicha to wakocha, pan-fired kamairicha and the fermented teas of the Shikoku mountains: how these teas are made, and the farmers making natural tea across Japan.",
+        "fr": "Des classiques sencha, matcha et hojicha au wakocha, au kamairicha torréfié à la poêle et aux thés fermentés des montagnes de Shikoku : comment ces thés sont faits, et les producteurs de thé naturel à travers le Japon."
       },
       "body": {
         "ja": [
-          "煎茶、抹茶、ほうじ茶といった定番のお茶が、自然栽培でつくられるようになっています。うま味だけでなく、やさしい甘みやすっきりした後味が好まれはじめています。",
-          "和紅茶や白茶、釜炒り茶など、新しい種類のお茶も次々に生まれています。自然栽培のほうがおいしいという声もあります。",
-          "阿波晩茶をはじめ、地域に伝わる発酵した晩茶も知られるようになってきました。"
+          "## 同じ茶の木から、いろいろなお茶",
+          "緑茶も紅茶も烏龍茶も、もとは同じ茶の木の葉からつくられます。違いを生むのは、つくり方です。摘んだ葉をすぐに加熱して、葉の中の酵素のはたらきを止めると緑茶になります。途中で止めると烏龍茶、最後まで加熱せずに酵素をはたらかせると紅茶になります。",
+          "自然栽培でも、それは同じです。肥料も農薬も使わずに育てた葉から、いま各地の農家が、定番のお茶、新しいお茶、そして昔から地域に伝わるお茶まで、さまざまなお茶をつくっています。",
+          "## 定番のお茶：煎茶・抹茶・ほうじ茶",
+          "煎茶は、日本でいちばん多くつくられているお茶です。摘んだ葉を蒸して、もみながら乾かし、細い針のような形に仕上げます。この「蒸してもむ」つくり方は、1738年に宇治田原の永谷宗円が始めた製法がもとになっています。",
+          "抹茶のもとになるのは、碾茶（てん茶）です。茶の木を覆って日の光をさえぎって育て、摘んだ新芽を蒸して、もまずに乾かし、茎や葉脈を取り除きます。この碾茶を石臼などで挽いて粉にしたものが抹茶です。",
+          "ほうじ茶は、番茶や煎茶を強い火で焙じたお茶です。香ばしい香りがあり、渋みや苦みがほとんどありません。",
+          "こうした定番のお茶も、自然栽培でつくられるようになっています。うま味の強さだけでなく、やさしい甘みやすっきりした後味を楽しむ人もいます。",
+          "## 新しいお茶と、九州の釜炒り茶",
+          "和紅茶（Wakocha）は、日本の茶葉を使って国内でつくる紅茶です。その歴史は明治にさかのぼります。政府は輸出で国を豊かにしようと紅茶づくりを進め、1875年には熊本県山鹿市に紅茶づくりを教える「紅茶伝習所」を設けました。山鹿の紅茶はロシアやイギリスにも輸出されましたが、やがて生産は途絶えました。いまの和紅茶は、小さな規模でつくり、農家が店先やイベントで直接売るものも多く、「地紅茶」とも呼ばれます。一番茶を摘み終えたあとの葉でつくることも多いお茶です。",
+          "白茶や烏龍茶に取り組む自然栽培の農家もいます。自然栽培のほうがおいしい、という声も聞かれます。",
+          "一方、釜炒り茶は新しいお茶ではありません。葉を蒸さずに、300〜400度ほどの釜で炒ってつくる緑茶で、おもに九州でつくられてきました。佐賀県の嬉野では、鉄の釜で茶葉を炒る製法が500年以上前に始まったと伝えられています。すっきりとした香ばしさが特徴です。",
+          "## 地域に伝わる発酵茶",
+          "日本には、微生物の力で発酵させる「後発酵茶」もあります。摘んだ葉をすぐに加熱して葉の酵素を止め、そのあとで乳酸菌やカビなどのはたらきで発酵させるお茶です。代表的なものが四つあり、三つは四国、一つは富山県でつくられています。",
+          "徳島県の阿波晩茶（Awa Bancha）は、夏に摘んだ葉を大釜で煮て、もんでから、煮汁とともに桶に漬けこんで発酵させます。愛媛県西条市の石鎚黒茶（Ishizuchi Kurocha）と高知県大豊町の碁石茶（Goishicha）は、蒸した葉にカビをつけたあと、桶に漬けこんでもう一度発酵させる、二段階の発酵でつくられます。どれも独特の酸味をもつお茶です。",
+          "これらの製造技術は、それぞれ国の重要無形民俗文化財に指定されています。阿波晩茶は2021年、石鎚黒茶は2023年、大豊の碁石茶は2026年の指定です。四国の山あいの暮らしの中で受け継がれてきた、日本の番茶の姿です。",
+          "## 各地の自然茶の農家",
+          "協会のサイトには、無肥料・無農薬でお茶を育てる各地の農家が載っています。静岡市の山あい、梅ヶ島の空洞庵は、在来種のお茶を育て、新茶を秋まで寝かせてから届けています。静岡県牧之原市の釜炒り茶柴本は、おもに九州でつくられてきた釜炒り茶を、牧之原台地でつくっています。",
+          "熊本県山鹿市の岳間茶好信楽も、釜炒り茶をつくっています。山鹿は、明治に紅茶伝習所が置かれた土地でもあります。福岡県の感楽園は、小郡市と八女市の二つの畑の葉から、緑茶や和紅茶、ほうじ茶をつくっています。",
+          "京都府宇治田原町の吉祥苑は、いまの煎茶の製法が生まれた土地で、抹茶・碾茶、煎茶、玉露、ほうじ茶、番茶をつくっています。奈良県奈良市の悠三堂は、煎茶や和紅茶、白茶、発酵番茶など、12種類のお茶をつくっています。",
+          "定番のお茶も、新しいお茶も、地域に伝わるお茶も、日本の各地で自然栽培の農家がつくっています。それぞれの農家の紹介と地図は、生産者のページ（naturaltea.jp/producers/）で見ることができます。"
         ],
         "en": [
-          "Classic teas such as sencha, matcha and hojicha are now being grown through natural agriculture. Beyond umami, people are starting to value a gentle sweetness and a clean aftertaste.",
-          "New kinds of tea keep appearing too: Japanese black tea, white tea and pan-fired kamairicha. Some say they taste even better when grown naturally.",
-          "Regional fermented teas, such as Awa bancha, are also starting to gain recognition."
+          "## Many teas from one plant",
+          "Green tea, black tea and oolong all come from the leaves of the same tea plant. What makes them different is how they are made. Heat the freshly picked leaves right away and the enzymes inside stop working: that gives green tea. Stop them halfway and you get oolong. Let the enzymes work all the way, with no heat until the end, and you get black tea.",
+          "Natural agriculture is no different. From leaves grown with no fertilizer and no pesticides, farmers across Japan now make all kinds of tea: the classics, new kinds of tea, and teas that have long been part of local life.",
+          "## The classics: sencha, matcha and hojicha",
+          "Sencha is the most widely produced tea in Japan. The leaves are steamed, then rolled as they dry into thin, needle-like shapes. This “steam and roll” method grew out of a technique begun in 1738 by Nagatani Soen in Ujitawara.",
+          "Matcha starts as tencha. The tea plants are covered to shade them from the sun, and the young shoots are steamed and dried without rolling, then stems and veins are removed. Ground into powder with a stone mill or similar, tencha becomes matcha.",
+          "Hojicha is bancha or sencha roasted over a strong flame. It has a toasty aroma and almost no astringency or bitterness.",
+          "These classic teas are now also made through natural agriculture. Some people enjoy not only strong umami, but a gentle sweetness and a clean aftertaste.",
+          "## New teas, and Kyushu’s pan-fired tea",
+          "Wakocha is black tea made in Japan from Japanese leaves. Its story goes back to the Meiji era. Hoping to enrich the country through exports, the government promoted black tea, and in 1875 it set up a black tea training center in Yamaga, Kumamoto. Yamaga black tea was even exported to Russia and Britain, but production eventually stopped. Today much wakocha is made on a small scale and sold by farmers directly, at their shops or at events; it is also called “jikocha,” local black tea. It is often made from leaves picked after the first green tea harvest.",
+          "Some natural farmers are also making white tea and oolong. Some people say these teas taste even better when grown naturally.",
+          "Kamairicha, pan-fired tea, on the other hand, is not new at all. It is a green tea that is not steamed but roasted in a pan at about 300 to 400°C, and it has long been made mainly in Kyushu. In Ureshino, Saga, the method of roasting leaves in an iron pan is said to have begun more than 500 years ago. It has a clean, toasty character.",
+          "## Fermented teas handed down in local regions",
+          "Japan also has post-fermented teas, fermented by microbes. The freshly picked leaves are heated right away to stop their enzymes, and then fermented by lactic acid bacteria, molds and other microbes. There are four well-known kinds: three in Shikoku and one in Toyama.",
+          "For Awa Bancha in Tokushima, leaves picked in summer are boiled in a large pot, rolled, then packed into wooden tubs with the cooking liquid to ferment. Ishizuchi Kurocha from Saijo, Ehime, and Goishicha from Otoyo, Kochi, go through two fermentations: the steamed leaves are first left to grow mold, then packed into tubs to ferment again. All of them have a distinctive sourness.",
+          "Each of these production techniques has been designated a national Important Intangible Folk Cultural Property: Awa Bancha in 2021, Ishizuchi Kurocha in 2023 and Otoyo’s Goishicha in 2026. They show what Japanese bancha looks like when it has been handed down in the life of the Shikoku mountains.",
+          "## Natural tea farmers across Japan",
+          "The association’s website introduces farmers across Japan who grow tea with no fertilizer and no pesticides. Kudoan, in the mountain village of Umegashima in Shizuoka city, grows native-variety tea and lets its spring tea rest until autumn before sending it out. Kamairicha Shibamoto, in Makinohara, Shizuoka, makes pan-fired tea, long made mainly in Kyushu, on the Makinohara plateau.",
+          "Koushinraku in Yamaga, Kumamoto, also makes pan-fired tea. Yamaga is also where the black tea training center was set up in the Meiji era. Kan Raku En in Fukuoka makes green tea, wakocha and hojicha from two fields, in Ogori and Yame.",
+          "Kisshoen in Ujitawara, Kyoto, where today’s sencha method was born, makes matcha and tencha, sencha, gyokuro, hojicha and bancha. Yusando in Nara city makes twelve kinds of tea, including sencha, wakocha, white tea and fermented bancha.",
+          "The classics, new teas and teas handed down in local regions: natural farmers make them all, in many parts of Japan. You can find each farmer’s profile and a map on the producers page (naturaltea.jp/producers/)."
         ],
         "fr": [
-          "Les thés classiques comme le sencha, le matcha et le hojicha sont désormais cultivés en culture naturelle. Au-delà de l’umami, on commence à apprécier une douceur délicate et une finale nette.",
-          "De nouveaux thés apparaissent aussi : thé noir japonais, thé blanc, kamairicha torréfié à la poêle. Certains disent qu’ils sont encore meilleurs cultivés naturellement.",
-          "Les thés fermentés régionaux, comme l’Awa bancha, commencent eux aussi à être reconnus."
+          "## Une seule plante, de nombreux thés",
+          "Thé vert, thé noir et oolong viennent tous des feuilles du même théier. Ce qui les distingue, c’est leur fabrication. Si l’on chauffe les feuilles tout de suite après la cueillette, leurs enzymes cessent d’agir : on obtient du thé vert. Si on les arrête à mi-chemin, c’est un oolong. Si on laisse les enzymes agir jusqu’au bout, sans chauffer avant la fin, c’est un thé noir.",
+          "En culture naturelle, c’est la même chose. À partir de feuilles cultivées sans engrais ni pesticides, des producteurs de tout le Japon font aujourd’hui toutes sortes de thés : les classiques, de nouveaux thés, et des thés qui font partie de la vie locale depuis longtemps.",
+          "## Les classiques : sencha, matcha et hojicha",
+          "Le sencha est le thé le plus produit au Japon. Les feuilles sont étuvées, puis roulées pendant le séchage jusqu’à prendre une forme fine, comme des aiguilles. Cette méthode « étuver et rouler » vient d’une technique lancée en 1738 par Nagatani Soen à Ujitawara.",
+          "Le matcha commence par le tencha. Les théiers sont couverts pour les protéger du soleil ; les jeunes pousses sont étuvées et séchées sans être roulées, puis on retire tiges et nervures. Moulu en poudre à la meule de pierre ou autrement, le tencha devient du matcha.",
+          "Le hojicha est un bancha ou un sencha torréfié à feu vif. Il a un arôme grillé et presque aucune astringence ni amertume.",
+          "Ces thés classiques sont désormais aussi produits en culture naturelle. Certains y apprécient non seulement un umami intense, mais aussi une douceur délicate et une finale nette.",
+          "## De nouveaux thés, et le thé torréfié de Kyushu",
+          "Le wakocha est un thé noir fabriqué au Japon à partir de feuilles japonaises. Son histoire remonte à l’ère Meiji. Pour enrichir le pays par l’exportation, le gouvernement encourage alors le thé noir et ouvre en 1875 un centre de formation au thé noir à Yamaga, dans la préfecture de Kumamoto. Le thé noir de Yamaga est même exporté vers la Russie et la Grande-Bretagne, mais la production finit par s’arrêter. Aujourd’hui, une grande partie du wakocha est produite à petite échelle et vendue directement par les producteurs, en boutique ou lors d’événements ; on l’appelle aussi « jikocha », thé noir local. Il est souvent fait avec des feuilles cueillies après la première récolte de thé vert.",
+          "Certains producteurs en culture naturelle font aussi du thé blanc et de l’oolong. Selon certains, ces thés sont encore meilleurs cultivés naturellement.",
+          "Le kamairicha, thé torréfié à la poêle, n’a en revanche rien de nouveau. C’est un thé vert qui n’est pas étuvé mais torréfié dans une poêle à environ 300 à 400 °C, et on le fabrique depuis longtemps surtout à Kyushu. À Ureshino, dans la préfecture de Saga, la méthode qui consiste à torréfier les feuilles dans une poêle en fer serait née il y a plus de 500 ans. Il a un caractère net et grillé.",
+          "## Des thés fermentés transmis dans les régions",
+          "Le Japon a aussi des thés post-fermentés, fermentés par des micro-organismes. Les feuilles fraîchement cueillies sont chauffées tout de suite pour arrêter leurs enzymes, puis fermentées par des bactéries lactiques, des moisissures et d’autres microbes. On en connaît quatre sortes principales : trois à Shikoku et une à Toyama.",
+          "Pour l’Awa Bancha de Tokushima, les feuilles cueillies en été sont bouillies dans un grand chaudron, roulées, puis tassées dans des cuves en bois avec le jus de cuisson pour fermenter. L’Ishizuchi Kurocha de Saijo (Ehime) et le Goishicha d’Otoyo (Kochi) passent par deux fermentations : les feuilles étuvées sont d’abord laissées moisir, puis tassées dans des cuves pour fermenter une seconde fois. Tous ont une acidité bien à eux.",
+          "Chacune de ces techniques de fabrication a été désignée bien culturel populaire immatériel important du Japon : l’Awa Bancha en 2021, l’Ishizuchi Kurocha en 2023 et le Goishicha d’Otoyo en 2026. Elles montrent le visage du bancha japonais tel qu’il s’est transmis dans la vie des montagnes de Shikoku.",
+          "## Des producteurs de thé naturel dans tout le Japon",
+          "Le site de l’association présente des producteurs de tout le Japon qui cultivent le thé sans engrais ni pesticides. Kudoan, dans le village de montagne d’Umegashima, à Shizuoka, cultive un thé de variété indigène et laisse reposer son thé de printemps jusqu’à l’automne avant de l’expédier. Kamairicha Shibamoto, à Makinohara (Shizuoka), fait sur le plateau de Makinohara du thé torréfié à la poêle, longtemps produit surtout à Kyushu.",
+          "Koushinraku, à Yamaga (Kumamoto), fait lui aussi du thé torréfié à la poêle. Yamaga est d’ailleurs le lieu où fut ouvert le centre de formation au thé noir à l’ère Meiji. Kan Raku En, à Fukuoka, fait du thé vert, du wakocha et du hojicha à partir de deux champs, à Ogori et à Yame.",
+          "Kisshoen, à Ujitawara (Kyoto), là où est née la méthode actuelle du sencha, produit matcha et tencha, sencha, gyokuro, hojicha et bancha. Yusando, dans la ville de Nara, produit douze sortes de thé, dont du sencha, du wakocha, du thé blanc et du bancha fermenté.",
+          "Les classiques, les nouveaux thés et les thés transmis dans les régions : des producteurs en culture naturelle les font tous, dans de nombreuses régions du Japon. La présentation de chaque producteur et une carte se trouvent sur la page des producteurs (naturaltea.jp/producers/)."
         ]
       },
       "takeaway": {
         "ja": "定番も、新しいお茶も、地域の発酵茶も。",
         "en": "The classics, new teas, and local fermented teas.",
         "fr": "Les classiques, les nouveaux thés et les thés fermentés régionaux."
-      }
+      },
+      "sources": [
+        {
+          "url": "https://www.maff.go.jp/j/pr/aff/2204/spe1_03.html",
+          "label": {
+            "ja": "農林水産省 広報誌 aff 2022年4月号「味わいや香りもさまざまなお茶の種類」",
+            "en": "MAFF, aff magazine, April 2022: “The many kinds of tea” (Japanese)",
+            "fr": "MAFF, magazine aff, avril 2022 : « Les nombreuses sortes de thé » (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.pref.shizuoka.jp/kensei/introduction/soshiki/1002123/1041029/chanomiyako/1040637/1027282.html",
+          "label": {
+            "ja": "静岡県「お茶の種類と効用」",
+            "en": "Shizuoka Prefecture, “Kinds of tea” (Japanese)",
+            "fr": "Préfecture de Shizuoka, « Les sortes de thé » (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.maff.go.jp/j/keikaku/syokubunka/traditional-foods/menu/uzitya.html",
+          "label": {
+            "ja": "農林水産省「にっぽん伝統食図鑑」宇治茶（京都府）",
+            "en": "MAFF, Japan’s traditional foods: Uji tea, Kyoto (Japanese)",
+            "fr": "MAFF, aliments traditionnels du Japon : thé d’Uji, Kyoto (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.pref.kyoto.jp/nosan/documents/04nenpyo.pdf",
+          "label": {
+            "ja": "京都府「お茶の年表」（宇治製法・青製煎茶製法、1738年）",
+            "en": "Kyoto Prefecture, timeline of tea (Uji method of sencha, 1738; Japanese)",
+            "fr": "Préfecture de Kyoto, chronologie du thé (méthode d’Uji pour le sencha, 1738 ; en japonais)"
+          }
+        },
+        {
+          "url": "https://www.mlit.go.jp/tagengo-db/common/001558082.pdf",
+          "label": {
+            "ja": "観光庁 多言語解説文「日本茶：歴史的概要」（嬉野茶）",
+            "en": "Japan Tourism Agency, “Japanese Tea: A Historical Overview” (Ureshino tea)",
+            "fr": "Agence japonaise du tourisme, « Japanese Tea: A Historical Overview » (thé d’Ureshino)"
+          }
+        },
+        {
+          "url": "https://www.qsr.mlit.go.jp/suishin/story2019/02_5.html",
+          "label": {
+            "ja": "国土交通省 九州地方整備局「九州と諸外国の交流ストーリー集2019」日本の紅茶がロシアやイギリスに",
+            "en": "MLIT Kyushu Regional Bureau, stories of Kyushu’s exchanges abroad (2019): Japanese black tea to Russia and Britain (Japanese)",
+            "fr": "MLIT, bureau régional de Kyushu, récits d’échanges (2019) : le thé noir japonais vers la Russie et la Grande-Bretagne (en japonais)"
+          }
+        },
+        {
+          "url": "https://online.bunka.go.jp/heritages/detail/392215",
+          "label": {
+            "ja": "文化庁 文化遺産オンライン「四国山地の発酵茶の製造技術」",
+            "en": "Agency for Cultural Affairs, “Fermented tea techniques of the Shikoku mountains” (Japanese)",
+            "fr": "Agence pour les affaires culturelles, techniques du thé fermenté des montagnes de Shikoku (en japonais)"
+          }
+        }
+      ]
     },
     {
       "slug": "harvest",
@@ -429,32 +944,133 @@
         "fr": "La récolte du matcha naturel"
       },
       "lead": {
-        "ja": "肥料も農薬も使わずに、抹茶の茶葉を育てて摘む。手間と時間のかかるお茶です。",
-        "en": "Growing and picking matcha leaves with no fertilizer and no pesticides: a tea that takes time and care.",
-        "fr": "Cultiver et cueillir les feuilles de matcha sans engrais ni pesticides : un thé qui demande du temps et du soin."
+        "ja": "覆いをかけて光をさえぎり、蒸して揉まずに乾かし、石臼で挽く。抹茶ができるまでと、肥料を使わずに抹茶の葉を育てる難しさを知る、コース最後の回です。",
+        "en": "Shaded from the sun, steamed and dried without rolling, then ground in a stone mill. In this final lesson, we follow how matcha is made and why growing its leaves without fertilizer is so demanding.",
+        "fr": "Ombragé, étuvé puis séché sans être roulé, et enfin moulu à la meule de pierre. Dans cette dernière leçon, on suit la naissance du matcha et l’on voit pourquoi cultiver ses feuilles sans engrais est si exigeant."
       },
       "body": {
         "ja": [
-          "抹茶の原料になる茶葉を、肥料も農薬も使わずに育てるのは、勇気のいる挑戦です。悠三堂は10年以上、この自然抹茶に取り組んできました。",
-          "2026年の収穫には、世界中から集まった仲間たちも加わり、一緒に茶葉を摘みました。",
-          "自然茶は、手間と時間をかけて、ようやく一杯になります。このコースで見てきた畑や農家の姿を思い浮かべながら、味わってみてください。"
+          "## 抹茶ができるまで",
+          "抹茶は、碾茶（Tencha）というお茶を粉にしたものです。碾茶づくりは、畑で茶の木に覆いをかけるところから始まります。",
+          "新芽が伸びはじめたころ、茶の木をよしずやわら、黒い布などで覆い、日の光をさえぎります。これを被覆栽培、または覆下（Ooishita）栽培といいます。京都府の茶業研究所は、碾茶を「約20日以上被覆（遮光）してから摘採された葉」を蒸して乾かしたもの、と説明しています。摘むのが遅れると新芽がかたくなるので、時期の見きわめが大切です。宇治では、春の一番茶の新芽が一芽ずつ手で摘まれ、碾茶や玉露に使われてきました。",
+          "摘んだ葉は、すぐに蒸します。煎茶は蒸したあと揉みながら乾かしますが、碾茶は揉まずにそのまま乾かします。乾いた葉から茎や葉脈を取り除き、石臼でゆっくり挽くと、細かな緑の粉、抹茶になります。",
+          "覆いをかけるのは、味のためです。農林水産省の資料によると、うま味のもとになるテアニンは根でつくられて葉に運ばれ、日光に当たると渋みのあるカテキンに変わります。光をさえぎることで、渋みがおさえられ、うま味の多い葉になります。この育て方は16世紀に宇治で生まれたとされ、もとは新芽を霜から守るために始まったともいわれています。",
+          "## 光をさえぎると、茶の木はどうなるか",
+          "茶の木にとって、日の光は自分の養分をつくる力です。覆いをかけると、光合成に使える光が大きく減ります。農研機構などがまとめた「被覆茶安定生産マニュアル」は、被覆栽培では光が足りないために茶の木が弱り、収量や品質が不安定になることが心配される、と書いています。毎年続けて覆うと、覆いを外したあとも葉の光合成の力が戻らず、翌年の生育が悪くなることがある、とも述べています。",
+          "岐阜県の研究でも、覆いをかけると品質は上がる一方で、収量や樹勢は下がるとされています。抹茶の葉は、茶の木に少し無理をしてもらって育てるお茶なのです。",
+          "## 肥料を使わずに、抹茶の葉を育てる",
+          "お茶づくりでは、うま味を高めるために窒素の肥料を多めに使うことが、慣行として続けられてきました。熊本県の研究報告は、テアニンなどのアミノ酸を多く含むお茶ほど高品質とされ、新芽のうま味を高める目的で窒素肥料が多く使われている、と書いています。品質と収入を守るために、農家が積み重ねてきた工夫です。",
+          "自然茶では、その肥料を使いません。茶の木は、落ち葉や刈った草が土に還ってめぐる養分だけで育ちます。そこへ覆いをかけて光まで減らせば、木への負担はさらに大きくなる。私たちはそう考えています。",
+          "だから、自然栽培の畑で抹茶の葉を育てるには、木の様子をよく見て、覆う期間や木を休ませる年のことを考えながら、長い時間をかけて向き合うことになります。とれる量は多くありません。それでも、肥料に頼らず、その土地の力だけで育った抹茶を届けることに、協会は大きな意味があると考えています。",
+          "## 2026年の収穫",
+          "悠三堂（Yusando）は、10年以上この自然抹茶に取り組んできました。肥料も農薬も使わずに抹茶の葉を育てるのは、勇気のいる挑戦です。",
+          "2026年の収穫には、世界中から集まった仲間たちも加わり、一緒に茶葉を摘みました。生まれた国や話す言葉はちがっても、同じ畑で同じ新芽に触れる。自然茶を通して人がつながる、ひとつの姿です。",
+          "## このコースのしめくくり",
+          "自然茶は、手間と時間をかけて、ようやく一杯になります。",
+          "このコースでは、自然栽培の農家をひとりにしないために協会が生まれたこと（第1回）、何も足さない育て方（第2回）、肥料をやめた畑が年月をかけて変わっていくこと（第3回）、つくる人や土地のことまで含めて良いお茶を考えなおすこと（第4回）、自然茶が人々の暮らしを支えてきた歴史（第5回）、求める人が増える一方でつくる人が減っている今（第6回）、そして各地に広がる自然茶（第7回）を見てきました。",
+          "次にお茶を飲むときは、このコースで出会った畑や農家の姿を、少し思い浮かべてみてください。",
+          "協会では、自然茶を育てる人、届ける人、楽しむ人と一緒に歩む仲間（メンバー）を募集しています。興味があれば、いつでも声をかけてください。"
         ],
         "en": [
-          "Growing the leaves for matcha with no fertilizer and no pesticides takes real courage. Yusando has been working on this natural matcha for more than ten years.",
-          "For the 2026 harvest, friends who had gathered from around the world joined in to pick the leaves together.",
-          "Natural tea becomes a cup only after much time and care. Next time you drink it, think of the fields and farmers you have met in this course."
+          "## How matcha is made",
+          "Matcha is tencha, a particular kind of tea, ground into powder. Making tencha begins in the field, by covering the tea plants.",
+          "Around the time the new shoots start to grow, the plants are covered with reed screens, straw or black cloth to block the sunlight. This is called shade cultivation, or ooishita. The Kyoto Prefecture tea research institute describes tencha as leaves “picked after being shaded for about 20 days or more,” then steamed and dried. If picking comes too late the shoots turn tough, so timing matters. In Uji, the new shoots of the spring first flush have long been picked one by one by hand for tencha and gyokuro.",
+          "The leaves are steamed right after picking. Sencha is rolled as it dries, but tencha is dried flat, without rolling. The stems and veins are then removed, and the dried leaf is ground slowly in a stone mill into a fine green powder: matcha.",
+          "The shade is there for flavor. According to the Ministry of Agriculture, theanine, the source of umami, is made in the roots and carried up to the leaves, and in sunlight it turns into catechins, which taste astringent. Blocking the light keeps astringency down and leaves the leaf rich in umami. This way of growing is said to have begun in Uji in the 16th century, and some say it started as a way to protect the new shoots from frost.",
+          "## What shade does to the tea plant",
+          "For a tea plant, sunlight is what lets it make its own food. Covering it sharply cuts the light available for photosynthesis. The “Manual for Stable Production of Shaded Tea,” compiled by NARO and partner institutes, warns that under shade cultivation the plants can weaken from lack of light, making yields and quality unstable. It adds that covering year after year can leave the leaves unable to recover their photosynthetic capacity even after the cover comes off, hurting growth the following year.",
+          "Research in Gifu Prefecture likewise found that shading raises quality but lowers yield and plant vigor. Matcha leaves, in other words, ask the tea plant to strain a little.",
+          "## Growing matcha leaves without fertilizer",
+          "In tea farming, using generous amounts of nitrogen fertilizer to boost umami has long been standard practice. A research report from Kumamoto Prefecture explains that teas rich in amino acids such as theanine are considered high quality, and that large amounts of nitrogen fertilizer are used to raise the umami of the new shoots. It is a practice farmers have built up to protect both quality and their livelihoods.",
+          "Natural tea uses none of that fertilizer. The plants live only on the nutrients that cycle through the field as fallen leaves and cut grass return to the soil. Add shade on top of that, cutting the light as well, and the burden on the plant grows heavier still. That is how we see it.",
+          "So growing matcha leaves in a natural field means watching the plants closely, thinking about how long to shade them and which years to let them rest, and working with them over a long time. The harvest is small. Even so, the association believes there is real meaning in offering matcha grown without fertilizer, by the strength of its land alone.",
+          "## The 2026 harvest",
+          "Yusando has been working on this natural matcha for more than ten years. Growing matcha leaves with no fertilizer and no pesticides takes real courage.",
+          "For the 2026 harvest, friends who had gathered from around the world joined in to pick the leaves together. Different countries, different languages, the same field and the same new shoots. It is one picture of how natural tea brings people together.",
+          "## Closing the course",
+          "Natural tea becomes a cup only after much time and care.",
+          "In this course we have seen why the association was born, so that natural farmers would not stand alone (lesson 1); a way of growing that adds nothing (lesson 2); how a field changes over the years once fertilizer stops (lesson 3); rethinking good tea to include the people who grow it and the land (lesson 4); the history of natural tea in everyday life (lesson 5); today, when demand is rising while growers are fewer (lesson 6); and natural tea spreading across the country (lesson 7).",
+          "Next time you drink tea, take a moment to picture the fields and farmers you met in this course.",
+          "The association is looking for members to walk alongside those who grow, share and enjoy natural tea. If you are interested, please get in touch anytime."
         ],
         "fr": [
-          "Cultiver les feuilles destinées au matcha sans engrais ni pesticides demande un vrai courage. Yusando se consacre à ce matcha naturel depuis plus de dix ans.",
-          "Pour la récolte 2026, des amis venus du monde entier se sont joints à la cueillette.",
-          "Le thé naturel ne devient une tasse qu’au prix de beaucoup de temps et de soin. La prochaine fois que vous en boirez, pensez aux champs et aux producteurs rencontrés dans ce cours."
+          "## Comment naît le matcha",
+          "Le matcha est du tencha, un thé particulier, réduit en poudre. La fabrication du tencha commence au champ, en couvrant les théiers.",
+          "Quand les jeunes pousses commencent à se développer, on couvre les théiers de nattes de roseau, de paille ou de toile noire pour arrêter la lumière du soleil. C’est la culture sous ombrage, ou ooishita. L’institut de recherche sur le thé de la préfecture de Kyoto décrit le tencha comme des feuilles « cueillies après environ 20 jours ou plus d’ombrage », puis étuvées et séchées. Si l’on cueille trop tard, les pousses durcissent : le bon moment compte. À Uji, les jeunes pousses de la première récolte de printemps sont depuis longtemps cueillies une à une, à la main, pour le tencha et le gyokuro.",
+          "Les feuilles sont étuvées aussitôt cueillies. Le sencha est roulé pendant le séchage, mais le tencha sèche à plat, sans être roulé. On retire ensuite les tiges et les nervures, puis on moud lentement la feuille sèche à la meule de pierre : on obtient une fine poudre verte, le matcha.",
+          "L’ombrage sert le goût. Selon le ministère de l’Agriculture, la théanine, source de l’umami, est produite dans les racines puis transportée jusqu’aux feuilles ; au soleil, elle se transforme en catéchines, au goût astringent. En arrêtant la lumière, on limite l’astringence et la feuille garde beaucoup d’umami. Cette culture serait née à Uji au XVIe siècle, et l’on dit qu’elle servait d’abord à protéger les jeunes pousses du gel.",
+          "## Ce que l’ombre fait au théier",
+          "Pour le théier, la lumière du soleil est ce qui lui permet de fabriquer sa propre nourriture. Le couvrir réduit fortement la lumière disponible pour la photosynthèse. Le « Manuel pour une production stable de thé ombragé », rédigé par le NARO et des instituts partenaires, signale que sous ombrage les théiers peuvent s’affaiblir faute de lumière, ce qui rend rendement et qualité instables. Il ajoute que couvrir année après année peut empêcher les feuilles de retrouver leur capacité de photosynthèse même une fois la couverture retirée, au détriment de la croissance l’année suivante.",
+          "Des recherches de la préfecture de Gifu montrent elles aussi que l’ombrage améliore la qualité mais réduit le rendement et la vigueur de l’arbre. Les feuilles de matcha demandent donc au théier un petit effort.",
+          "## Cultiver les feuilles de matcha sans engrais",
+          "Dans la culture du thé, utiliser beaucoup d’engrais azoté pour renforcer l’umami est depuis longtemps une pratique courante. Un rapport de recherche de la préfecture de Kumamoto explique que les thés riches en acides aminés comme la théanine sont jugés de haute qualité, et que l’on apporte beaucoup d’engrais azoté pour accroître l’umami des jeunes pousses. C’est un savoir-faire que les producteurs ont construit pour préserver la qualité et leurs revenus.",
+          "Le thé naturel n’utilise pas cet engrais. Les théiers vivent seulement des éléments nutritifs qui circulent dans le champ, quand feuilles mortes et herbes coupées retournent à la terre. Si l’on ajoute l’ombrage et que l’on retire aussi la lumière, la charge pour l’arbre devient encore plus lourde. C’est ainsi que nous le voyons.",
+          "Cultiver des feuilles de matcha dans un champ naturel, c’est donc observer les théiers de près, réfléchir à la durée de l’ombrage et aux années où les laisser se reposer, et s’y consacrer sur un temps long. La récolte est petite. Pourtant, l’association estime qu’il y a un vrai sens à proposer un matcha cultivé sans engrais, par la seule force de sa terre.",
+          "## La récolte 2026",
+          "Yusando se consacre à ce matcha naturel depuis plus de dix ans. Cultiver des feuilles de matcha sans engrais ni pesticides demande un vrai courage.",
+          "Pour la récolte 2026, des amis venus du monde entier se sont joints à la cueillette. Des pays et des langues différents, mais le même champ et les mêmes jeunes pousses. C’est une image de la façon dont le thé naturel rapproche les gens.",
+          "## Pour clore le cours",
+          "Le thé naturel ne devient une tasse qu’au prix de beaucoup de temps et de soin.",
+          "Dans ce cours, nous avons vu pourquoi l’association est née, pour que les producteurs en culture naturelle ne restent pas seuls (leçon 1) ; une façon de cultiver qui n’ajoute rien (leçon 2) ; comment un champ change au fil des années quand on arrête l’engrais (leçon 3) ; une nouvelle définition du bon thé, qui pense aussi à ceux qui le cultivent et à la terre (leçon 4) ; l’histoire du thé naturel dans la vie de tous les jours (leçon 5) ; le présent, où la demande augmente tandis que les producteurs se font plus rares (leçon 6) ; et le thé naturel qui se répand dans tout le pays (leçon 7).",
+          "La prochaine fois que vous boirez du thé, prenez un instant pour penser aux champs et aux producteurs rencontrés dans ce cours.",
+          "L’association recherche des membres pour avancer aux côtés de ceux qui cultivent, font connaître et savourent le thé naturel. Si cela vous intéresse, n’hésitez pas à nous écrire."
         ]
       },
       "takeaway": {
         "ja": "手間と時間をかけて、ようやく一杯になる。",
         "en": "Time and care go into every cup.",
         "fr": "Du temps et du soin dans chaque tasse."
-      }
+      },
+      "sources": [
+        {
+          "url": "https://www.maff.go.jp/j/keikaku/syokubunka/traditional-foods/menu/uzitya.html",
+          "label": {
+            "ja": "農林水産省「にっぽん伝統食図鑑：宇治茶（京都府）」",
+            "en": "MAFF, Traditional Foods of Japan: Uji tea, Kyoto (Japanese)",
+            "fr": "MAFF, aliments traditionnels du Japon : thé d’Uji, Kyoto (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.pref.kyoto.jp/nosoken/monthlyreport/documents/310506.pdf",
+          "label": {
+            "ja": "京都府農林水産技術センター 茶業研究所「直がけてん茶の品質向上を目指して」試験研究業務月報（2019年5月）",
+            "en": "Kyoto Prefecture Tea Research Institute, on improving directly covered tencha, monthly research report (May 2019, Japanese)",
+            "fr": "Institut de recherche sur le thé de la préfecture de Kyoto, sur la qualité du tencha couvert directement, rapport mensuel (mai 2019, en japonais)"
+          }
+        },
+        {
+          "url": "https://www.naro.go.jp/PUBLICITY_REPORT/publication/files/hihukucha-antei_man201803.pdf",
+          "label": {
+            "ja": "農食研究推進事業 27015C コンソーシアム（農研機構ほか）「被覆茶安定生産マニュアル」（2018年）",
+            "en": "NARO and partners (research consortium 27015C), Manual for Stable Production of Shaded Tea (2018, Japanese)",
+            "fr": "NARO et partenaires (consortium 27015C), manuel pour une production stable de thé ombragé (2018, en japonais)"
+          }
+        },
+        {
+          "url": "https://www.g-agri.rd.pref.gifu.lg.jp/pdf/research/kenkyuuseika/seika_h26-3.pdf",
+          "label": {
+            "ja": "岐阜県農業技術センター「西濃地域に適した茶の直がけ被覆栽培体系の開発」",
+            "en": "Gifu Prefectural Agricultural Technology Center, on a direct-covering system for tea in the Seino area (Japanese)",
+            "fr": "Centre de technologie agricole de la préfecture de Gifu, sur un système d’ombrage direct du thé dans la région de Seino (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.pref.kumamoto.jp/uploaded/attachment/6469.pdf",
+          "label": {
+            "ja": "甲木哲哉・城秀信「茶園における減肥による窒素負荷低減効果」熊本県農業研究センター研究報告 第12号",
+            "en": "Katsuki & Joh, on reducing nitrogen load by cutting fertilizer in tea fields, Kumamoto Prefectural Agricultural Research Center report no. 12 (Japanese)",
+            "fr": "Katsuki et Joh, sur la réduction de la charge azotée par la baisse des engrais dans les théiers, rapport n° 12 du centre de recherche agricole de Kumamoto (en japonais)"
+          }
+        },
+        {
+          "url": "https://www.mlit.go.jp/tagengo-db/common/001565526.pdf",
+          "label": {
+            "ja": "観光庁 多言語解説文「Processing Different Types of Tea」",
+            "en": "Japan Tourism Agency, multilingual commentary “Processing Different Types of Tea”",
+            "fr": "Agence du tourisme du Japon, texte explicatif « Processing Different Types of Tea » (en anglais)"
+          }
+        }
+      ]
     }
   ]
 }
