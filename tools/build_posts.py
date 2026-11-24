@@ -128,11 +128,12 @@ NAV = [
     ("/#natural", {"ja": "自然茶とは", "en": "Natural Tea", "fr": "Thé naturel"}),
     ("/producers/", {"ja": "生産者", "en": "Producers", "fr": "Producteurs"}),
     ("/shops/", {"ja": "ショップ", "en": "Shops", "fr": "Boutiques"}),
-    ("/learn/", {"ja": "学び", "en": "Learn", "fr": "Apprendre"}),
+    ("/learn/basics/", {"ja": "基礎コース", "en": "Basics course", "fr": "Cours de base"}),
     ("/#org", {"ja": "協会概要", "en": "Overview", "fr": "Présentation"}),
     ("/#join", {"ja": "入会・お問い合わせ", "en": "Membership", "fr": "Adhésion"}),
 ]
 FOOT_EXTRA = [  # フッターだけに出す、協会ページ内の欄
+    ("/learn/", {"ja": "学び", "en": "Learn", "fr": "Apprendre"}),
     ("/about/#business", {"ja": "事業内容", "en": "Activities", "fr": "Activités"}),
     ("/about/#upcoming", {"ja": "準備中の活動", "en": "Coming soon", "fr": "À venir"}),
 ]
@@ -335,7 +336,7 @@ SCRIPT = """
 def page(title, description, canonical, body, extra_head=""):
     current = ' aria-current="page"'
     nav = "\n".join(
-        f'    <a class="navlink" href="{href}"{current if href == "/learn/" else ""}>{t_raw(label)}</a>'
+        f'    <a class="navlink" href="{href}"{current if href == "/learn/basics/" else ""}>{t_raw(label)}</a>'
         for href, label in NAV
     )
     foot = "\n".join(f'      <a href="{href}">{t_raw(label)}</a>' for href, label in [("/", UI["home"])] + NAV[:1] + FOOT_EXTRA + NAV[1:])
