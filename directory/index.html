@@ -10,7 +10,7 @@
 <!-- tools/build_posts.py で生成。旧ページのリンクを生産者・ショップのページへ送る -->
 <script>
   (function(){
-    var shops=["yusando-natural-tea", "tencha-london"], h=location.hash.slice(1);
+    var shops=["yusando-natural-tea", "tencha-london", "tea-tea-tea"], h=location.hash.slice(1);
     location.replace((h==='shops'||shops.indexOf(h)>=0 ? '/shops/' : '/producers/') + (h && h!=='shops' && h!=='producers' ? '#'+h : ''));
   })();
 </script>
