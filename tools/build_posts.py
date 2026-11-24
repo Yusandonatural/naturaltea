@@ -19,6 +19,7 @@
 """
 import json
 import re
+import subprocess
 from html import escape
 from urllib.parse import quote
 from pathlib import Path
@@ -333,6 +334,22 @@ SCRIPT = """
 """
 
 
+ORG_LD = {"@type": "Organization", "name": "一般社団法人 日本自然茶協会", "alternateName": ["Japan Natural Tea Association", "JANATEA"],
+          "url": "https://naturaltea.jp/", "logo": "https://naturaltea.jp/assets/logo/og-image.png"}
+
+
+def ld_json(data):
+    """構造化データ（JSON-LD）の script タグ。検索エンジンにページの種類を伝える。"""
+    data = {"@context": "https://schema.org", **data}
+    return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + "</script>\n"
+
+
+def crumbs_ld(items):
+    """パンくず（BreadcrumbList）。items は (名前, URL) の並び。"""
+    return {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i, "name": n, "item": u} for i, (n, u) in enumerate(items, 1)]}
+
+
 def page(title, description, canonical, body, extra_head=""):
     current = ' aria-current="page"'
     nav = "\n".join(
@@ -480,7 +497,13 @@ def render_post(p):
     title = f'{p["title"]["ja"]} | 日本自然茶協会 Japan Natural Tea Association'
     desc = f'{p["lead"]["ja"]} {p["lead"]["en"]}'
     extra = "" if slides or p.get("video") else '<script async src="https://www.instagram.com/embed.js"></script>\n'
-    return page(title, desc, f"https://naturaltea.jp/learn/{p['slug']}/", body, extra)
+    url = f"https://naturaltea.jp/learn/{p['slug']}/"
+    extra += ld_json({"@graph": [
+        {"@type": "Article", "headline": p["title"]["ja"], "alternativeHeadline": p["title"]["en"], "description": desc,
+         "datePublished": p["date"], "inLanguage": ["ja", "en", "fr"], "url": url, "mainEntityOfPage": url,
+         "image": "https://naturaltea.jp/assets/logo/og-image.png", "author": ORG_LD, "publisher": ORG_LD},
+        crumbs_ld([("Home", "https://naturaltea.jp/"), ("Learn", "https://naturaltea.jp/learn/"), (p["title"]["en"], url)])]})
+    return page(title, desc, url, body, extra)
 
 
 def body_line(body, i):
@@ -781,7 +804,15 @@ def render_course(c):
   </div>
 </section>"""
     return page(f'{c["title"]["ja"]} {c["title"]["en"]} | 日本自然茶協会 Japan Natural Tea Association',
-                f'{c["lead"]["ja"]} {c["lead"]["en"]}', f"https://naturaltea.jp{base}", body)
+                f'{c["lead"]["ja"]} {c["lead"]["en"]}', f"https://naturaltea.jp{base}", body,
+                ld_json({"@graph": [
+                    {"@type": "Course", "name": f'{c["title"]["ja"]} {c["title"]["en"]}', "description": c["lead"]["ja"] + " " + c["lead"]["en"],
+                     "url": f"https://naturaltea.jp{base}", "inLanguage": ["ja", "en", "fr"], "isAccessibleForFree": True,
+                     "provider": ORG_LD, "numberOfLessons": len(c["lessons"]),
+                     "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "online", "courseWorkload": "PT1H"},
+                     "offers": {"@type": "Offer", "price": 0, "priceCurrency": "JPY", "category": "Free"},
+                     "hasPart": [{"@type": "LearningResource", "name": l["title"]["ja"], "url": f"https://naturaltea.jp{base}{l['slug']}/"} for l in c["lessons"]]},
+                    crumbs_ld([("Home", "https://naturaltea.jp/"), (c["title"]["en"], f"https://naturaltea.jp{base}")])]}))
 
 
 def render_lesson(c, i):
@@ -832,7 +863,14 @@ def render_lesson(c, i):
 </section>"""
     return page(f'{l["title"]["ja"]}（{c["title"]["ja"]} 第{n}回） | 日本自然茶協会 Japan Natural Tea Association',
                 f'{l["lead"]["ja"]} {l["lead"]["en"]}', f"https://naturaltea.jp{base}{l['slug']}/", body,
-                '<script async src="https://www.instagram.com/embed.js"></script>\n')
+                '<script async src="https://www.instagram.com/embed.js"></script>\n' + ld_json({"@graph": [
+                    {"@type": "LearningResource", "name": l["title"]["ja"], "alternateName": l["title"]["en"],
+                     "description": l["lead"]["ja"] + " " + l["lead"]["en"], "url": f"https://naturaltea.jp{base}{l['slug']}/",
+                     "inLanguage": ["ja", "en", "fr"], "isAccessibleForFree": True, "learningResourceType": "lesson",
+                     "position": n, "isPartOf": {"@type": "Course", "name": c["title"]["en"], "url": f"https://naturaltea.jp{base}"},
+                     "author": ORG_LD, "publisher": ORG_LD},
+                    crumbs_ld([("Home", "https://naturaltea.jp/"), (c["title"]["en"], f"https://naturaltea.jp{base}"),
+                               (l["title"]["en"], f"https://naturaltea.jp{base}{l['slug']}/")])]}))
 
 
 def check_course(c):
@@ -891,6 +929,24 @@ def check(p):
             assert len({len(p[key][l]) for l in LANGS}) == 1, f"{s}: {key} の数を3言語でそろえる"
 
 
+def write_sitemap():
+    """sitemap.xml を全ページから作る。lastmod は各ページの最後の commit 日（未 commit なら今日）。"""
+    import datetime
+    pages = sorted(p for p in ROOT.rglob("index.html")
+                   if not any(part.startswith(".") or part in ("tools", "directory") for part in p.relative_to(ROOT).parts))
+    today = datetime.date.today().isoformat()
+    rows = []
+    for p in pages:
+        rel = p.relative_to(ROOT).parent.as_posix()
+        url = "https://naturaltea.jp/" + ("" if rel == "." else rel + "/")
+        dirty = subprocess.run(["git", "status", "--porcelain", "--", str(p)], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        d = "" if dirty else subprocess.run(["git", "log", "-1", "--format=%cs", "--", str(p)], cwd=ROOT, capture_output=True, text=True).stdout.strip()
+        rows.append(f"  <url><loc>{url}</loc><lastmod>{d or today}</lastmod></url>")
+    (ROOT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                                      + "\n".join(rows) + "\n</urlset>\n", encoding="utf-8")
+    print("wrote sitemap.xml", len(rows), "pages")
+
+
 def main():
     posts = json.loads(DATA.read_text(encoding="utf-8"))
     slugs = [p["slug"] for p in posts]
@@ -912,6 +968,7 @@ def main():
     assert not course or course["slug"] not in {p["slug"] for p in learn}, "course.json の slug が entries.json の学びの記事と重なっています"
     (LEARN_DIR / "index.html").write_text(render_list(learn, course), encoding="utf-8")
     print("wrote learn/index.html")
+    write_sitemap()
 
 
 if __name__ == "__main__":

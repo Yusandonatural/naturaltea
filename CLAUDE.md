@@ -62,6 +62,7 @@
 - **Instagram 投稿を Claude で作るときは、サイトのページも同時に作る**（`.claude/skills/instagram-post/SKILL.md`）。`tools/entries.json` の項目に `slides`（スライドの中身）と `caption` を書き、`python3 tools/render_slides.py <slug>` で `instagram/<slug>/01.png…`（1080×1350、Tencha 投稿と同じデザイン。Chrome のヘッドレスで撮る）と caption.txt を作り、`python3 tools/build_posts.py` でサイトを更新。education の LP は投稿画像があればそれを並べ、directory のカードは photo がなければ表紙スライドを写真に使う。learn/ は記事0件のあいだはナビに出さずフッターのみ
 - **Jotform の新規登録 → 下書き PR（自動）**: `.github/workflows/jotform-drafts.yml` が1時間ごとに `tools/jotform_drafts.py` を実行。生産者・販売店フォームの新しい登録（`SINCE` 以降）から、Claude API で文面を作り、カード・投稿画像・キャプションを含む Pull Request を作る。**公開は PR をマージしたときだけ**。掲載不可は作らない、「名前のみ」は名前と場所だけ。地図のピンの位置（`geo`）も自動で付ける（生産者は所在地から市町村を取り出して国土地理院の住所検索、ショップは国と都市で OpenStreetMap の Nominatim。番地は使わない）ので、マージすると日本地図・世界地図とトップの地図にピンが増える。メール・電話・担当者名は Claude に渡さない。下書きは1件ずつ（開いている PR が片付くと次を作る）。PR を閉じると同じ登録は作り直さない。Secrets: `JOTFORM_API_KEY`, `ANTHROPIC_API_KEY`。リポジトリの Settings → Actions で「Allow GitHub Actions to create and approve pull requests」を有効にすること。リポジトリは公開なので PR の中身も公開で見える
 - ページを足したら、ヘッダー／フッターのリンクと3言語 span 件数チェックを各ページで行う
+- SEO: `sitemap.xml` は build_posts.py が全ページから毎回作り直す（手で直さない）。`robots.txt` はそれを指す。学びの記事・基礎コース・各回には構造化データ（Article／Course／LearningResource＋パンくず）を build_posts.py が入れ、トップは Organization／WebSite を `<head>` に直書き。ページを手で足したら canonical・description・og:title を付ける
 
 ### セクション構成（上から順）
 トップ（index.html）:
