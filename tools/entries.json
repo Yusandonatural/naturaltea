@@ -606,6 +606,140 @@
     "person": "Charlie Avendano"
   },
   {
+    "slug": "tea-tea-tea",
+    "kind": "shop",
+    "date": "2026-11-21",
+    "jotform_id": "6710643429522759923",
+    "name": "TEA TEA TEA (TTT)",
+    "region": {
+      "ja": "アメリカ",
+      "en": "USA",
+      "fr": "États-Unis"
+    },
+    "place": {
+      "ja": "カリフォルニア州ロサンゼルス、シャーマンオークス",
+      "en": "Sherman Oaks, Los Angeles, CA",
+      "fr": "Sherman Oaks, Los Angeles, Californie"
+    },
+    "body": {
+      "ja": [
+        "ロサンゼルス・シャーマンオークスを拠点に、家族で営む日本茶ブランド。京都・宇治の抹茶と奈良の大和茶を、小さな自然茶の生産者から直接仕入れ、ウェブサイトやポップアップ、茶会、LAのレストランやカフェへの卸を通じてアメリカに届けています。",
+        "長年の武者小路千家の茶の湯の稽古を土台に、お茶だけでなく生産者の物語や淹れ方も伝えています。陶芸家と共にオリジナルの茶碗をつくり、毎年ニューメキシコ州のDixon Studio Tourでは野点も開いています。"
+      ],
+      "en": [
+        "A family-run Japanese tea brand based in Sherman Oaks, Los Angeles. They source matcha from Uji, Kyoto and Yamato tea from Nara directly from small natural tea producers, and bring them to American drinkers through their website, pop-ups, tea gatherings and wholesale to LA restaurants and cafés.",
+        "Grounded in many years of Mushanokoji-senke tea ceremony practice, they share the producers' stories and how to prepare each tea, not just the leaves. They also make original tea bowls with ceramic artists and hold an outdoor nodate tea ceremony every year at the Dixon Studio Tour in New Mexico."
+      ],
+      "fr": [
+        "Une maison de thé japonais familiale installée à Sherman Oaks, à Los Angeles. Elle s'approvisionne directement auprès de petits producteurs de thé naturel : matcha d'Uji, à Kyoto, et thé Yamato de Nara. Ces thés sont proposés au public américain sur son site, lors de pop-ups et de réunions autour du thé, ainsi qu'aux restaurants et cafés de Los Angeles.",
+        "Forte de longues années de pratique de la cérémonie du thé de l'école Mushanokoji-senke, elle transmet aussi l'histoire des producteurs et l'art de préparer chaque thé. Elle crée des bols à thé originaux avec des céramistes et organise chaque année un nodate, cérémonie du thé en plein air, lors du Dixon Studio Tour au Nouveau-Mexique."
+      ]
+    },
+    "points": {
+      "ja": [
+        "抹茶",
+        "煎茶",
+        "茶道具",
+        "宇治",
+        "大和茶",
+        "オンラインショップ",
+        "卸売",
+        "野点"
+      ],
+      "en": [
+        "Matcha",
+        "Sencha",
+        "Tea ware",
+        "Uji",
+        "Yamato tea",
+        "Online shop",
+        "Wholesale",
+        "Nodate"
+      ],
+      "fr": [
+        "Matcha",
+        "Sencha",
+        "Ustensiles à thé",
+        "Uji",
+        "Thé Yamato",
+        "Boutique en ligne",
+        "Vente en gros",
+        "Nodate"
+      ]
+    },
+    "links": [
+      {
+        "label": "tea-tea-tea.com",
+        "url": "https://tea-tea-tea.com/"
+      }
+    ],
+    "slides": [
+      {
+        "type": "cover",
+        "label": "SHOPS / USA",
+        "section": "",
+        "kicker": "ロサンゼルスの日本茶",
+        "title": "TEA TEA TEA\n(TTT)",
+        "body": "A family-run tea brand bringing natural Japanese tea to Los Angeles.",
+        "items": [],
+        "box": ""
+      },
+      {
+        "type": "text",
+        "label": "",
+        "section": "ABOUT",
+        "kicker": "家族で営む茶の店",
+        "title": "From small farms\nto LA",
+        "body": "They source directly from small natural tea producers in Japan.",
+        "items": [
+          "Matcha from Uji, Kyoto",
+          "Yamato tea from Nara",
+          "Website, pop-ups & LA cafés"
+        ],
+        "box": ""
+      },
+      {
+        "type": "grid",
+        "label": "",
+        "section": "WHAT THEY CARRY",
+        "kicker": "",
+        "title": "On the shelf",
+        "body": "",
+        "items": [
+          "Matcha",
+          "Sencha",
+          "Tea ware"
+        ],
+        "box": ""
+      },
+      {
+        "type": "text",
+        "label": "",
+        "section": "THE WAY OF TEA",
+        "kicker": "茶の湯とともに",
+        "title": "More than\nthe leaves",
+        "body": "Rooted in Mushanokoji-senke practice, they share the producers' stories and how to brew.",
+        "items": [
+          "Original bowls with ceramic artists",
+          "Tea gatherings",
+          "Yearly nodate in New Mexico"
+        ],
+        "box": ""
+      },
+      {
+        "type": "cta",
+        "label": "",
+        "section": "FIND THEM",
+        "kicker": "お店を訪ねる",
+        "title": "Visit\nTEA TEA TEA",
+        "body": "Shop online at tea-tea-tea.com or catch them at pop-ups around Los Angeles.",
+        "items": [],
+        "box": "Looking for natural tea near you? DM us."
+      }
+    ],
+    "caption": "Natural Japanese tea, served the tea ceremony way in Los Angeles 🍵\n\nTEA TEA TEA (TTT) is a family-run tea brand in Sherman Oaks. They source matcha from Uji and Yamato tea from Nara directly from small natural tea producers, and share them through their website, pop-ups, tea gatherings and LA cafés.\n\nWith roots in Mushanokoji-senke practice, they pass on the producers' stories and how to brew, make original tea bowls with ceramic artists, and hold a yearly nodate in New Mexico.\n\n📩 @japan_natural_tea\n🔗 tea-tea-tea.com | naturaltea.jp\n\n#naturaltea #matcha #japanesetea #losangeles #teaceremony"
+  },
+  {
     "slug": "pesticides-in-tea-fields",
     "kind": "education",
     "date": "2026-11-21",
