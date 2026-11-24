@@ -394,8 +394,8 @@
   body.lang-en .reels-head h2,body.lang-fr .reels-head h2{font-weight:500;}
   .reels-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px;}
   .reels-head > div:first-child{flex:1 1 auto;}
-  .reels-course{display:inline-block;margin-top:10px;font-size:14px;letter-spacing:.04em;color:var(--matcha);border-bottom:1px solid rgba(138,171,110,.6);padding-bottom:1px;}
-  .reels-course:hover{color:var(--kinari);}
+  .reels-cta{max-width:1080px;margin:clamp(20px,3vw,32px) auto 0;text-align:center;color:var(--kinari);}
+  .reels-cta p{font-size:14px;letter-spacing:.04em;color:rgba(244,241,232,.8);margin-bottom:14px;}
   .reels-nav{display:flex;gap:10px;}
   .reels-nav[hidden]{display:none;}
   .reels-btn{width:42px;height:42px;border-radius:50%;border:1px solid rgba(244,241,232,.45);background:transparent;color:var(--kinari);font-size:18px;cursor:pointer;transition:background .2s;}
@@ -494,7 +494,6 @@
     <div>
     <p class="reels-kicker"><span class="ja-only">WATCH ・ 動画</span><span class="en-only">WATCH</span><span class="fr-only">EN VIDÉO</span></p>
     <h2><span class="ja-only">動画で知る、自然茶と協会</span><span class="en-only">Natural tea and our association, on video</span><span class="fr-only">Le thé naturel et l’association, en vidéo</span></h2>
-    <a class="reels-course" href="/learn/basics/"><span class="ja-only">自然茶基礎コース（全8回・無料）で順番に見る</span><span class="en-only">Watch them in order: Natural Tea Basics, a free 8-lesson course</span><span class="fr-only">Les voir dans l’ordre : Les bases du thé naturel, cours gratuit en 8 leçons</span></a>
     </div>
     <div class="reels-nav" id="reelsNav" hidden><button type="button" class="reels-btn" data-dir="-1" aria-label="Previous">&#8592;</button><button type="button" class="reels-btn" data-dir="1" aria-label="Next">&#8594;</button></div>
   </div>
@@ -509,6 +508,10 @@
     <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DfdYG-8vQNq/" data-instgrm-version="14"></blockquote></div>
     <div class="reel"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Dfas139PTYk/" data-instgrm-version="14"></blockquote></div>
     <!-- /REELS -->
+  </div>
+  <div class="reels-cta">
+    <p><span class="ja-only">動画と読みもので、自然茶の基本を順番に学べます。</span><span class="en-only">Learn the basics of natural tea in order, with short videos and readings.</span><span class="fr-only">Découvrez les bases du thé naturel dans l’ordre, en vidéos courtes et en lectures.</span></p>
+    <a class="btn btn-primary" href="/learn/basics/"><span class="ja-only">自然茶基礎コースを見る（全8回・無料）</span><span class="en-only">Start the Natural Tea Basics course (8 lessons, free)</span><span class="fr-only">Commencer le cours Les bases du thé naturel (8 leçons, gratuit)</span></a>
   </div>
 </section>
 
